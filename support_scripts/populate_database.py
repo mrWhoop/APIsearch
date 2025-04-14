@@ -2383,6 +2383,456 @@ def populate_database():
 
     api.save()
 
+    # ----------------
+    # Cats
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/v1/ai/image-to-video/kling-pro',
+            http_method='POST',
+            description='Generate a video from an image using the Kling 1.6 Pro model.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-to-video/kling-pro',
+            http_method='GET',
+            description='Get the list of the kling-pro tasks.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-to-video/kling/{task-id}',
+            http_method='GET',
+            description='Get the status of the kling task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-to-video/kling-std',
+            http_method='POST',
+            description='Generate a video from an image using the Kling 1.6 Std model.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-to-video/kling-std',
+            http_method='GET',
+            description='Get the list of the kling-pro tasks',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-to-video/kling/{task-id}',
+            http_method='GET',
+            description='Get the status of the kling task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/mystic',
+            http_method='POST',
+            description='Convert descriptive text input into images using AI. This endpoint accepts a variety of parameters to customize the generated images.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/mystic/{task-id}',
+            http_method='GET',
+            description='Get the status of the Mystic task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/mystic',
+            http_method='GET',
+            description='Get the status of all Mystic tasks',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/loras',
+            http_method='GET',
+            description=None,
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/text-to-image',
+            http_method='POST',
+            description='Convert descriptive text input into images using AI. This endpoint accepts a variety of parameters to customize the generated images.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/text-to-image/imagen3',
+            http_method='POST',
+            description='Convert descriptive text input into images using AI. This endpoint accepts a variety of parameters to customize the generated images.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/text-to-image/imagen3/{task-id}',
+            http_method='GET',
+            description='Get the status of the Imagen3 task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/text-to-image/imagen3',
+            http_method='GET',
+            description='Get the status of all Imagen3 tasks',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/text-to-image/flux-dev',
+            http_method='POST',
+            description='Convert descriptive text input into images using AI. This endpoint accepts a variety of parameters to customize the generated images.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/text-to-image/flux-dev/{task-id}',
+            http_method='GET',
+            description='Get the status of the flux-dev task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/text-to-image/flux-dev',
+            http_method='GET',
+            description='Get the status of the flux-dev tasks',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/beta/text-to-image/reimagine-flux',
+            http_method='POST',
+            description='(Beta, synchronous) Reimagine Flux is a new AI model that allows you to generate images from text prompts.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-upscaler',
+            http_method='POST',
+            description='This asynchronous endpoint enables image upscaling using advanced AI algorithms. Upon submission, it returns a unique task_id which can be used to track the progress of the upscaling process. For real-time production use, include the optional webhook_url parameter to receive an automated notification once the task has been completed. This allows for seamless integration and efficient task management without the need for continuous polling.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-upscaler/{task-id}',
+            http_method='GET',
+            description='Get the status of the upscaling task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-upscaler',
+            http_method='GET',
+            description='Get the status of the upscaling tasks',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-relight',
+            http_method='POST',
+            description='Relight an image using AI. This endpoint accepts a variety of parameters to customize the generated images.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-relight/{task-id}',
+            http_method='GET',
+            description='Get the status of the relight task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-relight',
+            http_method='GET',
+            description='Get the status of the relight tasks',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-style-transfer',
+            http_method='POST',
+            description=None,
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-style-transfer',
+            http_method='GET',
+            description='Get the status of all Style Transfer tasks',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/image-style-transfer/{task-id}',
+            http_method='GET',
+            description='Get the status of all Style Transfer task',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/beta/remove-background',
+            http_method='POST',
+            description='This endpoint removes the background from an image provided via a URL. The URLs in the response are temporary and valid for 5 minutes only.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/ai/classifier/image',
+            http_method='POST',
+            description='Accepts an image file as input and analyzes it to determine the probability that the image was generated by artificial intelligence, providing a confidence score.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/resources',
+            http_method='GET',
+            description='Retrieve a list of resources based on various filter criteria such as orientation, content type, license, and more.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/resources/{resource-id}',
+            http_method='GET',
+            description='Retrieve the detailed information of a specific resource by its ID. This endpoint supports multiple resource types including PSD, vector, photo, and AI-generated content.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/icons',
+            http_method='GET',
+            description='Get a list of icons based on the provided parameters and ordering criteria.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/icons/{id}',
+            http_method='GET',
+            description='Get detailed information about a specific icon identified by its unique ID.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/icons/{id}/download',
+            http_method='GET',
+            description='Download the specified icon by its unique ID in the requested format and size.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/resources/{resource-id}/download',
+            http_method='GET',
+            description='Download a specific resource by providing the resource ID. This endpoint supports downloading various types of resources including vectors, PSDs, photos, and AI-generated content.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/resources/{resource-id}/download/{resource-format}',
+            http_method='GET',
+            description='Retrieve a resource by specifying both the resource ID and the format. This endpoint allows for precise downloading of resources in the desired format.',
+            endpoint_keywords=['GET', 'testGET'],
+        )
+    ]
+
+    api = Api(
+        name='FREEP!K',
+        description='The most advanced AI features, the largest content library, and everything the future holds—all in one powerful API that you can set up instantly.',
+        base_url='https://api.freepik.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.freepik.com/introduction',
+        category='Art and Design'
+    )
+
+    api.save()
+
+    # ----------------
+    # Cats
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/v4/icons/search',
+            http_method='GET',
+            description='Search for icons by query string and filter parameters.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/icons/{icon_id}',
+            http_method='GET',
+            description='Get details about a specific icon.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/iconsets/{iconset_id}/icons',
+            http_method='GET',
+            description='Provides a list of all icons in an icon set sorted descendingly by the popularity of the icons.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/iconsets',
+            http_method='GET',
+            description='List all public icon sets in descending order of when they were published.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/iconsets/{iconset_id}',
+            http_method='GET',
+            description='Get details about a specific icon set.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/categories/{category_identifier}/iconsets',
+            http_method='GET',
+            description='List public icon sets in a category in descending order of when they were published.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/users/{user_id}/iconsets',
+            http_method='GET',
+            description='List all public icon sets owned by a specific user in descending order of when they were published.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/authors/{author_id}/iconsets',
+            http_method='GET',
+            description='List all public icon sets owned by a specific author in descending order of when they were published.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/styles/{style_identifier}/iconsets',
+            http_method='GET',
+            description='List public icon sets of a specific style in descending order of when they were published.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/authors/{author_id}',
+            http_method='GET',
+            description='Get details about a specific author identified by a unique ID.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/categories',
+            http_method='GET',
+            description='List all categories sorted ascendingly by their identifier.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/categories/{category_identifier}',
+            http_method='GET',
+            description='Get details about a specific category identified by its identifier.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/licenses/{license_id}',
+            http_method='GET',
+            description='Get details about a specific license by its unique ID.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/styles',
+            http_method='GET',
+            description='List all styles sorted ascendingly by their identifier.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v4/users/{user_id}',
+            http_method='GET',
+            description='Get details about a specific user.',
+            endpoint_keywords=['GET', 'testGET'],
+        )
+    ]
+
+    api = Api(
+        name='ICONFINDER',
+        description='Millions of graphics for your design projects. Created by independent designers.',
+        base_url='https://api.iconfinder.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developer.iconfinder.com/reference/search',
+        category='Art and Design'
+    )
+
+    api.save()
+
+    # ----------------
+    # Noun Project
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/v2/client/blacklist/id',
+            http_method='POST',
+            description='Add id to blacklist.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/client/blacklist/term',
+            http_method='POST',
+            description='Add term to os blacklist',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/client/blacklist',
+            http_method='GET',
+            description='View os blacklist',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/icon/{icon_id}',
+            http_method='GET',
+            description='Public os get icon by id',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/icon/{icon_id}/download',
+            http_method='GET',
+            description='Public download edited icon',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/icon',
+            http_method='GET',
+            description='Public os icon search',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/icon/autocomplete',
+            http_method='GET',
+            description='Public os icon autocomplete',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/client/usage',
+            http_method='GET',
+            description='Get client usage',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/client/report',
+            http_method='POST',
+            description='Report icon usage',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/collection',
+            http_method='GET',
+            description='Public os collection search',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/collection/{collection_id}',
+            http_method='GET',
+            description='Public os get collection by id',
+            endpoint_keywords=['GET', 'testGET'],
+        )
+    ]
+
+    api = Api(
+        name='Noun Project',
+        description='Grab a hold of the World’s Visual Language! Use it in your service or application.',
+        base_url='https://api.thenounproject.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://api.thenounproject.com/index.html',
+        category='Art and Design'
+    )
+
+    api.save()
+
     return
 
 

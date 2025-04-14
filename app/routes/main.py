@@ -18,3 +18,8 @@ def populate_database_call():
 
     return jsonify(apis)
 
+
+@main_blueprint.route('/search')
+def populate_database_call():
+
+    
