@@ -2833,6 +2833,259 @@ def populate_database():
 
     api.save()
 
+    # ----------------
+    # Cats
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/v2/chapters/',
+            http_method='GET',
+            description='Get all chapters.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v2/chapters/{ID}/',
+            http_method='GET',
+            description='Get particular chapter based on ID',
+            endpoint_keywords=['GET', 'testGET'],
+        )
+    ]
+
+    api = Api(
+        name='Bhagavad Gita',
+        description='Bhagavad Gita API is an open-source REST API that lets anyone use the text from Srimad Bhagavad Gita in their own web or mobile application(s).',
+        base_url='https://bhagavad-gita3.p.rapidapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=True,
+        docs='https://rapidapi.com/bhagavad-gita-bhagavad-gita-default/api/bhagavad-gita3',
+        category='Books'
+    )
+
+    api.save()
+
+    # ----------------
+    # Google Books
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/v1/volumes',
+            http_method='GET',
+            description='Get volume.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/users/{userId}/bookshelves',
+            http_method='GET',
+            description="Retrieving a list of a user's public bookshelves.",
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/users/{userId}/bookshelves/{shelf}',
+            http_method='GET',
+            description="Retrieving a specific public bookshelf.",
+            endpoint_keywords=['GET', 'testGET'],
+        )
+    ]
+
+    api = Api(
+        name='test_api',
+        description='Test API description',
+        base_url='https://www.googleapis.com/books',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.google.com/books/docs/v1/using',
+        category='Books'
+    )
+
+    api.save()
+
+    # ----------------
+    # Harry Potter API
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/books',
+            http_method='GET',
+            description='Return all Harry Potter books.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/books/random',
+            http_method='GET',
+            description='A single random book.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/characters',
+            http_method='GET',
+            description='Returns all Harry Potter characters.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/characters/random',
+            http_method='GET',
+            description='Returns a random Harry Potter character.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/houses',
+            http_method='GET',
+            description='Returns the four Hogwarts Houses with some extra data.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/houses/random',
+            http_method='GET',
+            description='Returns a random Hogwarts House with some extra data.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/spells',
+            http_method='GET',
+            description='Returns all the spells mentioned in the saga with a description.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/spells/random',
+            http_method='GET',
+            description='Returns a random spell mentioned in the saga with a description.',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+    ]
+
+    api = Api(
+        name='Harry Potter API',
+        description='Test API description',
+        base_url='https://potterapi-fedeperin.vercel.app/en',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=False,
+        https=True,
+        cors=True,
+        docs='https://vlaurencena.github.io/harry-potter-openapi-swagger-ui/',
+        category='Books'
+    )
+
+    api.save()
+
+    # ----------------
+    # OPEN Library
+    # ---------------
+
+    api = Api(
+        name='test_api',
+        description="Open Library offers a suite of APIs to help developers get up and running with our data. This includes RESTful APIs, which make Open Library data availabile in JSON, YAML and RDF/XML formats. There's also an earlier, now deprecated JSON API which is preserved for backward compatibility.",
+        base_url='https://openlibrary.org/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=None,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://openlibrary.org/developers/api',
+        category='Books'
+    )
+
+    api.save()
+
+    # ----------------
+    # Cats
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/resources/authors',
+            http_method='GET',
+            description='search for authors',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/resources/authors/AUTHORID',
+            http_method='GET',
+            description='details for a specific author',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/resources/works',
+            http_method='GET',
+            description='search for works',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/resources/works/WORKID',
+            http_method='GET',
+            description='details for a specific work',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/resources/titles',
+            http_method='GET',
+            description='search for titles',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/resources/title/ISBN',
+            http_method='GET',
+            description='details for a specific title',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/resources/authorevents',
+            http_method='GET',
+            description='search for author events',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/resources/authorevents/EVENTID',
+            http_method='GET',
+            description='details for a specific author event',
+            endpoint_keywords=['GET', 'testGET'],
+        )
+    ]
+
+    api = Api(
+        name='Penguin Publishing',
+        description="The Penguin Random House Rest Services can be used to get data about books, authors and events.",
+        base_url='https://reststop.randomhouse.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.penguinrandomhouse.biz/webservices/rest/',
+        category='Books'
+    )
+
+    api.save()
+
     return
 
 
@@ -2851,7 +3104,7 @@ def populate_database():
 
     api = Api(
         name='test_api',
-        description='Test API description',
+        description="Test API description",
         base_url='http://localhost:8000',
         api_keywords=['Test', 'testAPI'],
         popularity=randrange(0, 10),
