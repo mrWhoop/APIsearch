@@ -3698,35 +3698,178 @@ def populate_database():
 
     api.save()
 
+    # ----------------
+    # Box
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Box',
+        description="All the developer resources to help you get the most from Box products",
+        base_url='https://api.box.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developer.box.com/reference/',
+        category='Cloud storage and File Sharing'
+    )
+
+    api.save()
+
+    # ----------------
+    # Dropbox
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Dropbox',
+        description="Dropbox delivers tools that help you move your work forward faster, keep it safe, and let you collaborate with ease.",
+        base_url='https://www.dropbox.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://www.dropbox.com/developers/documentation',
+        category='Cloud storage and File Sharing'
+    )
+
+    api.save()
+
+    # ----------------
+    # Google Drive
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Google Drive',
+        description="Enhance the Google Drive experience. Insert interactive content, powered by your account data or an external service, with add-ons. Show a custom interface for uploading files from Drive into your third-party service. Enable users to quickly create files from custom templates.",
+        base_url='https://www.googleapis.com/drive/v3/files',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.google.com/workspace/drive',
+        category='Cloud storage and File Sharing'
+    )
+
+    api.save()
+
+    # ----------------
+    # OneDrive
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='OneDrive',
+        description="The OneDrive & SharePoint developer platform provides the APIs, components, and tools to access files and content across Microsoft 365, including: OneDrive personal, OneDrive for Business, SharePoint Online",
+        base_url='https://graph.microsoft.com/v1.0',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://learn.microsoft.com/en-us/onedrive/developer/?view=odsp-graph-online',
+        category='Cloud storage and File Sharing'
+    )
+
+    api.save()
+
+    # ----------------
+    # Pastebin
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='PASTEBIN',
+        description="Pastebin is a website where you can store any text online for easy sharing. The website is mainly used by programmers to store pieces of sources code or configuration information, but anyone is more than welcome to paste any type of text. The idea behind the site is to make it more convenient for people to share large amounts of text online.",
+        base_url='https://pastebin.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://pastebin.com/doc_api',
+        category='Cloud storage and File Sharing'
+    )
+
+    api.save()
+
+    # ----------------
+    # Mega.nz
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='MEGA',
+        description="Securely store files of any size. Backup important folders, sync items across multiple devices, and share files with total control and privacy.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://mega.io/developers',
+        category='Cloud storage and File Sharing'
+    )
+
+    api.save()
+
     return
 
 
-#----------------
-# Cats
-# ---------------
+    #----------------
+    # Cats
+    # ---------------
 
-    # endpoints = [
-    #     EndPoint(
-    #     endpoint='/testGET',
-    #     http_method='GET',
-    #     description="GET method",
-    #     endpoint_keywords=['GET', 'testGET'],
-    #     )
-    # ]
-    #
-    # api = Api(
-    #     name='test_api',
-    #     description="Test API description",
-    #     base_url='http://localhost:8000',
-    #     api_keywords=['Test', 'testAPI'],
-    #     popularity=randrange(0, 10),
-    #     service_level=randrange(0, 10),
-    #     latency=randrange(0, 1000),
-    #     reliability=randrange(0, 10),
-    #     endpoints=endpoints,
-    #     authenticaton=,
-    #     https=,
-    #     cors=,
-    #     docs=,
-    #     category=
-    # )
+    endpoints = None
+
+    api = Api(
+        name='',
+        description="",
+        base_url='',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=,
+        https=,
+        cors=,
+        docs=,
+        category=
+    )
