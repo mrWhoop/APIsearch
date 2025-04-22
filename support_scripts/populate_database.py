@@ -3923,6 +3923,104 @@ def populate_database():
 
     api.save()
 
+    # ----------------
+    # Bitquery
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Bitquery',
+        description="Bitquery provides historical and real-time indexed data for 40+ blockchains through Graphql APIs, Websockets, SQL, and Cloud providers such as AWS, Snowflake, Google, Azure, Kafka etc. Get APIs for token trades, transfers, holders, transactions, address balances, Smart contract events, calls, NFT trades, transfers, etc.",
+        base_url='https://streaming.bitquery.io/graphql',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://bitquery.io/',
+        category='Cryptocurrency'
+    )
+
+    api.save()
+
+    # ----------------
+    # BitcoinAverage
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='BitcoinAverage',
+        description="Welcome to the BitcoinAverage API! The world's best and longest running Cryptocurrency price API provider. These APIs can be used to gather real-time, OHLC, volume and historical price data for the following Cryptocurrencies: Bitcoin (BTC), Bitcoin Cash (BCH), Litecoin (LTC), Ethereum (ETH), Dash (DASH), Ripple (XRP), Monero (XMR) plus many more.",
+        base_url='https://apiv2.bitcoinaverage.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://apiv2.bitcoinaverage.com/',
+        category='Cryptocurrency'
+    )
+
+    api.save()
+
+    # ----------------
+    # Bitmex
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Bitmex',
+        description="BitMEX offers a fully featured REST API and a powerful streaming WebSocket API. All market and user data is available and updates in real-time. The BitMEX APIs are open and complete. Every function used by the BitMEX website is exposed via the API, allowing developers full control to build any kind of application on top of BitMEX.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.bitmex.com/app/apiOverview',
+        category='Cryptocurrency'
+    )
+
+    api.save()
+
+    # ----------------
+    # Blockchain
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Blockchain.com',
+        description="Bitcoin Payment, Wallet & Transaction Data",
+        base_url='https://api.blockchain.com/exchange',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.blockchain.com/explorer/api',
+        category='Cryptocurrency'
+    )
+
     return
 
 
