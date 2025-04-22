@@ -4223,6 +4223,331 @@ def populate_database():
 
     # Data Validation
 
+    # ----------------
+    # Cloudmersive Validate
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Cloudmersive',
+        description="Data Validation APIs. Validate key business data thoroughly.Email Address Validation. Validate whether an email is real when you accept it. Phone Number Validation. Validate and retrieve information for any phone number. Street Address Validation. Validate a street address, with full support for international addresses. VAT Number Validation. Validate and retrieve information for a VAT number or code. Domain Name Validation. Validate and retrieve WHOIS information for a domain name. Name Validation. Validate and extract information from names or code identifiers. IP Address Validation. Validate and retrieve key details about IP addresses, including geolocation.",
+        base_url='https://api.cloudmersive.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://api.cloudmersive.com/',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # languagelayer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='languagelayer',
+        description="Languagelayer is a simple and powerful REST API built to efficiently match text of any length to its corresponding language, cross-referencing single words, expressions and grammatical constructions, as well as taking into account any existing accents, dialects and other linguistic deviations. The languagelayer API relies on an ever-advancing, powerful and AI-based (Artificial Intelligence) detection algorithm, which increases in complexity and performance with each language detection API request performed. Only this way the languagelayer service can be capable of processing over 170 different languages & accents worldwide. In spite of its complexity behind the curtains, our language detection API continuously manages to stand out due to its easy-to-use REST interface, simple JSON response format, quick response time and low bandwidth consumption.",
+        base_url='http://api.languagelayer.com/detect',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://languagelayer.com/documentation',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # Lob.com
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Lob',
+        description="Your customer aren’t ignoring you. They just never saw your email. Or ad. Or social post. Digital overload is real. Lob is the antidote, powering personalized, automated, and trackable direct mail that outperforms digital (and other direct mail providers) at any scale.",
+        base_url='https://api.lob.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.lob.com/',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # mailboxlayer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='mailboxlayer',
+        description="Mailboxlayer offers a simple REST-based JSON API enabling you to thoroughly check and verify email addresses right at the point of entry into your system. In addition to checking the syntax, the actual existence of an email address using MX-Records and the Simple Mail Transfer Protocol (SMTP), and detecting whether or not the requested mailbox is configured to catch all incoming mail traffic, the mailboxlayer API is linked to a number of regularly updated databases containing all available email providers, which simplifies the separation of disposable (e.g. mailinator) and free email addresses (e.g. gmail, yahoo) from individual domains. Combined with typo checks, did-you-mean suggestions and a numeric score reflecting the quality of each email address, these structures will make it simple to automatically filter 'real' customers from abusers and increase response and success rates of your email campaigns.",
+        base_url='http://apilayer.net/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://mailboxlayer.com/documentation',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # NumValidate
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NumValidate',
+        description="NumValidate is an open source REST API powered by Google LibPhoneNumber that provides a simple yet effective way to validate and format a phone number. We have language bindings in Shell, Javascript (JQuery), Ruby and Java! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.",
+        base_url='https://numvalidate.com/api/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://numvalidate.com/numvalidate-docs/index.html',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # numverify
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='numverify',
+        description="NumVerify offers a full-featured yet simple RESTful JSON API for national and international phone number validation and information lookup for a total of 232 countries around the world. Requested numbers are processed in real-time, cross-checked with the latest international numbering plan databases and returned in handy JSON format enriched with useful carrier, geographical location and line type data. Integrating the numverify API into your application will enable you to verify the validity of phone numbers at the point of entry, protecting you from fraud and increasing good leads.",
+        base_url='http://apilayer.net/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://numverify.com/documentation',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # Phone Validation
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Trestle',
+        description="Trestle provides identity data for businesses. This identity data is key for building and maintaining great customer relationships.",
+        base_url='https://api.trestleiq.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://trestle-api.redoc.ly/',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # PurgoMalum
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='PurgoMalum',
+        description="PurgoMalum is a simple, free, RESTful web service for filtering and removing content of profanity, obscenity and other unwanted text. PurgoMalum's interface accepts several parameters for customization and can return results in plain text, XML and JSON. PurgoMalum is designed to remove words from input text, based on an internal profanity list (you may optionally add your own words to the profanity list through a request parameter (see Request Parameters below). It is designed to recognize character alternates often used in place of standard alphabetic characters, e.g. @ will be recognized as an a, $ will be recognized as an s, and so forth. PurgoMalum also utilizes a list of safe words, i.e. innocuous words which contain words from the profanity list (class for example). These safe words are excluded from the filter. If you discover any bugs or have any concerns, please contact me, and I will do my best to address them.",
+        base_url='https://www.purgomalum.com/service',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.purgomalum.com/',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # US Autocomplete
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='US Autocomplete',
+        description="nter address data quickly with real-time address suggestions.",
+        base_url='https://us-autocomplete-pro.api.smarty.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.smarty.com/docs/cloud',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # US Extract
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='US Extract',
+        description="Extract postal addresses from any text including emails.",
+        base_url='https://us-extract.api.smarty.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.smarty.com/products/apis/us-extract-api',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # US Street Address
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='US Street Address',
+        description="Extract postal addresses from any text including emails",
+        base_url='https://us-street.api.smarty.com/street-address',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.smarty.com/docs/cloud/us-street-api',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # vatlayer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='vatlayer',
+        description="Vatlayer is a simple JSON-based REST API enabling you to validate VAT numbers, retrieve all or single EU VAT rates based on IP address or country code, convert prices in compliance with EU VAT rates and types, and more. API results are requested using a transparent and easy-to-understand URL structure and delivered in handy JSON format, making for the highest possible level of compatibility with any of your applications, systems, programming languages and frameworks. The following API documentation explains in detail API properties, parameters and features, provides integration guides and code examples for PHP and jQuery.ajax.",
+        base_url='http://apilayer.net/api/validate',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://vatlayer.com/documentation',
+        category='Data Validation'
+    )
+
+    api.save()
+
+    # ----------------
+    # Veriphone
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='veriphone',
+        description="Clean your contact list and prevent fraud by validating phone numbers. Veriphone will validate, format, lookup the carrier and line type of any phone number.",
+        base_url='https://api.veriphone.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://veriphone.io/docs/v2',
+        category='Data Validation'
+    )
+
+    api.save()
+
     return
 
 
