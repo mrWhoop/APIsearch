@@ -3,6 +3,8 @@ from random import randrange
 
 def populate_database():
 
+    # ANIMALS
+
     # ---------------
     # Cats
     # ---------------
@@ -593,6 +595,8 @@ def populate_database():
     )
 
     api.save()
+
+    # ANIME
 
     # ----------------
     # AniList
@@ -1771,6 +1775,8 @@ def populate_database():
 
     api.save()
 
+    # ANTI-MALWARE
+
     # ----------------
     # AbuseIPDB
     # ---------------
@@ -2064,6 +2070,7 @@ def populate_database():
     )
 
     api.save()
+
     # ----------------
     # Metacert
     # ---------------
@@ -2384,6 +2391,8 @@ def populate_database():
     )
 
     api.save()
+
+    # ART & DESIGN
 
     # ----------------
     # FREEP!K
@@ -2835,6 +2844,8 @@ def populate_database():
 
     api.save()
 
+    # BOOKS
+
     # ----------------
     # Bhagavad Gita
     # ---------------
@@ -3150,6 +3161,8 @@ def populate_database():
 
     api.save()
 
+    # BUSINESS
+
     # ----------------
     # Domainsdb.info
     # ---------------
@@ -3448,6 +3461,8 @@ def populate_database():
 
     api.save()
 
+    # CALENDAR
+
     # ----------------
     # Abstract’s Holiday API
     # ---------------
@@ -3698,6 +3713,8 @@ def populate_database():
 
     api.save()
 
+    # Cloud storage and File Sharing
+
     # ----------------
     # Box
     # ---------------
@@ -3848,6 +3865,8 @@ def populate_database():
 
     api.save()
 
+    # Continuous Integration
+
     # ----------------
     # CircleCI
     # ---------------
@@ -3922,6 +3941,8 @@ def populate_database():
     )
 
     api.save()
+
+    # Cryptocurrency
 
     # ----------------
     # Bitquery
@@ -4020,6 +4041,187 @@ def populate_database():
         docs='https://www.blockchain.com/explorer/api',
         category='Cryptocurrency'
     )
+
+    api.save()
+
+    # Currency Exchange
+
+    # ----------------
+    # 1Forge
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='1Forge',
+        description="1Forge provides real-time quote data (bid & ask) for 700+ pairs. To see a full list of supported currency pairs, please see the full currency pair list. At this time, we do not offer historical data, however, clients are more than welcome to archive our quotes locally for internal use. By connecting directly to brokers and liquidity providers, we are able to provide data as fast as any ECN or brokerage. Depending on how active the market is, you can see price updates over 200 times per second for a single currency pair. No other quote provider in the world can match our accuracy, speed or level of service.",
+        base_url='https://api.1forge.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://1forge.com/api',
+        category='Currency Exchange'
+    )
+
+    api.save()
+
+    # ----------------
+    # Currencylayer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='currencylayer',
+        description="Currencylayer provides a simple REST API with real-time and historical exchange rates for 168 world currencies, delivering currency pairs in universally usable JSON format - compatible with any of your applications. Spot exchange rate data is retrieved from several major forex data providers in real-time, validated, processed and delivered hourly, every 10 minutes, or even within the 60-second market window. Providing the most representative forex market value available ('midpoint' value) for every API request, the currencylayer API powers currency converters, mobile applications, financial software components and back-office systems all around the world.",
+        base_url='https://api.currencylayer.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://currencylayer.com/documentation',
+        category='Currency Exchange'
+    )
+
+    api.save()
+
+    # ----------------
+    # ExchangeRate-API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='',
+        description="The Accurate & Reliable Exchange Rate API 🌍 Currency conversion rates for 161 currencies. 🏆 Over 14 years of exceptional uptime & support. ✅ Perfect for SaaS, Dashboards & E-Commerce. Hundreds of thousands of developers relax while our exchange rate API delivers forex rates, day-in, day-out!",
+        base_url='https://v6.exchangerate-api.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.exchangerate-api.com/docs/overview',
+        category='Currency Exchange'
+    )
+
+    api.save()
+
+    # ----------------
+    # Exchangeratesapi.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='exchangerates',
+        description="With over 15 exchange rate data sources, the Exchangerates API is delivering exchanging rates data for more than 170 world currencies. This API has several endpoints, where each of them serves a different purpose, use case. The endpoints include functionalities like receiving the latest exchange rates information for a specific set, or for all currencies; conversion from one to another currency; receiving data Time-series for multiple or for one currency, and preserving the API daily for the fluctuation data.",
+        base_url='https://api.exchangeratesapi.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://exchangeratesapi.io/documentation/',
+        category='Currency Exchange'
+    )
+
+    api.save()
+
+    # ----------------
+    # Fixer.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='fixer',
+        description="Powered by 15+ exchange rate data sources, the Fixer API is capable of delivering real-time exchange rate data for 170 world currencies. The API comes with multiple endpoints, each serving a different use case. Endpoint functionalities include getting the latest exchange rate data for all or a specific set of currencies, converting amounts from one currency to another, retrieving Time-Series data for one or multiple currencies and querying the API for daily fluctuation data.",
+        base_url='https://data.fixer.io/api/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://fixer.io/documentation',
+        category='Currency Exchange'
+    )
+
+    api.save()
+
+    # ----------------
+    # Frankfurter
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Frankfurter',
+        description="Frankfurter is a free, open-source currency data API that tracks reference exchange rates published by institutional and non-commercial sources like the European Central Bank. No usage caps or API keys. Works great client-side in the browser or mobile apps. The public API is available at api.frankfurter.dev. If preferred, you can self-host.",
+        base_url='https://api.frankfurter.dev/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://frankfurter.dev/',
+        category='Currency Exchange'
+    )
+
+    api.save()
+
+    # ----------------
+    # FxRatesAPI
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='FxRatesAPI',
+        description="Our API supports over 185 currencies and provides mid-market rates that are aggregated from more than 20 sources. Whether you're building a finance app, e-commerce platform, or simply need to convert currencies for your business, our API is designed to make the process quick and easy. This documentation will guide you through the steps of getting started with our API, including authentication, available endpoints, and response formats.",
+        base_url='https://api.fxratesapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=False,
+        docs='https://fxratesapi.com/docs',
+        category='Currency Exchange'
+    )
+
+    api.save()
+
+    # Data Validation
 
     return
 
