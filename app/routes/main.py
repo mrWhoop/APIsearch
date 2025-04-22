@@ -20,6 +20,6 @@ def populate_database_call():
 
 
 @main_blueprint.route('/search')
-def populate_database_call():
+def search():
 
-    
+    return None

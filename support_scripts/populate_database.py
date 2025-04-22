@@ -195,7 +195,7 @@ def populate_database():
         name='CATAAS',
         description='Cat as a service. Is a REST API to spread peace and love (or not) thanks to cats. Have 1987 cats for now.',
         base_url='https://cataas.com/',
-        api_key=['Cat', 'Cats', 'Cat Pictures', 'CATASS'],
+        api_keywords=['Cat', 'Cats', 'Cat Pictures', 'CATASS'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -257,7 +257,7 @@ def populate_database():
         name='Dog API',
         description='The Dog API provides information on over 340 dog breeds, 20 breed groups, and fun facts. Our data is accurate and constantly updated. Easily integrate this information into your own website or application with our user-friendly API. Get started today and discover more about the world of dogs.',
         base_url='https://dogapi.dog/api/v2',
-        api_key=['Dog', 'DogAPI'],
+        api_keywords=['Dog', 'DogAPI'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -1772,7 +1772,7 @@ def populate_database():
     api.save()
 
     # ----------------
-    # Cats
+    # AbuseIPDB
     # ---------------
 
     endpoints = [
@@ -2255,6 +2255,8 @@ def populate_database():
         category='Anti-Malware'
     )
 
+    api.save()
+
     # ----------------
     # VirusTotal
     # ---------------
@@ -2384,7 +2386,7 @@ def populate_database():
     api.save()
 
     # ----------------
-    # Cats
+    # FREEP!K
     # ---------------
 
     endpoints = [
@@ -2626,7 +2628,7 @@ def populate_database():
     api.save()
 
     # ----------------
-    # Cats
+    # ICONFINDER
     # ---------------
 
     endpoints = [
@@ -2834,7 +2836,7 @@ def populate_database():
     api.save()
 
     # ----------------
-    # Cats
+    # Bhagavad Gita
     # ---------------
 
     endpoints = [
@@ -3013,7 +3015,7 @@ def populate_database():
     api.save()
 
     # ----------------
-    # Cats
+    # Penguin Publishing
     # ---------------
 
     endpoints = [
@@ -3086,6 +3088,68 @@ def populate_database():
 
     api.save()
 
+    # ----------------
+    # Charity Search
+    # ---------------
+
+    endpoints = [
+        EndPoint(
+            endpoint='/v1/charitysearch',
+            http_method='GET',
+            description='This method enables you to search the entire database of IRS registered nonprofits. Use this API to return multiple charities based on user inputs such as an EIN, charity name, category, city, state, and ZIP Code. You can control the number of records that are returned and page position to implement Pagination. To filter out ineligible organizations simply pass the value eligible=1',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/categories',
+            http_method='GET',
+            description='This method enables you to provide a list of categories to your end-users allowing them to focus their search on a specific category. OrgHunter uses the NTEE Classification System developed by the National Center for Charitable Statistics as part of its keyword searching criteria. The National Taxonomy of Exempt Entities (NTEE) system is used by the IRS and NCCS to classify nonprofit organizations. It is also used by the Foundation Center to classify both grants and grant recipients (typically nonprofits or governments).',
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/charitybasic',
+            http_method='GET',
+            description="This method enables you to generate detailed information on a specific charity. This method accepts two parameters, your API key and the charity's EIN. The charity basic API provides detailed information on the charity including its current status with the IRS. In most cases, the charity basic API provide sufficient information to the end-user related a specific charity.",
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/charitygeolocation',
+            http_method='GET',
+            description="This method enables you to generate detailed information on a specific charity. This method accepts two parameters, your API key and the charity's EIN. The charity GeoLocation API provides detailed information on the charity including its current status with the IRS. This is an excellent option if you intend to include a Google maps widget within your application or website.",
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/charityfinancial',
+            http_method='GET',
+            description="This method enables you to generate detailed information on a specific charity. This method accepts two parameters, your API key and the charity's EIN. The charity Financial API provides detailed information on the charity including its current status with the IRS. This API is designed to provide detailed financial information from the charity's latest form 990 and is an excellent option if you intend to integrate financial charts and graphs into your project.",
+            endpoint_keywords=['GET', 'testGET'],
+        ),
+        EndPoint(
+            endpoint='/v1/charitypremium',
+            http_method='GET',
+            description="This method enables you to generate detailed information on a specific charity. This method accepts two parameters, your API key and the charity's EIN. The charity Premium API is our most comprehensive and provides detailed information on the charity including its current status with the IRS. This API is an excellent option if you intend to include detailed financial information, financial charts and graphs along with detailed mapping information.",
+            endpoint_keywords=['GET', 'testGET'],
+        )
+    ]
+
+    api = Api(
+        name='The OrgHunter Charity',
+        description="The OrgHunter Charity API provides developers access to over 2.5M charities. Our Charity API goes well beyond the IRS pub78 data source and enables your organization to perform accurate real-time charity vetting. Over 1,500 websites and mobile applications depend on our Charity API daily, making us the largest charity data provider on the market today!",
+        base_url='http://data.orghunter.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://charityapi.com/charity-api-summary-search',
+        category='Business'
+    )
+
+    api.save()
+
     return
 
 
@@ -3093,28 +3157,28 @@ def populate_database():
 # Cats
 # ---------------
 
-    endpoints = [
-        EndPoint(
-        endpoint='/testGET',
-        http_method='GET',
-        description='GET method',
-        endpoint_keywords=['GET', 'testGET'],
-        )
-    ]
-
-    api = Api(
-        name='test_api',
-        description="Test API description",
-        base_url='http://localhost:8000',
-        api_keywords=['Test', 'testAPI'],
-        popularity=randrange(0, 10),
-        service_level=randrange(0, 10),
-        latency=randrange(0, 1000),
-        reliability=randrange(0, 10),
-        endpoints=endpoints,
-        authenticaton=,
-        https=,
-        cors=,
-        docs=,
-        category=
-    )
+    # endpoints = [
+    #     EndPoint(
+    #     endpoint='/testGET',
+    #     http_method='GET',
+    #     description="GET method",
+    #     endpoint_keywords=['GET', 'testGET'],
+    #     )
+    # ]
+    #
+    # api = Api(
+    #     name='test_api',
+    #     description="Test API description",
+    #     base_url='http://localhost:8000',
+    #     api_keywords=['Test', 'testAPI'],
+    #     popularity=randrange(0, 10),
+    #     service_level=randrange(0, 10),
+    #     latency=randrange(0, 1000),
+    #     reliability=randrange(0, 10),
+    #     endpoints=endpoints,
+    #     authenticaton=,
+    #     https=,
+    #     cors=,
+    #     docs=,
+    #     category=
+    # )
