@@ -3150,6 +3150,554 @@ def populate_database():
 
     api.save()
 
+    # ----------------
+    # Domainsdb.info
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Domains-Index API',
+        description="Registered domains search checks the lists of registered domains for names containing particular words/phrases/numbers or symbols. Technically it's just a GUI interface for domains-index.com database containing more than 260M of registered domains and 1000+ TLDS including newGTLDs. It's free to use and could be helpful domains/marketing research tool.",
+        base_url='https://api.domainsdb.info',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://api.domainsdb.info/v1/',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Favicon.im
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Favicon.im/{domain}',
+        description="Instantly fetch and display the favicon for any website.",
+        base_url='https://favicon.im',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://favicon.im/',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Freelancer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='freelancer developers',
+        description="Use the Freelancer API to access a cloud workforce of skilled freelancers from your website, app or software. Why hire people when you can just make an API call to the cloud?",
+        base_url='https://developers.freelancer.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.freelancer.com/docs',
+        category='Business'
+    )
+
+    #----------------
+    # Gmail
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Gmail',
+        description="The Gmail API is a RESTful API that can be used to access Gmail mailboxes and send mail. For most web applications the Gmail API is the best choice for authorized access to a user's Gmail data and is suitable for various applications, such as: Read-only mail extraction, indexing, and backup; Automated or programmatic message sending; Email account migration; Email organization including filtering and sorting of messages; Standardization of email signatures across an organization",
+        base_url='https://www.googleapis.com/gmail',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.google.com/workspace/gmail/api/guides',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Google Analytics
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Google Analytics',
+        description="Google Analytics is the go-to platform for millions of website and app owners seeking to gain a deeper understanding of their website and app performance. With Google Analytics, you can fine-tune your digital strategy, optimize your campaigns, and take your online presence to new heights.",
+        base_url='https://analyticsdata.googleapis.com/v1beta/properties/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.google.com/analytics/devguides/reporting/data/v1',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # MailboxValidator
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='MailboxValidator',
+        description="Email Validation Services. Secure and reliable email validation service to check for invalid email addresses. It connects to the mail server and checks whether the mailbox exists or not. It reduces email bounce rate & costs. It increases conversion rate & sender reputation.",
+        base_url='https://api.mailboxvalidator.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.mailboxvalidator.com/api-single-validation',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # mailgun
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Mailgun',
+        description="Transactional Email Delivery Service & API for Developers. Try our email API and top-notch email sending service designed for developers. Enhance your transactional email capabilities seamlessly.  ",
+        base_url='https://api.mailgun.net',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://documentation.mailgun.com/docs/mailgun/quickstart-guide/quickstart',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Mailjet
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Mailjet',
+        description="Connect with your ideal customer, anywhere. All the email tools you need to hit the inbox. Discover our easy-to-use platform for designing and sending your email marketing campaigns, newsletters, and automated emails.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.mailjet.com/',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # markerapi
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='MARKER',
+        description="Use our trademark search API to search the US trademarks database (USPTO) based on a search string. Our API allows search by serial number, trademark, owner, upcoming expiration date, and product/service description. Sign up to integrate trademark data into your application.",
+        base_url='https://markerapi.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=False,
+        https=True,
+        cors=None,
+        docs='https://markerapi.com/',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Trello
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Trello',
+        description="The best way to build on top of Trello is to create a Power-Up! With Power-Ups you can add buttons to cards and boards, show previews of attachments on Trello cards, and much more - all inside of Trello! Power-Ups add extra functionality inside of Trello and let you and your team work with more perspective. Some Power-Ups help you automate your workflows, others give you a new view into the data you have stored in cards.",
+        base_url='https://api.trello.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developer.atlassian.com/cloud/trello/guides/rest-api/api-introduction/',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Tomba Email finder
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Tomba',
+        description="Tomba, your unique B2B email finder and verifier, provides a distinctive lead database for effortless and effective outreach scaling.",
+        base_url='https://api.tomba.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://tomba.io/api',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Valid Email
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Clientsbee',
+        description="With Clientsbee Embark on a journey of technological discovery with our advanced technographics data, designed to unveil the intricate layers of digital ecosystems and empower businesses with actionable insights.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=False,
+        docs='https://clientsbee.com/',
+        category='Business'
+    )
+
+    api.save()
+
+    # ----------------
+    # Abstract’s Holiday API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Holidays API',
+        description="Retrieve religious, non-public and public holidays for 200+ countries worldwide and for any specific year",
+        base_url='https://holidays.abstractapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://docs.abstractapi.com/holidays',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ----------------
+    # Byabbe
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Wikipedia, On this Day',
+        description="This API can be used to retrieve birth, deaths, and events for any given day of the year. The data is all harvested from Wikipedia and therefore licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License. The API itself is available as-is. Just keep calm and query on.",
+        base_url='https://byabbe.se/on-this-day',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://byabbe.se/on-this-day/#/',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ----------------
+    # Calendar Index
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CALENDARIFIC',
+        description="Welcome to the Calendarific Global Holidays API. We cover over 230 countries and 3000 states around the world. We are constantly adding new countries and states. Feel free to send us an email if your country is not included in the list. This document covers how to use our API. Let us know if you have any questions. The Calendarific API is built on REST principles. Authenticated users can interact with any of our URIs by using the specified HTTP request method. We enforce using SSL encryption by issuing requests through HTTPS.",
+        base_url='https://calendarific.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://calendarific.com/api-documentation',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ---------------
+    # Church Calendar
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Liturgical Calendar API',
+        description="The API provides access to Roman Catholic liturgical calendar according to the norms set forth by the liturgical reform after the II Vatican Council. Several Sanctorale calendars are available and others can be added easily.",
+        base_url='http://calapi.inadiutorium.cz',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='http://calapi.inadiutorium.cz/api-doc',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ---------------
+    # Czech Namedays Calendar
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Svátky API',
+        description="Lookup for a name and returns nameday date",
+        base_url='https://svatky.adresa.info/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://svatky.adresa.info/',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ---------------
+    # Google Calendar
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Google Calendar',
+        description="Enhance the Google Calendar experience. Insert interactive content, powered by your account data or an external service, with add-ons.",
+        base_url='https://www.googleapis.com/calendar/v3/calendars',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.google.com/workspace/calendar/api/guides/overview',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ---------------
+    # Hebrew Calendar
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Hebrew Calendar',
+        description="Our mission at Hebcal.com is to increase awareness of Jewish holidays and to help Jews to be observant of the mitzvot. You can embed Hebcal.com content directly onto your synagogue website with our JavaScript, JSON and RSS APIs.",
+        base_url='https://www.hebcal.com/hebcal',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.hebcal.com/home/195/jewish-calendar-rest-api',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ---------------
+    # Holidays
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Holiday API',
+        description="Stop maintaining holiday data. Start building what matters. Fresh, accurate holiday data—just an API call away. Skip the scraping. Ditch the spreadsheets.",
+        base_url='https://holidayapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://holidayapi.com/docs',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ---------------
+    # Nager.Date
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Public Holiday Api',
+        description="The api provides a simple way to query the holidays of over 100 countries, also it is possible to query long weekends. For IoT devices there is an endpoint to check if today is a holiday",
+        base_url='https://date.nager.at/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://date.nager.at/Api',
+        category='Calendar'
+    )
+
+    api.save()
+
+    # ---------------
+    # TimeZones iCal Library
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='TimeZones iCal Library',
+        description="The convenient way to directly access the most recent official time zone information for iCalendar files with JavaScript.",
+        base_url='https://tz.add-to-calendar-technology.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://tz.add-to-calendar-technology.com/',
+        category='Calendar'
+    )
+
+    api.save()
+
     return
 
 
