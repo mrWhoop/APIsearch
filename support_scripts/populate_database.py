@@ -3848,6 +3848,81 @@ def populate_database():
 
     api.save()
 
+    # ----------------
+    # CircleCI
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CircleCI',
+        description="We build CI/CD tooling to keep the world’s best engineers shipping great code. Engineering teams of all sizes use CircleCI to easily build, test, and deploy production-ready code. Focus on your code, and beyond. Trigger automatic tests whenever anything in your ecosystem changes: libraries, images, even LLMs.",
+        base_url='https://circleci.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://circleci.com/docs/api/v2/index.html',
+        category='Continuous Integration'
+    )
+
+    api.save()
+
+    # ----------------
+    # CloudBees Codeship
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CloudBees',
+        description="CloudBees CI is a fully-featured, cloud native capability that can be hosted on-premise or in the public cloud used to deliver CI at scale. It provides a shared, centrally managed, self-service experience for all your development teams running Jenkins. CloudBees CI on modern cloud platforms is designed to run on Kubernetes. CloudBees CI on traditional platforms has been developed for on-premise installations.",
+        base_url='https://api.codeship.com/v2',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.cloudbees.com/docs/cloudbees-codeship/latest/api-overview/',
+        category='Continuous Integration'
+    )
+
+    api.save()
+
+    # ----------------
+    # Travis CI
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Travis CI',
+        description="Sync your GitHub projects with Travis CI to test your code in minutes.",
+        base_url='https://api.travis-ci.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.travis-ci.com/api',
+        category='Continuous Integration'
+    )
+
+    api.save()
+
     return
 
 
