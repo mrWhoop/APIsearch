@@ -4548,6 +4548,380 @@ def populate_database():
 
     api.save()
 
+    # Development TODO
+
+    # Dictionaries
+
+    # ----------------
+    # Lingua Robot
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Lingua Robot',
+        description="English dictionary API providing an access to data of over 800 000 English lexical entries, such as words, phrasal verbs, multi-word expressions.",
+        base_url='https://lingua-robot.p.rapidapi.com/language/v1/entries/en',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://linguarobot.docs.apiary.io/',
+        category='Dictionaries'
+    )
+
+    api.save()
+
+    # ----------------
+    # Merriam-Webster
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Merriam-Webster',
+        description="The Merriam-Webster Dictionary API gives developers access to a comprehensive resource of dictionary and thesaurus content as well as specialized medical, Spanish, ESL, and student-friendly vocabulary. Make your applications better by integrating our authoritative definitions, etymologies, audio pronunciations, synonyms and antonyms, and more. Our robust API empowers developers to enhance word games and create educational, language learning, and other word-related applications for the digital environment. We look forward to seeing all of the new, innovative products powered by Merriam-Webster's trusted references.",
+        base_url='https://www.dictionaryapi.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://dictionaryapi.com/',
+        category='Dictionaries'
+    )
+
+    api.save()
+
+    # ----------------
+    # Oxford
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Oxford Dictionaries',
+        description="Oxford Dictionaries is at the forefront of lexical research and our products will help you succeed whether you are building a game, learning application, or next-generation speech and text technology",
+        base_url='https://od-api-sandbox.oxforddictionaries.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=False,
+        docs='https://developer.oxforddictionaries.com/documentation',
+        category='Dictionaries'
+    )
+
+    api.save()
+
+    # ----------------
+    # Wordnik
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Wordnik',
+        description="Request definitions, example sentences, spelling suggestions, synonyms and antonyms (and other related words), word phrases, pronunciations, random words, words of the day, and much more.",
+        base_url='http://api.wordnik.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://developer.wordnik.com/docs',
+        category='Dictionaries'
+    )
+
+    api.save()
+
+    # ----------------
+    # Words
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='WORDSAPI',
+        description="Use it to find definitions for more than 150,000 words. You can find synonyms, antonyms, or similar words. Words API includes hierarchical information.",
+        base_url='https://wordsapiv1.p.mashape.com/words/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.wordsapi.com/docs/',
+        category='Dictionaries'
+    )
+
+    api.save()
+
+    # Disasters
+
+    # ----------------
+    # USGS
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='USGS',
+        description="This is an implementation of the FDSN Event Web Service Specification, and allows custom searches for earthquake information using a variety of parameters. Please note that automated applications should use Real-time GeoJSON Feeds for displaying earthquake information whenever possible, as they will have the best performance and availability for that type of information.",
+        base_url='https://earthquake.usgs.gov/fdsnws/event/1/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://earthquake.usgs.gov/fdsnws/event/1/',
+        category='Disasters'
+    )
+
+    api.save()
+
+    # ----------------
+    # RWLabs
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ReliefWeb API',
+        description="The ReliefWeb API was originally built to power a mobile/ low-bandwidth version of the ReliefWeb website. Enhancements and a public release provided access to ReliefWeb's curated and continuously updated data archive. It's now used to serve much of the main site, content on other OCHA sites, and third party apps. All the content of ReliefWeb is available through its API. The API aligns with current API best-practices, and is intended to be friendly to developers, as well as machines. It is publicly accessible using HTTP requests and returns JSON data.",
+        base_url='https://api.reliefweb.int/v1/reports',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://apidoc.reliefweb.int/',
+        category='Disasters'
+    )
+
+    api.save()
+
+    # ----------------
+    # PredictHQ
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='PredictHQ',
+        description="Get up and running with the PredictHQ APIs. Explore our API Endpoints, API Guides, Data Science Guides and more.",
+        base_url='https://api.predicthq.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://api.predicthq.com/docs/',
+        category='Disasters'
+    )
+
+    api.save()
+
+    # ----------------
+    # Ambee
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ambee',
+        description="Safeguard your business against disasters with natural disasters API. Ambee’s natural disasters API offers real-time data on disasters such as earthquakes, cyclones, floods, volcanoes, droughts, and forest fires. Fortify your business outcomes from their impact by integrating this API today.",
+        base_url='https://api.ambeedata.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.ambeedata.com/',
+        category='Disasters'
+    )
+
+    api.save()
+
+    # Documents & Productivity TODO
+
+    # Education
+
+    # ----------------
+    # Current Affairs
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Current Affairs Of India',
+        description="This API will provides you with educational information and to help you compete in competative exams.",
+        base_url='https://current-affairs-of-india.p.rapidapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://rapidapi.com/malaithiru370/api/current-affairs-of-india',
+        category='Education'
+    )
+
+    api.save()
+
+    # ----------------
+    # NationNode
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NationNode',
+        description="Empowering Your Apps with Global Knowledge. Effortlessly access accurate, country-specific data to power your apps. From population stats to currency details, our free API delivers it all—fast, reliable, and always up-to-date.",
+        base_url='https://countries-api-abhishek.vercel.app',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://github.com/Abhishekkjainn/countriesAPI/blob/main/README.md',
+        category='Education'
+    )
+
+    api.save()
+
+    # ----------------
+    # Secrets-APi
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Secrets API',
+        description="Welcome to the Secrets API. This API allows you to manage and retrieve secrets anonymously.",
+        base_url='https://secrets-api.appbrewery.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='Basic',
+        https=True,
+        cors=None,
+        docs='https://secrets-api.appbrewery.com/',
+        category='Education'
+    )
+
+    api.save()
+
+    # Environment
+
+
+
+    # Events
+
+    # Finance
+
+    # Food & Drink
+
+    # Fraud Prevention
+
+    # Games & Comics
+
+    # Geocoding
+
+    # Government
+
+    # Health
+
+    # Jobs
+
+    # Machine Learning
+
+    # Music
+
+    # News
+
+    # Open Data
+
+    # Open Source Projects
+
+    # Patent
+
+    # Personality
+
+    # Photography
+
+    # Science & Math
+
+    # Security
+
+    # Shopping
+
+    # Social
+
+    # Sports & Fitness
+
+    # Test Data
+
+    # Text Analysis
+
+    # Tracking
+
+    # Transportation
+
+    # URL Shorteners
+
+    # Vehicle
+
+    # Video
+
+    # Weather
+
     return
 
 
