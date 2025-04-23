@@ -5168,27 +5168,77 @@ def populate_database():
 
     api.save()
 
-    # Games & Comics
+    # Games & Comics TODO
 
-    # Geocoding
+    # Geocoding TODO
 
-    # Government
+    # Government TODO
 
-    # Health
+    # Health TODO
 
-    # Jobs
+    # Jobs TODO
 
-    # Machine Learning
+    # Machine Learning TODO
 
-    # Music
+    # Music TODO
 
-    # News
+    # News TODO
 
-    # Open Data
+    # Open Data TODO
 
-    # Open Source Projects
+    # Open Source Projects TODO
 
     # Patent
+
+    # ----------------
+    # EPO
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='European Patent Offce',
+        description="Open Patent Services (OPS) is a web service which provides access to the EPO's raw data via a standardised XML interface. It does this using RESTful architecture. OPS data is extracted from the EPO's bibliographic, worldwide legal status, full-text and image databases. It is therefore from the same sources as the Espacenet and European Patent Register data.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.epo.org/',
+        category='Patent'
+    )
+
+    api.save()
+
+    # ----------------
+    # USPTO
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='United States Patent and Trademark Office',
+        description="The United States Patent and Trademark Office (USPTO) is the federal agency under the Department of Commerce and is responsible for granting U.S. patents and registering trademarks. Our mission is to drive U.S. innovation and global competitiveness for the benefit of all Americans.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.uspto.gov/learning-and-resources/data-and-statistics',
+        category='Patent'
+    )
+
+    api.save()
 
     # Personality
 
