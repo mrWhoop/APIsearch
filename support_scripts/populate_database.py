@@ -4860,9 +4860,232 @@ def populate_database():
 
     # Environment
 
+    # ----------------
+    # AirVisual
+    # ---------------
 
+    endpoints = None
+
+    api = Api(
+        name='IQAir',
+        description="AirVisual platform API. Unlock the power of real-time air quality data with IQAir's AirVisual platform API. Seamlessly integrate global air pollution insights into your apps, websites, or IoT platforms to deliver the most accurate information.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs=None,
+        category='Environment'
+    )
+
+    api.save()
+
+    # ----------------
+    # OpenAQ
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='OpenAQ',
+        description="The OpenAQ API provides open access to global air quality data, following REST principles with resource-oriented URLs, standard HTTP response codes, and JSON-formatted responses. OpenAQ focuses on criteria air pollutants, primarily aggregating PM2.5, PM10, SO2, NO2, CO, O3, BC, relative humidity and temperature measurement data. For a limited set of locations, we have data for PM1, PM4, CO2, NO, NOx, CH4 & UFP.",
+        base_url='https://api.openaq.org/v3/locations',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.openaq.org/using-the-api/quick-start',
+        category='Environment'
+    )
+
+    api.save()
+
+    # ----------------
+    # AQICN
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Air Quality Programmatic APIs',
+        description="The JSON API can be used for advanced programmatic integration: Access to more than 11000 station-level and 1000 city-level data, Geo-location query (based on latitude/longitude or IP address), Individual AQI for all pollutants (PM2.5, PM10, NO2, CO, SO2, Ozone), Station name and coordinates, Originating EPA name and link, Current weather conditions, Stations within a map lat/lng bounds, Search stations by name, Air Quality forecast (for 3~8 days)",
+        base_url='http://api.waqi.info',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://aqicn.org/json-api/doc/',
+        category='Environment'
+    )
+
+    api.save()
+
+    # ----------------
+    # PVWatts
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='PVWatts',
+        description="PVWatts® Version 8 is is the current version of the PVWatts API. Updates from Version 6 include a bifacial module option, a new input for monthly irradiance losses, new inputs for specifying albedo, and updates to the photovoltaic module, inverter, and thermal effects models to use more detailed and industry-accepted algorithms. PVWatts V8 also updates the weather data to 2020 TMY data from the NREL National Solar Radiation Database (NSRDB) for locations covered by the database. (The NSRDB weather data used in PVWatts V6 is from around 2015.) This update provides production estimates based on the latest, state-of-the art models from NREL that may differ from the V6 estimates, depending on the location and inputs. From a coding perspective, PVWatts V8 replaces the pvwattsv5 compute module with pvwattsv8 so that the PVWatts Calculator, web API, and implementation of PVWatts in the System Advisor Model (SAM) all use the same underlying model.",
+        base_url='https://developer.nrel.gov/api/pvwatts',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.nrel.gov/docs/solar/pvwatts/v8/',
+        category='Environment'
+    )
+
+    api.save()
+
+    # ----------------
+    # UK Carbon Intensity
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Carbon Intensity API',
+        description="National Energy System Operator’s Carbon Intensity API provides an indicative trend of regional carbon intensity of the electricity system in Great Britain (GB) up to 2 days ahead of real-time. It provides programmatic and timely access to both forecast and estimated carbon intensity data. The Carbon Intensity forecast includes CO2 emissions related to electricity generation only. The includes emissions from all large metered power stations, interconnector imports, transmission and distribution losses, and accounts for national electricity demand, embedded wind and solar generation.",
+        base_url='https://api.carbonintensity.org.uk',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://carbon-intensity.github.io/api-definitions/#carbon-intensity-api-v2-0-0',
+        category='Environment'
+    )
+
+    api.save()
+
+    # ----------------
+    # NOAA Climate Data
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NOAA Climate Data',
+        description="NCDC's Climate Data Online (CDO) offers web services that provide access to current data. This API is for developers looking to create their own scripts or programs that use the CDO database of weather and climate data. An access token is required to use the API, and each token will be limited to five requests per second and 10,000 requests per day.",
+        base_url='https://www.ncei.noaa.gov/cdo-web/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.ncdc.noaa.gov/cdo-web/webservices/v2',
+        category='Environment'
+    )
+
+    api.save()
+
+    # ----------------
+    # WeatherStack
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Weatherstack',
+        description="The weatherstack API was built to deliver accurate weather data for any application and use case, from real-time and historical weather information all the way to 14-day weather forecasts, supporting all major programming languages. Our straightforward API design will make it easy to use the API — continue reading below to get started.",
+        base_url='https://api.weatherstack.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://weatherstack.com/documentation',
+        category='Environment'
+    )
+
+    api.save()
 
     # Events
+
+    # ----------------
+    # Ticketmaster
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Ticketmaster',
+        description="The Real Backstage Pass to Live Event Tap into the Ticketmaster open developer network which gives you the flexibility and scale to bring unforgettable live events to fans. It's our technology - your way.",
+        base_url='https://app.ticketmaster.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.ticketmaster.com/products-and-docs/apis/getting-started/',
+        category='Events'
+    )
+
+    api.save()
+
+    # ----------------
+    # Songkick
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Songkick',
+        description="The Songkick API gives you easy access to the biggest live music database in the world: over 6 million upcoming and past concerts... and growing every day! Easily add concerts to your website or application. Use of the Songkick API will be subject to the standard terms of our partnership agreement and a license fee.",
+        base_url='https://api.songkick.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.songkick.com/developer/getting-started',
+        category='Events'
+    )
+
+    api.save()
 
     # Finance
 
