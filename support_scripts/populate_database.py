@@ -5087,11 +5087,86 @@ def populate_database():
 
     api.save()
 
-    # Finance
+    # Finance TODO
 
-    # Food & Drink
+    # Food & Drink TODO
 
     # Fraud Prevention
+
+    # ----------------
+    # FraudLabs Pro
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='FraudLabs Pro',
+        description="Screen an order transaction for payment fraud. This REST API will detect all possibles fraud traits based on the input parameters supplied. The more input parameter supplied, the higher accuracy of fraud detection. Protect your online business by signing up for a FREE license.",
+        base_url='https://api.fraudlabspro.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.fraudlabspro.com/developer/api/screen-order',
+        category='Fraud Prevention'
+    )
+
+    api.save()
+
+    # ----------------
+    # Jumio
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Jumio',
+        description="Jumio provides a variety of services for verifying the identities of your online users, as well as the Jumio Portal where you can configure and manage your transactions with Jumio. To get started:",
+        base_url='https://account.amer-1.jumio.ai',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.jumio.com/production/Content/Resources/SwaggerUI/dist/indexAccount.html',
+        category='Fraud Prevention'
+    )
+
+    api.save()
+
+    # ----------------
+    # Onfido
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='onfido',
+        description="Our mission is to make digital identity simple for everyone. We power open, secure, and inclusive relationships between businesses and their customers around the world. ",
+        base_url='https://api.eu.onfido.com/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://documentation.onfido.com/api/latest/',
+        category='Fraud Prevention'
+    )
+
+    api.save()
 
     # Games & Comics
 
