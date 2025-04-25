@@ -5381,13 +5381,263 @@ def populate_database():
 
     # Test Data TODO
 
-    # Text Analysis
+    # Text Analysis TODO
 
     # Tracking
 
-    # Transportation
+    # ---------------
+    # Let's Count
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Lets Count API',
+        description="This API uses the combination of a namespace and a key to identify a counter. The namespace is a string that identifies the application or service that is using it. This should be something like your domain or company name. The key is a string that identifies the counter within the namespace. This should be something memorable.",
+        base_url='https://letscountapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://letscountapi.com/docs',
+        category='Tracking'
+    )
+
+    api.save()
+
+    # ---------------
+    # Postmon
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Postmon',
+        description="An API to query Brazilian ZIP codes and orders easily, quickly and free",
+        base_url='https://api.postmon.com.br',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://postmon.com.br/',
+        category='Tracking'
+    )
+
+    api.save()
+
+    # ---------------
+    # Sweden
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='PostNord',
+        description="PostNord creates solutions for e-commerce; fulfillment, supply chain, warehousing and a wide range of global delivery solutions. Our goal is to make you successful by providing a smooth cross-border delivery experience to your customers.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://developer.postnord.com/apis/active',
+        category='Tracking'
+    )
+
+    api.save()
+
+    # ---------------
+    # UPS
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='UPS',
+        description="The Power of UPS on Your Digital Platform. Our APIs power the data connections needed to deliver value to customers through e-commerce platforms, supply chain visibility solutions and direct integrations.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.ups.com/catalog?loc=en_US',
+        category='Tracking'
+    )
+
+    api.save()
+
+    # ---------------
+    # WhatPulse
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='WhatPulse',
+        description="The Web API can be used to retrieve raw data from WhatPulse on users, teams and pulses. You can use this API to show statistics on your website, blog or use it for your own applications. In the following examples, we will assume that you want to display your statistics on a website. We will also assume that you have some working knowledge of web development.",
+        base_url='https://api.whatpulse.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://whatpulse.org/help/api/web-api',
+        category='Tracking'
+    )
+
+    api.save()
+
+    # Transportation TODO
 
     # URL Shorteners
+
+    # ---------------
+    # Bitly
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='bitly',
+        description="Bitly is the most widely trusted link management platform in the world. By using the Bitly API, you will exercise the full power of your links through automated link customization, mobile deep linking, and click analytics. While shortening links is Bitly’s most basic functionality, our customers create and distribute links at scale via integrated apps and SMS by utilizing the Bitly API.",
+        base_url='https://dev.bitly.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://dev.bitly.com/api-reference',
+        category='URL Shorteners'
+    )
+
+    api.save()
+
+    # ---------------
+    # CleanURI
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='cleanuri.com',
+        description="Given a long URL, returns a short link.",
+        base_url='https://cleanuri.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://cleanuri.com/docs',
+        category='URL Shorteners'
+    )
+
+    api.save()
+
+    # ---------------
+    # Rebrandly
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Rebrandly',
+        description="Smart links, better results. Maximize every digital connection with Rebrandly's advanced tracking, branded short URLs, and AI-powered insights.",
+        base_url='https://api.rebrandly.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developers.rebrandly.com/docs/get-started',
+        category='URL Shorteners'
+    )
+
+    api.save()
+
+    # ---------------
+    # T.LY
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='T.LY',
+        description="The World's Shortest Link Shortener service to track, brand, and share short links. Create short links to any website including Google, Spotify, TikTok, Instagram, Facebook, Amazon, YouTube, Twitter, WhatsApp, LinkedIn and more!  ",
+        base_url='https://api.t.ly',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://t.ly/docs/',
+        category='URL Shorteners'
+    )
+
+    api.save()
+
+    # ---------------
+    # Urlix
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='URLIX',
+        description="Your free and unlimited URL shortener service. Easily shorten long URLs into compact, shareable links and track redirection statistics — all in one place. Shorten long URLs to a simpler format. Customize the slug to create memorable links. Secure your links with password protection and set expiration dates. Generate QR codes for each URL for quick sharing. Monitor redirection statistics directly in your dashboard. Use advanced filters to manage and search your link. Access your API key to integrate our service into your apps (no usage limits)",
+        base_url='https://urlix.me/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://app.urlix.me/api',
+        category='URL Shorteners'
+    )
+
+    api.save()
 
     # Vehicle
 
