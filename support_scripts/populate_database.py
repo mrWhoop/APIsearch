@@ -5641,6 +5641,156 @@ def populate_database():
 
     # Vehicle
 
+    # ---------------
+    # Brazilian Vehicles and Prices
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='FIPE API',
+        description="Vehicles information from Fundação Instituto de Pesquisas Econômicas - Fipe",
+        base_url='https://parallelum.com.br/fipe/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://deividfortuna.github.io/fipe/',
+        category='Vehicle'
+    )
+
+    api.save()
+
+    # ---------------
+    # CarsXE API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CarsEX',
+        description="Rev up your business with real-time, comprehensive vehicle data. The most comprehensive and accessible vehicle data API.",
+        base_url='https://api.carsxe.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://api.carsxe.com/docs',
+        category='Vehicle'
+    )
+
+    api.save()
+
+    # ---------------
+    # Kelley Blue Book
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Kelley Blue Book',
+        description="Get all the vehicle data you need to build dynamic advertisements at lightning fast speeds. Data is fully managed for you. You don’t have to worry about applying data updates to stay in sync. Every week data is updated automatically without any changes required from you. Vehicle info, pricing, configuration, plus much more. Be empowered to build dynamic advertisements utilizing all the data we have to offer.",
+        base_url=None,
+        api_keywords=['KBB', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='http://developer.kbb.com/#!/data/99-Swagger',
+        category='Vehicle'
+    )
+
+    api.save()
+
+    # ---------------
+    # Mercedes-Benz
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Mercedes-Benz',
+        description="Telematics data, remotely access vehicle functions, car configurator, locate service dealers",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=False,
+        docs='https://developer.mercedes-benz.com/products',
+        category='Vehicle'
+    )
+
+    api.save()
+
+    # ---------------
+    # NHTSA
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NHTSA',
+        description="The NHTSA Product Information Catalog Vehicle Listing (vPIC) Application Programming Interface (API) provides different ways to gather information on Vehicles and their specifications. The vPIC Dataset is populated using the information submitted by the Motor Vehicle manufacturers through the 565 submittals. All the information on how a VIN is assigned by the manufacturer is captured in this catalog and used to decode a VIN and extract vehicle information.",
+        base_url='https://vpic.nhtsa.dot.gov/api/vehicles',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://vpic.nhtsa.dot.gov/api/',
+        category='Vehicle'
+    )
+
+    api.save()
+
+    # ---------------
+    # Smartcar
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='smartcar',
+        description="Smartcar is the only car API built with the highest standard for privacy and security. We allow your application to communicate with millions of vehicles easily and securely while giving vehicle owners the choice of how they share their data.",
+        base_url='https://api.smartcar.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=True,
+        docs='https://smartcar.com/docs/api-reference/intro',
+        category='Vehicle'
+    )
+
+    api.save()
+
     # Video
 
     # Weather
