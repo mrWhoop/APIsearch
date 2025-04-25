@@ -5791,9 +5791,332 @@ def populate_database():
 
     api.save()
 
-    # Video
+    # Video TODO
 
     # Weather
+
+    # ---------------
+    # 7Timer!
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='7Timer!',
+        description="7Timer! is a series of web-based meteorological forecast products, mainly derived from the NOAA/NCEP-based numeric weather model, the Global Forecast System (GFS). 7Timer! was firstly established in July 2005 as an exploration product under supported of the National Astronomical Observatories of China and had been largely renovated in 2008 and 2011. Currently it is supported by the Shanghai Astronomical Observatory of Chinese Academy of Sciences.",
+        base_url='http://www.7timer.info/bin/api.pl',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://www.7timer.info/doc.php',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # APIXU
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='weatherstack',
+        description="Real-Time & Historical World Weather Data API Retrieve instant, accurate weather information for any location in the world in lightweight JSON format",
+        base_url='https://api.weatherstack.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://weatherstack.com/documentation',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # DWD API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Deutscher Wetterdienst',
+        description="API des Deutschen Wetterdienstes (DWD) aus der DWD App. Neben unterschiedlichen Wetterwarnungen (s.u.) lassen sich unter /dwd.api.proxy.bund.dev/v30/stationOverviewExtended nach Angabe des Parameters stationIDs (z.B. 'G005') auch die Wetterdaten ausgewählter Wetterstationen anfordern (wobei die sog. 'Stationskennung' des DWD anzugeben ist).",
+        base_url='https://app-prod-ws.warnwetter.de',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://dwd.api.bund.dev/',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # Meteoblue
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='meteoblue',
+        description="Weather APIs. Instantly integrate weather data and make complex decisions easy",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://content.meteoblue.com/en/business-solutions/weather-apis',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # Meteorologisk Institutt
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='MET Weather API',
+        description="The MET Weather API is an interface to a selection of data produced by MET Norway. The data are freely available for use under a Creative Commons license, including commercial use.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://api.met.no/weatherapi',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # NOAA Climate Data
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NOAA Climate Data',
+        description="Climate Data Online (CDO) provides free access to NCDC's archive of global historical weather and climate data in addition to station history information. These data include quality controlled daily, monthly, seasonal, and yearly measurements of temperature, precipitation, wind, and degree days as well as radar data and 30-year Climate Normals. Customers can also order most of these data as certified hard copies for legal use.",
+        base_url='https://www.ncei.noaa.gov/cdo-web/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.ncdc.noaa.gov/cdo-web/webservices',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # ODWeather
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ODWeather',
+        description="This is the API for the ODWeather service including real time and forecast information",
+        base_url='https://api.oceandrivers.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=True,
+        docs='https://api.oceandrivers.com/static/docs.html',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # Open-Meteo
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Open-Meteo',
+        description="Free Weather API Open-Meteo is an open-source weather API and offers free access for non-commercial use. No API key required. Open-Meteo partners with national weather services to bring you open data with high resolution, ranging from 1 to 11 kilometers. Our powerful APIs intelligently select the most suitable weather models for your specific location, ensuring accurate and reliable forecasts.",
+        base_url='https://api.open-meteo.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://open-meteo.com/en/docs',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # OpenUV
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='OpenUV',
+        description="Global Real-Time UV Index JSON API. 100% Free Real-Time UV Index JSON API for inspiring Devs, Innovators and Smart Home Enthusiasts",
+        base_url='https://api.openuv.io/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.openuv.io/',
+        category='Weather'
+    )
+
+    # ---------------
+    # OpenWeatherMap
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='OpenWeather',
+        description="Make an API call to receive access to the various data: Current weather and forecasts: minute forecast for 1 hour, hourly forecast for 48 hoursm, daily forecast for 8 days, and government weather alerts. Weather data for any timestamp for 46+ years historical archive and 4 days ahead forecast. Daily aggregation of weather data for 46+ years archive and 1.5 years ahead forecast. Weather overview with a human-readable weather summary for today and tomorrow's forecast",
+        base_url='https://api.openweathermap.org/data',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://openweathermap.org/api/one-call-3',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # Storm Glass
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='The Storm Glass API',
+        description="Global Weather API. Weather forecasts & historical data from the world’s most trusted meteorological institutions in one single API. Coordinates In – Weather Data Out. The stormglass.io API provides high-resolution forecasts for up to 10 days ahead as well as historical data. Marine data including tide is available for all oceans and seas world wide.",
+        base_url='https://api.stormglass.io/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://docs.stormglass.io/',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # Weatherbit
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Weatherbit',
+        description="With our API you can retrieve current weather observations from over 50,000 live weather stations, and historical weather data for the past 20+ years sourced from stations, doppler radar, satellite, and atmospheric re-analysis products. As well as highly localized weather forecasts for any point on the globe backed by the world's most trusted weather models, and machine learning.",
+        base_url='https://api.weatherbit.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.weatherbit.io/api',
+        category='Weather'
+    )
+
+    api.save()
+
+    # ---------------
+    # National Weather Service API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='National Weather Service API',
+        description="The National Weather Service (NWS) API allows developers access to critical forecasts, alerts, and observations, along with other weather data. The API was designed with a cache-friendly approach that expires content based upon the information life cycle. The API is based upon of JSON-LD to promote machine data discovery.",
+        base_url='https://api.weather.gov',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.weather.gov/documentation/services-web-api',
+        category='Weather'
+    )
+
+    api.save()
 
     return
 
