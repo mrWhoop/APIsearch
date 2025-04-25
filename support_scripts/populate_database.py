@@ -5186,7 +5186,82 @@ def populate_database():
 
     # Open Data TODO
 
-    # Open Source Projects TODO
+    # Open Source Projects
+
+    # ---------------
+    # Drupal.org
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Drupal.org',
+        description="Create Ambitious Digital Experiences. Drupal is a fully composable CMS that allows you to design a digital experience to your vision.",
+        base_url='https://www.drupal.org/api-d7',
+        api_keywords=['Drupal', 'CMS'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.drupal.org/drupalorg/docs/apis/rest-and-other-apis',
+        category='Open Source Projects'
+    )
+
+    api.save()
+
+    # ---------------
+    # Evil Insult Generator
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Evil Insult Generator',
+        description="Evil Insults",
+        base_url='https://evilinsult.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://evilinsult.com/api',
+        category='Open Source Projects'
+    )
+
+    api.save()
+
+    # ---------------
+    # Libraries.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Libraries.io',
+        description="Libraries.io is a free service that collects publicly available open source package information scraped from the internet. With it you can search 9.96M packages by license, language, or explore new, trending, or popular packages.",
+        base_url='https://libraries.io/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://libraries.io/api',
+        category='Open Source Projects'
+    )
+
+    api.save()
 
     # Patent
 
@@ -5240,21 +5315,71 @@ def populate_database():
 
     api.save()
 
-    # Personality
+    # Personality TODO
 
-    # Photography
+    # Photography TODO
 
-    # Science & Math
+    # Science & Math TODO
 
-    # Security
+    # Security TODO
 
     # Shopping
 
-    # Social
+    # ---------------
+    # Best Buy
+    # ---------------
 
-    # Sports & Fitness
+    endpoints = None
 
-    # Test Data
+    api = Api(
+        name='Best Buy',
+        description="Welcome to the Best Buy Developer API site! Whether you’re an API pro, a beginning developer or a Best Buy partner, our extensive API catalog is waiting for your imagination. Our API suite allows you to query Products, Stores and much more. Come on in to explore our data, browse descriptions of the available attributes and see examples of working requests and responses.",
+        base_url='https://api.bestbuy.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://bestbuyapis.github.io/api-documentation/',
+        category='Shopping'
+    )
+
+    api.save()
+
+    # ---------------
+    # eBay
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='eBay',
+        description="We connect people and build communities to create economic opportunity for all. At eBay, we create pathways to connect millions of sellers and buyers in more than 190 markets around the world. Our technology empowers our customers, providing everyone the opportunity to grow and thrive — no matter who they are or where they are in the world. And the ripple effect of our work creates waves of change for our customers, our company, our communities and our planet.",
+        base_url='https://api.ebay.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developer.ebay.com/',
+        category='Shopping'
+    )
+
+    api.save()
+
+    # Social TODO
+
+    # Sports & Fitness TODO
+
+    # Test Data TODO
 
     # Text Analysis
 
@@ -5273,7 +5398,7 @@ def populate_database():
     return
 
 
-    #----------------
+    # ---------------
     # Cats
     # ---------------
 
