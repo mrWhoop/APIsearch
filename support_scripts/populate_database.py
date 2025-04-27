@@ -5424,7 +5424,205 @@ def populate_database():
 
     # Government TODO
 
-    # Health TODO
+    # Health
+
+    # ---------------
+    # Healthcare.gov
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Healthcare.gov',
+        description="Educational content about the US Health Insurance Marketplace",
+        base_url='https://www.healthcare.gov',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.healthcare.gov/developers/',
+        category='Health'
+    )
+
+    api.save()
+
+    # ---------------
+    # ICD-10 Codes
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ICD-10-CM',
+        description="ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification) is a medical coding system for classifying diagnoses and reasons for visits in U.S. health care settings.",
+        base_url='https://clinicaltables.nlm.nih.gov/api/icd10cm/v3/search',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html',
+        category='Health'
+    )
+
+    api.save()
+
+    # ---------------
+    # Lexigram
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Lexigram',
+        description="Lexigram provides users with a simple, easy-to-use interface for extracting targeted information from the patient record while preserving the rich contextual data that doctors work so hard to capture.",
+        base_url='https://app.lexigram.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs=,
+        category='Health'
+    )
+
+    api.save()
+
+    # ---------------
+    # Makeup
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Makeup API',
+        description="Makeup Information",
+        base_url='http://makeup-api.herokuapp.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='http://makeup-api.herokuapp.com/',
+        category='Health'
+    )
+
+    # ---------------
+    # Medicare
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CMS.gov',
+        description="CMS is the federal agency that provides health coverage to more than 160 million through Medicare, Medicaid, the Children's Health Insurance Program, and the Health Insurance Marketplace. CMS works in partnership with the entire health care community to improve quality, equity and outcomes in the health care system.",
+        base_url='https://data.cms.gov',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://data.cms.gov/provider-data/docs',
+        category='Health'
+    )
+
+    api.save()
+
+    # ---------------
+    # NPPES
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NPPES NPI Registry',
+        description="National Plan & Provider Enumeration System, info on healthcare providers registered in US. NPI Registry Public Search is a free directory of all active National Provider Identifier (NPI) records. Healthcare providers acquire their unique 10-digit NPIs to identify themselves in a standard way throughout their industry.",
+        base_url='https://npiregistry.cms.hhs.gov/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://npiregistry.cms.hhs.gov/api-page',
+        category='Health'
+    )
+
+    api.save()
+
+    # ---------------
+    # Nutritionix
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Nutritionix',
+        description="Our goal is to make it easier to understand what you eat. Through our interactive nutrition tools and world-renowned nutrition database, we help millions of consumers understand nutrition every single day.",
+        base_url='https://api.uat.syndigo.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docx.syndigo.com/developers/docs/nutritionix-api-guide',
+        category='Health'
+    )
+
+    api.save()
+
+    # ---------------
+    # openFDA
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='openFDA',
+        description="openFDA is an Elasticsearch-based API that serves public FDA data about nouns like drugs, devices, and foods. Not all data in openFDA has been validated for clinical or production use. And because openFDA only serves publicly available data, it does not contain data with Personally Identifiable Information about patients or other sensitive information.",
+        base_url='https://api.fda.gov',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://open.fda.gov/apis/',
+        category='Health'
+    )
+
+    api.save()
 
     # Jobs
 
