@@ -5089,11 +5089,261 @@ def populate_database():
 
     # Finance TODO
 
-    # Food & Drink TODO
+    # Food & Drink
+
+    # ---------------
+    # Edamam
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Edamam',
+        description="Leading provider of nutrition data and analytics. Get free access to a database with close to 900,000 foods and over 680,000 unique UPC codes. License over 180,000 full recipes and nutrition for over 2.3 million web recipes. Search over 2.3 million recipes by diets, calories and nutrient ranges. Personalized meal recommendations using 28 nutrients and 40 diets/allergies. We track several hundred thousand recipes from over 500 sources to build live trends of what is being cooked, what is popular and what is new.",
+        base_url='https://api.edamam.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.edamam.com/edamam-docs-nutrition-api',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # Open Brewery DB
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Open Brewery DB',
+        description="Open Brewery DB is a free dataset and API with public information on breweries, cideries, brewpubs, and bottleshops. The goal of Open Brewery DB is to maintain an open-source, community-driven dataset and provide a public API for brewery-related data.",
+        base_url='https://api.openbrewerydb.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://www.openbrewerydb.org/documentation',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # PunkAPI
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='PunkAPI',
+        description="A FastAPI-based project that serves as a digital archive of BrewDog's DIY Dog beers. It provides an API to access detailed information about each beer, including its recipe and associated image. The catalog data was initially extracted from a PDF document and transformed into JSON and PNG files. These files are placed in data and img folders according to their sequential number within the catalog. So, PunkAPI offers an interface to interact with this data.",
+        base_url='https://punkapi.online',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://github.com/alxiw/punkapi',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # Spoonacular
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='spoonacular',
+        description="Our knowledge engineers spent years crafting our complex food ontology, which allows us to understand the relationships between ingredients, recipes, nutrition, allergens, and more.",
+        base_url='https://api.spoonacular.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://spoonacular.com/food-api/docs',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # The Report of the Week
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='The Report of the Week',
+        description="This API returns all reviews done on The Report of the Week youtube channel",
+        base_url='https://www.thereportoftheweek.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/andyklimczak/TheReportOfTheWeek-API',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # TheCocktailDB
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='TheCocktailDB',
+        description="An open, crowd-sourced database of drinks and cocktails from around the world. We also offer a free cocktail API for anyone wanting to use it.",
+        base_url='www.thecocktaildb.com/api/json',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.thecocktaildb.com/api.php',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # TheMealDB
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='TheMealDB',
+        description="Welcome to TheMealDB: An open, crowd-sourced database of recipes from around the world. We offer a free recipe API for anyone wanting to use it, with additional premium features if required.",
+        base_url='www.themealdb.com/api/json',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.themealdb.com/api.php',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # What’s on the menu?
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='What’s on the menu?',
+        description="There's a lot of data behind The New York Public Library's What's On The Menu?, and here's your chance to explore it. This is built for programmers and power-users, so if you're looking for an easier way to explore the dataset you may want to take a look at our Biweekly data exports, which are in CSV format. However if you're looking to do powerful analysis of historical menu data, this is the tool for you.",
+        base_url='http://api.menus.nypl.org/menus',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://nypl.github.io/menus-api/',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # WhiskyHunter
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='WhiskyHunter',
+        description="Tools For Collectors, Traders & Whisky Lovers! We monitor data from 29 whisky auctions. Our database contains 4488618 past & 19003 records from live auctions. We also keep an eye on major online retailers.",
+        base_url='https://whiskyhunter.net/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://whiskyhunter.net/api/',
+        category='Food & Drink'
+    )
+
+    api.save()
+
+    # ---------------
+    # Zestful
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Zestful',
+        description="Zestful's ingredient parser API turns plain recipe strings into beautiful, structured JSON data. Zestful makes recipe apps smarter about managing ingredients. Zestful transforms ingredients from opaque strings to meaningful data in easy-to-consume JSON format.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://zestfuldata.com/docs',
+        category='Food & Drink'
+    )
+
+    api.save()
 
     # Fraud Prevention
 
-    # ----------------
+    # ---------------
     # FraudLabs Pro
     # ---------------
 
@@ -5176,7 +5426,233 @@ def populate_database():
 
     # Health TODO
 
-    # Jobs TODO
+    # Jobs
+
+    # ---------------
+    # Adzuna
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='adzuna',
+        description="Get the very latest ads and data with Adzuna's API. Get job ads to display on your own website. Use Adzuna's up-to-the-minute employment data to power your own website, reporting and data visualisations.",
+        base_url='https://api.adzuna.com/v1/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.adzuna.com/overview',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # Careerjet
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='careerjet',
+        description="Careerjet is a job search engine designed to make the process of finding a job on the internet easier for the user. It maps the huge selection of job offerings available on the internet in one extensive database by referencing job listings originating from job boards, recruitment agency websites and large specialist recruitment sites. Using a fast and straightforward interface, users can query this database and save themselves the trouble of visiting each site individually. The job offerings themselves are not hosted by Careerjet and users are always redirected to the original job listing. Essentially, Careerjet acts as traffic driver to those sites. Careerjet's job search engine network encompasses over 90 countries, featuring separate interfaces that are translated into 28 languages.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://www.careerjet.com/partners/api/',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # Jobicy
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='JOBICY',
+        description="Seeking to enhance your remote job feed with top-tier opportunities? Discover the power of Jobicy’s public API, RSS and XML feeds! Effortlessly integrate our expansive selection of remote job listings into your platform. Transform your job feed into a gateway of career possibilities!",
+        base_url='https://jobicy.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://jobicy.com/jobs-rss-feed',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # Jobs2Careers
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Jobs2Careers',
+        description=" By becoming a Jobs2Careers Publisher, you are able to add rich job content to your website and monetize your current traffic. You'll be providing a great jobseeker experience, and partnering with one of the largest job aggregators in the world.  There are 3 ways to access our jobs: 1. Job Search API 2. XML Feed 3. Widget ",
+        base_url='http://api.jobs2careers.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='http://api.jobs2careers.com/api/spec.pdf',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # Juju
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Juju',
+        description="Juju smarter job search. Search jobs from sites all over the web!",
+        base_url='http://www.juju.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=False,
+        cors=None,
+        docs='https://www.juju.com/publisher/spec/',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # Reed
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='reed.co.uk',
+        description="Founded in 1995, Reed.co.uk was the first recruitment website offered by a recruitment agency in the UK. Since then, Reed.co.uk has grown to become one of the UK's leading jobs and careers site.",
+        base_url='https://www.reed.co.uk/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.reed.co.uk/developers',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # Search.gov Jobs
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='USAJOBS',
+        description="Find your federal government job.",
+        base_url='https://data.usajobs.gov/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://developer.usajobs.gov/api-reference/',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # The Muse
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='The Muse',
+        description="The Muse is the go-to destination for the next-generation workforce to research companies and careers. More than 70 million visitors each year trust our two platforms, The Muse and Fairygodboss, to help them win at work, from professional advancement and skills-building techniques to finding a new job. We believe great ideas can come from anywhere, and support a collaborative environment with open participation from people who have different ideas, experiences, and perspectives. It’s our diverse team that makes The Muse an interesting and innovative place to work.",
+        base_url='https://www.themuse.com/api/public',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.themuse.com/developers/api/v2',
+        category='Jobs'
+    )
+
+    api.save()
+
+    # ---------------
+    # Upwork
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Upwork',
+        description="Connecting clients in need to freelancers who deliver. Integrate Upwork functionalities to your web-based or mobile apps. Upwork Developers Site offers you access to our web services to build your own applications and to integrate our features and workflow to your dashboards, websites and management systems.",
+        base_url='https://api.upwork.com/graphql',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://www.upwork.com/developer/documentation/graphql/api/docs/index.html',
+        category='Jobs',
+        type='GraphQL'
+    )
+
+    api.save()
 
     # Machine Learning TODO
 
