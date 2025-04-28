@@ -7655,7 +7655,180 @@ def populate_database():
 
     # Test Data TODO
 
-    # Text Analysis TODO
+    # Text Analysis
+
+    # ---------------
+    # Aylien Text Analysis
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Aylien Text Analysis',
+        description="Welcome to Quantexa News API — the most powerful way to aggregate, filter, and integrate global news data into your apps and models.",
+        base_url='https://api.aylien.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.aylien.com/newsapi/v6/getting-started',
+        category='Text Analysis'
+    )
+
+    api.save()
+
+    # ---------------
+    # Cloudmersive Natural Language Processing
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Cloudmersive',
+        description=" Powerful Natural Language Processing APIs. The most powerful and cost-effective NLP AI APIs, continuously updated.",
+        base_url='https://api.cloudmersive.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://api.cloudmersive.com/docs/convert.asp',
+        category='Text Analysis'
+    )
+
+    api.save()
+
+    # ---------------
+    # Detect Language
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Detect Language API',
+        description="The language detection web service analyzes the provided text and returns the identified language code along with a corresponding score. Detects 164 languages. High accuracy - handles long texts, short phrases and single words. Low latency worldwide. Supports batching. Ensures security and privacy. Free and premium plans.",
+        base_url='https://ws.detectlanguage.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://detectlanguage.com/documentation',
+        category='Text Analysis'
+    )
+
+    api.save()
+
+    # ---------------
+    # Google Cloud Natural
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Cloud Natural Language',
+        description="The Cloud Natural Language API provides natural language understanding technologies to developers, including sentiment analysis, entity analysis, entity sentiment analysis, content classification, and syntax analysis. This API is part of the larger Cloud Machine Learning API family.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://cloud.google.com/natural-language/docs/',
+        category='Text Analysis'
+    )
+
+    api.save()
+
+    # ---------------
+    # Semantira
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Semantria',
+        description="In this documentation you will find comprehensive guides and documentation to help you start working with the Semantria API. The Semantria API is a paid Saas text analytics service from Lexalytics. Contact sales to discuss your use case. Semantria is a fully REST compliant API. You can interact with the API via our SDKs or by rolling your own using standard modules such as https://pypi.org/project/requests/2.7.0/ (for Python), or https://square.github.io/okhttp/ (for Java)",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://semantria-docs.lexalytics.com/docs/obtain-your-creds',
+        category='Text Analysis'
+    )
+
+    api.save()
+
+    # ---------------
+    # Spam Hunter
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Spam Hunter',
+        description="Hey there! We're more than just a team – we're a dedicated group of professionals on a mission to combat spam and enhance online security. Our primary objective is to craft powerful yet user-friendly tools that empower individuals to shield themselves from unwanted emails, messages, and various other forms of spam. Leveraging our extensive expertise in data analysis and machine learning, we continuously refine our algorithms to accurately identify and filter out spam content. At our core, we prioritize transparency, openness, and a customer-centric ethos. We're committed to fostering trust and confidence by being forthright about our methods and dedicated to understanding and addressing the needs of our users. Driven by a passion for innovation, we're constantly pushing the boundaries to deliver cutting-edge solutions that set new standards in cybersecurity. Our tools are meticulously crafted with the latest technologies and adhere to industry best practices to ensure maximum effectiveness and reliability. But our journey doesn't end with the development of our products – it extends to providing exceptional support and guidance to our users. We're here every step of the way, ready to assist and empower individuals in navigating the complex landscape of online security. Ultimately, our vision is to cultivate a safer and more secure online environment for all.",
+        base_url='https://backend.spam-hunter.ru/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://spam-hunter.ru/documentation',
+        category='Text Analysis'
+    )
+
+    api.save()
+
+    # ---------------
+    # Yomi
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Yomi',
+        description="Yomi API is a free-to-use Japanese tokenizer and morphological analysis web API. It can take a Japanese text as an input and return a JSON response containing the tokenized text.",
+        base_url='https://yomi.onrender.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://github.com/ookii-tsuki/yomi',
+        category='Text Analysis'
+    )
 
     # Tracking
 
