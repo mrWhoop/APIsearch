@@ -4779,7 +4779,307 @@ def populate_database():
 
     api.save()
 
-    # Documents & Productivity TODO
+    # Documents & Productivity
+
+    # ---------------
+    # Cloudmersive Document and Data Conversion
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Cloudmersive',
+        description="Document and Data Conversion APIs. Convert files and content between file formats. Convert data between file formats. Instantly.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://cloudmersive.com/convert-api#documentation',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # DynamicDocs
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ADVICEment',
+        description="Generate dynamic PDFs with JSON to PDF API based on LaTeX.",
+        base_url='https://api.advicement.io/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://advicement.io/dynamic-documents-api/documentation/getting-started',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # File.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='file.io',
+        description="Simply upload a file, share the link, and after it is downloaded, the file is completely deleted. For added security, set an expiration on the file and it is deleted within a certain amount of time, even if it was never downloaded. All files are encrypted when stored on our servers.",
+        base_url='https://www.file.io/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.file.io/developers',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # pdfEndpoint
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='pdfEndpoint',
+        description="Effortlessly Convert HTML and URLs to PDF. High-quality output, easy integration, and full control over formatting for all your HTML to PDF needs. All it takes is just a few lines of code and you can customize your output with a variety of options. Check our Documentation to learn how do that.",
+        base_url='https://api.pdfendpoint.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://pdfendpoint.com/docs',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # pdflayer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='pdflayer',
+        description="The pdflayer API was built to provide a quick and seamless way to automate HTML to PDF conversion in any application. Its lightweight RESTful infrastructure is based on an efficient combination of the most powerful PDF rendering engines available, making it the most cost-effective and reliable option for anyone looking to process small or large numbers of documents within short time windows. The pdflayer API comes with a full set of customization functionalities, including document configuration, a series of layout adjustment options, authentication and security, design and branding tweaks, and much more.",
+        base_url='http://api.pdflayer.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://pdflayer.com/documentation',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # PrexView
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='PrexView',
+        description="Create documents programmatically. Transform your data from XML or JSON to high quality, beautiful and readable documents in PDF, HTML, PNG or JPG.",
+        base_url='https://api.prexview.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://prexview.com/docs/',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # RenderPDF.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='RenderPDF.io',
+        description="Cheapest & easiest API to convert HTML to PDF. RenderPDF.io provides developer-friendly APIs to convert HTML to modern PDF 🥰. Leave the boring, hard & tedious tasks to RenderPDF.io. We'll give you the rendered PDF files in no time 😎.",
+        base_url='https://renderpdf.io/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://docs.renderpdf.io/',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # Restpack
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='restpack',
+        description="HTML to PDF API: Simple PDF Conversion API you are looking for. Generate fully structured PDFs with few lines of code.",
+        base_url='https://restpack.io/api/html2pdf',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://restpack.io/html2pdf',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # Todoist
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Todoist',
+        description="Clarity, finally. Join 50+ million professionals who simplify work and life with the world’s #1 to-do list app. Capture tasks at the speed of thought. Achieve mental clarity by sorting tasks into Today, Upcoming, or using custom filters. See only what you need, when you need it. Make the most of your time. Schedule due dates, visualize your week in calendar view, and set recurring tasks with ease. Give your team a shared space to collaborate and stay on top of it all – alongside but separate from your personal tasks and projects.",
+        base_url='https://api.todoist.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://todoist.com/api/v1/docs',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # Vector Express
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Vector Express',
+        description="Free Vector Conversion Convert your vector files for free. We also offer an API!",
+        base_url='https://vector.express/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/vector-express/vectorexpress-api',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # Vertopal
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Vertopal',
+        description="Reliable & High-Performance File Conversion API. Create reliable desktop, mobile, and web applications using our powerful file conversion API.",
+        base_url='https://api.vertopal.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=False,
+        docs='https://www.vertopal.com/en/developer/api/introduction',
+        category='Documents & Productivity'
+    )
+
+    api.save()
+
+    # ---------------
+    # WakaTime
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='WakaTime',
+        description="Dashboards for developers. Code stats, straight from your IDE. Automated time tracking leaderboards for programmers.",
+        base_url='https://api.wakatime.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://wakatime.com/developers',
+        category='Documents & Productivity'
+    )
+
+    api.save()
 
     # Education
 
@@ -5087,7 +5387,257 @@ def populate_database():
 
     api.save()
 
-    # Finance TODO
+    # Finance
+
+    # ---------------
+    # Alpha Vantage
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Alpha Vantage',
+        description="Stock Market Data API for Software Applications.  Realtime & historical stock market data APIs. Options, forex, crypto & other asset classes. 60+ technical & economic indicators. Market news API & sentiments. Global coverage",
+        base_url='https://www.alphavantage.co',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.alphavantage.co/documentation/',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # Barchart OnDemand
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='barchart',
+        description="Barchart features a diverse set of market data APIs that can be easily integrated into your website. Whether you're looking for a small, medium, large or enterprise solution, we'll create a custom package for you that exceeds your expectations. Explore our Market Data APIs below.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.barchart.com/ondemand/api',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # Financial Data
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Financial Data',
+        description="An Outstanding Collection Of Financial Data. Our API provides access to a variety of financial information. You can get end-of-day or intraday market data, examine company financial statements and ratios, access insider trading, institutional trading, or earnings release data. Additionally, you can explore alternative data to uncover unique investment opportunities.",
+        base_url='https://financialdata.net/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://financialdata.net/documentation',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # Financial Modeling Prep
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='FMP',
+        description="Financial data for every need. We provide one of the most accurate financial data available on the market. You can get historical prices, fundamental data, insider transactions, and much more that goes back 30 years in history.",
+        base_url='https://financialmodelingprep.com/stable',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://site.financialmodelingprep.com/developer/docs/stable',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # Fincept Insights
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='FINCEPT',
+        description="Welcome! TLK Industries Insights. Explore Financial Economic Market Trends Worldwide. Unlock Global Financial Insights with TLK Industries. Insight delivers data-driven solutions, helping businesses and individuals make smarter decisions and achieve sustained growth globally.",
+        base_url='',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://insights.fincept.in/',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # Plaid
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Plaid',
+        description="Built to power the world of digital finance. Join the thousands of companies that use Plaid to increase conversion, lower fraud, and grow revenue.",
+        base_url='https://production.plaid.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://plaid.com/docs/',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # Razorpay IFSC
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Razorpay',
+        description="Razorpay IFSC Toolkit. Process IFSC codes via our toolkit. Fire up your tools and query our API for the IFSC codes. An API to query IFSC codes. IFSC dataset available for download. Code to generate the dataset. A blog post on the 'why'.",
+        base_url='https://ifsc.razorpay.com/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/razorpay/ifsc/wiki/API',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # Tradier
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='tradier',
+        description="Send trades for US-based equities and options easily using the language of your choice. Real-time, delayed, and historical market data available through request/response and streaming interfaces. Easy APIs for registered entities to open an account, get it funded, and start trading. HTTP streaming APIs for streaming market data and limit charting data for Tradier Brokerage account holders.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=True,
+        docs='https://documentation.tradier.com/',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # World Trading Data
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='marketstack',
+        description="Obtain real-time stock data for more than 30,000 tickers down to the minute, request intraday quotes for tickers from IEX, or search 15+ years of accurate EOD historical market data. Easily integrate the API and make use of 30,000+ worldwide stock tickers with our Stock Price endpoint or integrate more than 500,000 tickers with our EOD endpoint collected from more global exchanges, including Nasdaq, NYSE, and more. We have built a simple, powerful and scalable REST API with an uptime of close to 100%. It will take you less than 5 minutes to get started. Get up and running quickly using the Free Plan, allowing for 100 data requests per month. Instant access, no contract or payment required.",
+        base_url='https://api.marketstack.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://marketstack.com/documentation_v2',
+        category='Finance'
+    )
+
+    api.save()
+
+    # ---------------
+    # YNAB
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='YANB.API',
+        description="A better outcome for your income. A tool to help you find yourself financially. Simplify spending and clarify priorities with the YNAB Method for maximizing money.",
+        base_url='https://api.ynab.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=True,
+        docs='https://api.ynab.com/',
+        category='Finance'
+    )
+
+    api.save()
 
     # Food & Drink
 
@@ -5852,11 +6402,336 @@ def populate_database():
 
     api.save()
 
-    # Machine Learning TODO
+    # Machine Learning
+
+    # ---------------
+    # Cloudmersive
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Cloudmersive',
+        description="Powerful Deep Learning Image Recognition and Processing APIs. Advanced Machine Learning APIs for recognizing and processing images.",
+        base_url='https://api.cloudmersive.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://api.cloudmersive.com/docs/convert.asp',
+        category='Machine Learning'
+    )
+
+    api.save()
+
+    # ---------------
+    # Keen IO
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Keen',
+        description="The Fully Managed Event Streaming Platform. Event Streaming API for developers, built on Apache Kafka®, Storm®, and Cassandra®. Flexible Event Streaming that Scales with Your Application.",
+        base_url='https://api.keen.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://keen.io/docs/api/',
+        category='Machine Learning'
+    )
+
+    api.save()
+
+    # ---------------
+    # Unplugg
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Unplugg API',
+        description="This API currently provides forecasting for timeseries data that you can test below. You can use it to forecast energy comsuption, temperature, or any other timeseries data which has some seasonality effect.",
+        base_url='https://api.unplu.gg',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://unplu.gg/test_api.html',
+        category='Machine Learning'
+    )
+
+    api.save()
+
+    # ---------------
+    # Wit.ai
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='wit.ai',
+        description="Build Natural Language Experiences. Enable people to interact with your products using voice and text. Easily create bots that people can chat on their preferred messaging platform. Make multimodal interaction available to anyone, anywhere through the apps you create. Enable people to use their voices to control smart speakers, appliances, lighting and more. Create customizable expiriences for people, whethr they're at home or on the go.",
+        base_url='https://api.wit.ai',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://wit.ai/docs',
+        category='Machine Learning'
+    )
+
+    api.save()
 
     # Music TODO
 
-    # News TODO
+    # News
+
+    # ---------------
+    # Associated Press
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Associated Press',
+        description="Build powerful integrations with our APIs and Metadata Services. Looking for seamless access to AP news content, metadata or elections data? AP has the right API for you.",
+        base_url='https://api.ap.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://api.ap.org/media/v/docs/',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # Chronicling America
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Chronicling America',
+        description="Chronicling America provides access to information about historic newspapers and select digitized newspaper pages. To encourage a wide range of potential uses, we designed several different views of the data we provide, all of which are publicly visible. Each uses common Web protocols, and access is not restricted in any way. You do not need to apply for a special key to use them. Together they make up an extensive application programming interface (API) which you can use to explore all of our data in many ways.",
+        base_url='https://chroniclingamerica.loc.gov',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://chroniclingamerica.loc.gov/about/api/',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # Currents
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Currents',
+        description="Curate and Analyze Online News Effortlessly with Currents News API. Currents News API provides a comprehensive solution for curating global news and delivering it in a parsable format.",
+        base_url='https://api.currentsapi.services',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://currentsapi.services/en/docs/',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # Feedbin
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Feedbin',
+        description="RSS reader",
+        base_url='https://api.feedbin.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://github.com/feedbin/feedbin-api',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # Finlight
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='finlight.me',
+        description="Get Real-Time News and Deep Insights with our Financial News API",
+        base_url='https://api.finlight.me',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://docs.finlight.me/',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # New York Times
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='New York Times',
+        description="Provides news from New York Times.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.nytimes.com/apis',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # News
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NewsAPI',
+        description="The main use of News API is to search through every article published by over 150,000 news sources and blogs in the last 5 years. Think of us as Google News that you can interact with programmatically!",
+        base_url='https://newsapi.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://newsapi.org/docs',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # OkSurf
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='OkSurf!',
+        description="The OkSurf News API provides a simple, free REST API for developers to retrieve the latest Google news in a familiar JSON format. This news service is absolutely free. No account or signup is required.Retrieve all Google News headlines.",
+        base_url='https://ok.surf/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://ok.surf/swagger',
+        category='News'
+    )
+
+    api.save()
+
+    # ---------------
+    # The Guardian
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='The Guardian',
+        description="The OkSurf News API provides a simple, free REST API for developers to retrieve the latest Google news in a familiar JSON format. This news service is absolutely free. No account or signup is required.Retrieve all Google News headlines.",
+        base_url='https://content.guardianapis.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://open-platform.theguardian.com/documentation/',
+        category='News'
+    )
+
+    api.save()
 
     # Open Data TODO
 
@@ -5991,9 +6866,734 @@ def populate_database():
 
     # Personality TODO
 
-    # Photography TODO
+    # Photography
 
-    # Science & Math TODO
+    # ---------------
+    # Flickr
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='flickr',
+        description="The best place to be a photographer online. Flickr is a community in the truest sense: we’re here for each other, full stop. Get inspired. Get feedback. Get lost in a weird new photo style! We’ve got your back. There’s a home for every photo on Flickr. Store, organize, curate, and show off your creativity, all in one place. Not-so-humble-brag: Flickr is the largest collection of Creative Commons-licensed imagery on earth. Come get inspired and join the fun.",
+        base_url='https://live.staticflickr.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://www.flickr.com/services/api/',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Getty Images
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='gettyimages',
+        description="Unlock the power of world‑class visual content with the Getty Images API. Easy to implement, our flexible API brings the best visual content straight to you and your customers, letting you integrate outstanding images, videos, and illustrations from Getty Images and iStock directly into your platform.",
+        base_url='https://api.gettyimages.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.gettyimages.com/docs/',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Giphy
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Giphy',
+        description="GIPHY is the best way to search, share, discover and create GIFs on the Internet. The content on GIPHY's website, app, and API is all of the best and most popular GIFs on the web, along with content created by talented GIF artists and world-class brands. Our goal is to help make finding and sharing the good GIFs easier.",
+        base_url='https://api.giphy.com/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developers.giphy.com/docs/',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Gyazo
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Gyazo',
+        description="The Gyazo API can be used in a wide array of apps to upload new images, show a Gyazo user’s images, and more. It provides a RESTful API for HTTP requests and returns a response in JSON. This should be familiar to anyone who has used major APIs before such as Amazon S3 and Twitter.",
+        base_url='https://upload.gyazo.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://gyazo.com/api/docs',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Imgur
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Imgur',
+        description="Imgur's API exposes the entire Imgur infrastructure via a standardized programmatic interface. Using Imgur's API, you can do just about anything you can do on imgur.com, while using your programming language of choice. The Imgur API is a RESTful API based on HTTP requests and JSON responses.",
+        base_url='https://api.imgur.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://apidocs.imgur.com/',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Lorem Picsum
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Lorem Picsum.',
+        description="Lorem Picsum. The Lorem Ipsum for photos.",
+        base_url='https://picsum.photos',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://picsum.photos/',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # ObjectCut
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='',
+        description="This is the RESTful API for our AI Solution for Background or Foreground Removal. This solution allows clients to remove background or foreground from images without need to resize it, keeping or removing then just the main object visible.",
+        base_url='https://background-removal.p.rapidapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://objectcut.com/',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Pexels
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='pexels',
+        description="Start building with the power of Pexels. Give your users access to our entire photo and video library without leaving your app or website. It’s free and seamlessly integrates with just a few lines of code. Get started and immediately receive your unique API key.",
+        base_url='https://api.pexels.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.pexels.com/api/documentation/',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # ScreenShotLayer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ScreenShotLayer',
+        description="Capture highly customizable snapshots of any website.Powerful Screenshot API for any application",
+        base_url='http://api.screenshotlayer.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://screenshotlayer.com/documentation',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Unsplash
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Unsplash',
+        description="The most powerful photo engine in the world. Welcome to the Official Unsplash API. Create with the largest open collection of high-quality photos.",
+        base_url='https://api.unsplash.com/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://unsplash.com/documentation',
+        category='Photography'
+    )
+
+    api.save()
+
+    # ---------------
+    # Wallhaven
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='wallhaven',
+        description="wallhaven. The best wallpapers on the Net!",
+        base_url='',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://wallhaven.cc/help/api',
+        category='Photography'
+    )
+
+    api.save()
+
+    # Science & Math
+
+    # ---------------
+    # CORE
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CORE',
+        description="We deliver services for a wide range of audiences, including researchers, libraries, universities, innovative companies and funders. Process and analyse the largest structured collection of open research with their full texts, manage your research papers, make them more discoverable, and comply with funder mandates. All this you can do with CORE Services.",
+        base_url='https://api.core.ac.uk',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://api.core.ac.uk/docs/v3',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # GBIF
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='GBIF',
+        description="Free and open access to biodiversity data. GBIF—the Global Biodiversity Information Facility—is an international network and data infrastructure funded by the world's governments and aimed at providing anyone, anywhere, open access to data about all types of life on Earth.",
+        base_url='https://api.gbif.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://techdocs.gbif.org/en/openapi/',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # iDigBio
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='iDigBio',
+        description="Integrated Digitized Biocollections (iDigBio) is the National Resource for Advancing Digitization of Biodiversity Collections (ADBC) funded by the National Science Foundation. Through ADBC, data and images for millions of biological specimens are being made available in electronic format for the research community, government agencies, students, educators, and the general public. iDigBio is a data aggregator. This means that data is provided to iDigBio through various publishing mechanisms.",
+        base_url='https://search.idigbio.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/idigbio/idigbio-search-api/wiki',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # ITIS
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ITIS',
+        description="Integrated Taxonomic Information System. Welcome to ITIS, the Integrated Taxonomic Information System. Here you will find authoritative taxonomic information on plants, animals, fungi, and microbes of North America and the world. Our mission is to communicate a comprehensive taxonomy of global species that enables biodiversity information to be discovered, indexed, and connected across all human endeavors. The ITIS program partners with specialists from around the world to assemble scientific names and their taxonomic relationships. ITIS is an Associate Participant of the Global Biodiversity Information Facility (GBIF) and a partner and contributor to the Catalogue of Life (COL) and ChecklistBank which are the basis of the GBIF Backbone Taxonomy.",
+        base_url='https://www.itis.gov',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.itis.gov/ws_description.html',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Launch Library
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Launch Library 2',
+        description="The Launch Library 2 API is the official successor of the popular Launch Library API. It keeps its core features whilst also including everything the broader Space Launch Now API had to offer. The result is a large database delivering a more complete experience for each rocket launch and space event. The philosophy behind the API also remains unchanged : the entire database is accessible to everyone, for free.",
+        base_url='https://ll.thespacedevs.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://thespacedevs.com/llapi',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Minor Planet Center
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Asterank',
+        description="Asterank offers a database API for the Minor Planet Center's MPCORB.DAT data files. This API is a simple way to quickly apply constraints to a set of over 600,000 asteroids. Users can construct queries with specific constraints across all data attributes recorded by the MPC. Information is updated nightly from the MPC's MPCORB.dat dataset. The database queries are based on mongodb's json-formatted 'find' operation. See below for an example of a complex query.",
+        base_url='http://asterank.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://www.asterank.com/mpc',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # NASA
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='{ NASA APIs }',
+        description="Welcome to the NASA API portal. The objective of this site is to make NASA data, including imagery, eminently accessible to application developers. This catalog focuses on broadly useful and user friendly APIs and does not hold every NASA API.",
+        base_url='https://api.nasa.gov',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://api.nasa.gov/',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Newton
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='newton',
+        description="A really micro micro-service for advanced math.",
+        base_url='https://newton.now.sh/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/aunyks/newton-api',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Numbers
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='MathTOOLS Numbers',
+        description="Number of the day, random number generation , number facts and anything else you want to do with numbers.",
+        base_url='https://api.math.tools',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://math.tools/api/numbers/',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Numbers
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='NUMBERSAPI',
+        description="Bring meaning to your metrics and stories to your dates with our API of interesting number facts.",
+        base_url='http://numbersapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='http://numbersapi.com',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Open Notify
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Open Notify',
+        description="Open APIs From Space Open Notify is an open source project to provide a simple programming interface for some of NASA’s awesome data. I do some of the work to take raw data and turn them into APIs related to space and spacecraft.",
+        base_url='http://api.open-notify.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='http://open-notify.org/Open-Notify-API/',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Open Science Framework
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Open Science Framework ',
+        description="Welcome to the Open Science Framework API. With this API you can access users, projects, components, logs, and files from the Open Science Framework. The Open Science Framework (OSF) is a free, open-source service maintained by the Center for Open Science. The OSF serves as a repository and archive for study designs, materials, data, manuscripts, or anything else associated with your research during the research process. Every project and file on the OSF has a permanent unique identifier, and every registration (a permanent, time-stamped version of your projects and files) can be assigned a DOI. You can use the OSF to measure your impact by monitoring the traffic to projects and files you make public. With the OSF you have full control of what parts of your research are public and what remains private.",
+        base_url='https://api.osf.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://developer.osf.io',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # SHARE
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='SHARE',
+        description="A free, open, dataset about research and scholarly activities",
+        base_url='https://share.osf.io/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://share.osf.io/api/v2/',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # SpaceX
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='SpaceX-API',
+        description="Open Source REST API for launch, rocket, core, capsule, starlink, launchpad, and landing pad data. ",
+        base_url='https://api.spacexdata.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/r-spacex/SpaceX-API/blob/master/docs/README.md',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # Sunrise and Sunset
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Sunrise Sunset',
+        description="Sunrise-Sunset is a free online tool that provides information about day length, twilight, sunrise and sunset times for any location of the world. Our purpose is to make it easy to everybody to access Sun related information through simple tools that offers accurate information.",
+        base_url='https://api.sunrise-sunset.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://sunrise-sunset.org/api',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # USGS Earthquake Hazards Program
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='USGS Earthquake Hazards Program',
+        description="Earthquake Hazards Program. The USGS monitors and reports on earthquakes, assesses earthquake impacts and hazards, and conducts targeted research on the causes and effects of earthquakes. We undertake these activities as part of the larger National Earthquake Hazards Reduction Program (NEHRP), a four-agency partnership established by Congress.",
+        base_url='https://earthquake.usgs.gov/fdsnws',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://earthquake.usgs.gov/fdsnws',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # USGS Water Services
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='USGS Water Services',
+        description="USGS Water Services. This site provides USGS water data in machine-readable formats via REST APIs, a common framework programs use to search and download data. The services below each provide a different type of data, ranging from instantaneous measurements of streamflow to information about individual USGS sites and more. The links below lead to documentation for how to use each service, and web forms to build queries for each endpoint.",
+        base_url='https://waterservices.usgs.gov/nwis/iv',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://waterservices.usgs.gov/docs/',
+        category='Science & Math'
+    )
+
+    api.save()
+
+    # ---------------
+    # World Bank
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='THE WORLD BANK',
+        description="The World Bank Group works in every major area of development. We provide a wide array of financial products and technical assistance and help countries share and apply innovative knowledge and solutions to tackle today’s intertwined development challenges. World Bank APIs provide access to various types of data and databases: The Indicators API provides programmatic access to time series development data and metadata. Most of the articles in this section are devoted to the Indicators API, The Data Catalog API provides information about the thousands of development-relevant datasets available through the World Bank Data Catalog, The Projects API provides access to World Bank operations data, i.e., active, pipeline and closed projects implemented in countries and around the world, The Finances API provides programmatic access to World Bank financial data (loans, credits, financial statements, etc) delivered on the World Bank Finances platform, The Climate Data API provides access to historical and modelled climate data from the Climate Knowledge Portal",
+        base_url='https://api.worldbank.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://datahelpdesk.worldbank.org/knowledgebase/topics/125589-developer-information',
+        category='Science & Math'
+    )
+
+    api.save()
 
     # Security TODO
 
