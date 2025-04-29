@@ -6045,7 +6045,7 @@ def populate_database():
         authenticaton='apiKey',
         https=True,
         cors=None,
-        docs=,
+        docs='https://docs.lexigram.io/',
         category='Health'
     )
 
@@ -6733,7 +6733,307 @@ def populate_database():
 
     api.save()
 
-    # Open Data TODO
+    # Open Data
+
+    # ---------------
+    # Archive.org
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Archive.org',
+        description="The Internet Archive (the “Archive”) is a 501(c)(3) nonprofit organization committed to Universal Access of Knowledge. The Archive runs several services including the Archive.org search engine, OpenLibrary, and the Wayback Machine. In alignment with its mission, the Archive encourages developers to add media to archive.org, as well as to consume and re-purpose media and its metadata, for the great good of our community and beyond.",
+        base_url='https://archive.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://archive.readme.io/reference/getting-started',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Callook.info
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CALLLOOK',
+        description="United States ham radio callsigns. NO-NONSENSE AMATEUR RADIO U.S.A. CALLSIGN LOOKUPS.",
+        base_url='	https://callook.info',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://callook.info/api_reference.php',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # CARTO
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CARTO',
+        description="CARTO is the only cloud-first spatial platform built for accelerated, modern GIS. It runs natively on top of your cloud data warehouse platform (e.g. Google BigQuery, Snowflake, AWS Redshift, etc.), providing easy access to highly scalable spatial analysis and visualization capabilities in the cloud — be it for analytics, app development, data engineering, and more.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.carto.com/carto-user-manual/workflows/executing-workflows-via-api',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Enigma Public
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='enigma',
+        description="Enigma is building the single most reliable source of data on U.S. businesses. Our goal is to deliver the most actionable intelligence on the health and identity of every U.S. business.",
+        base_url='https://api.enigma.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://developers.enigma.com/docs/api',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # LinkPreview
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='LinkPreview',
+        description="Link preview is a feature that provides users with a glimpse of a web page’s content before actually clicking on the link. It typically includes a preview of the page’s title, a brief description, an image, and the URL. Link previews are commonly used in messaging apps, social media platforms, and email clients to give users an idea of what to expect when they click on a shared link. With the LinkPreview API, you can programmatically obtain detailed website information, including the title, preview image, and brief description, for any given URL.",
+        base_url='https://api.linkpreview.net',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://docs.linkpreview.net/',
+        category='Open Data'
+    )
+    
+    api.save()
+
+    # ---------------
+    # Microlink.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Microlink.io',
+        description="Browser as API. Microlink is a fast, scalable, and reliable high-level API to control a headless browser built for businesses and developers. Proudly open source.",
+        base_url='https://api.microlink.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://microlink.io/',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # OpenCorporates
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='opencorporates',
+        description="This documentation covers the main API (the so-called REST API). The API provides all the information available on the OpenCorporates website as data. By default it returns data as JSON, but XML is also available. Access to all the data is free for open data projects under the same open licence conditions as the rest of OpenCorporates. An API key is required in order to use the OpenCorporates API, and usage limits depend on your account type and plan. If you are matching company names to legal entities from an existing dataset, you should investigate using Open Refine, software which allows data to be filtered and cleansed more easily and more quickly than any other tool we know of. OpenCorporates provides a highly popular reconciliation API for Open Refine, which allows matching company names to legal entities.",
+        base_url='https://api.opencorporates.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://api.opencorporates.com/documentation/API-Reference',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Recreation Information Database
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='The Recreation Information Database',
+        description="Recreation Information Database - RIDB. RIDB is a part of the Recreation One Stop (R1S) program, which oversees the operation of Recreation.gov -- a user-friendly, web-based resource to citizens, offering a single point of access to information about recreational opportunities nationwide. The website represents an authoritative source of information and services for millions of visitors to federal lands, historic sites, museums, waterways and other destinations and activities.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://ridb.recreation.gov/docs',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Scoop.it
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Scoop.it!',
+        description="Research and publish the best content. Publish your topic page with curated content in minutes. Distribute it automatically with your network to build your professional brand. Curate, share, and read content on private hubs. Publish on your websites and blogs, newsletters and social media. Aggregate curated content across multiple WordPress blogs.",
+        base_url='https://www.scoop.it',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=False,
+        cors=None,
+        docs='https://www.scoop.it/dev/api/1/intro',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Universities List
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='university-domains-list',
+        description="Do you need a list of universities and their domain names? You found it! This package includes a JSON file that contains domains, names and countries of most of the universities of the world. Example usecases: You can create a validation script that checks the email domain, You can automatically generate a user's country and university by looking at their emails. You can use this data source in three ways: Use the JSON file as your data source and do whatever you like with your favourite programming language, Use free hosted-API, Use the tiny Python app to serve a fast API that you can query data.",
+        base_url='http://universities.hipolabs.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/Hipo/university-domains-list',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # UPC database
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='UPC database',
+        description="The UPCDatabase API allows you to access our database in a simple, programmatic way using conventional HTTP requests with any programming language. The API documentation will start with a general overview about the design and technology that has been implemented, followed by reference information about specific endpoints.",
+        base_url='https://api.upcdatabase.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://upcdatabase.org/api',
+        category='Open Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Wikidata
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='MediaWiki',
+        description="The MediaWiki software is used by tens of thousands of websites and thousands of companies and organisations. It powers Wikipedia and also this website. MediaWiki helps you collect and organise knowledge and make it available to people. It's powerful, multilingual, free and open, extensible, customisable, reliable, and free of charge. Find out more and if MediaWiki is right for you.",
+        base_url='https://www.example.org/w/api.php',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://www.mediawiki.org/wiki/API:Main_page',
+        category='Open Data'
+    )
+
+    api.save()
 
     # Open Source Projects
 
@@ -6864,7 +7164,355 @@ def populate_database():
 
     api.save()
 
-    # Personality TODO
+    # Personality
+
+    # ---------------
+    # Advice Slip
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Advice Slip',
+        description="The Advice Slip JSON API is provided for free. 😎 It currently gives out over 10 million pieces of advice every year.",
+        base_url='https://api.adviceslip.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://api.adviceslip.com/',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # chucknorris.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='chucknorris.io',
+        description="chucknorris.io is a free JSON API for hand curated Chuck Norris facts.",
+        base_url='https://api.chucknorris.io/jokes',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://api.chucknorris.io/',
+        category='Personality'
+    )
+    
+    api.save()
+
+    # ---------------
+    # FavQs.com
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='FavQs',
+        description="",
+        base_url='https://favqs.com/api/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://favqs.com/api',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Forismatic
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='',
+        description="Here we collect the most inspiring expressions of mankind. There are not any catalogues of phrases or lists of authors on the site, full of sages and philosophers’ thoughts, writers and outstanding people’s aphorisms. We don’t believe in a random choice. Only you can guide your destiny. Just listen to yourself and one of the most inspiring expressions of mankind will be the sign for you.",
+        base_url='http://api.forismatic.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://forismatic.com/en/api/',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Hindi Quotes
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='हिन्दी Quotes',
+        description="Get random Hindi quotes of different categories.",
+        base_url='https://hindi-quotes.vercel.app',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://hindi-quotes.vercel.app/',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Hindi Quotes and Shayari
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Pure विचार',
+        description="This API is completely free to use and provides a collection of quotes and shayari in Hindi and English. As we continue to grow, we will keep updating our database with more content to ensure a rich and diverse collection. I created this API because I noticed that there were no proper resources available for quotes and shayaris in Hindi audio format. This API is an attempt to bridge that gap and provide users with meaningful and inspiring content.",
+        base_url='https://www.purevichar.in/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://www.purevichar.in/tool/apitool/',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # icanhazdadjoke
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='icanhazdadjoke',
+        description="icanhazdadjoke.com can be used as an API for fetching a random joke, a specific joke, or searching for jokes in a variety of formats.",
+        base_url='https://icanhazdadjoke.com/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://icanhazdadjoke.com/api',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # kanye.rest
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='kanye.rest',
+        description="A free REST API for random Kanye West quotes (Kanye as a Service)",
+        base_url='https://api.kanye.rest',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://kanye.rest/',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Medium
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Medium',
+        description="Community of readers and writers offering unique perspectives on ideas",
+        base_url='https://api.medium.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://github.com/Medium/medium-api-docs',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Meme
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Meme API',
+        description="JSON API for a random meme scraped from reddit",
+        base_url='https://meme-api.com/gimme',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/D3vd/Meme_Api',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Programming Quotes
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Programming Quotes',
+        description="A free restful API serving quality programming quotes by programmers",
+        base_url='https://programming-quotesapi.vercel.app/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://programming-quotesapi.vercel.app/docs',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Quoterism
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Quoterism',
+        description="Collection of the most inspiring expressions of mankind",
+        base_url='https://www.quoterism.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://www.quoterism.com/developer',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Riddles API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Riddles API',
+        description="Get random riddles on every API call.",
+        base_url='https://riddles-api.vercel.app',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://riddles-api.vercel.app/',
+        category='Personality'
+    )
+
+    api.save()
+
+    # ---------------
+    # Traitify
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='traitify',
+        description="Welcome to Traitify's Personality API! We understand that behind every user is a human being with a personality waiting to be discovered. With that in mind, we've created a diverse set of fun visual assessments used to uncover personality types and traits. Your users simply select 'Me' or 'Not Me' to a brief series of images and voila! Instant, actionable data. With this psychology-backed data in hand, the possibilities are endless - any way that personalization can help you is now within reach.",
+        base_url='https://api.traitify.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://app.traitify.com/developer/documentation',
+        category='Personality'
+    )
 
     # Photography
 
@@ -7595,7 +8243,282 @@ def populate_database():
 
     api.save()
 
-    # Security TODO
+    # Security
+
+    # ---------------
+    # Censys.io
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='censys',
+        description="Censys provides the most complete view of the entire public-facing internet. Censys continually scans the entire public IPv4 address space using automatic protocol detection, examining all possible IP and port combinations. The results accurately represent the Internet’s current state. Censys also leverages redirects and the Domain Name System to discover and scan in-use IPv6 addresses.",
+        base_url='https://search.censys.io/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=False,
+        docs='https://search.censys.io/api',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # CRXcavator
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CRXcavator',
+        description="CRXcavator automatically scans the entire Chrome, Firefox, and Edge Web Stores every 3 hours and produces a quantified risk score for each browser extension based on several factors. These factors include permissions, inclusion of vulnerable third party javascript libraries, weak content security policies, missing details from the associated web store description, and more. Organizations can use this tool to assess the browser extensions they have installed and to move towards implementing explicit allow (allowlisting) for their organization.",
+        base_url='https://api.crxcavator.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://crxcavator.io/apidocs',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # FishFish
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='FishFish',
+        description="An anti-phishing service that focuses on quick, automated detection of threat resources before they're used for evil. We provide live updates to our database via a WebSocket feed. ",
+        base_url='https://api.fishfish.gg',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://api.fishfish.gg/docs/',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # HaveIBeenPwned
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='HaveIBeenPwned',
+        description="Check if your email address is in a data breach. This site came about after what was, at the time, the largest ever single breach of customer accounts — Adobe. I often did post-breach analysis of user credentials and kept finding the same accounts exposed over and over again, often with the same passwords which then put the victims at further risk of their other accounts being compromised.",
+        base_url='https://haveibeenpwned.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://haveibeenpwned.com/API/v3',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # phish.directory
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Phish Directory',
+        description="Keeping you safe from phishing attacks. Phish Directory is a community-driven database of phishing URLs. Our goal is to help you stay safe from phishing attacks by providing you with the latest information on phishing URLs.",
+        base_url='https://api.phish.directory',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://api.phish.directory/docs/',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # Secrets-APi
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Secrets API',
+        description="Welcome to the Secrets API. This API allows you to manage and retrieve secrets anonymously. Please refer to the documentation below for details on how to interact with the API. The API is rate limited to 100 requests every 15 minutes. All user submitted data (including registration, tokens, usernames, passwords, secrets) are erased on a regular basis. This API is just for education purposes, please don't rely on it for production.",
+        base_url='https://secrets-api.appbrewery.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='Basic',
+        https='apiKey',
+        cors=None,
+        docs='https://secrets-api.appbrewery.com/',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # SecurityTrails
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='SecurityTrails',
+        description="Data for Security companies, researchers and teams. Fast, always up cyber security API that allows you to access current and historical data. The API is paid via a simple pricing structure that allows you to embed our data into your applications.",
+        base_url='https://api.securitytrails.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://securitytrails.com/corp/api',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # Shodan
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Shodan',
+        description="See which ports an IP has open, what SSL/ TLS versions it supports, which country it's located in, what web technologies the website uses and much more. Shodan has a curated DNS database that contains information about hostnames likely to run a service. Use it to help map out your organization's attack surface. Subscribe to real-time data feeds to get notified when new ports are detected, vulnerabilities are discovered or network configurations change.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.shodan.io/api/clients',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # UK Police
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='DATA.POLICE.UK',
+        description="This is the site for open data about crime and policing in England, Wales and Northern Ireland. You can download street-level crime, outcome, and stop and search data in clear and simple CSV format and explore the API containing detailed crime data and information about individual police forces and neighbourhood teams. You can also download data on police activity, and a range of data collected under the police annual data requirement (ADR) including arrests and 101 call handling. All the data on this site is made available under the Open Government Licence v3.0.",
+        base_url='https://data.police.uk/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://data.police.uk/docs/',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # Whoisfreaks
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='WhoisFreaks',
+        description="Unleash the Power of Data with Our Domain and IP Intelligence. Elevate your cyber-security strategy with our domain and IP intelligence services. Designed for analysts, researchers, and brand owners. Our platform provides unparalleled insights and monitoring capabilities to protect your digital assets. Stay ahead of threats, ensure brand integrity, and make informed decisions with real-time data you can trust. Our platform seamlessly integrates with existing systems, enhancing workflow efficiency and effectiveness. We are committed to quality, up-to-date information, and unparalleled support, continuously evolving to stay ahead of industry trends.",
+        base_url='https://api.whoisfreaks.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://whoisfreaks.com/products/whois-api',
+        category='Security'
+    )
+
+    api.save()
+
+    # ---------------
+    # WhoisJSONApi
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='',
+        description="Whois API for looking up accurate domain data. Bulk WHOIS Lookups & URL Availability Checks Made Easy. Effortlessly retrieve accurate WHOIS details for any domain with our REST API. Perform bulk WHOIS queries and check URL availability in real time, all in a structured JSON format for seamless integration into your applications.",
+        base_url='https://whoisjsonapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://whoisjsonapi.com/page/documentation',
+        category='Security'
+    )
+
+    api.save()
 
     # Shopping
 
@@ -7815,7 +8738,7 @@ def populate_database():
 
     api = Api(
         name='Yomi',
-        description="Yomi API is a free-to-use Japanese tokenizer and morphological analysis web API. It can take a Japanese text as an input and return a JSON response containing the tokenized text.",
+        description="Yomi API is a free-to-use Japanese tokenizer and morphological analysis web API. It can take a Japanese text as an input and return a JSON response containing the tokenized text.  ",
         base_url='https://yomi.onrender.com',
         api_keywords=['Test', 'testAPI'],
         popularity=randrange(0, 10),
