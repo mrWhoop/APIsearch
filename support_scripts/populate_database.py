@@ -8574,7 +8574,382 @@ def populate_database():
 
     # Social TODO
 
-    # Sports & Fitness TODO
+    # Sports & Fitness
+
+    # ---------------
+    # balldontlie
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='BALLDONTLIE',
+        description="The #1 API for Live Sports Data and Analytics. Real-time stats, player insights, and game analytics for developers, analysts, and sports enthusiasts. Access the most affordable and comprehensive sports API on the market.",
+        base_url='https://api.balldontlie.io',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://www.balldontlie.io/',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # City Bikes
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CityBikes',
+        description="City Bikes around the world",
+        base_url='http://api.citybik.es',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://api.citybik.es/v2/',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # F1 API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='F1 API',
+        description="F1 Connect Api. Your free API, ready for development. This API provides access to a wealth of data related to Formula 1 races, drivers, teams, circuits, and more. All the data its provided in JSON format and its ready to use. Simply fetch https://f1api.dev with the endpoint that you like. You can also use our new SDK tool to fetch the data, with our methods and types.",
+        base_url='https://f1api.dev',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://f1api.dev/docs',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # F1 Data API
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='F1 Data API',
+        description="An API that serves the F1 Archive. Formula 1 data API that delivers data from the F1 Archive dating back to 1950",
+        base_url='https://api.bthree.uk/f1',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://github.com/jacobbrewer1/f1-data-docs',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # Football (Soccer) Videos
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='ScoreBat',
+        description="We decided to make all our video data accessible to developers! You can now build your own football website or app using our Video API and give your users the ability to watch video highlights of the matches of their favorite football leauges. Our Video API allows you to embed all official video highlights of the Premier League, Champions League, La Liga, Serie A, Europa League and many more into your website or app.",
+        base_url='https://www.scorebat.com/video-api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://www.scorebat.com/video-api/',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # Football Prediction
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='The Football Prediction API',
+        description="The Football Prediction API is a REST API that offers prediction data (JSON) for upcoming football (soccer) matches.",
+        base_url='https://football-prediction-api.p.rapidapi.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='X-Mashape-Key',
+        https=True,
+        cors=None,
+        docs='https://developer.boggio-analytics.com/',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # Football-Data.org
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Football-Data.org',
+        description="Football-data.org provides football data and statistics (live scores, fixtures, tables, squads, lineups/subs, etc.) in a machine-readable way. I won't announce how awesome football-data is, you're welcome to find out by yourself (or not). Access to the top competitions is and will be free forever as this was the initial purpose to setup the project. However if you need more competitions, in-depth data there are several paid plans available to serve your needs. If you need historical data, more requests or something out of the box just drop me a line, I'm glad to help.",
+        base_url='https://api.football-data.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=None,
+        docs='https://docs.football-data.org/general/v4/index.html',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # Golf-Data
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Golf Data API',
+        description="Golf data API with golf course, club and hole information",
+        base_url=' https://api.bthree.uk/golf',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://github.com/Jacobbrewer1/golf-data-docs',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # JCDecaux Bike
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='JCDecaux',
+        description="Enjoy our open data to create innovative services. We believe in shared innovation and the creative potential of communities to make cities ever more inventive and accessible. With JCDecaux developer, create new applications and services through an easy-to-access distibution of data under Open License. From the location of the bike stations to the availability of bikes and parking spaces in real time, use our data to experiment new representations or to provide innovative and useful services to users. You can access this data through a simple download or an advanced web API.",
+        base_url='https://api.jcdecaux.com/vls',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://developer.jcdecaux.com/#/opendata/vls?page=getstarted',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # NHL Records and Stats
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='nhlapi',
+        description="NHL historical data and statistics.",
+        base_url='https://api-web.nhle.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://gitlab.com/dword4/nhlapi/-/blob/master/swagger/openapi.yaml?ref_type=heads',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # Strava
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='STRAVA',
+        description="Track your progress and cheer each other on. Strava athletes upload millions of activities every day. Our open API and this rich data set yield diverse opportunities for developers, from creating new hardware to augmenting the Strava experience. The Strava V3 API is a publicly available interface that allows developers to access Strava data. The interface is stable and used by the Strava mobile apps. However, we occasionally make major changes to improve performance and enhance our features",
+        base_url='https://www.strava.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.strava.com/docs/reference/',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # SuredBits
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='SUREDBITS',
+        description="Thank you and welcome to Suredbits' Lightning App API documentation. This API allows you to query our NFL, NBA and Crypto Exchange data. Our NFL and NBA APIs offer multiple channels including teams, players, games, scores, and statistics. Our Crypto Exchange API allows you to stream data on Trades, Tickers and Order Books.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=False,
+        cors=False,
+        docs='https://suredbits.com/api/#lightning-api-v0-beta-documentation',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # TheSportsDB
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='TheSportsDB',
+        description="An open, crowd-sourced sports database of artwork and metadata with a free sports API.",
+        base_url='https://www.thesportsdb.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://www.thesportsdb.com/docs_api_examples',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # Wger
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='WGER',
+        description="Workout manager data as exercises, muscles or equipment. Can be self hosted FLOSS workout and fitness tracker. ",
+        base_url='https://wger.de',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://wger.de/api/v2/schema/ui',
+        category='Sports & Fitness'
+    )
+
+    api.save()
+
+    # ---------------
+    # CricData
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='CricetData',
+        description="Free to use, super-high bandwidth, high performance Cricket API. CricAPI was the first to provide free high quality Cricket API since September 2015 under the brand “CricAPI.com”. The organization has since changed hands, and “Cricket Data” – the new avatar – promises to continue supporting cricket enthusiasts all over the globe with rich and reliable cricket data in API format. Cricket score api was never this easy to use. We are ISO 9001:2015 Certified. The only exclusive provider of free to use, high bandwidth, high performance Cricket API. If you’re looking for CricAPI, Cricket API, Cricket Live Score API, Cricket Scorecard API or Cricket Ball by Ball API you’ve come to the right place. The source for Ultimate Cricket API – right here, right now.",
+        base_url='https://api.cricapi.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://cricketdata.org/',
+        category='Sports & Fitness'
+    )
+
+    api.save()
 
     # Test Data
 
