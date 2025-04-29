@@ -8576,7 +8576,357 @@ def populate_database():
 
     # Sports & Fitness TODO
 
-    # Test Data TODO
+    # Test Data
+
+    # ---------------
+    # Bacon Ipsum
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Bacon Ipsum',
+        description="The Bacon Ipsum JSON API is a REST interface for generating meaty lorem ipsum text and can be used by any application. Pass in the following parameters using an HTTPS GET and we’ll return a JSON string array of paragraphs.",
+        base_url='https://baconipsum.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://baconipsum.com/json-api/',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Beeceptor's CRUD APIs
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Beeceptor',
+        description="Welcome to the Beeceptor API reference! If you're new to Beeceptor, be sure to create an account and explore all the features. Please note that Beeceptor APIs are available for users with Team plans and above. Throughout this documentation, a mention of Beeceptor endpoint refers to the sub-domain name you have created.",
+        base_url='https://api.beeceptor.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://beeceptor.com/docs/api-overview/',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Dicebear Avatars
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='DiceBear',
+        description="With DiceBear you can create awesome avatars for your project in no time. Whether you are looking for abstract shapes or lovingly designed characters, you will find something suitable among our avatar styles. And no matter how and for what you want to use the avatars, DiceBear offers the right solution! In addition to purely random avatars, you can also create deterministic avatars for user identities. With the built-in PRNG you create the same avatar over and over again based on a seed. But also individual avatars are possible! Just use the countless options that each avatar style provides. And thanks to the JavaScript library, HTTP API, CLI, Figma plugin, Editor and Playground, your next avatar is always just a stone's throw away!",
+        base_url='https://api.dicebear.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://www.dicebear.com/how-to-use/http-api/',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # JSONing
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='JSONing',
+        description="Mock API. Free and open source fake API for testing and prototyping. Instantly generate a custom API from a JSON object. Create rules to handle error cases and customize HTTP codes, headers, and bodies. Use this tool for free; you can also retrieve the source code and set up a local installation.",
+        base_url='https://api.jsoning.com/mock/public',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKEy',
+        https=True,
+        cors=True,
+        docs='https://jsoning.com/api/',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # JSONPlaceholder
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='{JSON} Placeholder',
+        description="Free fake and reliable API for testing and prototyping.",
+        base_url='https://jsonplaceholder.typicode.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://jsonplaceholder.typicode.com/',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Micro-Jaymock
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='micro-jaymock',
+        description="Tiny API mocking microservice for generating fake JSON data.",
+        base_url='https://jaymock.now.sh',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://micro-jaymock.vercel.app/',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # RandomUser
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Random User Generator',
+        description="A free, open-source API for generating random user data. Like Lorem Ipsum, but for people.",
+        base_url='https://randomuser.me/api/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://randomuser.me/documentation',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # RoboHash
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='RoboHash',
+        description="Generate Unique images from any text. Robohash is a easy web service that makes it easy to provide unique, robot/alien/monster/whatever images for any text. Put in any text, such as IP address, email, filename, userid, or whatever else you like, and get back a pretty image for your site. With hundreds of millions of variations, Robohash is the among the leading robot-based hashing tools on the web.",
+        base_url='https://robohash.org/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://robohash.org/',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # UI Names
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='UI Names',
+        description="Generate random fake names.",
+        base_url='https://uinames.com/api/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://github.com/thm/uinames',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # UUID Generator
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='UUID Generator',
+        description="This API allows you to create UUIDs and GUIDs quickly on-the-fly for testing purposes. No authentication is required. We support generating all major UUID versions including version-1, version-3, version-4, version-5 and timestamp-first UUIDs. Read more about different UUID versions. No authentication is required. This is the same API that powers our UUID generator.Endpoints that accept a count argument allow you to create up to 100 UUIDs at once. All endpoints are limited to 60 requests per minute per IP address.",
+        base_url='https://www.uuidtools.com/api/generate',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://www.uuidtools.com/docs',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Yes No
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Yes No',
+        description="Generate yes or no randomly",
+        base_url='https://yesno.wtf/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs=None,
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Randommer
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Randommer',
+        description="We offer a RESTful API that you can access over HTTPS. We return all responses in JSON format, so you can use it with our app.",
+        base_url='https://randommer.io/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://randommer.io/randommer-api',
+        category='Test Data'
+    )
+    
+    api.save()
+
+    # ---------------
+    # Short Id
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='idgen',
+        description="The idgen is an API to generate Ids with the following characteristics: Short: currently fixed at 6 characters, Alphanumeric: IDs contain both uppercase and lowercase letters, and digits, Unique: each Id is guaranteed to be unique, Random sequence",
+        base_url='https://id.aslanta.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://github.com/aguedo/idgen',
+        category='Test Data'
+    )
+
+    api.save()
+
+    # ---------------
+    # Softwium
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Softwium',
+        description="Fake API. Free public API that enables developers to effortlessly obtain fake JSON data. Test API endpoints and retrieve dummy JSON data swiftly. No registration, tokens, or authentication is needed.",
+        base_url='https://softwium.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=True,
+        docs='https://softwium.com/fake-api/',
+        category='Test Data'
+    )
+
+    api.save()
 
     # Text Analysis
 
