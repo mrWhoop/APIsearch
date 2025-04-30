@@ -6504,7 +6504,505 @@ def populate_database():
 
     api.save()
 
-    # Music TODO
+    # Music
+
+    # ---------------
+    # AI Mastering
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='AI Mastering',
+        description="Automated Music Mastering",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=True,
+        docs='https://app.swaggerhub.com/apis/aimastering/aimastering/1.0.0',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Bandsintown
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Bandsintown',
+        description="The Bandsintown API is designed for artists and enterprises representing artists. It offers read-only access to artist info and artist events: artist info: returns the link to the Bandsintown artist page, the link to the artist photo, the current number of trackers and more artist events: returns the list of events including their date and time, venue name and location, ticket links, lineup, description, title, and the link to the Bandsintown event page",
+        base_url='https://rest.bandsintown.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://app.swaggerhub.com/apis/Bandsintown/PublicAPI/3.0.1',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Discogs
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Discogs',
+        description="Unlock the Ultimate Record Collecting Experience. Discover essential tools for your record collecting journey with Discogs. Experience unparalleled music discovery, comprehensive collection management, and a vibrant community revolutionizing record collecting.",
+        base_url='https://api.discogs.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://www.discogs.com/developers/',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Freesound
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Freesound',
+        description="With the Freesound API you can browse, search, and retrieve information about Freesound users, packs, and the sounds themselves of course. You can find similar sounds to a given target (based on content analysis) and retrieve automatically extracted features from audio files, as well as perform advanced queries combining content analysis features and other metadata (tags, etc…). With the Freesound API, you can also upload, comment, rate and bookmark sounds!",
+        base_url='https://freesound.org/apiv2',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://freesound.org/docs/api/overview.html',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Genius
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Genius',
+        description="Genius is the world’s biggest collection of song lyrics and musical knowledge.",
+        base_url='https://api.genius.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://docs.genius.com/#/getting-started-h1',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Genrenator
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Binary Jazz',
+        description="Much like Binary Jazz itself, the genrenator is the product of a bunch of us chatting and tossing ideas around and something sticks. In this case, it came from a discussion about obscure genres we didn't know existed, veered to the Every Noise At Once database that Spotify uses to inform their genres and playlists, and ended with the question what if we could create an API that served random genres? The Genrenator Twitter bot is also a product of this.",
+        base_url='https://binaryjazz.us/wp-json/genrenator',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://binaryjazz.us/genrenator-api/',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Jamendo
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Jamendo',
+        description="Please use our Api to build awesome music applications, support independent artists and express your creativity through mash-ups and innovative products! We provide more than 20 different read methods to access a catalog of half-a-million tracks, some powerful features for music discovery like search and radios, OAuth2 based authentication, 5 write methods to manage user library, and a website to monitor your app statistics.",
+        base_url='https://api.jamendo.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developer.jamendo.com/v3.0/docs',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # KKBOX
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='KKBOX',
+        description="Get music libraries, playlists, charts, and perform out of KKBOX's platform",
+        base_url='https://api.kkbox.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://docs-en.kkbox.codes/',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # LastFm
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='last.fm',
+        description="Explore Top Music Powered by your Scrobbles. We bring together your favourite music services and join up listening, watching and sharing to connect your musical world. Below you can visualise, in real-time, the listening habits & trends of Last.fm's global community. Go Explore.",
+        base_url='http://ws.audioscrobbler.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.last.fm/api/intro',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Lyrics.ovh
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Lyrics.ovh',
+        description="Simple API to retrieve the lyrics of a song.",
+        base_url='https://api.lyrics.ovh',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://lyricsovh.docs.apiary.io/#reference/0/lyrics-of-a-song/search',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Mixcloud
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Mixcloud',
+        description="Play, share and make money from music. Use Mixcloud to play any music you like, build communities and get paid directly. We take care of the music copyright for you.",
+        base_url='https://api.mixcloud.com/',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://www.mixcloud.com/developers/',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # MusicBrainz
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='MusicBrainz',
+        description="MusicBrainz is a community-maintained open source encyclopedia of music information. This means that anyone — including you — can help contribute to the project by adding information about your favorite artists and their works. In 2000, Gracenote took over the free CDDB project and commercialized it, essentially charging users for accessing the very data they themselves contributed. In response, Robert Kaye founded MusicBrainz. The project has since grown rapidly from a one-man operation to an international community of enthusiasts that appreciates both music and music metadata. Along the way, the scope of the project has expanded from its origins as a mere CDDB replacement to the true music encyclopedia MusicBrainz is today. As an encyclopedia and as a community, MusicBrainz exists only to collect as much information about music as we can. We do not discriminate or prefer one type of music over another, and we try to collect information about as many different types of music as possible. Whether it is published or unpublished, popular or fringe, western or non-western, human or non-human — we want it all in MusicBrainz.",
+        base_url='https://musicbrainz.org/ws/2',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=None,
+        docs='https://musicbrainz.org/doc/MusicBrainz_API',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Musixmatch
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='musixmatch',
+        description="Lyrics API. The Musixmatch Lyrics API allows you to get access to Musixmatch metadata about song and lyrics.",
+        base_url=None,
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://docs.musixmatch.com/lyrics-api/introduction',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Openwhyd
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='openwhyd',
+        description="Openwhyd is a free and open-source music curation service that allows users to create playlists of music tracks from various streaming platforms (YouTube, SoundCloud, Vimeo, Deezer…) and to discover the music posted by other users.",
+        base_url='https://openwhyd.org',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton=None,
+        https=True,
+        cors=False,
+        docs='https://openwhyd.github.io/openwhyd/API',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Songkick
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Songkick',
+        description="The best api for live music. The Songkick API gives you easy access to the biggest live music database in the world: over 6 million upcoming and past concerts... and growing every day! Easily add concerts to your website or application.",
+        base_url='https://api.songkick.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://www.songkick.com/developer/getting-started',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # SoundCloud
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='SoundCloud',
+        description="Discover. Get Discovered. Discover your next obsession, or become someone else’s. SoundCloud is the only community where fans and artists come together to discover and connect through music.",
+        base_url='https://developers.soundcloud.com/docs/api/explorer/open-api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developers.soundcloud.com/docs/api/explorer/open-api',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Spotify
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='Spotify',
+        description="etrieve metadata from Spotify content or control playback. Spotify Web API enables the creation of applications that can interact with Spotify's streaming service, such as retrieving content metadata, creating and managing playlists, or controlling playback.",
+        base_url='https://api.spotify.com',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='OAuth',
+        https=True,
+        cors=None,
+        docs='https://developer.spotify.com/documentation/web-api',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # TasteDive
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='test_dive',
+        description="TasteDive (formerly TasteKid) helps you discover new music, movies, TV shows, books, authors, games, podcasts, and people with shared interests. As a visitor, you can get instant suggestions using our recommendation engine. You can also hang around a bit longer, create a taste profile, discover interesting people, and learn about cool bands, movies, books or games from their profiles.",
+        base_url='https://tastedive.com/api',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://tastedive.com/read/api',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # TheAudioDB
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='TheAudioDB',
+        description="https://theaudiodb.com/api",
+        base_url='TheAudioDB is a community Database of audio artwork and metadata with a free music API. The content here is only possible thanks to the hard work of our editors.',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs='https://www.theaudiodb.com/api_guide.php',
+        category='Music'
+    )
+
+    api.save()
+
+    # ---------------
+    # Vagalume
+    # ---------------
+
+    endpoints = None
+
+    api = Api(
+        name='',
+        description="",
+        base_url='',
+        api_keywords=['Test', 'testAPI'],
+        popularity=randrange(0, 10),
+        service_level=randrange(0, 10),
+        latency=randrange(0, 1000),
+        reliability=randrange(0, 10),
+        endpoints=endpoints,
+        authenticaton='apiKey',
+        https=True,
+        cors=None,
+        docs=,
+        category='Music'
+    )
 
     # News
 
