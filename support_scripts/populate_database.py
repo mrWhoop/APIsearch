@@ -10670,27 +10670,27 @@ def populate_database():
     api.save()
 
     return
-
-
-    # ---------------
-    # Cats
-    # ---------------
-
-    endpoints = None
-
-    api = Api(
-        name='',
-        description="",
-        base_url='',
-        api_keywords=['Test', 'testAPI'],
-        popularity=randrange(0, 10),
-        service_level=randrange(0, 10),
-        latency=randrange(0, 1000),
-        reliability=randrange(0, 10),
-        endpoints=endpoints,
-        authenticaton=,
-        https=,
-        cors=,
-        docs=,
-        category=
-    )
+    #
+    #
+    # # ---------------
+    # # Cats
+    # # ---------------
+    #
+    # endpoints = None
+    #
+    # api = Api(
+    #     name='',
+    #     description="",
+    #     base_url='',
+    #     api_keywords=['Test', 'testAPI'],
+    #     popularity=randrange(0, 10),
+    #     service_level=randrange(0, 10),
+    #     latency=randrange(0, 1000),
+    #     reliability=randrange(0, 10),
+    #     endpoints=endpoints,
+    #     authenticaton=,
+    #     https=,
+    #     cors=,
+    #     docs=,
+    #     category=
+    # )
