@@ -1,10 +1,17 @@
-from flask import Blueprint, jsonify
+from flask import Blueprint, jsonify, request
 from ..extensions import mongo
 from support_scripts.populate_database import populate_database
 from support_scripts.populate_search_index import populate_search_index
-from support_scripts.create_chroma_chatGPT_embeddings import createCollection
+from support_scripts.create_chroma_chatGPT_embeddings import createCollection as GPT
+from support_scripts.create_chroma_Gemini_embeddings import createCollection as GEMINI
 from support_scripts.countTokens import countGPTtokens
 from app.models.api import Api, EndPoint
+import os
+from openai import OpenAI
+import chromadb
+from chromadb.config import Settings
+import google.generativeai as genai
+
 
 main_blueprint = Blueprint('main', __name__)
 
@@ -25,8 +32,13 @@ def populate_database_call():
 
 @main_blueprint.route('/support/create_GPT')
 def createGPTcollection():
-    createCollection()
-    return jsonify({'status': 'Done.'})
+    GPT()
+    return jsonify({'status': 'ChatGPT done.'})
+
+@main_blueprint.route('/support/create_Gemini')
+def createGeminiCollection():
+    GEMINI()
+    return jsonify({'status': 'Gemini done.'})
 
 @main_blueprint.route('/support/count_tokens')
 def countTokens():
@@ -39,4 +51,28 @@ def countTokens():
 @main_blueprint.route('/search')
 def search():
 
-    return None
+    OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
+    OpenAI_client = OpenAI(api_key=OPENAI_API_KEY)
+
+    genai.configure(api_key=os.environ['GEMINI_API_KEY'])
+    embedding_model_name = 'models/gemini-embedding-exp-03-07'
+
+    chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
+    chroma_GPT_collection = chroma_client.get_collection(name="gptAPI")
+
+    chroma_Gemini_collection = chroma_client.get_collection(name="GeminiAPI")
+
+    query = request.args.get('q')
+
+    query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
+    resultsGPT = chroma_GPT_collection.query(query_embeddings=[query_GPT_embedding], n_results=5)
+
+    query_Gemini_embedding = genai.embed_content(model=embedding_model_name, content=query)['embedding']
+    resultsGemini = chroma_Gemini_collection.query(query_embeddings=[query_Gemini_embedding], n_results=5)
+
+    result = {
+        "GPT_RAG": resultsGPT,
+        "Gemini_RAG": resultsGemini
+    }
+
+    return jsonify(result)
