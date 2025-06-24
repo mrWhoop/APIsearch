@@ -55,6 +55,27 @@ def countTokens():
 @main_blueprint.route('/search')
 def search():
 
+    # result = {
+    #     "results": [{
+    #       "name": 'string1',
+    #       "category": 'string',
+    #       "description": 'string',
+    #       "docs": 'string',
+    #     },
+    #     {
+    #         "name": 'string2',
+    #         "category": 'string',
+    #         "description": 'string',
+    #         "docs": 'string',
+    #     },
+    #     {
+    #         "name": 'string3',
+    #         "category": 'string',
+    #         "description": 'string',
+    #         "docs": 'string',
+    #     }]
+    # }
+
     OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
     OpenAI_client = OpenAI(api_key=OPENAI_API_KEY)
 
@@ -88,4 +109,4 @@ def search():
         "Gemini_RAG_meta": resultsGeminiMeta,
     }
 
-    return jsonify(result)
+    return jsonify({"results": resultsGPT["metadatas"][0]})

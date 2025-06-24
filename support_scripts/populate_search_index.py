@@ -22,6 +22,7 @@ def populate_search_index():
             'id': str(api['_id']),
             'name': api['name'],
             'description': api['description'],
+            'category': api['category'],
             'api_keywords': api['api_keywords'],
         }
         documents.append(doc)
