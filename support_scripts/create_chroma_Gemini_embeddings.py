@@ -10,6 +10,7 @@ embedding_model_name='models/gemini-embedding-exp-03-07'
 def createCollection():
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
+    chroma_client.delete_collection("GeminiAPI")
     chroma_collection = chroma_client.create_collection(name="GeminiAPI")
     apis = mongo.db.apis.find()
 
@@ -22,6 +23,13 @@ def createCollection():
             'description': str(api['description']),
             'docs': str(api['docs']),
             'category': str(api['category']),
+            'popularity': str(api['popularity']),
+            'service_level': str(api['service_level']),
+            'latency': str(api['latency']),
+            'reliability': str(api['reliability']),
+            'authentication': str(api['authentication']),
+            'https': str(api['https']),
+            'cors': str(api['cors'])
         }
 
         # here we get gemini embeddings
@@ -41,11 +49,12 @@ def createCollection():
 def createCollectionMeta():
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
+    chroma_client.delete_collection("GeminiAPImeta")
     chroma_collection = chroma_client.create_collection(name="GeminiAPImeta")
     apis = mongo.db.apis.find()
 
     for api in apis:
-        document = "Name: " + api['name'] + "\n" + "Description: " + api['description'] + "\n" + "Popularity: " + str(api['popularity']) + "/10 \n" + "Service level: " + str(api['service_level']) + "/10\n" + "Latency: " + str(api['latency']) + "\n" + "Reliability: " + str(api['reliability']) + "/10\n" + "Category: " + api['category'] + '\n'
+        document = "Name: " + api['name'] + "\n" + "Description: " + api['description'] + "\n" + "Popularity: " + str(api['popularity']) + "/10 \n" + "Service level: " + str(api['service_level']) + "/10\n" + "Latency: " + str(api['latency']) + "\n" + "Reliability: " + str(api['reliability']) + "/10\n" + "Category: " + api['category'] + "\n"
         chroma_id = str(api['_id'])
 
         metadata = {
@@ -53,6 +62,13 @@ def createCollectionMeta():
             'description': str(api['description']),
             'docs': str(api['docs']),
             'category': str(api['category']),
+            'popularity': str(api['popularity']),
+            'service_level': str(api['service_level']),
+            'latency': str(api['latency']),
+            'reliability': str(api['reliability']),
+            'authentication': str(api['authentication']),
+            'https': str(api['https']),
+            'cors': str(api['cors'])
         }
 
         # here we get gemini embeddings

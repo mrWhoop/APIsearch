@@ -21,7 +21,7 @@ class EndPoint:
 class Api(BaseModel):
     collection_name = 'apis'
 
-    def __init__(self, name=None, description=None, base_url=None, api_keywords=None, endpoints=None, popularity=None, service_level=None, latency=None, reliability=None, https=None, authenticaton=None, cors=None, docs=None, category=None, type=None, **kwargs):
+    def __init__(self, name=None, description=None, base_url=None, api_keywords=None, endpoints=None, popularity=None, service_level=None, latency=None, reliability=None, https=None, authentication=None, cors=None, docs=None, category=None, type=None, **kwargs):
         self.name = name
         self.description = description
         self.base_url = base_url
@@ -31,7 +31,7 @@ class Api(BaseModel):
         self.latency = latency
         self.reliability = reliability
         self.https = https
-        self.authenticaton = authenticaton
+        self.authentication = authentication
         self.cors = cors
         self.docs = docs
         self.category = category

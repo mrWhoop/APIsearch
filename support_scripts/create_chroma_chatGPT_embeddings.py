@@ -9,6 +9,7 @@ OpenAI_client = OpenAI(api_key=OPENAI_API_KEY)
 def createCollection():
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
+    chroma_client.delete_collection("gptAPI")
     chroma_collection = chroma_client.create_collection(name="gptAPI")
     apis = mongo.db.apis.find()
 
@@ -29,6 +30,13 @@ def createCollection():
             'description': str(api['description']),
             'docs': str(api['docs']),
             'category': str(api['category']),
+            'popularity': str(api['popularity']),
+            'service_level': str(api['service_level']),
+            'latency': str(api['latency']),
+            'reliability': str(api['reliability']),
+            'authentication': str(api['authentication']),
+            'https': str(api['https']),
+            'cors': str(api['cors'])
         }
 
         embedding = response.data[0].embedding
@@ -40,6 +48,7 @@ def createCollection():
 def createCollectionMeta():
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
+    chroma_client.delete_collection("gptAPImeta")
     chroma_collection = chroma_client.get_or_create_collection(name="gptAPImeta")
     apis = mongo.db.apis.find()
 
@@ -62,6 +71,13 @@ def createCollectionMeta():
             'description': str(api['description']),
             'docs': str(api['docs']),
             'category': str(api['category']),
+            'popularity': str(api['popularity']),
+            'service_level': str(api['service_level']),
+            'latency': str(api['latency']),
+            'reliability': str(api['reliability']),
+            'authentication': str(api['authentication']),
+            'https': str(api['https']),
+            'cors': str(api['cors'])
         }
 
         embedding = response.data[0].embedding

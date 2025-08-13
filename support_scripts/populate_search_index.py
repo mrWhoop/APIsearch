@@ -44,6 +44,14 @@ def populate_search_index():
             'category': api['category'],
             'docs': api['docs'],
             'api_keywords': api['api_keywords'],
+
+            'popularity': str(api['popularity']),
+            'service_level': str(api['service_level']),
+            'latency': str(api['latency']),
+            'reliability': str(api['reliability']),
+            'authentication': str(api['authentication']),
+            'https': api['https'],
+            'cors': api['cors']
         }
         documents.append(doc)
 
