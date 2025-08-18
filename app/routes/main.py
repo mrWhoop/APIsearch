@@ -2,6 +2,7 @@ from json import JSONDecodeError
 
 import meilisearch
 from flask import Blueprint, jsonify, request
+from flask_cors import cross_origin
 from mpmath.calculus.extrapolation import limit
 from pymongo.errors import OperationFailure
 
@@ -225,6 +226,7 @@ def databaseQuerySearchGPT(userQuery):
 
 
 @main_blueprint.route('/search')
+@cross_origin()
 def search():
 
     # result = {
