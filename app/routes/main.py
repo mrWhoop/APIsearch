@@ -22,6 +22,8 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 import json
 
+from support_scripts import evaluation
+
 load_dotenv()
 
 MEILISEARCH_SECRET = os.environ['MEILISEARCH_SECRET']
@@ -52,6 +54,11 @@ def populate_database_call():
         apis = mongo.db.apis.find()
 
     return jsonify(apis)
+
+@main_blueprint.route('/support/evaluateGemini')
+def evaluateGemini_call():
+    evaluation.repeatabilityTestGemini("reliable API for stock prices in real-time", 5)
+    return jsonify({'status': 'Gemini repeatability evaluation done.'})
 
 @main_blueprint.route('/support/create_GPT')
 def createGPTcollection():
@@ -143,7 +150,6 @@ def databaseQuerySearchGemini(userQuery):
         return None
 
     result = mongo.db.apis.find(query_response)
-
 
     res = list()
 
