@@ -58,8 +58,19 @@ def populate_database_call():
 
 @main_blueprint.route('/support/evaluateGemini')
 def evaluateGemini_call():
-    evaluation.repeatabilityTestGemini("reliable API for stock prices in real-time", 5)
+    evaluation.repeatabilityTestGemini(evaluation.simpleQuery, "simple", 10, mongo)
+    evaluation.repeatabilityTestGemini(evaluation.namedQuery, "named", 10, mongo)
+    evaluation.repeatabilityTestGemini(evaluation.complexQuery, "complex", 10, mongo)
+    evaluation.repeatabilityTestGemini(evaluation.maliciousQuery, "malicious", 10, mongo)
     return jsonify({'status': 'Gemini repeatability evaluation done.'})
+
+@main_blueprint.route('/support/evaluateGPT')
+def evaluateGPT_call():
+    evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
+    evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
+    evaluation.repeatabilityTestGPT(evaluation.complexQuery, "complex", 10, mongo)
+    evaluation.repeatabilityTestGPT(evaluation.maliciousQuery, "malicious", 10, mongo)
+    return jsonify({'status': 'GPT repeatability evaluation done.'})
 
 @main_blueprint.route('/support/create_GPT')
 def createGPTcollection():
@@ -86,7 +97,6 @@ def databaseQuerySearchGemini(userQuery):
     # You might also consider 'gemini-1.5-flash' or 'gemini-1.5-pro' for specific needs.
 
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-    modelGemini = genai.GenerativeModel('gemini-1.5-pro')
 
     prompt = """
         You are an expert MongoDB query generator. Your sole task is to generate the `query` document (and optionally the `projection` document) that would be passed directly into a `db.collection.find(query, projection)` method in MongoDB.
@@ -132,9 +142,11 @@ def databaseQuerySearchGemini(userQuery):
         }
         ```
         Request: 
-    """ + userQuery
+    """
 
-    response = modelGemini.generate_content(prompt)
+    modelGemini = genai.GenerativeModel('gemini-1.5-pro', system_instruction=prompt)
+
+    response = modelGemini.generate_content(userQuery)
     response = response.candidates[0].content.parts[0].text
 
     print("GEMINI", response)

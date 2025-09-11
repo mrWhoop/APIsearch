@@ -1,0 +1,17 @@
+{
+    "query": "jobs",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```"
+    ]
+}

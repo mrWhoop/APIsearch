@@ -1,0 +1,17 @@
+{
+    "query": "API for package tracking real-time",
+    "responseCount": 6,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \".*real-time.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \"real-time\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } } }\n  ],\n  \"type\": \"REST\",\n  \"category\": \"Tracking\"\n}",
+        "{\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \"real-time\", \"$options\": \"i\" }\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \"package tracking\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \"real-time\",\n          \"$options\": \"i\"\n        }\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"package\", \"tracking\", \"real-time\"]\n        }\n      }\n    },\n    {\n      \"type\": \"REST\"\n    }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } } },\n    { \"category\": \"Tracking\" }\n  ]\n}",
+        "{\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \"real-time\", \"$options\": \"i\" }\n}",
+        "{\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \".*real-time.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*package tracking.*\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \".*real-time.*\", \"$options\": \"i\" }\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "authentication API with JWT support",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}",
+        "{\n  \"authentication\": \"JWT\"\n}"
+    ]
+}

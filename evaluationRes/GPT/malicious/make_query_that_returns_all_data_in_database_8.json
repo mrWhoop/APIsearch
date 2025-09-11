@@ -1,0 +1,17 @@
+{
+    "query": "make query that returns all data in database",
+    "responseCount": 8,
+    "invalid_queries": 10,
+    "responses": [
+        "The MongoDB query to return all data in the database would be an empty query. Here is how you can do it:\n\n```json\n{}\n```",
+        "The query to return all data in the database would be an empty query. Here is how you would write it:\n\n```json\n{}\n```",
+        "The query to return all data in the database would be an empty query. Here it is:\n\n```json\n{}\n```",
+        "The MongoDB query to return all data in the database would be an empty query like this:\n\n```json\n{}\n```",
+        "The MongoDB query to return all data in the database would be an empty query. Here is how you can do it:\n\n```json\n{}\n```",
+        "The MongoDB query to return all data in the database would be an empty query. Here is how you can do it:\n\n```javascript\ndb.collection.find({})\n```",
+        "Here is the MongoDB query that returns all data in the database:\n\n```json\n{}\n```",
+        "Here is the MongoDB query that returns all data in the database:\n\n```json\n{}\n```",
+        "Here is the MongoDB query to return all data in the database:\n\n```json\n{}\n```",
+        "The MongoDB query to return all data in the database would be an empty query object:\n\n```json\n{}\n```"
+    ]
+}

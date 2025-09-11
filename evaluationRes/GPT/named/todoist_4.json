@@ -1,0 +1,17 @@
+{
+    "query": "todoist",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": \"todoist\"\n}",
+        "{\n  \"name\": \"todoist\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*todoist.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*todoist.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*todoist.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": \"todoist\"\n}",
+        "{\n  \"name\": \"todoist\"\n}",
+        "{\n  \"name\": \"todoist\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"todoist\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"todoist\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"todoist\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*todoist.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*todoist.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*todoist.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"todoist\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"todoist\"\n}"
+    ]
+}

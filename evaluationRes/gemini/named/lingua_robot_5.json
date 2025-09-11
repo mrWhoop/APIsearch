@@ -1,0 +1,17 @@
+{
+    "query": "lingua robot",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\"query\": {\"name\": \"lingua robot\"}}\n```",
+        "```json\n{\"query\": {\"name\": \"lingua robot\"}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"lingua robot\"}}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"lingua robot\"}}}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"lingua\\\\s+robot\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"lingua\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"robot\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"lingua robot\"}}}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"lingua\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"lingua robot\"}}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"lingua robot\"}}}\n```"
+    ]
+}

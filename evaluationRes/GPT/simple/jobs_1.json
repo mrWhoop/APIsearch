@@ -1,0 +1,17 @@
+{
+    "query": "jobs",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}",
+        "{\n  \"category\": \"Jobs\"\n}"
+    ]
+}

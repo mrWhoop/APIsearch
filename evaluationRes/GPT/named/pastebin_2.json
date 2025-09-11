@@ -1,0 +1,17 @@
+{
+    "query": "pastebin",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"pastebin\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*pastebin.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

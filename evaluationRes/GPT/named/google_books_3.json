@@ -1,0 +1,17 @@
+{
+    "query": "google books",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \"google books\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*google books.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*google books.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*google books.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"google books\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"google books\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "inventory management REST API",
+    "responseCount": 6,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"inventory management\", \"$options\": \"i\" },\n  \"type\": \"REST\"\n}",
+        "{\n  \"$and\": [\n    {\n      \"description\": {\n        \"$regex\": \"inventory management\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"type\": \"REST\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"$or\": [\n        {\n          \"name\": {\n            \"$regex\": \".*inventory management.*\",\n            \"$options\": \"i\"\n          }\n        },\n        {\n          \"description\": {\n            \"$regex\": \".*inventory management.*\",\n            \"$options\": \"i\"\n          }\n        },\n        {\n          \"api_keywords\": {\n            \"$elemMatch\": {\n              \"$regex\": \".*inventory management.*\",\n              \"$options\": \"i\"\n            }\n          }\n        }\n      ]\n    },\n    {\n      \"type\": \"REST\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"$or\": [\n        { \"name\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n        { \"description\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n        { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } } }\n      ]\n    },\n    { \"type\": \"REST\" }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } } }\n  ],\n  \"type\": \"REST\"\n}",
+        "{\n  \"$and\": [\n    {\n      \"description\": {\n        \"$regex\": \"inventory management\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"type\": \"REST\"\n    }\n  ]\n}",
+        "{\n  \"description\": { \"$regex\": \"inventory management\", \"$options\": \"i\" },\n  \"type\": \"REST\"\n}",
+        "{\n  \"$and\": [\n    {\n      \"$or\": [\n        { \"name\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n        { \"description\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n        { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } } }\n      ]\n    },\n    { \"type\": \"REST\" }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"inventory management\", \"$options\": \"i\" } } }\n  ],\n  \"type\": \"REST\"\n}",
+        "{\n  \"$and\": [\n    {\n      \"description\": {\n        \"$regex\": \"inventory management\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"type\": \"REST\"\n    }\n  ]\n}"
+    ]
+}

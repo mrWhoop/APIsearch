@@ -1,0 +1,17 @@
+{
+    "query": "open source location tracking API",
+    "responseCount": 7,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \"location|tracking\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"type\": \"REST\"\n    },\n    {\n      \"category\": \"Open Source Projects\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Open Source Projects\"\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*location.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*tracking.*\",\n          \"$options\": \"i\"\n        }\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*location.*tracking.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"type\": \"REST\"\n    },\n    {\n      \"category\": \"Open Source Projects\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"open source\", \"location\", \"tracking\"]\n        }\n      }\n    },\n    {\n      \"type\": \"REST\"\n    },\n    {\n      \"category\": \"Tracking\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*\", \"$options\": \"i\" } } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*tracking.*\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \".*Open Source Projects.*\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Open Source Projects\"\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*location.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*tracking.*\",\n          \"$options\": \"i\"\n        }\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*location.*tracking.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"type\": \"Open Source Projects\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"open source\", \"location\", \"tracking\"]\n        }\n      }\n    },\n    {\n      \"type\": \"REST\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Open Source Projects\"\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*location.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*tracking.*\",\n          \"$options\": \"i\"\n        }\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Open Source Projects\"\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*location.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*tracking.*\",\n          \"$options\": \"i\"\n        }\n      }\n    }\n  ]\n}"
+    ]
+}

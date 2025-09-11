@@ -1,0 +1,17 @@
+{
+    "query": "trestle",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"trestle\"}}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"trestle\"}}}\n```",
+        "```json\n{\"query\": {\"name\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"trestle\"}}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"trestle\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"trestle\"}}}\n```"
+    ]
+}

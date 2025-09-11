@@ -1,0 +1,17 @@
+{
+    "query": "weather",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}",
+        "{\n  \"category\": \"Weather\"\n}"
+    ]
+}

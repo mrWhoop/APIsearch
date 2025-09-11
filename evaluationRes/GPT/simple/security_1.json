@@ -1,0 +1,17 @@
+{
+    "query": "security",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}",
+        "{\n  \"category\": \"Security\"\n}"
+    ]
+}

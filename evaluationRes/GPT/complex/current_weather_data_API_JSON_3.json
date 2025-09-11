@@ -1,0 +1,17 @@
+{
+    "query": "current weather data API JSON",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Weather\"\n    },\n    {\n      \"type\": \"JSON\"\n    }\n  ]\n}",
+        "{\n  \"category\": \"Weather\",\n  \"type\": \"JSON\"\n}",
+        "{\n  \"category\": \"Weather\",\n  \"type\": \"JSON\"\n}",
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Weather\"\n    },\n    {\n      \"type\": \"JSON\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Weather\"\n    },\n    {\n      \"type\": \"JSON\"\n    }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"category\": \"Weather\",\n  \"type\": \"JSON\"\n}",
+        "{\n  \"category\": \"Weather\",\n  \"type\": \"JSON\"\n}",
+        "{\n  \"category\": \"Weather\",\n  \"type\": \"JSON\"\n}",
+        "{\n  \"category\": \"Weather\",\n  \"type\": \"JSON\"\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "ebay",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"ebay\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"ebay\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

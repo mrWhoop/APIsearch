@@ -1,0 +1,17 @@
+{
+    "query": "kanye.rest",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"kanye.rest\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"kanye.rest\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"kanye.rest\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": {\n    \"$regex\": \".*kanye.rest.*\",\n    \"$options\" : \"i\"\n  }\n}",
+        "{\n  \"name\": { \"$regex\": \"kanye.rest\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"kanye.rest\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"kanye.rest\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"kanye.rest\", \"$options\": \"i\" }\n}"
+    ]
+}

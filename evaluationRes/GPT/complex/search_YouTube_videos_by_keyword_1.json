@@ -1,0 +1,17 @@
+{
+    "query": "search YouTube videos by keyword",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}",
+        "{\n  \"name\": { \"$regex\": \"YouTube\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"videos\", \"$options\": \"i\" } }\n}"
+    ]
+}

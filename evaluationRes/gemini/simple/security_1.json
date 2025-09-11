@@ -1,0 +1,17 @@
+{
+    "query": "security",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Security\"\n  }\n}\n```"
+    ]
+}

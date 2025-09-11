@@ -1,0 +1,17 @@
+{
+    "query": "productivity",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Documents & Productivity\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"category\": \"Documents & Productivity\"\n}",
+        "{\n  \"category\": \"Documents & Productivity\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"category\": \"Documents & Productivity\"\n}",
+        "{\n  \"category\": \"Documents & Productivity\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \".*productivity.*\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"category\": \"Documents & Productivity\"\n}"
+    ]
+}

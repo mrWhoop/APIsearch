@@ -1,0 +1,17 @@
+{
+    "query": "IP geolocation API free tier",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 },\n  \"authentication\": \"None\"\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}"
+    ]
+}

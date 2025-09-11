@@ -1,0 +1,17 @@
+{
+    "query": "API to fetch tax rates by country",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "music",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*music.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*music.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*music.*\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \".*music.*\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"category\": \"Music\"\n}",
+        "{\n  \"category\": \"Music\"\n}"
+    ]
+}

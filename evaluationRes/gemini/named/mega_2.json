@@ -1,0 +1,17 @@
+{
+    "query": "mega",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"mega\"}}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$text\": {\"$search\": \"mega\"}}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```",
+        "```json\n{\"query\": {\"$or\": [{\"name\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"description\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"api_keywords\": {\"$regex\": \"mega\", \"$options\": \"i\"}}, {\"category\": {\"$regex\": \"mega\", \"$options\": \"i\"}}]}}\n```"
+    ]
+}

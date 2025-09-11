@@ -1,0 +1,17 @@
+{
+    "query": "UV index API free tier",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 1\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 0\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 2\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 2\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 2\n      }\n    }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 2 }\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 0\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 0\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$lte\": 0\n      }\n    }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 0 }\n}"
+    ]
+}

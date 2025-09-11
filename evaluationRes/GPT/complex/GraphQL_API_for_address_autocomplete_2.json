@@ -1,0 +1,17 @@
+{
+    "query": "GraphQL API for address autocomplete",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"description\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"description\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"address autocomplete\", \"$options\": \"i\" } }\n}"
+    ]
+}
