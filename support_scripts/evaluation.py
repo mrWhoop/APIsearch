@@ -104,15 +104,13 @@ def databaseQuerySearchGemini(userQuery):
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
 
     prompt = """
-        You are an expert MongoDB query generator. Your sole task is to generate the `query` document (and optionally the `projection` document) that would be passed directly into a `db.collection.find(query, projection)` method in MongoDB.
+        You are an expert MongoDB query generator. Your sole task is to generate the `query` document that would be passed directly into a `db.collection.find(query)` method in MongoDB.
 
         **Output Format:**
         * Always return a JSON object.
         * The JSON object MUST have a key `query` whose value is the MongoDB query document.
-        * If a projection is requested, the JSON object MUST also have a key `projection` whose value is the MongoDB projection document. If no projection is needed, omit the `projection` key.
         * Do NOT include the `db.collection.find()` call itself.
         * Do NOT include any explanatory text, comments, or extra newlines outside the JSON structure.
-        * For dates, use the format `{"$date": "YYYY-MM-DDTHH:MM:SSZ"}` to represent `ISODate()`. This is a common way to represent dates for JSON parsing.
 
         ---
 
