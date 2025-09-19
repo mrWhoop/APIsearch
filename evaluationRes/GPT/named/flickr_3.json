@@ -1,0 +1,17 @@
+{
+    "query": "flickr",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"flickr\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"flickr\"\n}",
+        "{\n  \"name\": { \"$regex\": \"flickr\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"flickr\"\n}",
+        "{\n  \"name\": \"flickr\"\n}",
+        "{\n  \"name\": \"flickr\"\n}",
+        "{\n  \"name\": { \"$regex\": \"flickr\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"flickr\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"flickr\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"flickr\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"flickr\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"flickr\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"flickr\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"flickr\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

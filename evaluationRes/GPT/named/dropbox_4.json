@@ -1,0 +1,17 @@
+{
+    "query": "dropbox",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*dropbox.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*dropbox.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*dropbox.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": \"dropbox\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"dropbox\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

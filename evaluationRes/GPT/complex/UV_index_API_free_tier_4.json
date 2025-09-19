@@ -1,0 +1,17 @@
+{
+    "query": "UV index API free tier",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$gte\": 0,\n        \"$lte\": 0\n      }\n    }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$lte\": 2 }\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"name\": { \"$regex\": \"UV index\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*UV index.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"service_level\": {\n        \"$gte\": 0\n      }\n    }\n  ]\n}"
+    ]
+}

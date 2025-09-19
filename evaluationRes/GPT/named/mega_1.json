@@ -1,0 +1,17 @@
+{
+    "query": "mega",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*mega.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

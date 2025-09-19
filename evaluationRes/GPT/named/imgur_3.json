@@ -1,0 +1,17 @@
+{
+    "query": "imgur",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": \"imgur\"\n}",
+        "{\n  \"name\": \"imgur\"\n}",
+        "{\n  \"name\": \"imgur\"\n}",
+        "{\n  \"name\": { \"$regex\": \"imgur\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"imgur\"\n}",
+        "{\n  \"name\": \"imgur\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*imgur.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*imgur.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*imgur.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": \"imgur\"\n}",
+        "{\n  \"name\": \"imgur\"\n}",
+        "{\n  \"name\": \"imgur\"\n}"
+    ]
+}

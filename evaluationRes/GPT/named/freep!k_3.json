@@ -1,0 +1,17 @@
+{
+    "query": "freep!k",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } },\n    { \"authentication\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"type\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"category\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"freep!k\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

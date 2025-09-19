@@ -1,0 +1,17 @@
+{
+    "query": "cryptocurrency price API with WebSocket",
+    "responseCount": 2,
+    "invalid_queries": 4,
+    "responses": [
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"price\", \"$options\": \"i\" } },\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"price\", \"$options\": \"i\" } },\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"description\": /price/,\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"price\", \"$options\": \"i\" } },\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"price\", \"$options\": \"i\" } },\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"description\": /price/,\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"description\": /price/,\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"price\", \"$options\": \"i\" } },\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"price\", \"$options\": \"i\" } },\n  \"type\": \"WebSocket\"\n}",
+        "{\n  \"category\": \"Cryptocurrency\",\n  \"description\": /price/,\n  \"type\": \"WebSocket\"\n}"
+    ]
+}

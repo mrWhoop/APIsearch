@@ -1,0 +1,17 @@
+{
+    "query": "fincept",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$text\": {\n    \"$search\": \"fincept\"\n  }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"fincept\"\n  }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"fincept\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"fincept\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"fincept\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"fincept\"\n  }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"fincept\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"fincept\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"fincept\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"fincept\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"fincept\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

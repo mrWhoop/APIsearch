@@ -1,0 +1,17 @@
+{
+    "query": "cataas",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"cataas\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"cataas\"\n}",
+        "{\n  \"name\": \"cataas\"\n}",
+        "{\n  \"name\": \"cataas\"\n}",
+        "{\n  \"name\": { \"$regex\": \"cataas\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"cataas\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"cataas\"\n}",
+        "{\n  \"name\": { \"$regex\": \"cataas\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"cataas\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*cataas.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*cataas.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*cataas.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

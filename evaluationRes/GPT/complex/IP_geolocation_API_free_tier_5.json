@@ -1,0 +1,17 @@
+{
+    "query": "IP geolocation API free tier",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \".*IP geolocation.*\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \".*free tier.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*IP geolocation.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \".*free tier.*\",\n        \"$options\": \"i\"\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*IP geolocation.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \".*free tier.*\",\n        \"$options\": \"i\"\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" }\n    },\n    {\n      \"service_level\": { \"$gte\": 0, \"$lte\": 1 }\n    }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 0 }\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": { \"$regex\": \"IP geolocation\", \"$options\": \"i\" }\n    },\n    {\n      \"description\": { \"$regex\": \"free tier\", \"$options\": \"i\" }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*IP geolocation.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \".*free tier.*\",\n        \"$options\": \"i\"\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*IP geolocation.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \".*free tier.*\",\n        \"$options\": \"i\"\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*IP geolocation.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \".*free tier.*\",\n        \"$options\": \"i\"\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"name\": {\n        \"$regex\": \".*IP geolocation.*\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \".*free tier.*\",\n        \"$options\": \"i\"\n      }\n    }\n  ]\n}"
+    ]
+}

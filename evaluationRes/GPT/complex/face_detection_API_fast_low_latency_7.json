@@ -1,0 +1,17 @@
+{
+    "query": "face detection API fast low latency",
+    "responseCount": 7,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*face detection.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"latency\": {\n        \"$lt\": 500\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"$or\": [\n        { \"name\": { \"$regex\": \"face detection\", \"$options\": \"i\" } },\n        { \"description\": { \"$regex\": \"face detection\", \"$options\": \"i\" } },\n        { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"face detection\", \"$options\": \"i\" } } }\n      ]\n    },\n    {\n      \"latency\": { \"$lt\": 200 }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*face detection.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"latency\": {\n        \"$lt\": 500\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*face detection.*\", \"$options\": \"i\" } } },\n    { \"latency\": { \"$lt\": 200 } }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"$or\": [\n        { \"name\": { \"$regex\": \"face detection\", \"$options\": \"i\" } },\n        { \"description\": { \"$regex\": \"face detection\", \"$options\": \"i\" } },\n        { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"face detection\", \"$options\": \"i\" } } }\n      ]\n    },\n    {\n      \"latency\": { \"$lt\": 200 }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*face detection.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"latency\": {\n        \"$lt\": 200\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*face detection.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"latency\": {\n        \"$lt\": 200\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \"face detection\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"latency\": {\n        \"$lt\": 500\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*face detection.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"latency\": {\n        \"$lte\": 200\n      }\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"face\", \"detection\"]\n        }\n      }\n    },\n    {\n      \"latency\": {\n        \"$lt\": 500\n      }\n    }\n  ]\n}"
+    ]
+}

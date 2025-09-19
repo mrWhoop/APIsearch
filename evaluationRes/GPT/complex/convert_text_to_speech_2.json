@@ -1,0 +1,17 @@
+{
+    "query": "convert text to speech",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } },\n    { \"category\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*text to speech.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

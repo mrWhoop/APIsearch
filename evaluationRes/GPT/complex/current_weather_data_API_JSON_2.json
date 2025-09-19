@@ -1,0 +1,17 @@
+{
+    "query": "current weather data API JSON",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"type\": \"JSON\"\n}",
+        "{\n  \"name\": { \"$regex\": \"weather\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"current\", \"$options\": \"i\" },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"data\", \"$options\": \"i\" } },\n  \"type\": \"JSON\"\n}"
+    ]
+}

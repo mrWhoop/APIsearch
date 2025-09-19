@@ -1,0 +1,17 @@
+{
+    "query": "API to validate health insurance numbers",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Health\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Health\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Health\"\n}",
+        "{\n  \"description\": { \"$regex\": \"validate.*health insurance numbers\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Health\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } },\n    { \"category\": \"Health\" }\n  ],\n  \"type\": \"REST\",\n  \"authentication\": { \"$in\": [\"apiKey\", \"OAuth\"] }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Health\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Health\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Data Validation\"\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*health insurance.*\", \"$options\": \"i\" } } }\n  ],\n  \"category\": \"Data Validation\"\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "API to fetch tax rates by country",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } } }\n  ],\n  \"category\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"$text\": {\n    \"$search\": \"tax rates country\"\n  }\n}",
+        "{\n  \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"country\", \"$options\": \"i\" }\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"tax rates\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

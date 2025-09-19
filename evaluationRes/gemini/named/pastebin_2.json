@@ -1,0 +1,17 @@
+{
+    "query": "pastebin",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"name\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"pastebin\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": \"pastebin\"\n  }\n}\n```"
+    ]
+}

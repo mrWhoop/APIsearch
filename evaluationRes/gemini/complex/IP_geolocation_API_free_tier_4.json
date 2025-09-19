@@ -1,0 +1,17 @@
+{
+    "query": "IP geolocation API free tier",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"free\",\n        \"tier\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"free\",\n        \"tier\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": \"free\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"ip geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"free\",\n        \"tier\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": \"free\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"free\",\n        \"tier\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"ip geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": \"free\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"free\",\n        \"tier\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": \"free\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"IP geolocation\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": \"free\"\n  }\n}\n```"
+    ]
+}

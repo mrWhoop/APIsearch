@@ -1,0 +1,17 @@
+{
+    "query": "open source location tracking API",
+    "responseCount": 6,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"type\": \"REST\",\n  \"category\": \"Tracking\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*\", \"$options\": \"i\" } },\n  \"https\": true\n}",
+        "{\n  \"type\": \"REST\",\n  \"category\": \"Tracking\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"location\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \"open source\", \"$options\": \"i\" }\n}",
+        "{\n  \"category\": \"Open Source Projects\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*tracking.*\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"type\": \"REST\",\n  \"category\": \"Tracking\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \".*open source.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"type\": \"REST\",\n  \"category\": \"Tracking\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*\", \"$options\": \"i\" } },\n  \"https\": true\n}",
+        "{\n  \"category\": \"Open Source Projects\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*tracking.*\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"category\": \"Open Source Projects\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*tracking.*\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*location.*tracking.*\", \"$options\": \"i\" } },\n  \"type\": \"REST\",\n  \"category\": \"Open Source Projects\"\n}",
+        "{\n  \"$and\": [\n    {\n      \"category\": \"Open Source Projects\"\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*location.*\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \".*tracking.*\",\n          \"$options\": \"i\"\n        }\n      }\n    }\n  ]\n}",
+        "{\n  \"type\": \"REST\",\n  \"category\": \"Tracking\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"location\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \"open source\", \"$options\": \"i\" }\n}"
+    ]
+}

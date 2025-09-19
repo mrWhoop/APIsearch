@@ -1,0 +1,17 @@
+{
+    "query": "ebay",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": \"ebay\"\n}",
+        "{\n  \"name\": \"ebay\"\n}",
+        "{\n  \"name\": {\"$regex\": \"ebay\", \"$options\": \"i\"}\n}",
+        "{\n  \"name\": {\"$regex\": \".*ebay.*\", \"$options\" :\"i\"}\n}",
+        "{\n  \"name\": \"ebay\"\n}",
+        "{\n  \"name\": \"ebay\"\n}",
+        "{\n  \"name\": \"ebay\"\n}",
+        "{\n  \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \"ebay\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": {\"$regex\": \".*ebay.*\", \"$options\": \"i\"}\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "bitquerry",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"bitquerry\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```"
+    ]
+}

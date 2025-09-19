@@ -1,0 +1,17 @@
+{
+    "query": "face detection API fast low latency",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lt\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"face detection\",\n      \"$options\": \"i\"\n    },\n    \"api_keywords\": {\n      \"$in\": [\n        \"fast\",\n        \"low latency\"\n      ]\n    },\n    \"latency\": {\n      \"$lte\": 100\n    }\n  }\n}\n```"
+    ]
+}

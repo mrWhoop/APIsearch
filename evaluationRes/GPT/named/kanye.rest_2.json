@@ -1,0 +1,17 @@
+{
+    "query": "kanye.rest",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": \"kanye.rest\"\n}",
+        "{\n  \"name\": \"kanye.rest\"\n}",
+        "{\n  \"name\": \"kanye.rest\"\n}",
+        "{\n  \"name\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": { \"$regex\": \".*kanye.rest.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"name\": \"kanye.rest\"\n}",
+        "{\n  \"name\": \"kanye.rest\"\n}",
+        "{\n  \"name\": \"kanye.rest\"\n}",
+        "{\n  \"name\": \"kanye.rest\"\n}",
+        "{\n  \"name\": \"kanye.rest\"\n}"
+    ]
+}

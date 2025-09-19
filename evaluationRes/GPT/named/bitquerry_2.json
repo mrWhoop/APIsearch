@@ -1,0 +1,17 @@
+{
+    "query": "bitquerry",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"bitquerry\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*bitquerry.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

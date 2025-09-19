@@ -1,0 +1,17 @@
+{
+    "query": "real-time stock market API free",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"api_keywords\": {\n      \"$all\": [\n        \"stock\",\n        \"market\",\n        \"real-time\",\n        \"free\"\n      ]\n    }\n  }\n}\n```"
+    ]
+}
