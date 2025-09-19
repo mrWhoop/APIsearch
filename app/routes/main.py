@@ -66,8 +66,8 @@ def evaluateGemini_call():
 
 @main_blueprint.route('/support/evaluateGPT')
 def evaluateGPT_call():
-    evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
-    evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
+    #evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
+    #evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
     evaluation.repeatabilityTestGPT(evaluation.complexQuery, "complex", 10, mongo)
     evaluation.repeatabilityTestGPT(evaluation.maliciousQuery, "malicious", 10, mongo)
     return jsonify({'status': 'GPT repeatability evaluation done.'})

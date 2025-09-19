@@ -1,0 +1,17 @@
+{
+    "query": "education",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}",
+        "{\n  \"category\": \"Education\"\n}"
+    ]
+}

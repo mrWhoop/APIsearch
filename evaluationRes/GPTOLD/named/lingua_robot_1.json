@@ -1,0 +1,17 @@
+{
+    "query": "lingua robot",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lingua robot.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

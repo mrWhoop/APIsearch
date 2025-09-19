@@ -1,0 +1,17 @@
+{
+    "query": "stream radio stations API",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*stream radio stations.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

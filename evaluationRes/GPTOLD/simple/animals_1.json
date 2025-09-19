@@ -1,0 +1,17 @@
+{
+    "query": "animals",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}",
+        "{\n  \"category\": \"Animals\"\n}"
+    ]
+}

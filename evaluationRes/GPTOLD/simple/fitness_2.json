@@ -1,0 +1,17 @@
+{
+    "query": "fitness",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}",
+        "{\n  \"category\": \"Sports & Fitness\"\n}"
+    ]
+}

@@ -56,37 +56,37 @@ namedQuery = [
 ]
 
 complexQuery = [
-    "stock prices in real-time",
-    "search YouTube videos by keyword",
-    "detect faces in images",
-    "PDF generation from HTML",
-    "convert text to speech",
-    "authentication API with JWT support",
-    "IP geolocation API free tier",
-    "open source location tracking API",
-    "GraphQL API for address autocomplete",
-    "real-time stock market API free",
-    "cryptocurrency price API with WebSocket",
-    "currency exchange rate API JSON",
-    "financial news API with sentiment analysis",
-    "face detection API fast low latency",
-    "OCR API free PDF to text",
-    "language detection API multilingual",
-    "email validation API free",
-    "product search API for e-commerce",
-    "inventory management REST API",
-    "current weather data API JSON",
-    "air quality API Europe",
-    "climate data API for research",
-    "UV index API free tier",
-    "Excel to JSON API cloud",
-    "API to fetch tax rates by country",
-    "expense tracking API for small business",
-    "API to validate health insurance numbers",
-    "stream radio stations API",
-    "music genre classification API"
-    "address validation API",
-    "API for package tracking real-time",
+    # "stock prices in real-time",
+    # "search YouTube videos by keyword",
+    # "detect faces in images",
+    # "PDF generation from HTML",
+    # "convert text to speech",
+    # "authentication API with JWT support",
+    # "IP geolocation API free tier",
+    # "open source location tracking API",
+    # "GraphQL API for address autocomplete",
+    # "real-time stock market API free",
+    # "cryptocurrency price API with WebSocket",
+    # "currency exchange rate API JSON",
+    # "financial news API with sentiment analysis",
+    # "face detection API fast low latency",
+    # "OCR API free PDF to text",
+    # "language detection API multilingual",
+    # "email validation API free",
+    # "product search API for e-commerce",
+    # "inventory management REST API",
+    # "current weather data API JSON",
+    # "air quality API Europe",
+    # "climate data API for research",
+    # "UV index API free tier",
+    # "Excel to JSON API cloud",
+    # "API to fetch tax rates by country",
+    # "expense tracking API for small business",
+    # "API to validate health insurance numbers",
+    # "stream radio stations API",
+    # "music genre classification API",
+    # "address validation API",
+    # "API for package tracking real-time",
     "mobile number verification API"
 ]
 
@@ -204,10 +204,10 @@ def databaseQuerySearchGPT(userQuery):
                      - name (string)
                      - description (string)
                      - api_keywords (list of strings, to search here use $elemMatch)
-                     - popularity (0-10, number)
-                     - service_level (0-10, number)
-                     - latency (0-1000 number in miliseconds)
-                     - reliability (0-10, number)
+                     - popularity (0-10, number interval, 0 indicating least popular and 10 indicating most popular)
+                     - service_level (0-10, number interval, 0 indicating lowest service level and 10 indicating highest service level)
+                     - latency (0-1000 number interval in miliseconds, 0 indicating most responsive and 1000 indicating least responsive)
+                     - reliability (0-10, number interval, 0 indicating least reliable and 10 indicating most reliable)
                      - https (boolean, indicating whether API uses https)
                      - authentication (string, possible options are: None, apiKey, OAuth)
                      - cors (boolean, indicating whether API uses CORS)

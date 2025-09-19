@@ -1,0 +1,17 @@
+{
+    "query": "books",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}",
+        "{\n  \"category\": \"Books\"\n}"
+    ]
+}

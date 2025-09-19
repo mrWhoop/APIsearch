@@ -1,0 +1,17 @@
+{
+    "query": "the world bank",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}",
+        "{\n  \"$or\": [\n    { \"name\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"description\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } },\n    { \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*the world bank.*\", \"$options\": \"i\" } } }\n  ]\n}"
+    ]
+}

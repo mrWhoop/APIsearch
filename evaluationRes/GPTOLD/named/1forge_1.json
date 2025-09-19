@@ -1,0 +1,17 @@
+{
+    "query": "1forge",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}",
+        "{\n  \"name\": \"1forge\"\n}"
+    ]
+}

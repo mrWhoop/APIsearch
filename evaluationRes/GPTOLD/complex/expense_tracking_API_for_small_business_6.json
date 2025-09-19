@@ -1,0 +1,17 @@
+{
+    "query": "expense tracking API for small business",
+    "responseCount": 6,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"expense tracking\", \"$options\": \"i\" } }\n    },\n    {\n      \"description\": { \"$regex\": \"small business\", \"$options\": \"i\" }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\n            \"expense\",\n            \"tracking\",\n            \"small business\"\n          ]\n        }\n      }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"expense\", \"tracking\", \"business\"]\n        }\n      }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \"expense|tracking\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \"small business\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"expense\", \"tracking\", \"business\"]\n        }\n      }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"expense\", \"tracking\"]\n        }\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \"small business\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"expense tracking\", \"$options\": \"i\" } }\n    },\n    {\n      \"description\": { \"$regex\": \"small business\", \"$options\": \"i\" }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \"expense|tracking|business\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \"small business\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"category\": \"Finance\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$in\": [\"expense\", \"tracking\", \"business\"]\n        }\n      }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}",
+        "{\n  \"$and\": [\n    {\n      \"api_keywords\": {\n        \"$elemMatch\": {\n          \"$regex\": \"expense|tracking\",\n          \"$options\": \"i\"\n        }\n      }\n    },\n    {\n      \"description\": {\n        \"$regex\": \"small business\",\n        \"$options\": \"i\"\n      }\n    },\n    {\n      \"category\": \"Business\"\n    }\n  ]\n}"
+    ]
+}
