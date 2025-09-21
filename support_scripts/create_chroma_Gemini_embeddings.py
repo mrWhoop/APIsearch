@@ -93,18 +93,69 @@ def createCollectionGeminiDescriptive():
     apis = mongo.db.apis.find()
 
     for api in apis:
+        # popularity = randrange(0, 10)
+        # service_level = randrange(0, 10)
+        # latency = randrange(0, 1000)
+        # reliability = randrange(0, 10)
 
         popularity = api['popularity'] # very unpopular, unpopular, popular, very popular
         service_level = api['service_level'] # very bad service level, bad service level, good service level, very good service level
         latency = api['latency'] # very unresponsive, unresponsive, responsive, very responsive
         reliability = api['reliability'] # very unreliable, unreliable, reliable, very reliable
-        authentication = api['authentication'] # pul out of db, if null skip
+        authentication = api['authentication'] # pull out of db, if null skip
         https = api['https'] # True --> uses https; False --> uses http; null --> skip
         cors = api['cors'] # True --> uses cors; False --> does not use cors; null skip
-        category = api['category'] # Falls into category
+        category = str(api['category']) # Falls into category
         type = api['type'] # Is 'type' API
 
-        document = "Name: " + api['name'] + "\n" + "Description: " + api['description'] + "\n" + "Popularity: " + str(api['popularity']) + "/10 \n" + "Service level: " + str(api['service_level']) + "/10\n" + "Latency: " + str(api['latency']) + "\n" + "Reliability: " + str(api['reliability']) + "/10\n" + "Category: " + api['category'] + "\n"
+        document = api['name'] + " is " + type + "API.\nIt belongs to " +'"' + category + '"' + "category.\n"
+
+        if 0 <= popularity <= 2.5:
+            document = document + "It is very unpopular.\n"
+        elif 2.5 < popularity <= 5:
+            document = document + "It is unpopular.\n"
+        elif 5 < popularity <= 7.5:
+            document = document + "It is popular.\n"
+        elif 7.5 < popularity <= 10:
+            document = document + "It is very popular.\n"
+        else:
+            print("Invalid popularity score.")
+
+        if 0 <= service_level <= 2.5:
+            document = document + "It has a very bad service level.\n"
+        elif 2.5 < service_level <= 5:
+            document = document + "It has a bad service level.\n"
+        elif 5 < service_level <= 7.5:
+            document = document + "It has a good service level.\n"
+        elif 7.5 < service_level <= 10:
+            document = document + "It has a very good service level.\n"
+        else:
+            print("Invalid service level score.")
+
+        if 0 <= latency <= 250:
+            document = document + "The API is very unresponsive.\n"
+        elif 250 < latency <= 500:
+            document = document + "The API is unresponsive.\n"
+        elif 500 < latency <= 750:
+            document = document + "The API is responsive.\n"
+        elif 750 < latency <= 1000:
+            document = document + "The API is very responsive.\n"
+        else:
+            print("Invalid service level score.")
+
+        if 0 <= reliability <= 250:
+            document = document + "The API is very unreliable.\n"
+        elif 250 < reliability <= 500:
+            document = document + "The API is unreliable.\n"
+        elif 500 < reliability <= 750:
+            document = document + "The API is reliable.\n"
+        elif 750 < reliability <= 1000:
+            document = document + "The API is very reliable.\n"
+        else:
+            print("Invalid service level score.")
+
+
+#        document = "Name: " + api['name'] + "\n" + "Description: " + api['description'] + "\n" + "Popularity: " + str(api['popularity']) + "/10 \n" + "Service level: " + str(api['service_level']) + "/10\n" + "Latency: " + str(api['latency']) + "\n" + "Reliability: " + str(api['reliability']) + "/10\n" + "Category: " + api['category'] + "\n"
         chroma_id = str(api['_id'])
 
         metadata = {
