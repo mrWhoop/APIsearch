@@ -17,7 +17,7 @@ simple = Path("simple")
 # complex
 # -------------------
 
-print('COMPLEX')
+print('-------------------COMPLEX')
 for file in complex.iterdir():
     if file.is_file():
         print(f"--- {file.name} ---")
@@ -37,7 +37,7 @@ for file in complex.iterdir():
         except json.JSONDecodeError as e:
             print(f"Error decoding {file.name}: {e}")
 
-print('NAMED')
+print('-------------------NAMED')
 for file in named.iterdir():
     if file.is_file():
         print(f"--- {file.name} ---")
@@ -57,7 +57,7 @@ for file in named.iterdir():
         except json.JSONDecodeError as e:
             print(f"Error decoding {file.name}: {e}")
 
-print('SIMPLE')
+print('-------------------SIMPLE')
 for file in simple.iterdir():
     if file.is_file():
         print(f"--- {file.name} ---")
@@ -77,7 +77,7 @@ for file in simple.iterdir():
         except json.JSONDecodeError as e:
             print(f"Error decoding {file.name}: {e}")
 
-print('MALICIOUS')
+print('-------------------MALICIOUS')
 for file in malicious.iterdir():
     if file.is_file():
         print(f"--- {file.name} ---")

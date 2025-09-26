@@ -85,18 +85,15 @@ def createCollectionMeta():
 
     return
 
-def createCollectionGeminiDescriptive():
+def createCollectionDescriptive():
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
-    chroma_client.delete_collection("GeminiAPImeta")
+    # chroma_client.delete_collection("GeminiAPIdescriptive")
     chroma_collection = chroma_client.create_collection(name="GeminiAPIdescriptive")
+
     apis = mongo.db.apis.find()
 
     for api in apis:
-        # popularity = randrange(0, 10)
-        # service_level = randrange(0, 10)
-        # latency = randrange(0, 1000)
-        # reliability = randrange(0, 10)
 
         popularity = api['popularity'] # very unpopular, unpopular, popular, very popular
         service_level = api['service_level'] # very bad service level, bad service level, good service level, very good service level
@@ -108,7 +105,26 @@ def createCollectionGeminiDescriptive():
         category = str(api['category']) # Falls into category
         type = api['type'] # Is 'type' API
 
-        document = api['name'] + " is " + type + "API.\nIt belongs to " +'"' + category + '"' + "category.\n"
+        document = api['name'] + " is " + type + " API.\nIt belongs to " +'"' + category + '"' + " category.\n"
+
+        if authentication is None:
+            pass
+        else:
+            document = document + "It uses " + authentication + " method of authentication.\n"
+
+        if https is None:
+            pass
+        elif https:
+            document = document + "It supports HTTPS.\n"
+        else:
+            document = document + "It does not support HTTPS.\n"
+
+        if cors is None:
+            pass
+        elif cors:
+            document = document + "It supports CORS.\n"
+        else:
+            document = document + "It does not support CORS.\n"
 
         if 0 <= popularity <= 2.5:
             document = document + "It is very unpopular.\n"
@@ -155,7 +171,8 @@ def createCollectionGeminiDescriptive():
             print("Invalid service level score.")
 
 
-#        document = "Name: " + api['name'] + "\n" + "Description: " + api['description'] + "\n" + "Popularity: " + str(api['popularity']) + "/10 \n" + "Service level: " + str(api['service_level']) + "/10\n" + "Latency: " + str(api['latency']) + "\n" + "Reliability: " + str(api['reliability']) + "/10\n" + "Category: " + api['category'] + "\n"
+        document = document + api['description']
+
         chroma_id = str(api['_id'])
 
         metadata = {

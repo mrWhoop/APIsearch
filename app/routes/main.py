@@ -13,6 +13,8 @@ from support_scripts.create_chroma_chatGPT_embeddings import createCollection as
 from support_scripts.create_chroma_Gemini_embeddings import createCollection as GEMINI
 from support_scripts.create_chroma_chatGPT_embeddings import createCollectionMeta as GPTmeta
 from support_scripts.create_chroma_Gemini_embeddings import createCollectionMeta as GEMINImeta
+from support_scripts.create_chroma_chatGPT_embeddings import createCollectionDescriptive as GPTdescriptive
+from support_scripts.create_chroma_Gemini_embeddings import createCollectionDescriptive as GEMINIdescriptive
 from support_scripts.countTokens import countGPTtokens
 from app.models.api import Api, EndPoint
 import os
@@ -66,22 +68,24 @@ def evaluateGemini_call():
 
 @main_blueprint.route('/support/evaluateGPT')
 def evaluateGPT_call():
-    #evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
-    #evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
+    evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
+    evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
     evaluation.repeatabilityTestGPT(evaluation.complexQuery, "complex", 10, mongo)
     evaluation.repeatabilityTestGPT(evaluation.maliciousQuery, "malicious", 10, mongo)
     return jsonify({'status': 'GPT repeatability evaluation done.'})
 
 @main_blueprint.route('/support/create_GPT')
 def createGPTcollection():
-    GPT()
-    GPTmeta()
+    # GPT()
+    # GPTmeta()
+    GPTdescriptive()
     return jsonify({'status': 'ChatGPT done.'})
 
 @main_blueprint.route('/support/create_Gemini')
 def createGeminiCollection():
-    GEMINI()
-    GEMINImeta()
+    # GEMINI()
+    # GEMINImeta()
+    GEMINIdescriptive()
     return jsonify({'status': 'Gemini done.'})
 
 @main_blueprint.route('/support/count_tokens')
@@ -135,13 +139,19 @@ def databaseQuerySearchGemini(userQuery):
                          },
           "https": { "type": "boolean",
                     "description": "Field indicating if API is using https or not."},
+          "authentication": { "type": "string",
+                    "description": "Field indicating API authentication method, possible options are None, apiKey, OAuth"},
+          "cors": { "type": "boolean",
+                    "description": "Field indicating API if API is using cors or not."},
+          "type": { "type": "string",
+                    "description": "Field indicating API response type, possible options are REST, GraphQL, XML."},
           "category": { "type": "string",
                     "description": "Field indicating API category, possible options are: Animals, Anime, Anti-Malware, Art and Design, Books, Business, Calendar, Cloud storage and File Sharing, Continuous Integration, Cryptocurrency, Currency Exchange, Data Validation, Dictionaries, Disasters, Documents & Productivity, Education, Enviroment, Events, Finance, Food & Drink, Fraud Prevention, Health, Jobs, Machine Learning, Music, News, Open Data, Open Source Projects, Patent, Personality, Photography, Science & Math, Security, Sports & Fitness, Test Data, Text Analysis, Tracking, URL Shorteners, Vehicle, Weather"},          
         }
         ``` 
     """
 
-    modelGemini = genai.GenerativeModel('gemini-1.5-pro', system_instruction=prompt)
+    modelGemini = genai.GenerativeModel('gemini-2.5-pro', system_instruction=prompt)
 
     response = modelGemini.generate_content(userQuery)
     response = response.candidates[0].content.parts[0].text
@@ -279,6 +289,9 @@ def search():
     chroma_GPT_collection_meta = chroma_client.get_collection(name="gptAPImeta")
     chroma_Gemini_collection_meta = chroma_client.get_collection(name="GeminiAPImeta")
 
+    chroma_GPT_collection_desc = chroma_client.get_collection(name="gptAPIdescriptive")
+    chroma_Gemini_collection_desc = chroma_client.get_collection(name="GeminiAPIdescriptive")
+
     query = request.args.get('q')
     ai = request.args.get('ai')
 
@@ -329,6 +342,16 @@ def search():
     elif ai == 'Geminiprompt':
         data = databaseQuerySearchGemini(query)
         return jsonify({"results": data})
+
+    elif ai == 'GPTdesc':
+        query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
+        resultsGPTdesc = chroma_GPT_collection_desc.query(query_embeddings=[query_GPT_embedding], n_results=5)
+        return jsonify({"results": resultsGPTdesc["metadatas"][0]})
+
+    elif ai == 'Geminidesc':
+        query_Gemini_embedding = genai.embed_content(model=embedding_model_name, content=query)['embedding']
+        resultsGeminiDesc = chroma_Gemini_collection_desc.query(query_embeddings=[query_Gemini_embedding], n_results=5)
+        return jsonify({"results": resultsGeminiDesc["metadatas"][0]})
 
     elif ai == 'GPTHybrid':
         # hybrid solution with chroma for GPT
