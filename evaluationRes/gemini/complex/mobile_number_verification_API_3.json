@@ -1,0 +1,17 @@
+{
+    "query": "mobile number verification API",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"mobile|number|verification|phone|sms\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"mobile number verification|phone number validation|sms verification\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$in\": [\n            \"mobile\",\n            \"number\",\n            \"verification\",\n            \"phone\",\n            \"sms\",\n            \"validation\"\n          ]\n        }\n      },\n      {\n        \"category\": \"Data Validation\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"mobile number verification phone sms\"\n        }\n      },\n      {\n        \"category\": \"Data Validation\"\n      },\n      {\n        \"api_keywords\": {\n          \"$in\": [\n            \"phone\",\n            \"sms\",\n            \"verification\",\n            \"mobile\",\n            \"number validation\"\n          ]\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"mobile number verification\"\n    }\n  }\n}\n```"
+    ]
+}

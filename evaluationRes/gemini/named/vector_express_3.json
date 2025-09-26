@@ -1,0 +1,17 @@
+{
+    "query": "vector express",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": {\n      \"$regex\": \"vector express\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"vector express\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"vector express\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"vector express\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"vector express\"\n    }\n  }\n}\n```"
+    ]
+}

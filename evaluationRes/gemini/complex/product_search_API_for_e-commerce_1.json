@@ -1,0 +1,17 @@
+{
+    "query": "product search API for e-commerce",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```"
+    ]
+}

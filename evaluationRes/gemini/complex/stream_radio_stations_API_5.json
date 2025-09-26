@@ -1,0 +1,17 @@
+{
+    "query": "stream radio stations API",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"stream radio stations\"\n        }\n      },\n      {\n        \"category\": \"Music\"\n      },\n      {\n        \"name\": {\n          \"$regex\": \"radio|stream\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"stream radio stations\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"stream radio stations\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"stream radio stations\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$in\": [\n            \"stream\",\n            \"radio\",\n            \"stations\",\n            \"music\"\n          ]\n        }\n      },\n      {\n        \"category\": \"Music\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"stream|radio|station\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"category\": \"Music\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"stream radio stations\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"stream radio stations\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"stream radio stations\"\n    }\n  }\n}\n```"
+    ]
+}

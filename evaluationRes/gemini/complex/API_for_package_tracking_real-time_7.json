@@ -1,0 +1,17 @@
+{
+    "query": "API for package tracking real-time",
+    "responseCount": 7,
+    "invalid_queries": 1,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"$text\": {\n          \"$search\": \"\\\"package tracking\\\" real-time\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"$text\": {\n          \"$search\": \"package tracking real-time\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"$text\": {\n          \"$search\": \"package tracking real-time\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"name\": {\n          \"$regex\": \"tracking|package\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"package tracking|real-time\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$in\": [\n            \"tracking\",\n            \"package\",\n            \"shipping\"\n          ]\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Tracking\",\n    \"$text\": {\n      \"$search\": \"real-time\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"$text\": {\n          \"$search\": \"package tracking real-time\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"name\": {\n          \"$regex\": \"package|tracking\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"package|tracking|real-time\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$in\": [\n            /package/i,\n            /tracking/i\n          ]\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"description\": {\n          \"$regex\": \"package|shipment|parcel|tracking|real-time\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"track|package|shipment\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$in\": [\n            \"tracking\",\n            \"package\",\n            \"shipping\",\n            \"logistics\"\n          ]\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"$text\": {\n          \"$search\": \"package tracking real-time\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Tracking\"\n      },\n      {\n        \"$text\": {\n          \"$search\": \"package tracking real-time shipping\"\n        }\n      }\n    ]\n  }\n}\n```"
+    ]
+}

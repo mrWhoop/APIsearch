@@ -1,0 +1,17 @@
+{
+    "query": "PDF generation from HTML",
+    "responseCount": 8,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"PDF HTML generation\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"PDF generation HTML\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"\\\"pdf\\\" \\\"html\\\"\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"description\": {\n          \"$regex\": \"pdf generation|html to pdf\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"pdf generation|html to pdf\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$all\": [\n            \"pdf\",\n            \"html\"\n          ]\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"\\\"PDF generation\\\" HTML\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"PDF generation HTML\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$or\": [\n          {\n            \"name\": {\n              \"$regex\": \"pdf\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"description\": {\n              \"$regex\": \"pdf\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"api_keywords\": {\n              \"$regex\": \"pdf\",\n              \"$options\": \"i\"\n            }\n          }\n        ]\n      },\n      {\n        \"$or\": [\n          {\n            \"name\": {\n              \"$regex\": \"html\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"description\": {\n              \"$regex\": \"html\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"api_keywords\": {\n              \"$regex\": \"html\",\n              \"$options\": \"i\"\n            }\n          }\n        ]\n      },\n      {\n        \"$or\": [\n          {\n            \"description\": {\n              \"$regex\": \"generat|convert\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"name\": {\n              \"$regex\": \"generat|convert\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"api_keywords\": {\n              \"$regex\": \"generat|convert\",\n              \"$options\": \"i\"\n            }\n          }\n        ]\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"pdf generation html\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"PDF generation HTML\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"\\\"PDF generation\\\" \\\"HTML\\\" \\\"documents\\\"\"\n    }\n  }\n}\n```"
+    ]
+}

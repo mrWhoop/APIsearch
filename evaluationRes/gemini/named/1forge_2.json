@@ -1,0 +1,17 @@
+{
+    "query": "1forge",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"1forge\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"1forge\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"1forge\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"1forge\"\n  }\n}\n```"
+    ]
+}

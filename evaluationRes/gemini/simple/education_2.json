@@ -1,0 +1,17 @@
+{
+    "query": "education",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"education\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Education\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Education\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Education\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Education\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Education\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"education\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"education\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Education\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Education\"\n  }\n}\n```"
+    ]
+}

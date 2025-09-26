@@ -1,0 +1,17 @@
+{
+    "query": "car rent",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"car rent vehicle\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"car|rent\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"car|rent\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"car|rent\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"car rent\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"car rent\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"car rent\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"car rent vehicle\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"car rent\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"car rent\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"car rent\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"car|rent\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"car|rent\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"car|rent\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"category\": \"Vehicle\"\n      }\n    ]\n  }\n}\n```"
+    ]
+}

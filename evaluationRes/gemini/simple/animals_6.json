@@ -1,0 +1,17 @@
+{
+    "query": "animals",
+    "responseCount": 6,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"animals\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"category\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"animals\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Animals\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"animals\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Animals\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Animals\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Animals\"\n      },\n      {\n        \"name\": {\n          \"$regex\": \"animal\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"animal\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"animal\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Animals\"\n      },\n      {\n        \"name\": {\n          \"$regex\": \"animal\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"animal\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"animal\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"^animals$\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```"
+    ]
+}

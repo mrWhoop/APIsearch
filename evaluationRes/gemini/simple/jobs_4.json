@@ -1,0 +1,17 @@
+{
+    "query": "jobs",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": {\n          \"$regex\": \"^Jobs$\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Jobs\"\n      },\n      {\n        \"name\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": \"Jobs\"\n      },\n      {\n        \"name\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"jobs\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Jobs\"\n  }\n}\n```"
+    ]
+}

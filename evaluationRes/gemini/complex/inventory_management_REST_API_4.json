@@ -1,0 +1,17 @@
+{
+    "query": "inventory management REST API",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$text\": {\n          \"$search\": \"inventory management\"\n        }\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$text\": {\n          \"$search\": \"inventory management\"\n        }\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$text\": {\n          \"$search\": \"inventory management\"\n        }\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$text\": {\n          \"$search\": \"inventory management\"\n        }\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"inventory management\"\n    },\n    \"type\": \"REST\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$or\": [\n          {\n            \"name\": {\n              \"$regex\": \"inventory management\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"description\": {\n              \"$regex\": \"inventory management\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"api_keywords\": {\n              \"$in\": [\n                \"inventory\",\n                \"management\"\n              ]\n            }\n          }\n        ]\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$text\": {\n          \"$search\": \"inventory management\"\n        }\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"inventory management\"\n    },\n    \"type\": \"REST\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$or\": [\n          {\n            \"name\": {\n              \"$regex\": \"inventory management\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"description\": {\n              \"$regex\": \"inventory management\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"api_keywords\": {\n              \"$regex\": \"inventory management\",\n              \"$options\": \"i\"\n            }\n          }\n        ]\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$and\": [\n      {\n        \"$or\": [\n          {\n            \"name\": {\n              \"$regex\": \"inventory management\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"description\": {\n              \"$regex\": \"inventory management\",\n              \"$options\": \"i\"\n            }\n          },\n          {\n            \"api_keywords\": {\n              \"$in\": [\n                \"inventory\",\n                \"management\"\n              ]\n            }\n          }\n        ]\n      },\n      {\n        \"type\": \"REST\"\n      }\n    ]\n  }\n}\n```"
+    ]
+}

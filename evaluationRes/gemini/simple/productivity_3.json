@@ -1,0 +1,17 @@
+{
+    "query": "productivity",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"category\": {\n          \"$regex\": \"productivity\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"productivity\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"productivity\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"productivity\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"productivity\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"productivity\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Documents & Productivity\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Documents & Productivity\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"productivity\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Documents & Productivity\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Documents & Productivity\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Documents & Productivity\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"productivity\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```"
+    ]
+}
