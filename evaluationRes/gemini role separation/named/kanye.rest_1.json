@@ -1,0 +1,17 @@
+{
+    "query": "kanye.rest",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"name\": \"kanye.rest\"\n  }\n}\n```"
+    ]
+}
