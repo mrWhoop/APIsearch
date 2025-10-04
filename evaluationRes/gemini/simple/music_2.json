@@ -1,0 +1,17 @@
+{
+    "query": "music",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"Music\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Music\"\n  }\n}\n```"
+    ]
+}

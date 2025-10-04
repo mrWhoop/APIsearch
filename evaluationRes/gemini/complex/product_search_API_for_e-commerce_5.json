@@ -1,0 +1,17 @@
+{
+    "query": "product search API for e-commerce",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search ecommerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"\\\"product search\\\" ecommerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"product|search|e-?commerce|shopping\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"product|search|e-?commerce|shopping\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"product|search|e-?commerce|shopping\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"category\": \"Business\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"product search e-commerce\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"e-commerce|product search\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"e-commerce|product search\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"category\": \"Business\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"product search e-commerce\"\n    }\n  }\n}\n```"
+    ]
+}

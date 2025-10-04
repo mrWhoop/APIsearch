@@ -60,32 +60,32 @@ def populate_database_call():
 
 @main_blueprint.route('/support/evaluateGemini')
 def evaluateGemini_call():
-    evaluation.repeatabilityTestGemini(evaluation.simpleQuery, "simple", 10, mongo)
-    evaluation.repeatabilityTestGemini(evaluation.namedQuery, "named", 10, mongo)
-    evaluation.repeatabilityTestGemini(evaluation.complexQuery, "complex", 10, mongo)
+#    evaluation.repeatabilityTestGemini(evaluation.simpleQuery, "simple", 10, mongo)
+#    evaluation.repeatabilityTestGemini(evaluation.namedQuery, "named", 10, mongo)
+#    evaluation.repeatabilityTestGemini(evaluation.complexQuery, "complex", 10, mongo)
     evaluation.repeatabilityTestGemini(evaluation.maliciousQuery, "malicious", 10, mongo)
     return jsonify({'status': 'Gemini repeatability evaluation done.'})
 
 @main_blueprint.route('/support/evaluateGPT')
 def evaluateGPT_call():
-    evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
-    evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
-    evaluation.repeatabilityTestGPT(evaluation.complexQuery, "complex", 10, mongo)
+    # evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
+    # evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
+    # evaluation.repeatabilityTestGPT(evaluation.complexQuery, "complex", 10, mongo)
     evaluation.repeatabilityTestGPT(evaluation.maliciousQuery, "malicious", 10, mongo)
-    return jsonify({'status': 'GPT repeatability evaluation done.'})
+    return jsonify({'status': 'GPT role separation repeatability evaluation done.'})
 
 @main_blueprint.route('/support/create_GPT')
 def createGPTcollection():
-    # GPT()
+    # GPT role separation()
     # GPTmeta()
-    GPTdescriptive()
+    # GPTdescriptive()
     return jsonify({'status': 'ChatGPT done.'})
 
 @main_blueprint.route('/support/create_Gemini')
 def createGeminiCollection():
     # GEMINI()
     # GEMINImeta()
-    GEMINIdescriptive()
+    # GEMINIdescriptive()
     return jsonify({'status': 'Gemini done.'})
 
 @main_blueprint.route('/support/count_tokens')
@@ -148,12 +148,13 @@ def databaseQuerySearchGemini(userQuery):
           "category": { "type": "string",
                     "description": "Field indicating API category, possible options are: Animals, Anime, Anti-Malware, Art and Design, Books, Business, Calendar, Cloud storage and File Sharing, Continuous Integration, Cryptocurrency, Currency Exchange, Data Validation, Dictionaries, Disasters, Documents & Productivity, Education, Enviroment, Events, Finance, Food & Drink, Fraud Prevention, Health, Jobs, Machine Learning, Music, News, Open Data, Open Source Projects, Patent, Personality, Photography, Science & Math, Security, Sports & Fitness, Test Data, Text Analysis, Tracking, URL Shorteners, Vehicle, Weather"},          
         }
-        ``` 
+        ```
+        Request:
     """
 
-    modelGemini = genai.GenerativeModel('gemini-2.5-pro', system_instruction=prompt)
+    modelGemini = genai.GenerativeModel('gemini-2.5-pro') #, system_instruction=prompt)
 
-    response = modelGemini.generate_content(userQuery)
+    response = modelGemini.generate_content(prompt)
     response = response.candidates[0].content.parts[0].text
 
     print("GEMINI", response)
@@ -220,7 +221,7 @@ def databaseQuerySearchGPT(userQuery):
         temperature=0.2
     )
 
-    print("GPT", GPTresponse.choices[0].message.content.strip())
+    print("GPT role separation", GPTresponse.choices[0].message.content.strip())
 
     try:
         mongoQuery = json.loads(GPTresponse.choices[0].message.content.strip())
@@ -297,7 +298,7 @@ def search():
 
     ## RAG
 
-    if ai == 'GPT':
+    if ai == 'GPT role separation':
         query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
         resultsGPT = chroma_GPT_collection.query(query_embeddings=[query_GPT_embedding], n_results=5)
         return jsonify({"results": resultsGPT["metadatas"][0]})
@@ -354,7 +355,7 @@ def search():
         return jsonify({"results": resultsGeminiDesc["metadatas"][0]})
 
     elif ai == 'GPTHybrid':
-        # hybrid solution with chroma for GPT
+        # hybrid solution with chroma for GPT role separation
         return
 
     elif ai == 'GeminiHybrid':

@@ -21,6 +21,7 @@ def createCollection():
         metadata = {
             'name': str(api['name']),
             'description': str(api['description']),
+            'type': str(api['type']),
             'docs': str(api['docs']),
             'category': str(api['category']),
             'popularity': str(api['popularity']),
@@ -54,12 +55,35 @@ def createCollectionMeta():
     apis = mongo.db.apis.find()
 
     for api in apis:
-        document = "Name: " + api['name'] + "\n" + "Description: " + api['description'] + "\n" + "Popularity: " + str(api['popularity']) + "/10 \n" + "Service level: " + str(api['service_level']) + "/10\n" + "Latency: " + str(api['latency']) + "\n" + "Reliability: " + str(api['reliability']) + "/10\n" + "Category: " + api['category'] + "\n"
+        document = "Name: " + api['name'] + "\n" + "Type: " + api['type'] + "\n" + "Description: " + api['description'] + "\n" + "Category: " + api['category'] + "\n"
+
+        authentication = api['authentication']
+        https = api['https']
+        cors = api['cors']
+
+        if authentication is None:
+            pass
+        else:
+            document = document + "Authentication: " + authentication + "\n"
+
+        if https is None:
+            pass
+        else:
+            document = document + "HTTPS: " + str(https) + "\n"
+
+        if cors is None:
+            pass
+        else:
+            document = document + "CORS: " + str(cors) + "\n"
+
+        document = document + "Popularity: " + str(api['popularity']) + "/10 \n" + "Service level: " + str(api['service_level']) + "/10\n" + "Latency: " + str(api['latency']) + " ms\n" + "Reliability: " + str(api['reliability']) + "/10"
+
         chroma_id = str(api['_id'])
 
         metadata = {
             'name': str(api['name']),
             'description': str(api['description']),
+            'type': str(api['type']),
             'docs': str(api['docs']),
             'category': str(api['category']),
             'popularity': str(api['popularity']),
@@ -88,7 +112,7 @@ def createCollectionMeta():
 def createCollectionDescriptive():
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
-    # chroma_client.delete_collection("GeminiAPIdescriptive")
+    chroma_client.delete_collection("GeminiAPIdescriptive")
     chroma_collection = chroma_client.create_collection(name="GeminiAPIdescriptive")
 
     apis = mongo.db.apis.find()
@@ -105,7 +129,9 @@ def createCollectionDescriptive():
         category = str(api['category']) # Falls into category
         type = api['type'] # Is 'type' API
 
-        document = api['name'] + " is " + type + " API.\nIt belongs to " +'"' + category + '"' + " category.\n"
+        document = api['name'] + " is " + type + " API.\n"
+        document = document + api['description'] + "\n"
+        document = document + "It belongs to " + '"' + category + '"' + " category.\n"
 
         if authentication is None:
             pass
@@ -149,35 +175,33 @@ def createCollectionDescriptive():
             print("Invalid service level score.")
 
         if 0 <= latency <= 250:
-            document = document + "The API is very unresponsive.\n"
-        elif 250 < latency <= 500:
-            document = document + "The API is unresponsive.\n"
-        elif 500 < latency <= 750:
-            document = document + "The API is responsive.\n"
-        elif 750 < latency <= 1000:
             document = document + "The API is very responsive.\n"
+        elif 250 < latency <= 500:
+            document = document + "The API is responsive.\n"
+        elif 500 < latency <= 750:
+            document = document + "The API is unresponsive.\n"
+        elif 750 < latency <= 1000:
+            document = document + "The API is very unresponsive.\n"
         else:
             print("Invalid service level score.")
 
-        if 0 <= reliability <= 250:
+        if 0 <= reliability <= 2.5:
             document = document + "The API is very unreliable.\n"
-        elif 250 < reliability <= 500:
+        elif 2.5 < reliability <= 5:
             document = document + "The API is unreliable.\n"
-        elif 500 < reliability <= 750:
+        elif 5 < reliability <= 7.5:
             document = document + "The API is reliable.\n"
-        elif 750 < reliability <= 1000:
+        elif 7.5 < reliability <= 10:
             document = document + "The API is very reliable.\n"
         else:
             print("Invalid service level score.")
-
-
-        document = document + api['description']
 
         chroma_id = str(api['_id'])
 
         metadata = {
             'name': str(api['name']),
             'description': str(api['description']),
+            'type': str(api['type']),
             'docs': str(api['docs']),
             'category': str(api['category']),
             'popularity': str(api['popularity']),

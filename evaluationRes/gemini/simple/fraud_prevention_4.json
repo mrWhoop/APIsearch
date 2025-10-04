@@ -1,0 +1,17 @@
+{
+    "query": "fraud prevention",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"category\": \"Fraud Prevention\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Fraud Prevention\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Fraud Prevention\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"fraud prevention\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"Fraud Prevention\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Fraud Prevention\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": {\n      \"$regex\": \"^Fraud Prevention$\",\n      \"$options\": \"i\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Fraud Prevention\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Fraud Prevention\"\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"category\": \"Fraud Prevention\"\n  }\n}\n```"
+    ]
+}

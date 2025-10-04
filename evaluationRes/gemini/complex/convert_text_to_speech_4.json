@@ -1,0 +1,17 @@
+{
+    "query": "convert text to speech",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"text to speech|tts\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"text to speech|tts\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"text to speech|tts\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"text to speech|tts\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"text to speech|tts\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"text to speech|tts\",\n          \"$options\": \"i\"\n        }\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"text to speech\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"text to speech\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"text to speech\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"name\": {\n          \"$regex\": \"text to speech\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"text to speech\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$regex\": \"text to speech\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"category\": \"Text Analysis\"\n      }\n    ]\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"text to speech\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"text to speech\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$text\": {\n      \"$search\": \"text to speech\"\n    }\n  }\n}\n```",
+        "```json\n{\n  \"query\": {\n    \"$or\": [\n      {\n        \"$text\": {\n          \"$search\": \"\\\"text to speech\\\" tts voice\"\n        }\n      },\n      {\n        \"name\": {\n          \"$regex\": \"text to speech|tts|voice\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"description\": {\n          \"$regex\": \"text to speech|tts|voice\",\n          \"$options\": \"i\"\n        }\n      },\n      {\n        \"api_keywords\": {\n          \"$in\": [\n            \"text-to-speech\",\n            \"tts\",\n            \"speech\",\n            \"voice\"\n          ]\n        }\n      }\n    ]\n  }\n}\n```"
+    ]
+}
