@@ -1,0 +1,17 @@
+{
+    "query": "popular and reliable anti-phishing API whith https support",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"description\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"description\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"description\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"description\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"description\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"https\": true,\n  \"category\": \"Anti-Malware\",\n  \"description\": { \"$regex\": \"anti-phishing\", \"$options\": \"i\" }\n}"
+    ]
+}

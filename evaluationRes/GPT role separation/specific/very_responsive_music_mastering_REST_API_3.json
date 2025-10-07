@@ -1,0 +1,17 @@
+{
+    "query": "very responsive music mastering REST API",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"latency\": { \"$lte\": 100 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 100 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 100 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 100 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 100 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 100 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lte\": 100 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"category\": \"Music\",\n  \"type\": \"REST\"\n}"
+    ]
+}

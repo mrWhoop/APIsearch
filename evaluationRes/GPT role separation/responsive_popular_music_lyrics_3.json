@@ -1,0 +1,17 @@
+{
+    "query": "responsive popular music lyrics",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": \"Music\",\n  \"description\": { \"$regex\": \"lyrics\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lyrics.*\", \"$options\": \"i\" } },\n  \"category\": { \"$regex\": \".*music.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": \"Music\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"lyrics\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": \"Music\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"lyrics\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lyrics.*\", \"$options\": \"i\" } },\n  \"category\": { \"$regex\": \".*music.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": \"Music\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"lyrics\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": \"Music\",\n  \"description\": { \"$regex\": \"lyrics\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": \"Music\",\n  \"description\": { \"$regex\": \"lyrics\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": \"Music\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"lyrics\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*lyrics.*\", \"$options\": \"i\" } },\n  \"category\": { \"$regex\": \".*music.*\", \"$options\": \"i\" }\n}"
+    ]
+}

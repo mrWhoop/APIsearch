@@ -1,0 +1,17 @@
+{
+    "query": "very responsive and popular news API",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"latency\": { \"$lte\": 200 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"popularity\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}"
+    ]
+}

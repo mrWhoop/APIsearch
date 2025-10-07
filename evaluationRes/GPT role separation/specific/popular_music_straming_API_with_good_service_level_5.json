@@ -1,0 +1,17 @@
+{
+    "query": "popular music straming API with good service level",
+    "responseCount": 5,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Music\",\n  \"description\": { \"$regex\": \"streaming\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \".*music.*streaming.*\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Music\",\n  \"description\": { \"$regex\": \"streaming\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"music\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Music\",\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Music\",\n  \"description\": { \"$regex\": \"streaming\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"music\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Music\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"streaming\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Music\",\n  \"description\": { \"$regex\": \"streaming\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 7 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"music\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 }\n}"
+    ]
+}

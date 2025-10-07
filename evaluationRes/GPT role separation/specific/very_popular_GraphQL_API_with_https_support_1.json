@@ -1,0 +1,17 @@
+{
+    "query": "very popular GraphQL API with https support",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"GraphQL\",\n  \"https\": true\n}"
+    ]
+}

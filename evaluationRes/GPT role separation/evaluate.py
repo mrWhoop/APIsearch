@@ -12,6 +12,7 @@ complex = Path("complex")
 malicious = Path("malicious")
 named = Path("named")
 simple = Path("simple")
+specific = Path("specific")
 
 # -------------------
 # complex
@@ -138,9 +139,45 @@ for file in malicious.iterdir():
         except json.JSONDecodeError as e:
             print(f"Error decoding {file.name}: {e}")
 
+print('SPECIFIC')
+specificTextError = 0
+allSpecific = 0
+specificInvalidJSON = 0
+for file in specific.iterdir():
+    if file.is_file():
+        print()
+        print(f"--- {file.name} ---")
+        try:
+            data = json.loads(file.read_text(encoding="utf-8"))
+            queries = data["responses"]
+            for query in queries:
+                allSpecific += 1
+                try:
+                    mongoQuery = json.loads(query)
+                except json.JSONDecodeError as e:
+                    specificInvalidJSON += 1
+                try:
+                    apis = collection.find(mongoQuery)
+                    apiNames = list()
+                    if collection.count_documents(mongoQuery) > 0:
+                        for api in apis:
+                            apiNames.append(api["name"])
+                    print(collection.count_documents(mongoQuery), apiNames)
+                except pymongo.errors.OperationFailure as e:
+                    print(f"error: {e}")
+                    print(mongoQuery)
+                    specificTextError += 1
+
+
+        except json.JSONDecodeError as e:
+            print(f"Error decoding: {file.name}: {e}")
+
+
+
 print('*****************************************')
 print('SIMPLE', allSimple, simpleTextError, 1 - (simpleTextError/allSimple), 'Invalid JSON: ', simpleInvalidJSON)
 print('NAMED', allNamed, namedTextError, 1 - (namedTextError/allNamed), 'Invalid JSON: ', namedInvalidJSON)
 print('COMPLEX', allComplex, complexTextError, 1 - (complexTextError/allComplex), 'Invalid JSON: ', complexInvalidJSON)
 print('MALICIOUS', allMalicious, maliciousTextError, 1 - (maliciousTextError/allMalicious), 'Invalid JSON: ', maliciousInvalidJSON)
+print('SPECIFIC', allSpecific, specificTextError, 1 - (specificTextError/allSpecific), 'Invalid JSON: ', specificInvalidJSON)
 

@@ -1,0 +1,17 @@
+{
+    "query": "reliable and popular currency exchange REST API",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 8 },\n  \"popularity\": { \"$gte\": 8 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 8 },\n  \"popularity\": { \"$gte\": 8 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}",
+        "{\n  \"reliability\": { \"$gte\": 7 },\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": \"Currency Exchange\",\n  \"type\": \"REST\"\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "very popular cloud storage API with apiKey authentication",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cloud storage\", \"$options\": \"i\" } },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cloud storage\", \"$options\": \"i\" } },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"category\": { \"$regex\": \"Cloud storage and File Sharing\", \"$options\": \"i\" },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"category\": { \"$regex\": \"Cloud storage and File Sharing\", \"$options\": \"i\" },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"category\": { \"$regex\": \"Cloud storage and File Sharing\", \"$options\": \"i\" },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"category\": { \"$regex\": \"Cloud storage and File Sharing\", \"$options\": \"i\" },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cloud storage\", \"$options\": \"i\" } },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cloud storage\", \"$options\": \"i\" } },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"category\": { \"$regex\": \"Cloud storage and File Sharing\", \"$options\": \"i\" },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cloud storage\", \"$options\": \"i\" } },\n  \"authentication\": \"apiKey\"\n}"
+    ]
+}

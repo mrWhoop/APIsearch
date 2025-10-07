@@ -1,0 +1,17 @@
+{
+    "query": "very popular REST todo API with https and Oauth authentication",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"todo\", \"$options\": \"i\" } },\n  \"https\": true,\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"todo\", \"$options\": \"i\" },\n  \"https\": true,\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"todo\", \"$options\": \"i\" },\n  \"https\": true,\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"todo\", \"$options\": \"i\" },\n  \"https\": true,\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"todo\", \"$options\": \"i\" } },\n  \"https\": true,\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"https\": true,\n  \"authentication\": \"OAuth\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"todo\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"todo\", \"$options\": \"i\" },\n  \"https\": true,\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"https\": true,\n  \"authentication\": \"OAuth\",\n  \"name\": { \"$regex\": \"todo\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"https\": true,\n  \"authentication\": \"OAuth\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"todo\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"todo\", \"$options\": \"i\" },\n  \"https\": true,\n  \"authentication\": \"OAuth\"\n}"
+    ]
+}

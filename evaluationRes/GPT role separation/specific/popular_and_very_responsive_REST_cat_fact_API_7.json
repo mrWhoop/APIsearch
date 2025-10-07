@@ -1,0 +1,17 @@
+{
+    "query": "popular and very responsive REST cat fact API",
+    "responseCount": 7,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"type\": \"REST\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cat\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \"fact\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"latency\": { \"$lte\": 200 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"cat fact\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"cat fact\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"type\": \"REST\",\n  \"description\": { \"$regex\": \"cat fact\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"type\": \"REST\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cat fact\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"latency\": { \"$lte\": 200 },\n  \"type\": \"REST\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cat fact\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"type\": \"REST\",\n  \"name\": { \"$regex\": \"cat fact\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"type\": \"REST\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cat fact\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"latency\": { \"$lte\": 200 },\n  \"type\": \"REST\",\n  \"description\": { \"$regex\": \"cat fact\", \"$options\": \"i\" }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"type\": \"REST\",\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"cat\", \"$options\": \"i\" } },\n  \"description\": { \"$regex\": \"fact\", \"$options\": \"i\" }\n}"
+    ]
+}

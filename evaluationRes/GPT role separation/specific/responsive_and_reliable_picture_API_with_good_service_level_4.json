@@ -1,0 +1,17 @@
+{
+    "query": "responsive and reliable picture API with good service level",
+    "responseCount": 4,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"photography\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Photography\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lte\": 100 },\n  \"reliability\": { \"$gte\": 7 },\n  \"service_level\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"picture|image|photo\", \"$options\": \"i\" } }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Photography\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Photography\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Photography\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Photography\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Photography\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"picture|image|photo\", \"$options\": \"i\" } }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"reliability\": { \"$gt\": 7 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Photography\", \"$options\": \"i\" }\n}"
+    ]
+}

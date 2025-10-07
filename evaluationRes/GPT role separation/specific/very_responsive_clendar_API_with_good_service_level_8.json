@@ -1,0 +1,17 @@
+{
+    "query": "very responsive clendar API with good service level",
+    "responseCount": 8,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \".*Calendar.*\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"category\": \"Calendar\",\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": \"Calendar\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"Calendar\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"category\": { \"$regex\": \"Calendar\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": { \"$regex\": \"calendar\", \"$options\": \"i\" }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"category\": { \"$regex\": \".*Calendar.*\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 100 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": \"Calendar\"\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": \"Calendar\"\n}",
+        "{\n  \"latency\": { \"$lt\": 100 },\n  \"service_level\": { \"$gt\": 7 },\n  \"category\": \"Calendar\"\n}"
+    ]
+}

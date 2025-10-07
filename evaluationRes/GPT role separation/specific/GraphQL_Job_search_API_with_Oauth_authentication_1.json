@@ -1,0 +1,17 @@
+{
+    "query": "GraphQL Job search API with Oauth authentication",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}",
+        "{\n  \"type\": \"GraphQL\",\n  \"category\": \"Jobs\",\n  \"authentication\": \"OAuth\"\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "popular and reliable air quality REST API",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 8 },\n  \"reliability\": { \"$gte\": 8 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"reliability\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"air quality\", \"$options\": \"i\" } },\n  \"type\": \"REST\"\n}"
+    ]
+}

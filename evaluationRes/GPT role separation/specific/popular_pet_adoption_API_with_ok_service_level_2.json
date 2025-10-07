@@ -1,0 +1,17 @@
+{
+    "query": "popular pet adoption API with ok service level",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"pet|adoption\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"category\": { \"$regex\": \"Animals\", \"$options\": \"i\" },\n  \"description\": { \"$regex\": \"pet adoption\", \"$options\": \"i\" },\n  \"service_level\": { \"$gte\": 5 }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"pet|adoption\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 5 }\n}"
+    ]
+}

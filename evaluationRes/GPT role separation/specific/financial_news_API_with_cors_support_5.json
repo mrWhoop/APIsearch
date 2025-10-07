@@ -1,0 +1,17 @@
+{
+    "query": "financial news API with cors support",
+    "responseCount": 5,
+    "invalid_queries": 1,
+    "responses": [
+        "{\n  \"category\": \"Finance\",\n  \"type\": \"News\",\n  \"cors\": true\n}",
+        "{\n  \"category\": { \"$in\": [\"Finance\", \"News\"] },\n  \"cors\": true\n}",
+        "{\n  \"$and\": [\n    { \"category\": \"Finance\" },\n    { \"name\": /news/i },\n    { \"cors\": true }\n  ]\n}",
+        "{\n  \"$and\": [\n    { \"category\": \"Finance\" },\n    { \"category\": \"News\" },\n    { \"cors\": true }\n  ]\n}",
+        "{\n  \"category\": { \"$in\": [\"Finance\", \"News\"] },\n  \"cors\": true\n}",
+        "{\n  \"category\": { \"$in\": [\"Finance\", \"News\"] },\n  \"cors\": true\n}",
+        "{\n  \"category\": { \"$in\": [\"Finance\", \"News\"] },\n  \"cors\": true\n}",
+        "{\n  \"category\": { \"$in\": [\"Finance\", \"News\"] },\n  \"cors\": true\n}",
+        "{\n  \"$and\": [\n    { \"category\": { \"$regex\": \"Finance\", \"$options\": \"i\" } },\n    { \"category\": { \"$regex\": \"News\", \"$options\": \"i\" } },\n    { \"cors\": true }\n  ]\n}",
+        "{\n  \"category\": { \"$in\": [\"Finance\", \"News\"] },\n  \"cors\": true\n}"
+    ]
+}

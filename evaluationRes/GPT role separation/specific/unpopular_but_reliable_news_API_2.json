@@ -1,0 +1,17 @@
+{
+    "query": "unpopular but reliable news API",
+    "responseCount": 2,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 5 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 5 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 5 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 5 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 5 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}",
+        "{\n  \"popularity\": { \"$lt\": 5 },\n  \"reliability\": { \"$gt\": 7 },\n  \"category\": \"News\"\n}"
+    ]
+}

@@ -1,0 +1,17 @@
+{
+    "query": "popular and responsive document conversion API with cors support",
+    "responseCount": 3,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"cors\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"document conversion\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"cors\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"document conversion\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": { \"$regex\": \"Documents & Productivity\", \"$options\": \"i\" },\n  \"cors\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"description\": { \"$regex\": \"document conversion\", \"$options\": \"i\" },\n  \"cors\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"category\": { \"$regex\": \"Documents & Productivity\", \"$options\": \"i\" },\n  \"cors\": true\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"cors\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"document conversion\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"cors\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"document conversion\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"cors\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"document conversion\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"cors\": true,\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"document conversion\", \"$options\": \"i\" } }\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"latency\": { \"$lte\": 300 },\n  \"description\": { \"$regex\": \"document conversion\", \"$options\": \"i\" },\n  \"cors\": true\n}"
+    ]
+}

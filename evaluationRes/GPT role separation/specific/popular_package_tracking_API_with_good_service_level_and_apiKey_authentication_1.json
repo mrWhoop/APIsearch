@@ -1,0 +1,17 @@
+{
+    "query": "popular package tracking API with good service level and apiKey authentication",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}",
+        "{\n  \"popularity\": { \"$gte\": 7 },\n  \"api_keywords\": { \"$elemMatch\": { \"$regex\": \"package tracking\", \"$options\": \"i\" } },\n  \"service_level\": { \"$gte\": 7 },\n  \"authentication\": \"apiKey\"\n}"
+    ]
+}

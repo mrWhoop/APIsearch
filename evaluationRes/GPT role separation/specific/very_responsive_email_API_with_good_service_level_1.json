@@ -1,0 +1,17 @@
+{
+    "query": "very responsive email API with good service level",
+    "responseCount": 1,
+    "invalid_queries": 0,
+    "responses": [
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}",
+        "{\n  \"latency\": { \"$lt\": 200 },\n  \"description\": { \"$regex\": \"email\", \"$options\": \"i\" },\n  \"service_level\": { \"$gt\": 7 }\n}"
+    ]
+}

@@ -63,7 +63,7 @@ def evaluateGemini_call():
 #    evaluation.repeatabilityTestGemini(evaluation.simpleQuery, "simple", 10, mongo)
 #    evaluation.repeatabilityTestGemini(evaluation.namedQuery, "named", 10, mongo)
 #    evaluation.repeatabilityTestGemini(evaluation.complexQuery, "complex", 10, mongo)
-    evaluation.repeatabilityTestGemini(evaluation.maliciousQuery, "malicious", 10, mongo)
+#    evaluation.repeatabilityTestGemini(evaluation.maliciousQuery, "malicious", 10, mongo)
     return jsonify({'status': 'Gemini repeatability evaluation done.'})
 
 @main_blueprint.route('/support/evaluateGPT')
@@ -71,7 +71,8 @@ def evaluateGPT_call():
     # evaluation.repeatabilityTestGPT(evaluation.simpleQuery, "simple", 10, mongo)
     # evaluation.repeatabilityTestGPT(evaluation.namedQuery, "named", 10, mongo)
     # evaluation.repeatabilityTestGPT(evaluation.complexQuery, "complex", 10, mongo)
-    evaluation.repeatabilityTestGPT(evaluation.maliciousQuery, "malicious", 10, mongo)
+    # evaluation.repeatabilityTestGPT(evaluation.maliciousQuery, "malicious", 10, mongo)
+    # evaluation.repeatabilityTestGPT(evaluation.specificQuerry, "specific", 10, mongo)
     return jsonify({'status': 'GPT role separation repeatability evaluation done.'})
 
 @main_blueprint.route('/support/create_GPT')
@@ -197,18 +198,19 @@ def databaseQuerySearchGPT(userQuery):
                  - name (string)
                  - description (string)
                  - api_keywords (list of strings, to search here use $elemMatch)
-                 - popularity (0-10, number)
-                 - service_level (0-10, number)
-                 - latency (0-1000 number in miliseconds)
-                 - reliability (0-10, number)
+                 - popularity (0-10, number interval, 0 indicating least popular and 10 indicating most popular)
+                 - service_level (0-10, number interval, 0 indicating lowest service level and 10 indicating highest service level)
+                 - latency (0-1000 number interval in miliseconds, 0 indicating most responsive and 1000 indicating least responsive)
+                 - reliability (0-10, number interval, 0 indicating least reliable and 10 indicating most reliable)
                  - https (boolean, indicating whether API uses https)
                  - authentication (string, possible options are: None, apiKey, OAuth)
                  - cors (boolean, indicating whether API uses CORS)
                  - type (string, possible options are REST, GraphQL, XML)
-                
+                 - category (string, possible options are: Animals, Anime, Anti-Malware, Art and Design, Books, Business, Calendar, Cloud storage and File Sharing, Continious Integration, Cryptocurrency, Currency Exchange, Data Validation, Dictionaries, Disasters, Documents & Productivity, Education, Enviroment, Events, Finance, Food & Drink, Fraud Prevention, Health, Jobs, Machine Learning, Music, News, Open Data, Open Source Projects, Patent, Personality, Photography, Science & Math, Security, Sports & Fitness, Test Data, Text Analysis, Tracking, URL Shorteners, Vehicle, Weather)
+
                 Use regular expressions for approximate matches and ranges for "reliable", "popular", "fast" etc. only if user query calls for it.
                 Respond with only a JSON object that can be used in db.collection.find().
-                """
+              """
 
 # - category (string, possible options are: Animals, Anime, Anti-Malware, Art and Design, Books, Business, Calendar, Cloud storage and File Sharing, Continious Integration, Cryptocurrency, Currency Exchange, Data Validation, Dictionaries, Disasters, Documents & Productivity, Education, Enviroment, Events, Finance, Food & Drink, Fraud Prevention, Health, Jobs, Machine Learning, Music, News, Open Data, Open Source Projects, Patent, Personality, Photography, Science & Math, Security, Sports & Fitness, Test Data, Text Analysis, Tracking, URL Shorteners, Vehicle, Weather)
 
@@ -221,7 +223,7 @@ def databaseQuerySearchGPT(userQuery):
         temperature=0.2
     )
 
-    print("GPT role separation", GPTresponse.choices[0].message.content.strip())
+    print("GPT role separation call:", GPTresponse.choices[0].message.content.strip())
 
     try:
         mongoQuery = json.loads(GPTresponse.choices[0].message.content.strip())
@@ -236,18 +238,62 @@ def databaseQuerySearchGPT(userQuery):
                 "category": document['category'],
                 "description": document['description'],
                 "docs": document['docs'],
+                "type": document['type'],
+                "https": document['https'],
+                "popularity": document['popularity'],
+                "latency": document['latency'],
+                "reliability": document['reliability'],
+                "service_level": document['service_level'],
+                "cors": document['cors'],
+                "authentication": document['authentication'],
             }
             res.append(r)
 
         return res
 
     except JSONDecodeError:
-        print(GPTresponse.choices[0].message.content.strip())
-        mongoQuery = None
+        print("JSONerror:", GPTresponse.choices[0].message.content.strip())
+        return []
 
     except OperationFailure as e:
         print(e)
-        return None
+        GPTresponse = OpenAI_client.chat.completions.create(
+            model="gpt-4",
+            messages=[
+                {"role": "system", "content": prompt},
+                {"role": "user", "content": userQuery}
+            ],
+            temperature=0.2
+        )
+        print("GPT role separation call retry:", GPTresponse.choices[0].message.content.strip())
+
+        try:
+            mongoQuery = json.loads(GPTresponse.choices[0].message.content.strip())
+            result = mongo.db.apis.find(mongoQuery)
+
+            res = list()
+
+            for document in result:
+                r = {
+                    "name": document['name'],
+                    "category": document['category'],
+                    "description": document['description'],
+                    "docs": document['docs'],
+                    "type": document['type'],
+                    "https": document['https'],
+                    "popularity": document['popularity'],
+                    "latency": document['latency'],
+                    "reliability": document['reliability'],
+                    "service_level": document['service_level'],
+                    "cors": document['cors'],
+                    "authentication": document['authentication'],
+                }
+                res.append(r)
+        except OperationFailure as e:
+            print("Retry failed.", e)
+            return []
+
+        return res
 
 
 
@@ -298,24 +344,28 @@ def search():
 
     ## RAG
 
-    if ai == 'GPT role separation':
+    if ai == 'GPT':
         query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
         resultsGPT = chroma_GPT_collection.query(query_embeddings=[query_GPT_embedding], n_results=5)
+        print(resultsGPT['documents'])
         return jsonify({"results": resultsGPT["metadatas"][0]})
 
     elif ai == 'GPTmeta':
         query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
         resultsGPTmeta = chroma_GPT_collection_meta.query(query_embeddings=[query_GPT_embedding], n_results=5)
+        print(resultsGPTmeta['documents'])
         return jsonify({"results": resultsGPTmeta["metadatas"][0]})
 
     elif ai == 'Gemini':
         query_Gemini_embedding = genai.embed_content(model=embedding_model_name, content=query)['embedding']
         resultsGemini = chroma_Gemini_collection.query(query_embeddings=[query_Gemini_embedding], n_results=5)
+        print(resultsGemini['documents'])
         return jsonify({"results": resultsGemini["metadatas"][0]})
 
     elif ai == 'Geminimeta':
         query_Gemini_embedding = genai.embed_content(model=embedding_model_name, content=query)['embedding']
         resultsGeminiMeta = chroma_Gemini_collection_meta.query(query_embeddings=[query_Gemini_embedding], n_results=5)
+        print(resultsGeminiMeta['documents'])
         return jsonify({"results": resultsGeminiMeta["metadatas"][0]})
 
     elif ai == 'MeiliSearch':
@@ -340,29 +390,20 @@ def search():
         data = databaseQuerySearchGPT(query)
         return jsonify({"results": data})
 
-    elif ai == 'Geminiprompt':
-        data = databaseQuerySearchGemini(query)
-        return jsonify({"results": data})
-
     elif ai == 'GPTdesc':
         query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
         resultsGPTdesc = chroma_GPT_collection_desc.query(query_embeddings=[query_GPT_embedding], n_results=5)
+        print(resultsGPTdesc['documents'])
         return jsonify({"results": resultsGPTdesc["metadatas"][0]})
 
     elif ai == 'Geminidesc':
         query_Gemini_embedding = genai.embed_content(model=embedding_model_name, content=query)['embedding']
         resultsGeminiDesc = chroma_Gemini_collection_desc.query(query_embeddings=[query_Gemini_embedding], n_results=5)
+        print(resultsGeminiDesc['documents'])
         return jsonify({"results": resultsGeminiDesc["metadatas"][0]})
-
-    elif ai == 'GPTHybrid':
-        # hybrid solution with chroma for GPT role separation
-        return
-
-    elif ai == 'GeminiHybrid':
-        # hybrid solution with chroma for Gemini
-        return
     else:
         # this will be normal search, final best product
+        return
         query_Gemini_embedding = genai.embed_content(model=embedding_model_name, content=query)['embedding']
         resultsGeminiMeta = chroma_Gemini_collection_meta.query(query_embeddings=[query_Gemini_embedding], n_results=5)
         return jsonify({"results": resultsGeminiMeta["metadatas"][0]})
