@@ -4,11 +4,12 @@ import meilisearch
 from flask import Blueprint, jsonify, request
 from flask_cors import cross_origin
 from mpmath.calculus.extrapolation import limit
+from numpy.random import default_rng
 from pymongo.errors import OperationFailure
 
 from ..extensions import mongo
 from support_scripts.populate_database import populate_database
-from support_scripts.populate_search_index import populate_search_index
+from support_scripts.populate_search_index import populate_search_index, documents
 from support_scripts.create_chroma_chatGPT_embeddings import createCollection as GPT
 from support_scripts.create_chroma_Gemini_embeddings import createCollection as GEMINI
 from support_scripts.create_chroma_chatGPT_embeddings import createCollectionMeta as GPTmeta
@@ -37,6 +38,12 @@ searchIndex = searchClient.index(MEILISEARCH_INDEX)
 
 
 main_blueprint = Blueprint('main', __name__)
+
+def compareGPT(docs):
+    return "stuff"
+
+def compareGemini(docs):
+    return "stuff"
 
 @main_blueprint.route('/support/populate_search_index')
 def populate_search_index_call():
@@ -296,31 +303,9 @@ def databaseQuerySearchGPT(userQuery):
         return res
 
 
-
 @main_blueprint.route('/search')
 @cross_origin()
 def search():
-
-    # result = {
-    #     "results": [{
-    #       "name": 'string1',
-    #       "category": 'string',
-    #       "description": 'string',
-    #       "docs": 'string',
-    #     },
-    #     {
-    #         "name": 'string2',
-    #         "category": 'string',
-    #         "description": 'string',
-    #         "docs": 'string',
-    #     },
-    #     {
-    #         "name": 'string3',
-    #         "category": 'string',
-    #         "description": 'string',
-    #         "docs": 'string',
-    #     }]
-    # }
 
     OPENAI_API_KEY = os.environ['OPENAI_API_KEY']
     OpenAI_client = OpenAI(api_key=OPENAI_API_KEY)
@@ -341,8 +326,6 @@ def search():
 
     query = request.args.get('q')
     ai = request.args.get('ai')
-
-    ## RAG
 
     if ai == 'GPT':
         query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
@@ -402,8 +385,9 @@ def search():
         print(resultsGeminiDesc['documents'])
         return jsonify({"results": resultsGeminiDesc["metadatas"][0]})
     else:
-        # this will be normal search, final best product
-        return
         query_Gemini_embedding = genai.embed_content(model=embedding_model_name, content=query)['embedding']
-        resultsGeminiMeta = chroma_Gemini_collection_meta.query(query_embeddings=[query_Gemini_embedding], n_results=5)
-        return jsonify({"results": resultsGeminiMeta["metadatas"][0]})
+        resultsGeminiDesc = chroma_Gemini_collection_desc.query(query_embeddings=[query_Gemini_embedding], n_results=5)
+        return jsonify({"results": resultsGeminiDesc["metadatas"][0],
+                        "GPTsummary": compareGPT(resultsGeminiDesc['documents'][0]),
+                        "GeminiSummary": compareGemini(resultsGeminiDesc['documents'][0])
+                        })
