@@ -58,7 +58,7 @@ def compareGPT(docs):
     GPTresponse = OpenAI_client.chat.completions.create(
         model="gpt-4",
         messages=[
-            {"role": "system", "content": "You are an expert document analyst. Compare the provided documents and produce a concise comparative analysis. Do NOT include <script> tags or inline event handlers. Use semantic HTML (sections, headings, lists). If information is missing, state it inside the HTML. Keep style minimal — no external CSS links."},
+            {"role": "system", "content": "You are an expert document analyst. Compare the provided documents and produce a concise comparative analysis. Do NOT include <script> tags or inline event handlers. Use semantic HTML (sections, headings, lists). Keep style minimal — no external CSS links."},
             {"role": "user", "content": documentsString}
         ],
         temperature=0.2
@@ -71,12 +71,12 @@ def compareGemini(docs):
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
     modelGemini = genai.GenerativeModel('gemini-2.5-pro')
 
-    prompt = """You are an expert document analys. Your task is to compare provided documents and produce a concise comparative analysis. Do NOT include <script> tags or inline event handlers. Use semantic HTML (sections, headings, lists). If information is missing, state it inside the HTML. Keep style minimal — no external CSS links.
+    prompt = """You are an expert document analyst. Your task is to compare provided documents and produce a concise comparative analysis. Do NOT include <script> tags or inline event handlers. Use semantic HTML (sections, headings, lists). Keep style minimal — no external CSS links.
                 
                 ### INSTRUCTIONS:
                 1. **Analyze and Compare:** Review the text from all documents to identify the key **similarities, differences, and unique points** 
-                2.  **Strict Grounding:** Base your entire response *only* on the content provided in the [DOCUMENT A EXCERPTS] and [DOCUMENT B EXCERPTS] sections. Do not use outside knowledge or make assumptions.
-                3.  **Output Format:** **Use semantic HTML (sections, headings, lists)** Provide 3 sections in HTML: 1) similarities, 2) differences, 3) unique points per document. Keep each section concise. Return only HTML. Keep style minimal — no external CSS links.
+                2. **Strict Grounding:** Base your entire response *only* on the content provided in the [DOCUMENT] section. Do not use outside knowledge or make assumptions.
+                3. **Output Format:** **Use semantic HTML (sections, headings, lists)** Provide 3 sections in HTML: 1) similarities, 2) differences, 3) unique points per document. Keep each section concise. Return only HTML. Keep style minimal — no external CSS links.
                 
                 ### CONTEXT:
                 
