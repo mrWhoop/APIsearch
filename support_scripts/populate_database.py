@@ -121,7 +121,7 @@ def populate_database():
 
     api = Api(
         name='The Cat API',
-        description="An open, free, read & write API all about Cats. The Cat API gives you access to 10000's of Cat images, and breeds. Upload your own Images. Get detailed info on all Cat Breeds. Allow your Users to Favourite or Vote on Images. Save a custom value with each request so you can match dataRAG to your Users.",
+        description="An open, free, read & write API all about Cats. The Cat API gives you access to 10000's of Cat images, and breeds. Upload your own Images. Get detailed info on all Cat Breeds. Allow your Users to Favourite or Vote on Images. Save a custom value with each request so you can match data to your Users.",
         base_url='https://api.thecatapi.com/v1/',
         api_keywords=['CatAPI', 'Cats', 'Cat Pictures', 'Animals'],
         popularity=randrange(0,10),
@@ -257,7 +257,7 @@ def populate_database():
 
     api = Api(
         name='Dog API',
-        description='The Dog API provides information on over 340 dog breeds, 20 breed groups, and fun facts. Our dataRAG is accurate and constantly updated. Easily integrate this information into your own website or application with our user-friendly API. Get started today and discover more about the world of dogs.',
+        description='The Dog API provides information on over 340 dog breeds, 20 breed groups, and fun facts. Our data is accurate and constantly updated. Easily integrate this information into your own website or application with our user-friendly API. Get started today and discover more about the world of dogs.',
         base_url='https://dogapi.dog/api/v2',
         api_keywords=['Dog', 'DogAPI', 'Dog breeds', 'Dog facts', 'Animals'],
         popularity=randrange(0, 10),
@@ -533,7 +533,7 @@ def populate_database():
 
     api = Api(
         name='Petfinder',
-        description='The Petfinder API (Application Programming Interface) allows you to access the Petfinder database of hundreds of thousands of pets ready for adoption and over ten thousand animal welfare organizations. You can use the API to build your own dynamic websites or applications backed by the same dataRAG used on Petfinder.com.',
+        description='The Petfinder API (Application Programming Interface) allows you to access the Petfinder database of hundreds of thousands of pets ready for adoption and over ten thousand animal welfare organizations. You can use the API to build your own dynamic websites or applications backed by the same data used on Petfinder.com.',
         base_url='https://api.petfinder.com/v2/',
         api_keywords=['Pets', 'adoption', 'petfinder', 'animals'],
         popularity=randrange(0, 10),
@@ -606,7 +606,7 @@ def populate_database():
 
     api = Api(
         name='AniList',
-        description='The AniList GraphQL API provides quick and powerful access to over 500k anime and manga entries, including character, staff, and live airing dataRAG. The AniList & AniChart websites themselves run on the API, so almost everything you can do on the sites, you can do via the API.',
+        description='The AniList GraphQL API provides quick and powerful access to over 500k anime and manga entries, including character, staff, and live airing data. The AniList & AniChart websites themselves run on the API, so almost everything you can do on the sites, you can do via the API.',
         base_url='https://graphql.anilist.co',
         api_keywords=['manga', 'anime', 'The AniList', 'AniChart', 'AniList'],
         popularity=randrange(0, 10),
@@ -835,7 +835,7 @@ def populate_database():
         EndPoint(
             endpoint='/v4/characters/{id}/full',
             http_method='GET',
-            description='Returns complete character resource dataRAG',
+            description='Returns complete character resource data',
             endpoint_keywords=['GET', 'testGET'],
         ),
         EndPoint(
@@ -925,7 +925,7 @@ def populate_database():
         EndPoint(
             endpoint='/v4/manga/{id}/full',
             http_method='GET',
-            description="Returns complete manga resource dataRAG",
+            description="Returns complete manga resource data",
             endpoint_keywords=['GET', 'testGET'],
         ),
         EndPoint(
@@ -1009,7 +1009,7 @@ def populate_database():
         EndPoint(
             endpoint='/v4/people/{id}/full',
             http_method='GET',
-            description="Returns complete character resource dataRAG",
+            description="Returns complete character resource data",
             endpoint_keywords=['GET', 'testGET'],
         ),
         EndPoint(
@@ -1147,7 +1147,7 @@ def populate_database():
         EndPoint(
             endpoint='/v4/users/{username}/full',
             http_method='GET',
-            description="Returns complete user resource dataRAG",
+            description="Returns complete user resource data",
             endpoint_keywords=['GET', 'testGET'],
         ),
         EndPoint(
@@ -2242,7 +2242,7 @@ def populate_database():
         EndPoint(
             endpoint='/admin/user/:id/:useExtended',
             http_method='PATCH',
-            description="Updates a user's useExteded dataRAG enum",
+            description="Updates a user's useExteded data enum",
             endpoint_keywords=['GET', 'testGET'],
         )
     ]
@@ -2962,13 +2962,13 @@ def populate_database():
         EndPoint(
             endpoint='/houses',
             http_method='GET',
-            description='Returns the four Hogwarts Houses with some extra dataRAG.',
+            description='Returns the four Hogwarts Houses with some extra data.',
             endpoint_keywords=['GET', 'testGET'],
         ),
         EndPoint(
             endpoint='/houses/random',
             http_method='GET',
-            description='Returns a random Hogwarts House with some extra dataRAG.',
+            description='Returns a random Hogwarts House with some extra data.',
             endpoint_keywords=['GET', 'testGET'],
         ),
         EndPoint(
@@ -3010,9 +3010,9 @@ def populate_database():
 
     api = Api(
         name='OPEN Library',
-        description="Open Library offers a suite of APIs to help developers get up and running with our dataRAG. This includes RESTful APIs, which make Open Library dataRAG availabile in JSON, YAML and RDF/XML formats. There's also an earlier, now deprecated JSON API which is preserved for backward compatibility.",
+        description="Open Library offers a suite of APIs to help developers get up and running with our data. This includes RESTful APIs, which make Open Library data availabile in JSON, YAML and RDF/XML formats. There's also an earlier, now deprecated JSON API which is preserved for backward compatibility.",
         base_url='https://openlibrary.org/',
-        api_keywords=['OPEN Library', 'Books', 'Open Library dataRAG'],
+        api_keywords=['OPEN Library', 'Books', 'Open Library data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -3084,7 +3084,7 @@ def populate_database():
 
     api = Api(
         name='Penguin Publishing',
-        description="The Penguin Random House Rest Services can be used to get dataRAG about books, authors and events.",
+        description="The Penguin Random House Rest Services can be used to get data about books, authors and events.",
         base_url='https://reststop.randomhouse.com',
         api_keywords=['Penguin Publishing', 'Books', 'Authors', 'Events'],
         popularity=randrange(0, 10),
@@ -3146,7 +3146,7 @@ def populate_database():
 
     api = Api(
         name='The OrgHunter Charity',
-        description="The OrgHunter Charity API provides developers access to over 2.5M charities. Our Charity API goes well beyond the IRS pub78 dataRAG source and enables your organization to perform accurate real-time charity vetting. Over 1,500 websites and mobile applications depend on our Charity API daily, making us the largest charity dataRAG provider on the market today!",
+        description="The OrgHunter Charity API provides developers access to over 2.5M charities. Our Charity API goes well beyond the IRS pub78 data source and enables your organization to perform accurate real-time charity vetting. Over 1,500 websites and mobile applications depend on our Charity API daily, making us the largest charity data provider on the market today!",
         base_url='http://data.orghunter.com',
         api_keywords=['The OrgHunter Charity', 'Business', 'charities', 'real-time charity vetting'],
         popularity=randrange(0, 10),
@@ -3246,7 +3246,7 @@ def populate_database():
 
     api = Api(
         name='Gmail',
-        description="The Gmail API is a RESTful API that can be used to access Gmail mailboxes and send mail. For most web applications the Gmail API is the best choice for authorized access to a user's Gmail dataRAG and is suitable for various applications, such as: Read-only mail extraction, indexing, and backup; Automated or programmatic message sending; Email account migration; Email organization including filtering and sorting of messages; Standardization of email signatures across an organization",
+        description="The Gmail API is a RESTful API that can be used to access Gmail mailboxes and send mail. For most web applications the Gmail API is the best choice for authorized access to a user's Gmail data and is suitable for various applications, such as: Read-only mail extraction, indexing, and backup; Automated or programmatic message sending; Email account migration; Email organization including filtering and sorting of messages; Standardization of email signatures across an organization",
         base_url='https://www.googleapis.com/gmail',
         api_keywords=['Gmail', 'Business', 'access Gmail mailbox', 'send mail'],
         popularity=randrange(0, 10),
@@ -3371,9 +3371,9 @@ def populate_database():
 
     api = Api(
         name='MARKER',
-        description="Use our trademark search API to search the US trademarks database (USPTO) based on a search string. Our API allows search by serial number, trademark, owner, upcoming expiration date, and product/service description. Sign up to integrate trademark dataRAG into your application.",
+        description="Use our trademark search API to search the US trademarks database (USPTO) based on a search string. Our API allows search by serial number, trademark, owner, upcoming expiration date, and product/service description. Sign up to integrate trademark data into your application.",
         base_url='https://markerapi.com/api',
-        api_keywords=['MARKER', 'Business', 'USPTO', 'integrate trademark dataRAG'],
+        api_keywords=['MARKER', 'Business', 'USPTO', 'integrate trademark data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -3396,7 +3396,7 @@ def populate_database():
 
     api = Api(
         name='Trello',
-        description="The best way to build on top of Trello is to create a Power-Up! With Power-Ups you can add buttons to cards and boards, show previews of attachments on Trello cards, and much more - all inside of Trello! Power-Ups add extra functionality inside of Trello and let you and your team work with more perspective. Some Power-Ups help you automate your workflows, others give you a new view into the dataRAG you have stored in cards.",
+        description="The best way to build on top of Trello is to create a Power-Up! With Power-Ups you can add buttons to cards and boards, show previews of attachments on Trello cards, and much more - all inside of Trello! Power-Ups add extra functionality inside of Trello and let you and your team work with more perspective. Some Power-Ups help you automate your workflows, others give you a new view into the data you have stored in cards.",
         base_url='https://api.trello.com',
         api_keywords=['Trello', 'Business', 'bussiness cards'],
         popularity=randrange(0, 10),
@@ -3446,9 +3446,9 @@ def populate_database():
 
     api = Api(
         name='Clientsbee',
-        description="With Clientsbee Embark on a journey of technological discovery with our advanced technographics dataRAG, designed to unveil the intricate layers of digital ecosystems and empower businesses with actionable insights.",
+        description="With Clientsbee Embark on a journey of technological discovery with our advanced technographics data, designed to unveil the intricate layers of digital ecosystems and empower businesses with actionable insights.",
         base_url=None,
-        api_keywords=['Clientsbee', 'Business', 'technographics dataRAG'],
+        api_keywords=['Clientsbee', 'Business', 'technographics data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -3498,7 +3498,7 @@ def populate_database():
 
     api = Api(
         name='Wikipedia, On this Day',
-        description="This API can be used to retrieve birth, deaths, and events for any given day of the year. The dataRAG is all harvested from Wikipedia and therefore licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License. The API itself is available as-is. Just keep calm and query on.",
+        description="This API can be used to retrieve birth, deaths, and events for any given day of the year. The data is all harvested from Wikipedia and therefore licensed under Creative Commons Attribution-ShareAlike 3.0 Unported License. The API itself is available as-is. Just keep calm and query on.",
         base_url='https://byabbe.se/on-this-day',
         api_keywords=['Wikipedia, On this Day', 'Calendar', 'events of the year', 'wikipedia'],
         popularity=randrange(0, 10),
@@ -3598,7 +3598,7 @@ def populate_database():
 
     api = Api(
         name='Google Calendar',
-        description="Enhance the Google Calendar experience. Insert interactive content, powered by your account dataRAG or an external service, with add-ons.",
+        description="Enhance the Google Calendar experience. Insert interactive content, powered by your account data or an external service, with add-ons.",
         base_url='https://www.googleapis.com/calendar/v3/calendars',
         api_keywords=['Google Calendar', 'Calendar', 'Enhance google calendar'],
         popularity=randrange(0, 10),
@@ -3648,9 +3648,9 @@ def populate_database():
 
     api = Api(
         name='Holiday API',
-        description="Stop maintaining holiday dataRAG. Start building what matters. Fresh, accurate holiday dataRAG—just an API call away. Skip the scraping. Ditch the spreadsheets.",
+        description="Stop maintaining holiday data. Start building what matters. Fresh, accurate holiday data—just an API call away. Skip the scraping. Ditch the spreadsheets.",
         base_url='https://holidayapi.com',
-        api_keywords=['Holiday API', 'Calendar', 'accurate holiday dataRAG'],
+        api_keywords=['Holiday API', 'Calendar', 'accurate holiday data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -3775,7 +3775,7 @@ def populate_database():
 
     api = Api(
         name='Google Drive',
-        description="Enhance the Google Drive experience. Insert interactive content, powered by your account dataRAG or an external service, with add-ons. Show a custom interface for uploading files from Drive into your third-party service. Enable users to quickly create files from custom templates.",
+        description="Enhance the Google Drive experience. Insert interactive content, powered by your account data or an external service, with add-ons. Show a custom interface for uploading files from Drive into your third-party service. Enable users to quickly create files from custom templates.",
         base_url='https://www.googleapis.com/drive/v3/files',
         api_keywords=['Google Drive', 'Cloud storage and File Sharing', 'uploading file', 'create file', 'interactive content'],
         popularity=randrange(0, 10),
@@ -3954,9 +3954,9 @@ def populate_database():
 
     api = Api(
         name='Bitquery',
-        description="Bitquery provides historical and real-time indexed dataRAG for 40+ blockchains through Graphql APIs, Websockets, SQL, and Cloud providers such as AWS, Snowflake, Google, Azure, Kafka etc. Get APIs for token trades, transfers, holders, transactions, address balances, Smart contract events, calls, NFT trades, transfers, etc.",
+        description="Bitquery provides historical and real-time indexed data for 40+ blockchains through Graphql APIs, Websockets, SQL, and Cloud providers such as AWS, Snowflake, Google, Azure, Kafka etc. Get APIs for token trades, transfers, holders, transactions, address balances, Smart contract events, calls, NFT trades, transfers, etc.",
         base_url='https://streaming.bitquery.io/graphql',
-        api_keywords=['Bitquery', 'blockchain', 'Cryptocurrency', 'real-time dataRAG', 'smart contracts'],
+        api_keywords=['Bitquery', 'blockchain', 'Cryptocurrency', 'real-time data', 'smart contracts'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -3979,7 +3979,7 @@ def populate_database():
 
     api = Api(
         name='BitcoinAverage',
-        description="Welcome to the BitcoinAverage API! The world's best and longest running Cryptocurrency price API provider. These APIs can be used to gather real-time, OHLC, volume and historical price dataRAG for the following Cryptocurrencies: Bitcoin (BTC), Bitcoin Cash (BCH), Litecoin (LTC), Ethereum (ETH), Dash (DASH), Ripple (XRP), Monero (XMR) plus many more.",
+        description="Welcome to the BitcoinAverage API! The world's best and longest running Cryptocurrency price API provider. These APIs can be used to gather real-time, OHLC, volume and historical price data for the following Cryptocurrencies: Bitcoin (BTC), Bitcoin Cash (BCH), Litecoin (LTC), Ethereum (ETH), Dash (DASH), Ripple (XRP), Monero (XMR) plus many more.",
         base_url='https://apiv2.bitcoinaverage.com',
         api_keywords=['BitcoinAverage', 'real-time', 'Cryptocurrency', 'cryptocurrency price'],
         popularity=randrange(0, 10),
@@ -4004,7 +4004,7 @@ def populate_database():
 
     api = Api(
         name='BitMEX',
-        description="BitMEX offers a fully featured REST API and a powerful streaming WebSocket API. All market and user dataRAG is available and updates in real-time. The BitMEX APIs are open and complete. Every function used by the BitMEX website is exposed via the API, allowing developers full control to build any kind of application on top of BitMEX.",
+        description="BitMEX offers a fully featured REST API and a powerful streaming WebSocket API. All market and user data is available and updates in real-time. The BitMEX APIs are open and complete. Every function used by the BitMEX website is exposed via the API, allowing developers full control to build any kind of application on top of BitMEX.",
         base_url=None,
         api_keywords=['BitMEX', 'Cryptocurrency', 'open API', 'streaming websocket API'],
         popularity=randrange(0, 10),
@@ -4056,9 +4056,9 @@ def populate_database():
 
     api = Api(
         name='1Forge',
-        description="1Forge provides real-time quote dataRAG (bid & ask) for 700+ pairs. To see a full list of supported currency pairs, please see the full currency pair list. At this time, we do not offer historical dataRAG, however, clients are more than welcome to archive our quotes locally for internal use. By connecting directly to brokers and liquidity providers, we are able to provide dataRAG as fast as any ECN or brokerage. Depending on how active the market is, you can see price updates over 200 times per second for a single currency pair. No other quote provider in the world can match our accuracy, speed or level of service.",
+        description="1Forge provides real-time quote data (bid & ask) for 700+ pairs. To see a full list of supported currency pairs, please see the full currency pair list. At this time, we do not offer historical data, however, clients are more than welcome to archive our quotes locally for internal use. By connecting directly to brokers and liquidity providers, we are able to provide data as fast as any ECN or brokerage. Depending on how active the market is, you can see price updates over 200 times per second for a single currency pair. No other quote provider in the world can match our accuracy, speed or level of service.",
         base_url='https://api.1forge.com',
-        api_keywords=['1Forge', 'real-time quote dataRAG', 'Currency Exchange'],
+        api_keywords=['1Forge', 'real-time quote data', 'Currency Exchange'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -4081,7 +4081,7 @@ def populate_database():
 
     api = Api(
         name='currencylayer',
-        description="Currencylayer provides a simple REST API with real-time and historical exchange rates for 168 world currencies, delivering currency pairs in universally usable JSON format - compatible with any of your applications. Spot exchange rate dataRAG is retrieved from several major forex dataRAG providers in real-time, validated, processed and delivered hourly, every 10 minutes, or even within the 60-second market window. Providing the most representative forex market value available ('midpoint' value) for every API request, the currencylayer API powers currency converters, mobile applications, financial software components and back-office systems all around the world.",
+        description="Currencylayer provides a simple REST API with real-time and historical exchange rates for 168 world currencies, delivering currency pairs in universally usable JSON format - compatible with any of your applications. Spot exchange rate data is retrieved from several major forex data providers in real-time, validated, processed and delivered hourly, every 10 minutes, or even within the 60-second market window. Providing the most representative forex market value available ('midpoint' value) for every API request, the currencylayer API powers currency converters, mobile applications, financial software components and back-office systems all around the world.",
         base_url='https://api.currencylayer.com',
         api_keywords=['currencylayer', 'Currency Exchange', 'real-time exchange', 'historical exchange'],
         popularity=randrange(0, 10),
@@ -4131,7 +4131,7 @@ def populate_database():
 
     api = Api(
         name='Exchangeratesapi.io',
-        description="With over 15 exchange rate dataRAG sources, the Exchangerates API is delivering exchanging rates dataRAG for more than 170 world currencies. This API has several endpoints, where each of them serves a different purpose, use case. The endpoints include functionalities like receiving the latest exchange rates information for a specific set, or for all currencies; conversion from one to another currency; receiving dataRAG Time-series for multiple or for one currency, and preserving the API daily for the fluctuation dataRAG.",
+        description="With over 15 exchange rate data sources, the Exchangerates API is delivering exchanging rates data for more than 170 world currencies. This API has several endpoints, where each of them serves a different purpose, use case. The endpoints include functionalities like receiving the latest exchange rates information for a specific set, or for all currencies; conversion from one to another currency; receiving data Time-series for multiple or for one currency, and preserving the API daily for the fluctuation data.",
         base_url='https://api.exchangeratesapi.io',
         api_keywords=['Exchangeratesapi.io', 'latest exchange rate', 'Currency Exchange', 'conversion', 'fluctioations'],
         popularity=randrange(0, 10),
@@ -4156,9 +4156,9 @@ def populate_database():
 
     api = Api(
         name='Fixer.io',
-        description="Powered by 15+ exchange rate dataRAG sources, the Fixer API is capable of delivering real-time exchange rate dataRAG for 170 world currencies. The API comes with multiple endpoints, each serving a different use case. Endpoint functionalities include getting the latest exchange rate dataRAG for all or a specific set of currencies, converting amounts from one currency to another, retrieving Time-Series dataRAG for one or multiple currencies and querying the API for daily fluctuation dataRAG.",
+        description="Powered by 15+ exchange rate data sources, the Fixer API is capable of delivering real-time exchange rate data for 170 world currencies. The API comes with multiple endpoints, each serving a different use case. Endpoint functionalities include getting the latest exchange rate data for all or a specific set of currencies, converting amounts from one currency to another, retrieving Time-Series data for one or multiple currencies and querying the API for daily fluctuation data.",
         base_url='https://data.fixer.io/api/',
-        api_keywords=['Fixer.io', 'real-time exchange rate', 'Currency Exchange', 'Time-Series dataRAG', 'daily fluctuation da'],
+        api_keywords=['Fixer.io', 'real-time exchange rate', 'Currency Exchange', 'Time-Series data', 'daily fluctuation da'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -4181,7 +4181,7 @@ def populate_database():
 
     api = Api(
         name='Frankfurter',
-        description="Frankfurter is a free, open-source currency dataRAG API that tracks reference exchange rates published by institutional and non-commercial sources like the European Central Bank. No usage caps or API keys. Works great client-side in the browser or mobile apps. The public API is available at api.frankfurter.dev. If preferred, you can self-host.",
+        description="Frankfurter is a free, open-source currency data API that tracks reference exchange rates published by institutional and non-commercial sources like the European Central Bank. No usage caps or API keys. Works great client-side in the browser or mobile apps. The public API is available at api.frankfurter.dev. If preferred, you can self-host.",
         base_url='https://api.frankfurter.dev/',
         api_keywords=['Frankfurter', 'free', 'Currency Exchange', 'open-source', 'client-side'],
         popularity=randrange(0, 10),
@@ -4233,7 +4233,7 @@ def populate_database():
 
     api = Api(
         name='Cloudmersive',
-        description="Data Validation APIs. Validate key business dataRAG thoroughly. Email Address Validation. Validate whether an email is real when you accept it. Phone Number Validation. Validate and retrieve information for any phone number. Street Address Validation. Validate a street address, with full support for international addresses. VAT Number Validation. Validate and retrieve information for a VAT number or code. Domain Name Validation. Validate and retrieve WHOIS information for a domain name. Name Validation. Validate and extract information from names or code identifiers. IP Address Validation. Validate and retrieve key details about IP addresses, including geolocation.",
+        description="Data Validation APIs. Validate key business data thoroughly. Email Address Validation. Validate whether an email is real when you accept it. Phone Number Validation. Validate and retrieve information for any phone number. Street Address Validation. Validate a street address, with full support for international addresses. VAT Number Validation. Validate and retrieve information for a VAT number or code. Domain Name Validation. Validate and retrieve WHOIS information for a domain name. Name Validation. Validate and extract information from names or code identifiers. IP Address Validation. Validate and retrieve key details about IP addresses, including geolocation.",
         base_url='https://api.cloudmersive.com',
         api_keywords=['Cloudmersive', 'Validate email', 'Data Validation', 'validate phone number', 'VAT number', 'street address'],
         popularity=randrange(0, 10),
@@ -4358,7 +4358,7 @@ def populate_database():
 
     api = Api(
         name='numverify',
-        description="NumVerify offers a full-featured yet simple RESTful JSON API for national and international phone number validation and information lookup for a total of 232 countries around the world. Requested numbers are processed in real-time, cross-checked with the latest international numbering plan databases and returned in handy JSON format enriched with useful carrier, geographical location and line type dataRAG. Integrating the numverify API into your application will enable you to verify the validity of phone numbers at the point of entry, protecting you from fraud and increasing good leads.",
+        description="NumVerify offers a full-featured yet simple RESTful JSON API for national and international phone number validation and information lookup for a total of 232 countries around the world. Requested numbers are processed in real-time, cross-checked with the latest international numbering plan databases and returned in handy JSON format enriched with useful carrier, geographical location and line type data. Integrating the numverify API into your application will enable you to verify the validity of phone numbers at the point of entry, protecting you from fraud and increasing good leads.",
         base_url='http://apilayer.net/api',
         api_keywords=['numverify', 'phone number validation', 'Data Validation', 'national', 'international', 'real-time'],
         popularity=randrange(0, 10),
@@ -4383,9 +4383,9 @@ def populate_database():
 
     api = Api(
         name='Trestle',
-        description="Trestle provides identity dataRAG for businesses. This identity dataRAG is key for building and maintaining great customer relationships.",
+        description="Trestle provides identity data for businesses. This identity data is key for building and maintaining great customer relationships.",
         base_url='https://api.trestleiq.com',
-        api_keywords=['Trestle', 'identity dataRAG for businesses', 'Data Validation', 'customer relationships'],
+        api_keywords=['Trestle', 'identity data for businesses', 'Data Validation', 'customer relationships'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -4433,7 +4433,7 @@ def populate_database():
 
     api = Api(
         name='US Autocomplete',
-        description="nter address dataRAG quickly with real-time address suggestions.",
+        description="nter address data quickly with real-time address suggestions.",
         base_url='https://us-autocomplete-pro.api.smarty.com',
         api_keywords=['US Autocomplete', 'real-time', 'Data Validation', 'address suggestion'],
         popularity=randrange(0, 10),
@@ -4562,9 +4562,9 @@ def populate_database():
 
     api = Api(
         name='Lingua Robot',
-        description="English dictionary API providing an access to dataRAG of over 800 000 English lexical entries, such as words, phrasal verbs, multi-word expressions.",
+        description="English dictionary API providing an access to data of over 800 000 English lexical entries, such as words, phrasal verbs, multi-word expressions.",
         base_url='https://lingua-robot.p.rapidapi.com/language/v1/entries/en',
-        api_keywords=['Lingua Robot', 'Dictionaries', 'English dictionary', 'dataRAG'],
+        api_keywords=['Lingua Robot', 'Dictionaries', 'English dictionary', 'data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -4714,7 +4714,7 @@ def populate_database():
 
     api = Api(
         name='ReliefWeb API',
-        description="The ReliefWeb API was originally built to power a mobile/ low-bandwidth version of the ReliefWeb website. Enhancements and a public release provided access to ReliefWeb's curated and continuously updated dataRAG archive. It's now used to serve much of the main site, content on other OCHA sites, and third party apps. All the content of ReliefWeb is available through its API. The API aligns with current API best-practices, and is intended to be friendly to developers, as well as machines. It is publicly accessible using HTTP requests and returns JSON dataRAG.",
+        description="The ReliefWeb API was originally built to power a mobile/ low-bandwidth version of the ReliefWeb website. Enhancements and a public release provided access to ReliefWeb's curated and continuously updated data archive. It's now used to serve much of the main site, content on other OCHA sites, and third party apps. All the content of ReliefWeb is available through its API. The API aligns with current API best-practices, and is intended to be friendly to developers, as well as machines. It is publicly accessible using HTTP requests and returns JSON data.",
         base_url='https://api.reliefweb.int/v1/reports',
         api_keywords=['ReliefWeb API', 'Disasters', 'continuously updated'],
         popularity=randrange(0, 10),
@@ -4741,7 +4741,7 @@ def populate_database():
         name='PredictHQ',
         description="Get up and running with the PredictHQ APIs. Explore our API Endpoints, API Guides, Data Science Guides and more.",
         base_url='https://api.predicthq.com',
-        api_keywords=['PredictHQ', 'dataRAG science', 'Disasters'],
+        api_keywords=['PredictHQ', 'data science', 'Disasters'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -4764,7 +4764,7 @@ def populate_database():
 
     api = Api(
         name='ambee',
-        description="Safeguard your business against disasters with natural disasters API. Ambee’s natural disasters API offers real-time dataRAG on disasters such as earthquakes, cyclones, floods, volcanoes, droughts, and forest fires. Fortify your business outcomes from their impact by integrating this API today.",
+        description="Safeguard your business against disasters with natural disasters API. Ambee’s natural disasters API offers real-time data on disasters such as earthquakes, cyclones, floods, volcanoes, droughts, and forest fires. Fortify your business outcomes from their impact by integrating this API today.",
         base_url='https://api.ambeedata.com',
         api_keywords=['Ambee', 'natural disasters', 'Disasters', 'earthquakes', 'cyclones', 'floods', 'volcanoes', 'droughts', 'forest fires'],
         popularity=randrange(0, 10),
@@ -4791,9 +4791,9 @@ def populate_database():
 
     api = Api(
         name='Cloudmersive',
-        description="Document and Data Conversion APIs. Convert files and content between file formats. Convert dataRAG between file formats. Instantly.",
+        description="Document and Data Conversion APIs. Convert files and content between file formats. Convert data between file formats. Instantly.",
         base_url=None,
-        api_keywords=['Cloudmersive', 'Document and Data Conversion', 'Documents & Productivity', 'convert dataRAG'],
+        api_keywords=['Cloudmersive', 'Document and Data Conversion', 'Documents & Productivity', 'convert data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -4916,7 +4916,7 @@ def populate_database():
 
     api = Api(
         name='PrexView',
-        description="Create documents programmatically. Transform your dataRAG from XML or JSON to high quality, beautiful and readable documents in PDF, HTML, PNG or JPG.",
+        description="Create documents programmatically. Transform your data from XML or JSON to high quality, beautiful and readable documents in PDF, HTML, PNG or JPG.",
         base_url='https://api.prexview.com',
         api_keywords=['PrexView', 'Documents & Productivity', 'XML and JSON to PDF, HTML, PNG, JPG'],
         popularity=randrange(0, 10),
@@ -5118,7 +5118,7 @@ def populate_database():
 
     api = Api(
         name='NationNode',
-        description="Empowering Your Apps with Global Knowledge. Effortlessly access accurate, country-specific dataRAG to power your apps. From population stats to currency details, our free API delivers it all—fast, reliable, and always up-to-date.",
+        description="Empowering Your Apps with Global Knowledge. Effortlessly access accurate, country-specific data to power your apps. From population stats to currency details, our free API delivers it all—fast, reliable, and always up-to-date.",
         base_url='https://countries-api-abhishek.vercel.app',
         api_keywords=['NationNode', 'Education', 'population stats', 'currency details', 'up-to-date', 'reliable'],
         popularity=randrange(0, 10),
@@ -5170,7 +5170,7 @@ def populate_database():
 
     api = Api(
         name='IQAir',
-        description="AirVisual platform API. Unlock the power of real-time air quality dataRAG with IQAir's AirVisual platform API. Seamlessly integrate global air pollution insights into your apps, websites, or IoT platforms to deliver the most accurate information.",
+        description="AirVisual platform API. Unlock the power of real-time air quality data with IQAir's AirVisual platform API. Seamlessly integrate global air pollution insights into your apps, websites, or IoT platforms to deliver the most accurate information.",
         base_url=None,
         api_keywords=['IQAir', 'Environment', 'real-time', 'air quality', 'global', 'IoT', 'accurate'],
         popularity=randrange(0, 10),
@@ -5195,7 +5195,7 @@ def populate_database():
 
     api = Api(
         name='OpenAQ',
-        description="The OpenAQ API provides open access to global air quality dataRAG, following REST principles with resource-oriented URLs, standard HTTP response codes, and JSON-formatted responses. OpenAQ focuses on criteria air pollutants, primarily aggregating PM2.5, PM10, SO2, NO2, CO, O3, BC, relative humidity and temperature measurement dataRAG. For a limited set of locations, we have dataRAG for PM1, PM4, CO2, NO, NOx, CH4 & UFP.",
+        description="The OpenAQ API provides open access to global air quality data, following REST principles with resource-oriented URLs, standard HTTP response codes, and JSON-formatted responses. OpenAQ focuses on criteria air pollutants, primarily aggregating PM2.5, PM10, SO2, NO2, CO, O3, BC, relative humidity and temperature measurement data. For a limited set of locations, we have data for PM1, PM4, CO2, NO, NOx, CH4 & UFP.",
         base_url='https://api.openaq.org/v3/locations',
         api_keywords=['OpenAQ', 'Environment', 'global air quality', 'open access', 'forcast'],
         popularity=randrange(0, 10),
@@ -5220,7 +5220,7 @@ def populate_database():
 
     api = Api(
         name='Air Quality Programmatic APIs',
-        description="The JSON API can be used for advanced programmatic integration: Access to more than 11000 station-level and 1000 city-level dataRAG, Geo-location query (based on latitude/longitude or IP address), Individual AQI for all pollutants (PM2.5, PM10, NO2, CO, SO2, Ozone), Station name and coordinates, Originating EPA name and link, Current weather conditions, Stations within a map lat/lng bounds, Search stations by name, Air Quality forecast (for 3~8 days)",
+        description="The JSON API can be used for advanced programmatic integration: Access to more than 11000 station-level and 1000 city-level data, Geo-location query (based on latitude/longitude or IP address), Individual AQI for all pollutants (PM2.5, PM10, NO2, CO, SO2, Ozone), Station name and coordinates, Originating EPA name and link, Current weather conditions, Stations within a map lat/lng bounds, Search stations by name, Air Quality forecast (for 3~8 days)",
         base_url='http://api.waqi.info',
         api_keywords=['Air Quality Programmatic APIs', 'Environment', 'pollutants', 'Current weather'],
         popularity=randrange(0, 10),
@@ -5245,9 +5245,9 @@ def populate_database():
 
     api = Api(
         name='PVWatts',
-        description="PVWatts® Version 8 is is the current version of the PVWatts API. Updates from Version 6 include a bifacial module option, a new input for monthly irradiance losses, new inputs for specifying albedo, and updates to the photovoltaic module, inverter, and thermal effects models to use more detailed and industry-accepted algorithms. PVWatts V8 also updates the weather dataRAG to 2020 TMY dataRAG from the NREL National Solar Radiation Database (NSRDB) for locations covered by the database. (The NSRDB weather dataRAG used in PVWatts V6 is from around 2015.) This update provides production estimates based on the latest, state-of-the art models from NREL that may differ from the V6 estimates, depending on the location and inputs. From a coding perspective, PVWatts V8 replaces the pvwattsv5 compute module with pvwattsv8 so that the PVWatts Calculator, web API, and implementation of PVWatts in the System Advisor Model (SAM) all use the same underlying model.",
+        description="PVWatts® Version 8 is is the current version of the PVWatts API. Updates from Version 6 include a bifacial module option, a new input for monthly irradiance losses, new inputs for specifying albedo, and updates to the photovoltaic module, inverter, and thermal effects models to use more detailed and industry-accepted algorithms. PVWatts V8 also updates the weather data to 2020 TMY data from the NREL National Solar Radiation Database (NSRDB) for locations covered by the database. (The NSRDB weather data used in PVWatts V6 is from around 2015.) This update provides production estimates based on the latest, state-of-the art models from NREL that may differ from the V6 estimates, depending on the location and inputs. From a coding perspective, PVWatts V8 replaces the pvwattsv5 compute module with pvwattsv8 so that the PVWatts Calculator, web API, and implementation of PVWatts in the System Advisor Model (SAM) all use the same underlying model.",
         base_url='https://developer.nrel.gov/api/pvwatts',
-        api_keywords=['PVWatts', 'weather dataRAG', 'Environment'],
+        api_keywords=['PVWatts', 'weather data', 'Environment'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5270,9 +5270,9 @@ def populate_database():
 
     api = Api(
         name='Carbon Intensity API',
-        description="National Energy System Operator’s Carbon Intensity API provides an indicative trend of regional carbon intensity of the electricity system in Great Britain (GB) up to 2 days ahead of real-time. It provides programmatic and timely access to both forecast and estimated carbon intensity dataRAG. The Carbon Intensity forecast includes CO2 emissions related to electricity generation only. The includes emissions from all large metered power stations, interconnector imports, transmission and distribution losses, and accounts for national electricity demand, embedded wind and solar generation.",
+        description="National Energy System Operator’s Carbon Intensity API provides an indicative trend of regional carbon intensity of the electricity system in Great Britain (GB) up to 2 days ahead of real-time. It provides programmatic and timely access to both forecast and estimated carbon intensity data. The Carbon Intensity forecast includes CO2 emissions related to electricity generation only. The includes emissions from all large metered power stations, interconnector imports, transmission and distribution losses, and accounts for national electricity demand, embedded wind and solar generation.",
         base_url='https://api.carbonintensity.org.uk',
-        api_keywords=['Carbon Intensity API', 'Environment', 'regional carbon intensity', 'Great Britain', 'carbon dataRAG forcast'],
+        api_keywords=['Carbon Intensity API', 'Environment', 'regional carbon intensity', 'Great Britain', 'carbon data forcast'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5295,9 +5295,9 @@ def populate_database():
 
     api = Api(
         name='NOAA Climate Data',
-        description="NCDC's Climate Data Online (CDO) offers web services that provide access to current dataRAG. This API is for developers looking to create their own scripts or programs that use the CDO database of weather and climate dataRAG. An access token is required to use the API, and each token will be limited to five requests per second and 10,000 requests per day.",
+        description="NCDC's Climate Data Online (CDO) offers web services that provide access to current data. This API is for developers looking to create their own scripts or programs that use the CDO database of weather and climate data. An access token is required to use the API, and each token will be limited to five requests per second and 10,000 requests per day.",
         base_url='https://www.ncei.noaa.gov/cdo-web/api',
-        api_keywords=['NOAA Climate Data', 'Environment', 'weather', 'climate dataRAG'],
+        api_keywords=['NOAA Climate Data', 'Environment', 'weather', 'climate data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5320,7 +5320,7 @@ def populate_database():
 
     api = Api(
         name='WeatherStack',
-        description="The weatherstack API was built to deliver accurate weather dataRAG for any application and use case, from real-time and historical weather information all the way to 14-day weather forecasts, supporting all major programming languages. Our straightforward API design will make it easy to use the API — continue reading below to get started.",
+        description="The weatherstack API was built to deliver accurate weather data for any application and use case, from real-time and historical weather information all the way to 14-day weather forecasts, supporting all major programming languages. Our straightforward API design will make it easy to use the API — continue reading below to get started.",
         base_url='https://api.weatherstack.com',
         api_keywords=['WeatherStack', 'Environment', 'accurate weather', 'real-time', 'historical', 'weather forcast'],
         popularity=randrange(0, 10),
@@ -5399,7 +5399,7 @@ def populate_database():
 
     api = Api(
         name='Alpha Vantage',
-        description="Stock Market Data API for Software Applications.  Realtime & historical stock market dataRAG APIs. Options, forex, crypto & other asset classes. 60+ technical & economic indicators. Market news API & sentiments. Global coverage",
+        description="Stock Market Data API for Software Applications.  Realtime & historical stock market data APIs. Options, forex, crypto & other asset classes. 60+ technical & economic indicators. Market news API & sentiments. Global coverage",
         base_url='https://www.alphavantage.co',
         api_keywords=['Alpha Vantage', 'Finance', 'Stock Market', 'real-time', 'historical', 'forex', 'crypto'],
         popularity=randrange(0, 10),
@@ -5424,9 +5424,9 @@ def populate_database():
 
     api = Api(
         name='barchart',
-        description="Barchart features a diverse set of market dataRAG APIs that can be easily integrated into your website. Whether you're looking for a small, medium, large or enterprise solution, we'll create a custom package for you that exceeds your expectations. Explore our Market Data APIs below.",
+        description="Barchart features a diverse set of market data APIs that can be easily integrated into your website. Whether you're looking for a small, medium, large or enterprise solution, we'll create a custom package for you that exceeds your expectations. Explore our Market Data APIs below.",
         base_url=None,
-        api_keywords=['barchart', 'Finance', 'market dataRAG'],
+        api_keywords=['barchart', 'Finance', 'market data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5449,7 +5449,7 @@ def populate_database():
 
     api = Api(
         name='Financial Data',
-        description="An Outstanding Collection Of Financial Data. Our API provides access to a variety of financial information. You can get end-of-day or intraday market dataRAG, examine company financial statements and ratios, access insider trading, institutional trading, or earnings release dataRAG. Additionally, you can explore alternative dataRAG to uncover unique investment opportunities.",
+        description="An Outstanding Collection Of Financial Data. Our API provides access to a variety of financial information. You can get end-of-day or intraday market data, examine company financial statements and ratios, access insider trading, institutional trading, or earnings release data. Additionally, you can explore alternative data to uncover unique investment opportunities.",
         base_url='https://financialdata.net/api',
         api_keywords=['Financial Data', 'Finance', 'Financial Data', 'financial statements', 'insider trading', 'earnings releases'],
         popularity=randrange(0, 10),
@@ -5474,9 +5474,9 @@ def populate_database():
 
     api = Api(
         name='FMP',
-        description="Financial dataRAG for every need. We provide one of the most accurate financial dataRAG available on the market. You can get historical prices, fundamental dataRAG, insider transactions, and much more that goes back 30 years in history.",
+        description="Financial data for every need. We provide one of the most accurate financial data available on the market. You can get historical prices, fundamental data, insider transactions, and much more that goes back 30 years in history.",
         base_url='https://financialmodelingprep.com/stable',
-        api_keywords=['FMP', 'Finance', 'financial dataRAG', 'historical prices', 'insider transactions', 'accurate'],
+        api_keywords=['FMP', 'Finance', 'financial data', 'historical prices', 'insider transactions', 'accurate'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5499,9 +5499,9 @@ def populate_database():
 
     api = Api(
         name='FINCEPT',
-        description="Welcome! TLK Industries Insights. Explore Financial Economic Market Trends Worldwide. Unlock Global Financial Insights with TLK Industries. Insight delivers dataRAG-driven solutions, helping businesses and individuals make smarter decisions and achieve sustained growth globally.",
+        description="Welcome! TLK Industries Insights. Explore Financial Economic Market Trends Worldwide. Unlock Global Financial Insights with TLK Industries. Insight delivers data-driven solutions, helping businesses and individuals make smarter decisions and achieve sustained growth globally.",
         base_url='',
-        api_keywords=['FINCEPT', 'Finance', 'market trends', 'dataRAG-driven solutions', 'growth'],
+        api_keywords=['FINCEPT', 'Finance', 'market trends', 'data-driven solutions', 'growth'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5574,7 +5574,7 @@ def populate_database():
 
     api = Api(
         name='tradier',
-        description="Send trades for US-based equities and options easily using the language of your choice. Real-time, delayed, and historical market dataRAG available through request/response and streaming interfaces. Easy APIs for registered entities to open an account, get it funded, and start trading. HTTP streaming APIs for streaming market dataRAG and limit charting dataRAG for Tradier Brokerage account holders.",
+        description="Send trades for US-based equities and options easily using the language of your choice. Real-time, delayed, and historical market data available through request/response and streaming interfaces. Easy APIs for registered entities to open an account, get it funded, and start trading. HTTP streaming APIs for streaming market data and limit charting data for Tradier Brokerage account holders.",
         base_url=None,
         api_keywords=['tradier', 'Finance', 'US-based', 'equities', 'options', 'trading'],
         popularity=randrange(0, 10),
@@ -5599,9 +5599,9 @@ def populate_database():
 
     api = Api(
         name='marketstack',
-        description="Obtain real-time stock dataRAG for more than 30,000 tickers down to the minute, request intraday quotes for tickers from IEX, or search 15+ years of accurate EOD historical market dataRAG. Easily integrate the API and make use of 30,000+ worldwide stock tickers with our Stock Price endpoint or integrate more than 500,000 tickers with our EOD endpoint collected from more global exchanges, including Nasdaq, NYSE, and more. We have built a simple, powerful and scalable REST API with an uptime of close to 100%. It will take you less than 5 minutes to get started. Get up and running quickly using the Free Plan, allowing for 100 dataRAG requests per month. Instant access, no contract or payment required.",
+        description="Obtain real-time stock data for more than 30,000 tickers down to the minute, request intraday quotes for tickers from IEX, or search 15+ years of accurate EOD historical market data. Easily integrate the API and make use of 30,000+ worldwide stock tickers with our Stock Price endpoint or integrate more than 500,000 tickers with our EOD endpoint collected from more global exchanges, including Nasdaq, NYSE, and more. We have built a simple, powerful and scalable REST API with an uptime of close to 100%. It will take you less than 5 minutes to get started. Get up and running quickly using the Free Plan, allowing for 100 data requests per month. Instant access, no contract or payment required.",
         base_url='https://api.marketstack.com',
-        api_keywords=['marketstack', 'Finance', 'real-time', 'stock dataRAG', 'market'],
+        api_keywords=['marketstack', 'Finance', 'real-time', 'stock data', 'market'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5651,9 +5651,9 @@ def populate_database():
 
     api = Api(
         name='Edamam',
-        description="Leading provider of nutrition dataRAG and analytics. Get free access to a database with close to 900,000 foods and over 680,000 unique UPC codes. License over 180,000 full recipes and nutrition for over 2.3 million web recipes. Search over 2.3 million recipes by diets, calories and nutrient ranges. Personalized meal recommendations using 28 nutrients and 40 diets/allergies. We track several hundred thousand recipes from over 500 sources to build live trends of what is being cooked, what is popular and what is new.",
+        description="Leading provider of nutrition data and analytics. Get free access to a database with close to 900,000 foods and over 680,000 unique UPC codes. License over 180,000 full recipes and nutrition for over 2.3 million web recipes. Search over 2.3 million recipes by diets, calories and nutrient ranges. Personalized meal recommendations using 28 nutrients and 40 diets/allergies. We track several hundred thousand recipes from over 500 sources to build live trends of what is being cooked, what is popular and what is new.",
         base_url='https://api.edamam.com',
-        api_keywords=['Edamam', 'Food & Drink', 'nutrition dataRAG', 'recipies', 'food', 'diet', 'meal recommendation'],
+        api_keywords=['Edamam', 'Food & Drink', 'nutrition data', 'recipies', 'food', 'diet', 'meal recommendation'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -5676,7 +5676,7 @@ def populate_database():
 
     api = Api(
         name='Open Brewery DB',
-        description="Open Brewery DB is a free dataset and API with public information on breweries, cideries, brewpubs, and bottleshops. The goal of Open Brewery DB is to maintain an open-source, community-driven dataset and provide a public API for brewery-related dataRAG.",
+        description="Open Brewery DB is a free dataset and API with public information on breweries, cideries, brewpubs, and bottleshops. The goal of Open Brewery DB is to maintain an open-source, community-driven dataset and provide a public API for brewery-related data.",
         base_url='https://api.openbrewerydb.org',
         api_keywords=['Open Brewery DB', 'Food & Drink', 'free', 'breweries', 'open-source', 'brewpubs', 'bottleshops'],
         popularity=randrange(0, 10),
@@ -5701,7 +5701,7 @@ def populate_database():
 
     api = Api(
         name='PunkAPI',
-        description="A FastAPI-based project that serves as a digital archive of BrewDog's DIY Dog beers. It provides an API to access detailed information about each beer, including its recipe and associated image. The catalog dataRAG was initially extracted from a PDF document and transformed into JSON and PNG files. These files are placed in dataRAG and img folders according to their sequential number within the catalog. So, PunkAPI offers an interface to interact with this dataRAG.",
+        description="A FastAPI-based project that serves as a digital archive of BrewDog's DIY Dog beers. It provides an API to access detailed information about each beer, including its recipe and associated image. The catalog data was initially extracted from a PDF document and transformed into JSON and PNG files. These files are placed in data and img folders according to their sequential number within the catalog. So, PunkAPI offers an interface to interact with this data.",
         base_url='https://punkapi.online',
         api_keywords=['PunkAPI', 'Food & Drink', 'BrewDog', 'beer recipe'],
         popularity=randrange(0, 10),
@@ -5826,7 +5826,7 @@ def populate_database():
 
     api = Api(
         name='What’s on the menu?',
-        description="There's a lot of dataRAG behind The New York Public Library's What's On The Menu?, and here's your chance to explore it. This is built for programmers and power-users, so if you're looking for an easier way to explore the dataset you may want to take a look at our Biweekly dataRAG exports, which are in CSV format. However if you're looking to do powerful analysis of historical menu dataRAG, this is the tool for you.",
+        description="There's a lot of data behind The New York Public Library's What's On The Menu?, and here's your chance to explore it. This is built for programmers and power-users, so if you're looking for an easier way to explore the dataset you may want to take a look at our Biweekly data exports, which are in CSV format. However if you're looking to do powerful analysis of historical menu data, this is the tool for you.",
         base_url='http://api.menus.nypl.org/menus',
         api_keywords=['What’s on the menu?', 'Food & Drink', 'New York Public Library'],
         popularity=randrange(0, 10),
@@ -5851,7 +5851,7 @@ def populate_database():
 
     api = Api(
         name='WhiskyHunter',
-        description="Tools For Collectors, Traders & Whisky Lovers! We monitor dataRAG from 29 whisky auctions. Our database contains 4488618 past & 19003 records from live auctions. We also keep an eye on major online retailers.",
+        description="Tools For Collectors, Traders & Whisky Lovers! We monitor data from 29 whisky auctions. Our database contains 4488618 past & 19003 records from live auctions. We also keep an eye on major online retailers.",
         base_url='https://whiskyhunter.net/api',
         api_keywords=['WhiskyHunter', 'Food & Drink', 'Whisky', 'tools for collectors'],
         popularity=randrange(0, 10),
@@ -5876,7 +5876,7 @@ def populate_database():
 
     api = Api(
         name='Zestful',
-        description="Zestful's ingredient parser API turns plain recipe strings into beautiful, structured JSON dataRAG. Zestful makes recipe apps smarter about managing ingredients. Zestful transforms ingredients from opaque strings to meaningful dataRAG in easy-to-consume JSON format.",
+        description="Zestful's ingredient parser API turns plain recipe strings into beautiful, structured JSON data. Zestful makes recipe apps smarter about managing ingredients. Zestful transforms ingredients from opaque strings to meaningful data in easy-to-consume JSON format.",
         base_url=None,
         api_keywords=['Zestful', 'Food & Drink', 'ingredient parser', 'recipe'],
         popularity=randrange(0, 10),
@@ -6036,7 +6036,7 @@ def populate_database():
 
     api = Api(
         name='Lexigram',
-        description="Lexigram provides users with a simple, easy-to-use interface for extracting targeted information from the patient record while preserving the rich contextual dataRAG that doctors work so hard to capture.",
+        description="Lexigram provides users with a simple, easy-to-use interface for extracting targeted information from the patient record while preserving the rich contextual data that doctors work so hard to capture.",
         base_url='https://app.lexigram.io',
         api_keywords=['Lexigram', 'patient record', 'Health', 'targeted information'],
         popularity=randrange(0, 10),
@@ -6159,7 +6159,7 @@ def populate_database():
 
     api = Api(
         name='openFDA',
-        description="openFDA is an Elasticsearch-based API that serves public FDA dataRAG about nouns like drugs, devices, and foods. Not all dataRAG in openFDA has been validated for clinical or production use. And because openFDA only serves publicly available dataRAG, it does not contain dataRAG with Personally Identifiable Information about patients or other sensitive information.",
+        description="openFDA is an Elasticsearch-based API that serves public FDA data about nouns like drugs, devices, and foods. Not all data in openFDA has been validated for clinical or production use. And because openFDA only serves publicly available data, it does not contain data with Personally Identifiable Information about patients or other sensitive information.",
         base_url='https://api.fda.gov',
         api_keywords=['openFDA', 'Health', 'testAPI', 'drugs', 'devices', 'food', 'regulation'],
         popularity=randrange(0, 10),
@@ -6186,9 +6186,9 @@ def populate_database():
 
     api = Api(
         name='adzuna',
-        description="Get the very latest ads and dataRAG with Adzuna's API. Get job ads to display on your own website. Use Adzuna's up-to-the-minute employment dataRAG to power your own website, reporting and dataRAG visualisations.",
+        description="Get the very latest ads and data with Adzuna's API. Get job ads to display on your own website. Use Adzuna's up-to-the-minute employment data to power your own website, reporting and data visualisations.",
         base_url='https://api.adzuna.com/v1/api',
-        api_keywords=['adzuna', 'Jobs', 'employment dataRAG'],
+        api_keywords=['adzuna', 'Jobs', 'employment data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -6464,9 +6464,9 @@ def populate_database():
 
     api = Api(
         name='Unplugg API',
-        description="This API currently provides forecasting for timeseries dataRAG that you can test below. You can use it to forecast energy comsuption, temperature, or any other timeseries dataRAG which has some seasonality effect.",
+        description="This API currently provides forecasting for timeseries data that you can test below. You can use it to forecast energy comsuption, temperature, or any other timeseries data which has some seasonality effect.",
         base_url='https://api.unplu.gg',
-        api_keywords=['Unplugg API', 'Machine Learning', 'forecasting', 'timeseries dataRAG', 'energy', 'temperature'],
+        api_keywords=['Unplugg API', 'Machine Learning', 'forecasting', 'timeseries data', 'energy', 'temperature'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -6791,7 +6791,7 @@ def populate_database():
 
     api = Api(
         name='MusicBrainz',
-        description="MusicBrainz is a community-maintained open source encyclopedia of music information. This means that anyone — including you — can help contribute to the project by adding information about your favorite artists and their works. In 2000, Gracenote took over the free CDDB project and commercialized it, essentially charging users for accessing the very dataRAG they themselves contributed. In response, Robert Kaye founded MusicBrainz. The project has since grown rapidly from a one-man operation to an international community of enthusiasts that appreciates both music and music metadata. Along the way, the scope of the project has expanded from its origins as a mere CDDB replacement to the true music encyclopedia MusicBrainz is today. As an encyclopedia and as a community, MusicBrainz exists only to collect as much information about music as we can. We do not discriminate or prefer one type of music over another, and we try to collect information about as many different types of music as possible. Whether it is published or unpublished, popular or fringe, western or non-western, human or non-human — we want it all in MusicBrainz.",
+        description="MusicBrainz is a community-maintained open source encyclopedia of music information. This means that anyone — including you — can help contribute to the project by adding information about your favorite artists and their works. In 2000, Gracenote took over the free CDDB project and commercialized it, essentially charging users for accessing the very data they themselves contributed. In response, Robert Kaye founded MusicBrainz. The project has since grown rapidly from a one-man operation to an international community of enthusiasts that appreciates both music and music metadata. Along the way, the scope of the project has expanded from its origins as a mere CDDB replacement to the true music encyclopedia MusicBrainz is today. As an encyclopedia and as a community, MusicBrainz exists only to collect as much information about music as we can. We do not discriminate or prefer one type of music over another, and we try to collect information about as many different types of music as possible. Whether it is published or unpublished, popular or fringe, western or non-western, human or non-human — we want it all in MusicBrainz.",
         base_url='https://musicbrainz.org/ws/2',
         api_keywords=['MusicBrainz', 'Music', 'open source encyclopedia', 'music information'],
         popularity=randrange(0, 10),
@@ -6993,7 +6993,7 @@ def populate_database():
 
     api = Api(
         name='Associated Press',
-        description="Build powerful integrations with our APIs and Metadata Services. Looking for seamless access to AP news content, metadata or elections dataRAG? AP has the right API for you.",
+        description="Build powerful integrations with our APIs and Metadata Services. Looking for seamless access to AP news content, metadata or elections data? AP has the right API for you.",
         base_url='https://api.ap.org',
         api_keywords=['Associated Press', 'News', 'news content', 'news metadata'],
         popularity=randrange(0, 10),
@@ -7018,7 +7018,7 @@ def populate_database():
 
     api = Api(
         name='Chronicling America',
-        description="Chronicling America provides access to information about historic newspapers and select digitized newspaper pages. To encourage a wide range of potential uses, we designed several different views of the dataRAG we provide, all of which are publicly visible. Each uses common Web protocols, and access is not restricted in any way. You do not need to apply for a special key to use them. Together they make up an extensive application programming interface (API) which you can use to explore all of our dataRAG in many ways.",
+        description="Chronicling America provides access to information about historic newspapers and select digitized newspaper pages. To encourage a wide range of potential uses, we designed several different views of the data we provide, all of which are publicly visible. Each uses common Web protocols, and access is not restricted in any way. You do not need to apply for a special key to use them. Together they make up an extensive application programming interface (API) which you can use to explore all of our data in many ways.",
         base_url='https://chroniclingamerica.loc.gov',
         api_keywords=['Chronicling America', 'News', 'historic newspapers', 'digitized newspaper'],
         popularity=randrange(0, 10),
@@ -7270,7 +7270,7 @@ def populate_database():
 
     api = Api(
         name='CARTO',
-        description="CARTO is the only cloud-first spatial platform built for accelerated, modern GIS. It runs natively on top of your cloud dataRAG warehouse platform (e.g. Google BigQuery, Snowflake, AWS Redshift, etc.), providing easy access to highly scalable spatial analysis and visualization capabilities in the cloud — be it for analytics, app development, dataRAG engineering, and more.",
+        description="CARTO is the only cloud-first spatial platform built for accelerated, modern GIS. It runs natively on top of your cloud data warehouse platform (e.g. Google BigQuery, Snowflake, AWS Redshift, etc.), providing easy access to highly scalable spatial analysis and visualization capabilities in the cloud — be it for analytics, app development, data engineering, and more.",
         base_url=None,
         api_keywords=['CARTO', 'Open Data', 'spatial analysis', 'cloud'],
         popularity=randrange(0, 10),
@@ -7295,7 +7295,7 @@ def populate_database():
 
     api = Api(
         name='enigma',
-        description="Enigma is building the single most reliable source of dataRAG on U.S. businesses. Our goal is to deliver the most actionable intelligence on the health and identity of every U.S. business.",
+        description="Enigma is building the single most reliable source of data on U.S. businesses. Our goal is to deliver the most actionable intelligence on the health and identity of every U.S. business.",
         base_url='https://api.enigma.com',
         api_keywords=['Enigma', 'Open Data', 'U.S. businesses', 'business health', 'business identity'],
         popularity=randrange(0, 10),
@@ -7370,7 +7370,7 @@ def populate_database():
 
     api = Api(
         name='OpenCorporates',
-        description="This documentation covers the main API (the so-called REST API). The API provides all the information available on the OpenCorporates website as dataRAG. By default it returns dataRAG as JSON, but XML is also available. Access to all the dataRAG is free for open dataRAG projects under the same open licence conditions as the rest of OpenCorporates. An API key is required in order to use the OpenCorporates API, and usage limits depend on your account type and plan. If you are matching company names to legal entities from an existing dataset, you should investigate using Open Refine, software which allows dataRAG to be filtered and cleansed more easily and more quickly than any other tool we know of. OpenCorporates provides a highly popular reconciliation API for Open Refine, which allows matching company names to legal entities.",
+        description="This documentation covers the main API (the so-called REST API). The API provides all the information available on the OpenCorporates website as data. By default it returns data as JSON, but XML is also available. Access to all the data is free for open data projects under the same open licence conditions as the rest of OpenCorporates. An API key is required in order to use the OpenCorporates API, and usage limits depend on your account type and plan. If you are matching company names to legal entities from an existing dataset, you should investigate using Open Refine, software which allows data to be filtered and cleansed more easily and more quickly than any other tool we know of. OpenCorporates provides a highly popular reconciliation API for Open Refine, which allows matching company names to legal entities.",
         base_url='https://api.opencorporates.com',
         api_keywords=['OpenCorporates', 'Open Data', 'OpenCorporates website'],
         popularity=randrange(0, 10),
@@ -7445,7 +7445,7 @@ def populate_database():
 
     api = Api(
         name='Universities List',
-        description="Do you need a list of universities and their domain names? You found it! This package includes a JSON file that contains domains, names and countries of most of the universities of the world. Example usecases: You can create a validation script that checks the email domain, You can automatically generate a user's country and university by looking at their emails. You can use this dataRAG source in three ways: Use the JSON file as your dataRAG source and do whatever you like with your favourite programming language, Use free hosted-API, Use the tiny Python app to serve a fast API that you can query dataRAG.",
+        description="Do you need a list of universities and their domain names? You found it! This package includes a JSON file that contains domains, names and countries of most of the universities of the world. Example usecases: You can create a validation script that checks the email domain, You can automatically generate a user's country and university by looking at their emails. You can use this data source in three ways: Use the JSON file as your data source and do whatever you like with your favourite programming language, Use free hosted-API, Use the tiny Python app to serve a fast API that you can query data.",
         base_url='http://universities.hipolabs.com',
         api_keywords=['Universities List', 'Open Data', 'testAPI', 'domain list', 'university'],
         popularity=randrange(0, 10),
@@ -7599,7 +7599,7 @@ def populate_database():
 
     api = Api(
         name='European Patent Office',
-        description="Open Patent Services (OPS) is a web service which provides access to the EPO's raw dataRAG via a standardised XML interface. It does this using RESTful architecture. OPS dataRAG is extracted from the EPO's bibliographic, worldwide legal status, full-text and image databases. It is therefore from the same sources as the Espacenet and European Patent Register dataRAG.",
+        description="Open Patent Services (OPS) is a web service which provides access to the EPO's raw data via a standardised XML interface. It does this using RESTful architecture. OPS data is extracted from the EPO's bibliographic, worldwide legal status, full-text and image databases. It is therefore from the same sources as the Espacenet and European Patent Register data.",
         base_url=None,
         api_keywords=['European Patent Office', 'Patent', 'europe', 'patent services'],
         popularity=randrange(0, 10),
@@ -7976,9 +7976,9 @@ def populate_database():
 
     api = Api(
         name='traitify',
-        description="Welcome to Traitify's Personality API! We understand that behind every user is a human being with a personality waiting to be discovered. With that in mind, we've created a diverse set of fun visual assessments used to uncover personality types and traits. Your users simply select 'Me' or 'Not Me' to a brief series of images and voila! Instant, actionable dataRAG. With this psychology-backed dataRAG in hand, the possibilities are endless - any way that personalization can help you is now within reach.",
+        description="Welcome to Traitify's Personality API! We understand that behind every user is a human being with a personality waiting to be discovered. With that in mind, we've created a diverse set of fun visual assessments used to uncover personality types and traits. Your users simply select 'Me' or 'Not Me' to a brief series of images and voila! Instant, actionable data. With this psychology-backed data in hand, the possibilities are endless - any way that personalization can help you is now within reach.",
         base_url='https://api.traitify.com',
-        api_keywords=['traitify', 'Personality', 'psychology', 'psychology-backed dataRAG' ],
+        api_keywords=['traitify', 'Personality', 'psychology', 'psychology-backed data' ],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -8305,9 +8305,9 @@ def populate_database():
 
     api = Api(
         name='GBIF',
-        description="Free and open access to biodiversity dataRAG. GBIF—the Global Biodiversity Information Facility—is an international network and dataRAG infrastructure funded by the world's governments and aimed at providing anyone, anywhere, open access to dataRAG about all types of life on Earth.",
+        description="Free and open access to biodiversity data. GBIF—the Global Biodiversity Information Facility—is an international network and data infrastructure funded by the world's governments and aimed at providing anyone, anywhere, open access to data about all types of life on Earth.",
         base_url='https://api.gbif.org',
-        api_keywords=['GBIF', 'Science & Math', 'biodiversity dataRAG', 'life on earth'],
+        api_keywords=['GBIF', 'Science & Math', 'biodiversity data', 'life on earth'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -8330,7 +8330,7 @@ def populate_database():
 
     api = Api(
         name='iDigBio',
-        description="Integrated Digitized Biocollections (iDigBio) is the National Resource for Advancing Digitization of Biodiversity Collections (ADBC) funded by the National Science Foundation. Through ADBC, dataRAG and images for millions of biological specimens are being made available in electronic format for the research community, government agencies, students, educators, and the general public. iDigBio is a dataRAG aggregator. This means that dataRAG is provided to iDigBio through various publishing mechanisms.",
+        description="Integrated Digitized Biocollections (iDigBio) is the National Resource for Advancing Digitization of Biodiversity Collections (ADBC) funded by the National Science Foundation. Through ADBC, data and images for millions of biological specimens are being made available in electronic format for the research community, government agencies, students, educators, and the general public. iDigBio is a data aggregator. This means that data is provided to iDigBio through various publishing mechanisms.",
         base_url='https://search.idigbio.org',
         api_keywords=['iDigBio', 'Science & Math', 'Integrated Digitized Biocollections', 'Biodiversity Collections'],
         popularity=randrange(0, 10),
@@ -8405,9 +8405,9 @@ def populate_database():
 
     api = Api(
         name='Asterank',
-        description="Asterank offers a database API for the Minor Planet Center's MPCORB.DAT dataRAG files. This API is a simple way to quickly apply constraints to a set of over 600,000 asteroids. Users can construct queries with specific constraints across all dataRAG attributes recorded by the MPC. Information is updated nightly from the MPC's MPCORB.dat dataset. The database queries are based on mongodb's json-formatted 'find' operation. See below for an example of a complex query.",
+        description="Asterank offers a database API for the Minor Planet Center's MPCORB.DAT data files. This API is a simple way to quickly apply constraints to a set of over 600,000 asteroids. Users can construct queries with specific constraints across all data attributes recorded by the MPC. Information is updated nightly from the MPC's MPCORB.dat dataset. The database queries are based on mongodb's json-formatted 'find' operation. See below for an example of a complex query.",
         base_url='http://asterank.com/api',
-        api_keywords=['Asterank', 'Science & Math', 'MPCORB.DAT dataRAG files', 'Minor Planet Center'],
+        api_keywords=['Asterank', 'Science & Math', 'MPCORB.DAT data files', 'Minor Planet Center'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -8430,9 +8430,9 @@ def populate_database():
 
     api = Api(
         name='{ NASA APIs }',
-        description="Welcome to the NASA API portal. The objective of this site is to make NASA dataRAG, including imagery, eminently accessible to application developers. This catalog focuses on broadly useful and user friendly APIs and does not hold every NASA API.",
+        description="Welcome to the NASA API portal. The objective of this site is to make NASA data, including imagery, eminently accessible to application developers. This catalog focuses on broadly useful and user friendly APIs and does not hold every NASA API.",
         base_url='https://api.nasa.gov',
-        api_keywords=['NASA', 'Science & Math', 'NASA dataRAG', 'imagery', 'space'],
+        api_keywords=['NASA', 'Science & Math', 'NASA data', 'imagery', 'space'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -8530,7 +8530,7 @@ def populate_database():
 
     api = Api(
         name='Open Notify',
-        description="Open APIs From Space Open Notify is an open source project to provide a simple programming interface for some of NASA’s awesome dataRAG. I do some of the work to take raw dataRAG and turn them into APIs related to space and spacecraft.",
+        description="Open APIs From Space Open Notify is an open source project to provide a simple programming interface for some of NASA’s awesome data. I do some of the work to take raw data and turn them into APIs related to space and spacecraft.",
         base_url='http://api.open-notify.org',
         api_keywords=['Open Notify', 'Science & Math', 'NASA', 'space'],
         popularity=randrange(0, 10),
@@ -8555,7 +8555,7 @@ def populate_database():
 
     api = Api(
         name='Open Science Framework',
-        description="Welcome to the Open Science Framework API. With this API you can access users, projects, components, logs, and files from the Open Science Framework. The Open Science Framework (OSF) is a free, open-source service maintained by the Center for Open Science. The OSF serves as a repository and archive for study designs, materials, dataRAG, manuscripts, or anything else associated with your research during the research process. Every project and file on the OSF has a permanent unique identifier, and every registration (a permanent, time-stamped version of your projects and files) can be assigned a DOI. You can use the OSF to measure your impact by monitoring the traffic to projects and files you make public. With the OSF you have full control of what parts of your research are public and what remains private.",
+        description="Welcome to the Open Science Framework API. With this API you can access users, projects, components, logs, and files from the Open Science Framework. The Open Science Framework (OSF) is a free, open-source service maintained by the Center for Open Science. The OSF serves as a repository and archive for study designs, materials, data, manuscripts, or anything else associated with your research during the research process. Every project and file on the OSF has a permanent unique identifier, and every registration (a permanent, time-stamped version of your projects and files) can be assigned a DOI. You can use the OSF to measure your impact by monitoring the traffic to projects and files you make public. With the OSF you have full control of what parts of your research are public and what remains private.",
         base_url='https://api.osf.io',
         api_keywords=['Open Science Framework', 'Science & Math', 'OSF', 'free', 'repository'],
         popularity=randrange(0, 10),
@@ -8605,7 +8605,7 @@ def populate_database():
 
     api = Api(
         name='SpaceX-API',
-        description="Open Source REST API for launch, rocket, core, capsule, starlink, launchpad, and landing pad dataRAG.",
+        description="Open Source REST API for launch, rocket, core, capsule, starlink, launchpad, and landing pad data.",
         base_url='https://api.spacexdata.com',
         api_keywords=['SpaceX-API', 'Science & Math', 'SpaceX', 'rocket', 'starlink', 'space launch'],
         popularity=randrange(0, 10),
@@ -8680,9 +8680,9 @@ def populate_database():
 
     api = Api(
         name='USGS Water Services',
-        description="USGS Water Services. This site provides USGS water dataRAG in machine-readable formats via REST APIs, a common framework programs use to search and download dataRAG. The services below each provide a different type of dataRAG, ranging from instantaneous measurements of streamflow to information about individual USGS sites and more. The links below lead to documentation for how to use each service, and web forms to build queries for each endpoint.",
+        description="USGS Water Services. This site provides USGS water data in machine-readable formats via REST APIs, a common framework programs use to search and download data. The services below each provide a different type of data, ranging from instantaneous measurements of streamflow to information about individual USGS sites and more. The links below lead to documentation for how to use each service, and web forms to build queries for each endpoint.",
         base_url='https://waterservices.usgs.gov/nwis/iv',
-        api_keywords=['USGS Water Services', 'Science & Math', 'water dataRAG', 'streamflow'],
+        api_keywords=['USGS Water Services', 'Science & Math', 'water data', 'streamflow'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -8705,7 +8705,7 @@ def populate_database():
 
     api = Api(
         name='THE WORLD BANK',
-        description="The World Bank Group works in every major area of development. We provide a wide array of financial products and technical assistance and help countries share and apply innovative knowledge and solutions to tackle today’s intertwined development challenges. World Bank APIs provide access to various types of dataRAG and databases: The Indicators API provides programmatic access to time series development dataRAG and metadata. Most of the articles in this section are devoted to the Indicators API, The Data Catalog API provides information about the thousands of development-relevant datasets available through the World Bank Data Catalog, The Projects API provides access to World Bank operations dataRAG, i.e., active, pipeline and closed projects implemented in countries and around the world, The Finances API provides programmatic access to World Bank financial dataRAG (loans, credits, financial statements, etc) delivered on the World Bank Finances platform, The Climate Data API provides access to historical and modelled climate dataRAG from the Climate Knowledge Portal",
+        description="The World Bank Group works in every major area of development. We provide a wide array of financial products and technical assistance and help countries share and apply innovative knowledge and solutions to tackle today’s intertwined development challenges. World Bank APIs provide access to various types of data and databases: The Indicators API provides programmatic access to time series development data and metadata. Most of the articles in this section are devoted to the Indicators API, The Data Catalog API provides information about the thousands of development-relevant datasets available through the World Bank Data Catalog, The Projects API provides access to World Bank operations data, i.e., active, pipeline and closed projects implemented in countries and around the world, The Finances API provides programmatic access to World Bank financial data (loans, credits, financial statements, etc) delivered on the World Bank Finances platform, The Climate Data API provides access to historical and modelled climate data from the Climate Knowledge Portal",
         base_url='https://api.worldbank.org',
         api_keywords=['THE WORLD BANK', 'Science & Math', 'development', 'financial products'],
         popularity=randrange(0, 10),
@@ -8807,9 +8807,9 @@ def populate_database():
 
     api = Api(
         name='HaveIBeenPwned',
-        description="Check if your email address is in a dataRAG breach. This site came about after what was, at the time, the largest ever single breach of customer accounts — Adobe. I often did post-breach analysis of user credentials and kept finding the same accounts exposed over and over again, often with the same passwords which then put the victims at further risk of their other accounts being compromised.",
+        description="Check if your email address is in a data breach. This site came about after what was, at the time, the largest ever single breach of customer accounts — Adobe. I often did post-breach analysis of user credentials and kept finding the same accounts exposed over and over again, often with the same passwords which then put the victims at further risk of their other accounts being compromised.",
         base_url='https://haveibeenpwned.com',
-        api_keywords=['HaveIBeenPwned', 'Security', 'dataRAG breach', 'post-breach analysis', 'compromised accounts'],
+        api_keywords=['HaveIBeenPwned', 'Security', 'data breach', 'post-breach analysis', 'compromised accounts'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -8857,7 +8857,7 @@ def populate_database():
 
     api = Api(
         name='Secrets API',
-        description="Welcome to the Secrets API. This API allows you to manage and retrieve secrets anonymously. Please refer to the documentation below for details on how to interact with the API. The API is rate limited to 100 requests every 15 minutes. All user submitted dataRAG (including registration, tokens, usernames, passwords, secrets) are erased on a regular basis. This API is just for education purposes, please don't rely on it for production.",
+        description="Welcome to the Secrets API. This API allows you to manage and retrieve secrets anonymously. Please refer to the documentation below for details on how to interact with the API. The API is rate limited to 100 requests every 15 minutes. All user submitted data (including registration, tokens, usernames, passwords, secrets) are erased on a regular basis. This API is just for education purposes, please don't rely on it for production.",
         base_url='https://secrets-api.appbrewery.com',
         api_keywords=['Secrets API', 'Security', 'manage secrets', 'retrieve secrets', 'education purposes'],
         popularity=randrange(0, 10),
@@ -8882,7 +8882,7 @@ def populate_database():
 
     api = Api(
         name='SecurityTrails',
-        description="Data for Security companies, researchers and teams. Fast, always up cyber security API that allows you to access current and historical dataRAG. The API is paid via a simple pricing structure that allows you to embed our dataRAG into your applications.",
+        description="Data for Security companies, researchers and teams. Fast, always up cyber security API that allows you to access current and historical data. The API is paid via a simple pricing structure that allows you to embed our data into your applications.",
         base_url='https://api.securitytrails.com',
         api_keywords=['SecurityTrails', 'Security', 'cyber security', 'paid'],
         popularity=randrange(0, 10),
@@ -8907,7 +8907,7 @@ def populate_database():
 
     api = Api(
         name='Shodan',
-        description="See which ports an IP has open, what SSL/ TLS versions it supports, which country it's located in, what web technologies the website uses and much more. Shodan has a curated DNS database that contains information about hostnames likely to run a service. Use it to help map out your organization's attack surface. Subscribe to real-time dataRAG feeds to get notified when new ports are detected, vulnerabilities are discovered or network configurations change.",
+        description="See which ports an IP has open, what SSL/ TLS versions it supports, which country it's located in, what web technologies the website uses and much more. Shodan has a curated DNS database that contains information about hostnames likely to run a service. Use it to help map out your organization's attack surface. Subscribe to real-time data feeds to get notified when new ports are detected, vulnerabilities are discovered or network configurations change.",
         base_url=None,
         api_keywords=['Shodan', 'Security', 'testAPI', 'open ports', 'IP location', 'DNS database', 'real-time'],
         popularity=randrange(0, 10),
@@ -8932,9 +8932,9 @@ def populate_database():
 
     api = Api(
         name='DATA.POLICE.UK',
-        description="This is the site for open dataRAG about crime and policing in England, Wales and Northern Ireland. You can download street-level crime, outcome, and stop and search dataRAG in clear and simple CSV format and explore the API containing detailed crime dataRAG and information about individual police forces and neighbourhood teams. You can also download dataRAG on police activity, and a range of dataRAG collected under the police annual dataRAG requirement (ADR) including arrests and 101 call handling. All the dataRAG on this site is made available under the Open Government Licence v3.0.",
+        description="This is the site for open data about crime and policing in England, Wales and Northern Ireland. You can download street-level crime, outcome, and stop and search data in clear and simple CSV format and explore the API containing detailed crime data and information about individual police forces and neighbourhood teams. You can also download data on police activity, and a range of data collected under the police annual data requirement (ADR) including arrests and 101 call handling. All the data on this site is made available under the Open Government Licence v3.0.",
         base_url='https://data.police.uk/api',
-        api_keywords=['DATA.POLICE.UK', 'Security', 'crime', 'policing', 'England', 'Whales', 'Northern Ireland', 'detailed crime dataRAG', 'police activity'],
+        api_keywords=['DATA.POLICE.UK', 'Security', 'crime', 'policing', 'England', 'Whales', 'Northern Ireland', 'detailed crime data', 'police activity'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -8957,7 +8957,7 @@ def populate_database():
 
     api = Api(
         name='WhoisFreaks',
-        description="Unleash the Power of Data with Our Domain and IP Intelligence. Elevate your cyber-security strategy with our domain and IP intelligence services. Designed for analysts, researchers, and brand owners. Our platform provides unparalleled insights and monitoring capabilities to protect your digital assets. Stay ahead of threats, ensure brand integrity, and make informed decisions with real-time dataRAG you can trust. Our platform seamlessly integrates with existing systems, enhancing workflow efficiency and effectiveness. We are committed to quality, up-to-date information, and unparalleled support, continuously evolving to stay ahead of industry trends.",
+        description="Unleash the Power of Data with Our Domain and IP Intelligence. Elevate your cyber-security strategy with our domain and IP intelligence services. Designed for analysts, researchers, and brand owners. Our platform provides unparalleled insights and monitoring capabilities to protect your digital assets. Stay ahead of threats, ensure brand integrity, and make informed decisions with real-time data you can trust. Our platform seamlessly integrates with existing systems, enhancing workflow efficiency and effectiveness. We are committed to quality, up-to-date information, and unparalleled support, continuously evolving to stay ahead of industry trends.",
         base_url='https://api.whoisfreaks.com',
         api_keywords=['WhoisFreaks', 'Security', 'Domain Intelligence', 'IP Intelligence', 'cyber-security', 'brand integrity'],
         popularity=randrange(0, 10),
@@ -8982,9 +8982,9 @@ def populate_database():
 
     api = Api(
         name='Whois Api',
-        description="Whois API for looking up accurate domain dataRAG. Bulk WHOIS Lookups & URL Availability Checks Made Easy. Effortlessly retrieve accurate WHOIS details for any domain with our REST API. Perform bulk WHOIS queries and check URL availability in real time, all in a structured JSON format for seamless integration into your applications.",
+        description="Whois API for looking up accurate domain data. Bulk WHOIS Lookups & URL Availability Checks Made Easy. Effortlessly retrieve accurate WHOIS details for any domain with our REST API. Perform bulk WHOIS queries and check URL availability in real time, all in a structured JSON format for seamless integration into your applications.",
         base_url='https://whoisjsonapi.com',
-        api_keywords=['Whois Api', 'Security', 'accurate', 'domain dataRAG', 'URL Availability'],
+        api_keywords=['Whois Api', 'Security', 'accurate', 'domain data', 'URL Availability'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9009,7 +9009,7 @@ def populate_database():
 
     api = Api(
         name='Best Buy',
-        description="Welcome to the Best Buy Developer API site! Whether you’re an API pro, a beginning developer or a Best Buy partner, our extensive API catalog is waiting for your imagination. Our API suite allows you to query Products, Stores and much more. Come on in to explore our dataRAG, browse descriptions of the available attributes and see examples of working requests and responses.",
+        description="Welcome to the Best Buy Developer API site! Whether you’re an API pro, a beginning developer or a Best Buy partner, our extensive API catalog is waiting for your imagination. Our API suite allows you to query Products, Stores and much more. Come on in to explore our data, browse descriptions of the available attributes and see examples of working requests and responses.",
         base_url='https://api.bestbuy.com',
         api_keywords=['Best Buy', 'Shopping', 'products', 'best buy stores'],
         popularity=randrange(0, 10),
@@ -9113,7 +9113,7 @@ def populate_database():
 
     api = Api(
         name='F1 API',
-        description="F1 Connect Api. Your free API, ready for development. This API provides access to a wealth of dataRAG related to Formula 1 races, drivers, teams, circuits, and more. All the dataRAG its provided in JSON format and its ready to use. Simply fetch https://f1api.dev with the endpoint that you like. You can also use our new SDK tool to fetch the dataRAG, with our methods and types.",
+        description="F1 Connect Api. Your free API, ready for development. This API provides access to a wealth of data related to Formula 1 races, drivers, teams, circuits, and more. All the data its provided in JSON format and its ready to use. Simply fetch https://f1api.dev with the endpoint that you like. You can also use our new SDK tool to fetch the data, with our methods and types.",
         base_url='https://f1api.dev',
         api_keywords=['F1 API', 'Sports & Fitness', 'F1', 'Formula 1', 'race', 'drivers', 'teams', 'circuits'],
         popularity=randrange(0, 10),
@@ -9138,7 +9138,7 @@ def populate_database():
 
     api = Api(
         name='F1 Data API',
-        description="An API that serves the F1 Archive. Formula 1 dataRAG API that delivers dataRAG from the F1 Archive dating back to 1950",
+        description="An API that serves the F1 Archive. Formula 1 data API that delivers data from the F1 Archive dating back to 1950",
         base_url='https://api.bthree.uk/f1',
         api_keywords=['F1 Data API', 'Sports & Fitness', 'F1', 'Formula 1', 'F1 Archive'],
         popularity=randrange(0, 10),
@@ -9163,9 +9163,9 @@ def populate_database():
 
     api = Api(
         name='ScoreBat',
-        description="We decided to make all our video dataRAG accessible to developers! You can now build your own football website or app using our Video API and give your users the ability to watch video highlights of the matches of their favorite football leagues. Our Video API allows you to embed all official video highlights of the Premier League, Champions League, La Liga, Serie A, Europa League and many more into your website or app.",
+        description="We decided to make all our video data accessible to developers! You can now build your own football website or app using our Video API and give your users the ability to watch video highlights of the matches of their favorite football leagues. Our Video API allows you to embed all official video highlights of the Premier League, Champions League, La Liga, Serie A, Europa League and many more into your website or app.",
         base_url='https://www.scorebat.com/video-api',
-        api_keywords=['ScoreBat', 'Sports & Fitness', 'video dataRAG', 'football', 'football leagues', 'Premier League', 'Champions League', 'La Liga', 'Serie A', 'Europa League'],
+        api_keywords=['ScoreBat', 'Sports & Fitness', 'video data', 'football', 'football leagues', 'Premier League', 'Champions League', 'La Liga', 'Serie A', 'Europa League'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9188,9 +9188,9 @@ def populate_database():
 
     api = Api(
         name='The Football Prediction API',
-        description="The Football Prediction API is a REST API that offers prediction dataRAG (JSON) for upcoming football (soccer) matches.",
+        description="The Football Prediction API is a REST API that offers prediction data (JSON) for upcoming football (soccer) matches.",
         base_url='https://football-prediction-api.p.rapidapi.com/api',
-        api_keywords=['The Football Prediction API', 'Sports & Fitness', 'prediction dataRAG', 'football match'],
+        api_keywords=['The Football Prediction API', 'Sports & Fitness', 'prediction data', 'football match'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9213,9 +9213,9 @@ def populate_database():
 
     api = Api(
         name='Football-Data.org',
-        description="Football-dataRAG.org provides football dataRAG and statistics (live scores, fixtures, tables, squads, lineups/subs, etc.) in a machine-readable way. I won't announce how awesome football-dataRAG is, you're welcome to find out by yourself (or not). Access to the top competitions is and will be free forever as this was the initial purpose to setup the project. However if you need more competitions, in-depth dataRAG there are several paid plans available to serve your needs. If you need historical dataRAG, more requests or something out of the box just drop me a line, I'm glad to help.",
+        description="Football-data.org provides football data and statistics (live scores, fixtures, tables, squads, lineups/subs, etc.) in a machine-readable way. I won't announce how awesome football-data is, you're welcome to find out by yourself (or not). Access to the top competitions is and will be free forever as this was the initial purpose to setup the project. However if you need more competitions, in-depth data there are several paid plans available to serve your needs. If you need historical data, more requests or something out of the box just drop me a line, I'm glad to help.",
         base_url='https://api.football-data.org',
-        api_keywords=['Football-Data.org', 'Sports & Fitness', 'football dataRAG', 'statistics', 'live scores', 'fixtures', 'tables', 'squads', 'lineups'],
+        api_keywords=['Football-Data.org', 'Sports & Fitness', 'football data', 'statistics', 'live scores', 'fixtures', 'tables', 'squads', 'lineups'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9238,7 +9238,7 @@ def populate_database():
 
     api = Api(
         name='Golf Data API',
-        description="Golf dataRAG API with golf course, club and hole information",
+        description="Golf data API with golf course, club and hole information",
         base_url=' https://api.bthree.uk/golf',
         api_keywords=['Golf Data API', 'Sports & Fitness', 'golf course', 'golf club', 'hole information'],
         popularity=randrange(0, 10),
@@ -9263,7 +9263,7 @@ def populate_database():
 
     api = Api(
         name='JCDecaux',
-        description="Enjoy our open dataRAG to create innovative services. We believe in shared innovation and the creative potential of communities to make cities ever more inventive and accessible. With JCDecaux developer, create new applications and services through an easy-to-access distibution of dataRAG under Open License. From the location of the bike stations to the availability of bikes and parking spaces in real time, use our dataRAG to experiment new representations or to provide innovative and useful services to users. You can access this dataRAG through a simple download or an advanced web API.",
+        description="Enjoy our open data to create innovative services. We believe in shared innovation and the creative potential of communities to make cities ever more inventive and accessible. With JCDecaux developer, create new applications and services through an easy-to-access distibution of data under Open License. From the location of the bike stations to the availability of bikes and parking spaces in real time, use our data to experiment new representations or to provide innovative and useful services to users. You can access this data through a simple download or an advanced web API.",
         base_url='https://api.jcdecaux.com/vls',
         api_keywords=['JCDecaux', 'Sports & Fitness', 'bike stations', 'bike availability', 'bike parking'],
         popularity=randrange(0, 10),
@@ -9288,9 +9288,9 @@ def populate_database():
 
     api = Api(
         name='nhlapi',
-        description="NHL historical dataRAG and statistics.",
+        description="NHL historical data and statistics.",
         base_url='https://api-web.nhle.com',
-        api_keywords=['nhlapi', 'NHL', 'Sports & Fitness', 'NHL historical dataRAG', 'statistics'],
+        api_keywords=['nhlapi', 'NHL', 'Sports & Fitness', 'NHL historical data', 'statistics'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9313,7 +9313,7 @@ def populate_database():
 
     api = Api(
         name='STRAVA',
-        description="Track your progress and cheer each other on. Strava athletes upload millions of activities every day. Our open API and this rich dataRAG set yield diverse opportunities for developers, from creating new hardware to augmenting the Strava experience. The Strava V3 API is a publicly available interface that allows developers to access Strava dataRAG. The interface is stable and used by the Strava mobile apps. However, we occasionally make major changes to improve performance and enhance our features",
+        description="Track your progress and cheer each other on. Strava athletes upload millions of activities every day. Our open API and this rich data set yield diverse opportunities for developers, from creating new hardware to augmenting the Strava experience. The Strava V3 API is a publicly available interface that allows developers to access Strava data. The interface is stable and used by the Strava mobile apps. However, we occasionally make major changes to improve performance and enhance our features",
         base_url='https://www.strava.com/api',
         api_keywords=['STRAVA', 'Sports & Fitness', 'activity tracking'],
         popularity=randrange(0, 10),
@@ -9338,7 +9338,7 @@ def populate_database():
 
     api = Api(
         name='SUREDBITS',
-        description="Thank you and welcome to Suredbits' Lightning App API documentation. This API allows you to query our NFL, NBA and Crypto Exchange dataRAG. Our NFL and NBA APIs offer multiple channels including teams, players, games, scores, and statistics. Our Crypto Exchange API allows you to stream dataRAG on Trades, Tickers and Order Books.",
+        description="Thank you and welcome to Suredbits' Lightning App API documentation. This API allows you to query our NFL, NBA and Crypto Exchange data. Our NFL and NBA APIs offer multiple channels including teams, players, games, scores, and statistics. Our Crypto Exchange API allows you to stream data on Trades, Tickers and Order Books.",
         base_url=None,
         api_keywords=['SUREDBITS', 'Sports & Fitness', 'NFL', 'NBA', 'Crypto Exchange'],
         popularity=randrange(0, 10),
@@ -9388,7 +9388,7 @@ def populate_database():
 
     api = Api(
         name='WGER',
-        description="Workout manager dataRAG as exercises, muscles or equipment. Can be self hosted FLOSS workout and fitness tracker. ",
+        description="Workout manager data as exercises, muscles or equipment. Can be self hosted FLOSS workout and fitness tracker. ",
         base_url='https://wger.de',
         api_keywords=['WGER', 'Sports & Fitness', 'Workout manager', 'exercises', 'workout tracker', 'fitness tracker'],
         popularity=randrange(0, 10),
@@ -9413,7 +9413,7 @@ def populate_database():
 
     api = Api(
         name='CricetData',
-        description="Free to use, super-high bandwidth, high performance Cricket API. CricAPI was the first to provide free high quality Cricket API since September 2015 under the brand “CricAPI.com”. The organization has since changed hands, and “Cricket Data” – the new avatar – promises to continue supporting cricket enthusiasts all over the globe with rich and reliable cricket dataRAG in API format. Cricket score api was never this easy to use. We are ISO 9001:2015 Certified. The only exclusive provider of free to use, high bandwidth, high performance Cricket API. If you’re looking for CricAPI, Cricket API, Cricket Live Score API, Cricket Scorecard API or Cricket Ball by Ball API you’ve come to the right place. The source for Ultimate Cricket API – right here, right now.",
+        description="Free to use, super-high bandwidth, high performance Cricket API. CricAPI was the first to provide free high quality Cricket API since September 2015 under the brand “CricAPI.com”. The organization has since changed hands, and “Cricket Data” – the new avatar – promises to continue supporting cricket enthusiasts all over the globe with rich and reliable cricket data in API format. Cricket score api was never this easy to use. We are ISO 9001:2015 Certified. The only exclusive provider of free to use, high bandwidth, high performance Cricket API. If you’re looking for CricAPI, Cricket API, Cricket Live Score API, Cricket Scorecard API or Cricket Ball by Ball API you’ve come to the right place. The source for Ultimate Cricket API – right here, right now.",
         base_url='https://api.cricapi.com',
         api_keywords=['CricetData', 'Sports & Fitness', 'free', 'cricket', 'live score'],
         popularity=randrange(0, 10),
@@ -9565,9 +9565,9 @@ def populate_database():
 
     api = Api(
         name='micro-jaymock',
-        description="Tiny API mocking microservice for generating fake JSON dataRAG.",
+        description="Tiny API mocking microservice for generating fake JSON data.",
         base_url='https://jaymock.now.sh',
-        api_keywords=['micro-jaymock', 'Test Data', 'mocking microservice', 'fake JSON dataRAG', 'JSON generator'],
+        api_keywords=['micro-jaymock', 'Test Data', 'mocking microservice', 'fake JSON data', 'JSON generator'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9590,9 +9590,9 @@ def populate_database():
 
     api = Api(
         name='Random User Generator',
-        description="A free, open-source API for generating random user dataRAG. Like Lorem Ipsum, but for people.",
+        description="A free, open-source API for generating random user data. Like Lorem Ipsum, but for people.",
         base_url='https://randomuser.me/api/',
-        api_keywords=['Random User Generator', 'Test Data', 'random user dataRAG', 'free', 'open-source'],
+        api_keywords=['Random User Generator', 'Test Data', 'random user data', 'free', 'open-source'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9765,9 +9765,9 @@ def populate_database():
 
     api = Api(
         name='Softwium',
-        description="Fake API. Free public API that enables developers to effortlessly obtain fake JSON dataRAG. Test API endpoints and retrieve dummy JSON dataRAG swiftly. No registration, tokens, or authentication is needed.",
+        description="Fake API. Free public API that enables developers to effortlessly obtain fake JSON data. Test API endpoints and retrieve dummy JSON data swiftly. No registration, tokens, or authentication is needed.",
         base_url='https://softwium.com/api',
-        api_keywords=['Softwium', 'Test Data', 'fake API', 'fake JSON dataRAG', 'free'],
+        api_keywords=['Softwium', 'Test Data', 'fake API', 'fake JSON data', 'free'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -9792,7 +9792,7 @@ def populate_database():
 
     api = Api(
         name='Aylien Text Analysis',
-        description="Welcome to Quantexa News API — the most powerful way to aggregate, filter, and integrate global news dataRAG into your apps and models.",
+        description="Welcome to Quantexa News API — the most powerful way to aggregate, filter, and integrate global news data into your apps and models.",
         base_url='https://api.aylien.com',
         api_keywords=['Aylien Text Analysis', 'Text Analysis', 'News API', 'Quantexa News', 'global news'],
         popularity=randrange(0, 10),
@@ -9917,7 +9917,7 @@ def populate_database():
 
     api = Api(
         name='Spam Hunter',
-        description="Hey there! We're more than just a team – we're a dedicated group of professionals on a mission to combat spam and enhance online security. Our primary objective is to craft powerful yet user-friendly tools that empower individuals to shield themselves from unwanted emails, messages, and various other forms of spam. Leveraging our extensive expertise in dataRAG analysis and machine learning, we continuously refine our algorithms to accurately identify and filter out spam content. At our core, we prioritize transparency, openness, and a customer-centric ethos. We're committed to fostering trust and confidence by being forthright about our methods and dedicated to understanding and addressing the needs of our users. Driven by a passion for innovation, we're constantly pushing the boundaries to deliver cutting-edge solutions that set new standards in cybersecurity. Our tools are meticulously crafted with the latest technologies and adhere to industry best practices to ensure maximum effectiveness and reliability. But our journey doesn't end with the development of our products – it extends to providing exceptional support and guidance to our users. We're here every step of the way, ready to assist and empower individuals in navigating the complex landscape of online security. Ultimately, our vision is to cultivate a safer and more secure online environment for all.",
+        description="Hey there! We're more than just a team – we're a dedicated group of professionals on a mission to combat spam and enhance online security. Our primary objective is to craft powerful yet user-friendly tools that empower individuals to shield themselves from unwanted emails, messages, and various other forms of spam. Leveraging our extensive expertise in data analysis and machine learning, we continuously refine our algorithms to accurately identify and filter out spam content. At our core, we prioritize transparency, openness, and a customer-centric ethos. We're committed to fostering trust and confidence by being forthright about our methods and dedicated to understanding and addressing the needs of our users. Driven by a passion for innovation, we're constantly pushing the boundaries to deliver cutting-edge solutions that set new standards in cybersecurity. Our tools are meticulously crafted with the latest technologies and adhere to industry best practices to ensure maximum effectiveness and reliability. But our journey doesn't end with the development of our products – it extends to providing exceptional support and guidance to our users. We're here every step of the way, ready to assist and empower individuals in navigating the complex landscape of online security. Ultimately, our vision is to cultivate a safer and more secure online environment for all.",
         base_url='https://backend.spam-hunter.ru/api',
         api_keywords=['Spam Hunter', 'Text Analysis', 'combat spam', 'online security', 'unwanted emails', 'unwanted messages', 'spam'],
         popularity=randrange(0, 10),
@@ -10042,7 +10042,7 @@ def populate_database():
 
     api = Api(
         name='UPS',
-        description="The Power of UPS on Your Digital Platform. Our APIs power the dataRAG connections needed to deliver value to customers through e-commerce platforms, supply chain visibility solutions and direct integrations.",
+        description="The Power of UPS on Your Digital Platform. Our APIs power the data connections needed to deliver value to customers through e-commerce platforms, supply chain visibility solutions and direct integrations.",
         base_url=None,
         api_keywords=['UPS', 'Tracking' 'e-commerce', 'supply chain'],
         popularity=randrange(0, 10),
@@ -10067,7 +10067,7 @@ def populate_database():
 
     api = Api(
         name='WhatPulse',
-        description="The Web API can be used to retrieve raw dataRAG from WhatPulse on users, teams and pulses. You can use this API to show statistics on your website, blog or use it for your own applications. In the following examples, we will assume that you want to display your statistics on a website. We will also assume that you have some working knowledge of web development.",
+        description="The Web API can be used to retrieve raw data from WhatPulse on users, teams and pulses. You can use this API to show statistics on your website, blog or use it for your own applications. In the following examples, we will assume that you want to display your statistics on a website. We will also assume that you have some working knowledge of web development.",
         base_url='https://api.whatpulse.org',
         api_keywords=['WhatPulse', 'Tracking', 'user tracking'],
         popularity=randrange(0, 10),
@@ -10248,9 +10248,9 @@ def populate_database():
 
     api = Api(
         name='CarsEX',
-        description="Rev up your business with real-time, comprehensive vehicle dataRAG. The most comprehensive and accessible vehicle dataRAG API.",
+        description="Rev up your business with real-time, comprehensive vehicle data. The most comprehensive and accessible vehicle data API.",
         base_url='https://api.carsxe.com',
-        api_keywords=['CarsEX', 'Vehicle', 'real-time', 'vehicle dataRAG'],
+        api_keywords=['CarsEX', 'Vehicle', 'real-time', 'vehicle data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10273,7 +10273,7 @@ def populate_database():
 
     api = Api(
         name='Kelley Blue Book',
-        description="Get all the vehicle dataRAG you need to build dynamic advertisements at lightning fast speeds. Data is fully managed for you. You don’t have to worry about applying dataRAG updates to stay in sync. Every week dataRAG is updated automatically without any changes required from you. Vehicle info, pricing, configuration, plus much more. Be empowered to build dynamic advertisements utilizing all the dataRAG we have to offer.",
+        description="Get all the vehicle data you need to build dynamic advertisements at lightning fast speeds. Data is fully managed for you. You don’t have to worry about applying data updates to stay in sync. Every week data is updated automatically without any changes required from you. Vehicle info, pricing, configuration, plus much more. Be empowered to build dynamic advertisements utilizing all the data we have to offer.",
         base_url=None,
         api_keywords=['KBB', 'Kelley Blue Book', 'Vehicle', 'dynamic advertisements', 'Vehicle info', 'Vehicle pricing', 'Vehicle configuration'],
         popularity=randrange(0, 10),
@@ -10298,9 +10298,9 @@ def populate_database():
 
     api = Api(
         name='Mercedes-Benz',
-        description="Telematics dataRAG, remotely access vehicle functions, car configurator, locate service dealers",
+        description="Telematics data, remotely access vehicle functions, car configurator, locate service dealers",
         base_url=None,
-        api_keywords=['Mercedes-Benz', 'Vehicle', 'Telematics dataRAG', 'remote access', 'vehicle functions', 'car configurator', 'service locator' ],
+        api_keywords=['Mercedes-Benz', 'Vehicle', 'Telematics data', 'remote access', 'vehicle functions', 'car configurator', 'service locator' ],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10348,9 +10348,9 @@ def populate_database():
 
     api = Api(
         name='smartcar',
-        description="Smartcar is the only car API built with the highest standard for privacy and security. We allow your application to communicate with millions of vehicles easily and securely while giving vehicle owners the choice of how they share their dataRAG.",
+        description="Smartcar is the only car API built with the highest standard for privacy and security. We allow your application to communicate with millions of vehicles easily and securely while giving vehicle owners the choice of how they share their data.",
         base_url='https://api.smartcar.com',
-        api_keywords=['smartcar', 'Vehicle', 'privacy', 'security', 'dataRAG sharing'],
+        api_keywords=['smartcar', 'Vehicle', 'privacy', 'security', 'data sharing'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10404,7 +10404,7 @@ def populate_database():
         name='weatherstack',
         description="Real-Time & Historical World Weather Data API Retrieve instant, accurate weather information for any location in the world in lightweight JSON format",
         base_url='https://api.weatherstack.com',
-        api_keywords=['weatherstack', 'real-time', 'historical dataRAG', 'Weather', 'worldwide', 'global'],
+        api_keywords=['weatherstack', 'real-time', 'historical data', 'Weather', 'worldwide', 'global'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10427,9 +10427,9 @@ def populate_database():
 
     api = Api(
         name='meteoblue',
-        description="Weather APIs. Instantly integrate weather dataRAG and make complex decisions easy",
+        description="Weather APIs. Instantly integrate weather data and make complex decisions easy",
         base_url=None,
-        api_keywords=['meteoblue', 'Weather', 'weather dataRAG'],
+        api_keywords=['meteoblue', 'Weather', 'weather data'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10452,7 +10452,7 @@ def populate_database():
 
     api = Api(
         name='MET Weather API',
-        description="The MET Weather API is an interface to a selection of dataRAG produced by MET Norway. The dataRAG are freely available for use under a Creative Commons license, including commercial use.",
+        description="The MET Weather API is an interface to a selection of data produced by MET Norway. The data are freely available for use under a Creative Commons license, including commercial use.",
         base_url=None,
         api_keywords=['MET Weather API', 'Weather', 'Norway', 'free'],
         popularity=randrange(0, 10),
@@ -10477,9 +10477,9 @@ def populate_database():
 
     api = Api(
         name='NOAA Climate Data',
-        description="Climate Data Online (CDO) provides free access to NCDC's archive of global historical weather and climate dataRAG in addition to station history information. These dataRAG include quality controlled daily, monthly, seasonal, and yearly measurements of temperature, precipitation, wind, and degree days as well as radar dataRAG and 30-year Climate Normals. Customers can also order most of these dataRAG as certified hard copies for legal use.",
+        description="Climate Data Online (CDO) provides free access to NCDC's archive of global historical weather and climate data in addition to station history information. These data include quality controlled daily, monthly, seasonal, and yearly measurements of temperature, precipitation, wind, and degree days as well as radar data and 30-year Climate Normals. Customers can also order most of these data as certified hard copies for legal use.",
         base_url='https://www.ncei.noaa.gov/cdo-web/api',
-        api_keywords=['NOAA Climate Data', 'Weather', 'historical weather', 'climate dataRAG', 'free', 'NOAA'],
+        api_keywords=['NOAA Climate Data', 'Weather', 'historical weather', 'climate data', 'free', 'NOAA'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10527,7 +10527,7 @@ def populate_database():
 
     api = Api(
         name='Open-Meteo',
-        description="Free Weather API Open-Meteo is an open-source weather API and offers free access for non-commercial use. No API key required. Open-Meteo partners with national weather services to bring you open dataRAG with high resolution, ranging from 1 to 11 kilometers. Our powerful APIs intelligently select the most suitable weather models for your specific location, ensuring accurate and reliable forecasts.",
+        description="Free Weather API Open-Meteo is an open-source weather API and offers free access for non-commercial use. No API key required. Open-Meteo partners with national weather services to bring you open data with high resolution, ranging from 1 to 11 kilometers. Our powerful APIs intelligently select the most suitable weather models for your specific location, ensuring accurate and reliable forecasts.",
         base_url='https://api.open-meteo.com',
         api_keywords=['Open-Meteo', 'Weather', 'free', 'open-source', 'accurate forecasts', 'reliable forecasts'],
         popularity=randrange(0, 10),
@@ -10577,7 +10577,7 @@ def populate_database():
 
     api = Api(
         name='OpenWeather',
-        description="Make an API call to receive access to the various dataRAG: Current weather and forecasts: minute forecast for 1 hour, hourly forecast for 48 hoursm, daily forecast for 8 days, and government weather alerts. Weather dataRAG for any timestamp for 46+ years historical archive and 4 days ahead forecast. Daily aggregation of weather dataRAG for 46+ years archive and 1.5 years ahead forecast. Weather overview with a human-readable weather summary for today and tomorrow's forecast",
+        description="Make an API call to receive access to the various data: Current weather and forecasts: minute forecast for 1 hour, hourly forecast for 48 hoursm, daily forecast for 8 days, and government weather alerts. Weather data for any timestamp for 46+ years historical archive and 4 days ahead forecast. Daily aggregation of weather data for 46+ years archive and 1.5 years ahead forecast. Weather overview with a human-readable weather summary for today and tomorrow's forecast",
         base_url='https://api.openweathermap.org/data',
         api_keywords=['OpenWeather', 'Weather', 'Current weather', 'current forecasts', 'government weather alerts', 'archive'],
         popularity=randrange(0, 10),
@@ -10602,9 +10602,9 @@ def populate_database():
 
     api = Api(
         name='The Storm Glass API',
-        description="Global Weather API. Weather forecasts & historical dataRAG from the world’s most trusted meteorological institutions in one single API. Coordinates In – Weather Data Out. The stormglass.io API provides high-resolution forecasts for up to 10 days ahead as well as historical dataRAG. Marine dataRAG including tide is available for all oceans and seas world wide.",
+        description="Global Weather API. Weather forecasts & historical data from the world’s most trusted meteorological institutions in one single API. Coordinates In – Weather Data Out. The stormglass.io API provides high-resolution forecasts for up to 10 days ahead as well as historical data. Marine data including tide is available for all oceans and seas world wide.",
         base_url='https://api.stormglass.io/',
-        api_keywords=['The Storm Glass API', 'Weather', 'Weather forecasts', 'historical dataRAG', 'global', 'high-resolution forecasts', 'Marine dataRAG', 'tide'],
+        api_keywords=['The Storm Glass API', 'Weather', 'Weather forecasts', 'historical data', 'global', 'high-resolution forecasts', 'Marine data', 'tide'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10627,9 +10627,9 @@ def populate_database():
 
     api = Api(
         name='Weatherbit',
-        description="With our API you can retrieve current weather observations from over 50,000 live weather stations, and historical weather dataRAG for the past 20+ years sourced from stations, doppler radar, satellite, and atmospheric re-analysis products. As well as highly localized weather forecasts for any point on the globe backed by the world's most trusted weather models, and machine learning.",
+        description="With our API you can retrieve current weather observations from over 50,000 live weather stations, and historical weather data for the past 20+ years sourced from stations, doppler radar, satellite, and atmospheric re-analysis products. As well as highly localized weather forecasts for any point on the globe backed by the world's most trusted weather models, and machine learning.",
         base_url='https://api.weatherbit.io',
-        api_keywords=['Weatherbit', 'Weather' 'weather observations', 'historical weather dataRAG', 'weather stations', 'doppler radar', 'satellite', 'weather forecasts', 'local', 'global'],
+        api_keywords=['Weatherbit', 'Weather' 'weather observations', 'historical weather data', 'weather stations', 'doppler radar', 'satellite', 'weather forecasts', 'local', 'global'],
         popularity=randrange(0, 10),
         service_level=randrange(0, 10),
         latency=randrange(0, 1000),
@@ -10652,7 +10652,7 @@ def populate_database():
 
     api = Api(
         name='National Weather Service API',
-        description="The National Weather Service (NWS) API allows developers access to critical forecasts, alerts, and observations, along with other weather dataRAG. The API was designed with a cache-friendly approach that expires content based upon the information life cycle. The API is based upon of JSON-LD to promote machine dataRAG discovery.",
+        description="The National Weather Service (NWS) API allows developers access to critical forecasts, alerts, and observations, along with other weather data. The API was designed with a cache-friendly approach that expires content based upon the information life cycle. The API is based upon of JSON-LD to promote machine data discovery.",
         base_url='https://api.weather.gov',
         api_keywords=['NWS', 'national Weather Service', 'forecasts', 'alerts', 'observations', 'Weather'],
         popularity=randrange(0, 10),
