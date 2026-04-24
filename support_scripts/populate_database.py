@@ -103,7 +103,7 @@ def populate_database():
         name='HTTP Status Dogs',
         description='Dogs for every HyperText Transfer Protocol response status code.',
         base_url='https://http.dog/',
-        api_keywords=['Dog', 'DogAPI', 'animals', 'http status'],
+        api_keywords=['Dog', 'DogAPI', 'animals', 'http status', 'status code'],
         https=True,
         authentication=None,
         cors=None,
@@ -232,7 +232,7 @@ def populate_database():
 
     api = Api(
         name='AnimeNewsNetwork',
-        description='Anime industry news',
+        description="Anime News Network was created as a news source that focuses on the medium of Japanese Animation(anime) and Japanese Comics (manga). ANN was founded by Justin Sevakis in July of 1998, and has since lead the online anime news medium with a tradition of strong unbiased coverage of major breaking news. With in-depth coverage, analysis and commentary to provide insight into the world of anime and manga, ANN has been and continues to be the #1 English language source for anime and manga news on the Internet. ANN's goal is to make the latest, most comprehensive Anime news available to new fans and veteran Otaku alike.",
         base_url='https://cdn.animenewsnetwork.com/encyclopedia',
         api_keywords=['Anime', 'News', 'anime news'],
         authentication=None,
@@ -251,7 +251,7 @@ def populate_database():
 
     api = Api(
         name='Attack on Titan Quotes API',
-        description='The AOT Quotes API provides random quotes from the Attack on Titan series, perfect for adding a touch of anime flavor to your project.n',
+        description='The AOT Quotes API provides random quotes from the Attack on Titan series, perfect for adding a touch of anime flavor to your project.',
         base_url='https://aot-api.vercel.app',
         api_keywords=['Attack on Titan', 'quotes', 'anime'],
         authentication=None,
@@ -546,7 +546,7 @@ def populate_database():
 
     api = Api(
         name='Harry Potter API',
-        description='Harry potter character, house and spell information.',
+        description="Harry potter character, house and spell information. The Harry Potter API offers endpoints for retrieving lists of entities (books, characters, houses, spells), as well as endpoints for retrieving random items. It supports filtering and pagination through query parameters, and it's designed to be easily translated into multiple languages.",
         base_url='https://potterapi-fedeperin.vercel.app/en',
         api_keywords=['Harry Potter API', 'Books'],
         authentication=None,
@@ -638,7 +638,7 @@ def populate_database():
 
     api = Api(
         name='Favicon.im',
-        description="Instantly fetch and display the favicon for any website.",
+        description="Favicon.im is a simple and efficient service that allows you to fetch the favicon (website icon) of any website. Just provide a domain name, and we'll return the associated favicon. It's perfect for developers, designers, or anyone who needs quick access to website icons.",
         base_url='https://favicon.im',
         api_keywords=['Favicon.im', 'favicon for any website', 'Business'],
         authentication=None,
@@ -965,7 +965,7 @@ def populate_database():
 
     api = Api(
         name='Holiday API',
-        description="Stop maintaining holiday data. Start building what matters. Fresh, accurate holiday data—just an API call away. Skip the scraping. Ditch the spreadsheets.",
+        description="Holiday API is on a mission to rid the world of databases and spreadsheets full of stale holiday data. Our algorithmic approach to this problem allow us to provide accurate, up-to-date holiday information that can be added to your application in minutes. On the fly calculations allow us to offer a wide range of both historical and future data. We're obsessive about holidays and observances, the different calendars used around the world, and the math that makes it all work.",
         base_url='https://holidayapi.com',
         api_keywords=['Holiday API', 'Calendar', 'accurate holiday data'],
         authentication='apiKey',
@@ -983,7 +983,7 @@ def populate_database():
 
     api = Api(
         name='Public Holiday Api',
-        description="The api provides a simple way to query the holidays of over 100 countries, also it is possible to query long weekends. For IoT devices there is an endpoint to check if today is a holiday",
+        description="The api provides a simple way to query the holidays of over 100 countries, also it is possible to query long weekends. For IoT devices there is an endpoint to check if today is a holiday.",
         base_url='https://date.nager.at/api',
         api_keywords=['Public Holiday Api', 'Calendar', 'simple way to query the holidays'],
         authentication=None,
@@ -1021,7 +1021,7 @@ def populate_database():
 
     api = Api(
         name='Box',
-        description="All the developer resources to help you get the most from Box products",
+        description="All the developer resources to help you get the most from Box products. Gain access to various tools and resources to integrate the Developer Service with the Box Service and build custom Developer Applications on the Box platform (each as defined below).",
         base_url='https://api.box.com',
         api_keywords=['Box', 'Cloud storage and File Sharing', 'storage', 'file sharing'],
         authentication='OAuth',
