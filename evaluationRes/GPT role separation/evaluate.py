@@ -143,6 +143,7 @@ print('SPECIFIC')
 specificTextError = 0
 allSpecific = 0
 specificInvalidJSON = 0
+specificSuccessCount = 0
 for file in specific.iterdir():
     if file.is_file():
         print()

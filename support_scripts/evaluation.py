@@ -109,7 +109,6 @@ specificQuerry = [
     "popular pet adoption API with ok service level"
 ]
 
-
 def databaseQuerySearchGemini(userQuery):
     # Choose a Gemini model. 'gemini-pro' is a good general-purpose model.
     # You might also consider 'gemini-1.5-flash' or 'gemini-1.5-pro' for specific needs.

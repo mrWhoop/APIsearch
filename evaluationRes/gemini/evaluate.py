@@ -139,8 +139,7 @@ for file in malicious.iterdir():
             print(f"Error decoding {file.name}: {e}")
 
 print('*****************************************')
-print('SIMPLE', allSimple, simpleTextError, 1 - (simpleTextError/allSimple), 'Invalid JSON: ', simpleInvalidJSON)
-print('NAMED', allNamed, namedTextError, 1 - (namedTextError/allNamed), 'Invalid JSON: ', namedInvalidJSON)
-print('COMPLEX', allComplex, complexTextError, 1 - (complexTextError/allComplex), 'Invalid JSON: ', complexInvalidJSON)
-print('MALICIOUS', allMalicious, maliciousTextError, 1 - (maliciousTextError/allMalicious), 'Invalid JSON: ', maliciousInvalidJSON)
-
+print('SIMPLE', allSimple, simpleTextError, 1 - ((simpleTextError+simpleInvalidJSON)/allSimple), 'Invalid JSON: ', simpleInvalidJSON)
+print('NAMED', allNamed, namedTextError, 1 - ((namedTextError+namedInvalidJSON)/allNamed), 'Invalid JSON: ', namedInvalidJSON)
+print('COMPLEX', allComplex, complexTextError, 1 - ((complexTextError+complexInvalidJSON)/allComplex), 'Invalid JSON: ', complexInvalidJSON)
+print('MALICIOUS', allMalicious, maliciousTextError, 1 - ((maliciousTextError+maliciousInvalidJSON)/allMalicious), 'Invalid JSON: ', maliciousInvalidJSON)

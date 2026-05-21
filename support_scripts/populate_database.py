@@ -344,7 +344,7 @@ def populate_database():
 
     api = Api(
         name='AbuseIPDB',
-        description='The AbuseIPDB API allows you to utilize our database programmatically. This is most commonly done through Fail2Ban, which comes prepackaged with an AbuseIPDB configuration.',
+        description='AbuseIPDB is a project dedicated to helping combat the spread of hackers, spammers, and abusive activity on the internet. Our mission is to help make Web safer by providing a central blacklist for webmasters, system administrators, and other interested parties to report and find IP addresses that have been associated with malicious activity online. The AbuseIPDB API allows you to utilize our database programmatically. This is most commonly done through Fail2Ban, which comes prepackaged with an AbuseIPDB configuration.',
         base_url='https://api.abuseipdb.com/api/',
         api_keywords=['AbuseIPDB', 'Anti-Malware', 'Fail2Ban'],
         authentication='apiKey',
@@ -1241,7 +1241,7 @@ def populate_database():
 
     api = Api(
         name='Blockchain.com',
-        description="Bitcoin Payment, Wallet & Transaction Data",
+        description="Bitcoin Payment, Wallet & Transaction Data. The world’s leading crypto finance house serving people, projects, protocols and institutions since 2011.",
         base_url='https://api.blockchain.com/exchange',
         api_keywords=['Blockchain.com', 'bitcoin payment', 'Cryptocurrency', 'transactions', 'wallets'],
         authentication='apiKey',
@@ -1533,9 +1533,9 @@ def populate_database():
 
     api = Api(
         name='US Autocomplete',
-        description="nter address data quickly with real-time address suggestions.",
+        description="Smarty helps businesses worldwide leverage address data intelligence to supercharge operations, slash costs, and skyrocket revenue. Enter address data quickly with real-time address suggestions.",
         base_url='https://us-autocomplete-pro.api.smarty.com',
-        api_keywords=['US Autocomplete', 'real-time', 'Data Validation', 'address suggestion'],
+        api_keywords=['address autocomplete', 'real-time', 'Data Validation', 'address suggestion'],
         authentication='apiKey',
         https=True,
         cors=True,
@@ -3572,7 +3572,7 @@ def populate_database():
     api = Api(
         name='CALLLOOK',
         description="United States ham radio callsigns. NO-NONSENSE AMATEUR RADIO U.S.A. CALLSIGN LOOKUPS.",
-        base_url='	https://callook.info',
+        base_url='https://callook.info',
         api_keywords=['CALLLOOK', 'Open Data', 'testAPI', 'ham radio', 'callsigns'],
         authentication=None,
         https=True,
@@ -4065,7 +4065,7 @@ def populate_database():
         name='Quoterism',
         description="Collection of the most inspiring expressions of mankind",
         base_url='https://www.quoterism.com/api',
-        api_keywords=['Quoterism', 'Personality', 'inspiring expressions'],
+        api_keywords=['Quoterism', 'Personality', 'inspiring expressions', 'quotes'],
         authentication=None,
         https=True,
         cors=None,
@@ -4101,7 +4101,7 @@ def populate_database():
         name='traitify',
         description="Welcome to Traitify's Personality API! We understand that behind every user is a human being with a personality waiting to be discovered. With that in mind, we've created a diverse set of fun visual assessments used to uncover personality types and traits. Your users simply select 'Me' or 'Not Me' to a brief series of images and voila! Instant, actionable data. With this psychology-backed data in hand, the possibilities are endless - any way that personalization can help you is now within reach.",
         base_url='https://api.traitify.com',
-        api_keywords=['traitify', 'Personality', 'psychology', 'psychology-backed data' ],
+        api_keywords=['traitify', 'Personality', 'psychology', 'psychology-backed data'],
         authentication=None,
         https=True,
         cors=None,
@@ -4209,9 +4209,9 @@ def populate_database():
 
     api = Api(
         name='Lorem Picsum.',
-        description="Lorem Picsum. The Lorem Ipsum for photos.",
+        description="Lorem Picsum. The Lorem Ipsum for photos. API that serves random photos.",
         base_url='https://picsum.photos',
-        api_keywords=['Lorem Picsum.', 'photos', 'Photography'],
+        api_keywords=['Lorem Picsum.', 'photos', 'Photography', 'random photos'],
         authentication=None,
         https=True,
         cors=None,
@@ -4300,7 +4300,7 @@ def populate_database():
     api = Api(
         name='wallhaven',
         description="wallhaven. The best wallpapers on the Net!",
-        base_url='',
+        base_url='https://wallhaven.cc/api/v1/',
         api_keywords=['wallhaven', 'Photography', 'wallpapers'],
         authentication='apiKey',
         https=True,
@@ -4535,7 +4535,7 @@ def populate_database():
 
     api = Api(
         name='SHARE',
-        description="A free, open, dataset about research and scholarly activities",
+        description="A free, open, dataset about research and scholarly activities.",
         base_url='https://share.osf.io/api',
         api_keywords=['SHARE', 'Science & Math', 'research', 'scholarly activities'],
         authentication=None,
@@ -5119,7 +5119,7 @@ def populate_database():
 
     api = Api(
         name='WGER',
-        description="Workout manager data as exercises, muscles or equipment. Can be self hosted FLOSS workout and fitness tracker. ",
+        description="Workout manager data as exercises, muscles or equipment. Can be self hosted FLOSS workout and fitness tracker.",
         base_url='https://wger.de',
         api_keywords=['WGER', 'Sports & Fitness', 'Workout manager', 'exercises', 'workout tracker', 'fitness tracker'],
         authentication='apiKey',
@@ -5687,7 +5687,7 @@ def populate_database():
 
     api = Api(
         name='T.LY',
-        description="The World's Shortest Link Shortener service to track, brand, and share short links. Create short links to any website including Google, Spotify, TikTok, Instagram, Facebook, Amazon, YouTube, Twitter, WhatsApp, LinkedIn and more!  ",
+        description="The World's Shortest Link Shortener service to track, brand, and share short links. Create short links to any website including Google, Spotify, TikTok, Instagram, Facebook, Amazon, YouTube, Twitter, WhatsApp, LinkedIn and more!",
         base_url='https://api.t.ly',
         api_keywords=['T.LY', 'URL Shorteners', 'track', 'brand', 'share'],
         authentication='apiKey',

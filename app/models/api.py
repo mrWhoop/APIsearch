@@ -21,15 +21,11 @@ class EndPoint:
 class Api(BaseModel):
     collection_name = 'apis'
 
-    def __init__(self, name=None, description=None, base_url=None, api_keywords=None, endpoints=None, popularity=None, service_level=None, latency=None, reliability=None, https=None, authentication=None, cors=None, docs=None, category=None, type=None, **kwargs):
+    def __init__(self, name=None, description=None, base_url=None, api_keywords=None, endpoints=None, https=None, authentication=None, cors=None, docs=None, category=None, type=None, **kwargs):
         self.name = name
         self.description = description
         self.base_url = base_url
         self.api_keywords = api_keywords or []
-        self.popularity = popularity
-        self.service_level = service_level
-        self.latency = latency
-        self.reliability = reliability
         self.https = https
         self.authentication = authentication
         self.cors = cors
@@ -37,18 +33,18 @@ class Api(BaseModel):
         self.category = category
         self.type = type or 'REST'
 
-        self.endpoints = []
-        if endpoints is not None:
-            for endpoint in endpoints:
-                if isinstance(endpoint, EndPoint):
-                    self.endpoints.append(endpoint)
-                else:
-                    self.endpoints.append(EndPoint(**endpoint))
+        # self.endpoints = []
+        # if endpoints is not None:
+        #     for endpoint in endpoints:
+        #         if isinstance(endpoint, EndPoint):
+        #             self.endpoints.append(endpoint)
+        #         else:
+        #             self.endpoints.append(EndPoint(**endpoint))
 
         # Initialize with parent class
         super().__init__(**kwargs)
 
     def to_dict(self):
         doc = super().to_dict()
-        doc['endpoints'] = [endpoint.to_dict() for endpoint in self.endpoints]
+        # doc['endpoints'] = [endpoint.to_dict() for endpoint in self.endpoints]
         return doc

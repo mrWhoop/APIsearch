@@ -9,7 +9,7 @@ from pymongo.errors import OperationFailure
 
 from ..extensions import mongo
 from support_scripts.populate_database import populate_database
-from support_scripts.populate_search_index import populate_search_index, documents
+from support_scripts.populate_search_index import populate_search_index, documents, populate_search_index_embeddings
 from support_scripts.create_chroma_chatGPT_embeddings import createCollection as GPT
 from support_scripts.create_chroma_Gemini_embeddings import createCollection as GEMINI
 from support_scripts.create_chroma_chatGPT_embeddings import createCollectionMeta as GPTmeta
@@ -33,9 +33,11 @@ load_dotenv()
 
 MEILISEARCH_SECRET = os.environ['MEILISEARCH_SECRET']
 MEILISEARCH_INDEX = os.environ['MEILISEARCH_INDEX']
+MEILISEARCH_INDEX_EMM = os.environ['MEILISEARCH_INDEX_EMM']
 
 searchClient = meilisearch.Client('http://127.0.0.1:7700', MEILISEARCH_SECRET)
 searchIndex = searchClient.index(MEILISEARCH_INDEX)
+searchIndexEmm = searchClient.index(MEILISEARCH_INDEX_EMM)
 
 
 main_blueprint = Blueprint('main', __name__)
@@ -102,7 +104,7 @@ def compareGemini(docs):
 
 @main_blueprint.route('/support/populate_search_index')
 def populate_search_index_call():
-    populate_search_index()
+    # populate_search_index_embeddings()
     return jsonify({'status': 'Populating meilisearch done.'})
 
 @main_blueprint.route('/support/populate_database')
@@ -112,11 +114,13 @@ def populate_database_call():
         mongo.db.apis.delete_many({})
         populate_database()
         populate_search_index()
+        populate_search_index_embeddings()
         apis = mongo.db.apis.find()
     else:
         populate_database()
         populate_search_index()
         apis = mongo.db.apis.find()
+        populate_search_index_embeddings()
 
     return jsonify(apis)
 
@@ -139,7 +143,7 @@ def evaluateGPT_call():
 
 @main_blueprint.route('/support/create_GPT')
 def createGPTcollection():
-    # GPT role separation()
+    # GPT()
     # GPTmeta()
     # GPTdescriptive()
     return jsonify({'status': 'ChatGPT done.'})
@@ -364,9 +368,7 @@ def search():
     OpenAI_client = OpenAI(api_key=OPENAI_API_KEY)
 
     genai.configure(api_key=os.environ['GEMINI_API_KEY'])
-    embedding_model_name = 'models/gemini-embedding-exp-03-07'
-    embedding_model_name_stable = 'models/gemini-embedding-001'
-
+    embedding_model_name = 'models/gemini-embedding-001'
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
 
@@ -383,13 +385,13 @@ def search():
     ai = request.args.get('ai')
 
     if ai == 'GPT':
-        query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
+        query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-3-large", input=query).data[0].embedding
         resultsGPT = chroma_GPT_collection.query(query_embeddings=[query_GPT_embedding], n_results=5)
         print(resultsGPT['documents'])
         return jsonify({"results": resultsGPT["metadatas"][0]})
 
     elif ai == 'GPTmeta':
-        query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
+        query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-3-large", input=query).data[0].embedding
         resultsGPTmeta = chroma_GPT_collection_meta.query(query_embeddings=[query_GPT_embedding], n_results=5)
         print(resultsGPTmeta['documents'])
         return jsonify({"results": resultsGPTmeta["metadatas"][0]})
@@ -424,6 +426,29 @@ def search():
 
         return jsonify({"results": result})
 
+    elif ai == 'MeiliSearchEmm':
+
+        search_results = searchIndexEmm.search(query, {
+            "hybrid": {
+                "embedder": "default",
+                "semanticRatio": 0.4
+            },
+            "limit": 5})['hits']
+
+        result = list()
+
+        for sr in search_results:
+            res = {
+                "name": sr['name'],
+                "category": sr['category'],
+                "description": sr['description'],
+                "docs": sr['docs'],
+            }
+
+            result.append(res)
+
+        return jsonify({"results": result})
+
     elif ai == 'GPTprompt':
         start = time.time()
         data = databaseQuerySearchGPT(query)
@@ -433,7 +458,7 @@ def search():
 
     elif ai == 'GPTdesc':
         start = time.time()
-        query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-ada-002", input=query).data[0].embedding
+        query_GPT_embedding = OpenAI_client.embeddings.create(model="text-embedding-3-large", input=query).data[0].embedding
         end = time.time()
         resultsGPTdesc = chroma_GPT_collection_desc.query(query_embeddings=[query_GPT_embedding], n_results=5)
         print("GPTdesc: ", end - start)
