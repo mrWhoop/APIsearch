@@ -3,6 +3,7 @@ from datetime import datetime
 import json
 from ..extensions import mongo
 
+# Boilerplate composed using AI
 class BaseModel:
     """Base model class for MongoDB documents."""
 

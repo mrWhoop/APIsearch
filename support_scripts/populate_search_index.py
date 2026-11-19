@@ -23,12 +23,12 @@ def cleanUp():
         print(f"Deleting all documents from '{MEILISEARCH_INDEX}' index...")
 
         # Wait for the task to complete
-        searchClient.wait_for_task(task['taskUid'])
+        searchClient.wait_for_task(task.task_uid)
 
         print(f"All documents deleted from '{MEILISEARCH_INDEX}' index successfully!")
         return True
     except Exception as e:
-        print(f"Error clearing documents from index '{MEILISEARCH_INDEX}': {e}")
+        print(f"Error clearing documents from index '{MEILISEARCH_INDEX} ': {e}")
         return False
 
 def populate_search_index():
@@ -46,13 +46,7 @@ def populate_search_index():
             'category': api['category'],
             'docs': api['docs'],
             'api_keywords': api['api_keywords'],
-
-            # 'popularity': str(api['popularity']),
-            # 'service_level': str(api['service_level']),
-            # 'latency': str(api['latency']),
-            # 'reliability': str(api['reliability']),
-
-            'authentication': str(api['authentication']),
+            'authentication': api['authentication'],
             'https': api['https'],
             'cors': api['cors'],
             'type': api['type']
@@ -60,8 +54,7 @@ def populate_search_index():
         documents.append(doc)
 
     searchIndex.add_documents(documents)
-
-    searchIndex.update_filterable_attributes(['name', 'description', 'category', 'api_keywords'],)
+    searchIndex.update_searchable_attributes(['name', 'description', 'category', 'api_keywords', 'authentication', 'https', 'cors', 'type'])
 
     return
 
@@ -74,7 +67,7 @@ def cleanUpEmbeddings():
         print(f"Deleting all documents from '{MEILISEARCH_INDEX_EMM}' index...")
 
         # Wait for the task to complete
-        searchClient.wait_for_task(task['taskUid'])
+        searchClient.wait_for_task(task.task_uid)
 
         print(f"All documents deleted from '{MEILISEARCH_INDEX_EMM}' index successfully!")
         return True
@@ -97,13 +90,7 @@ def populate_search_index_embeddings():
             'category': api['category'],
             'docs': api['docs'],
             'api_keywords': api['api_keywords'],
-
-            # 'popularity': str(api['popularity']),
-            # 'service_level': str(api['service_level']),
-            # 'latency': str(api['latency']),
-            # 'reliability': str(api['reliability']),
-
-            'authentication': str(api['authentication']),
+            'authentication': api['authentication'],
             'https': api['https'],
             'cors': api['cors'],
             'type': api['type']
@@ -119,7 +106,7 @@ def populate_search_index_embeddings():
     })
 
     searchIndexEmm.add_documents(documents)
-    searchIndex.update_filterable_attributes(['name', 'description', 'category', 'api_keywords'], )
+    searchIndexEmm.update_searchable_attributes(['name', 'description', 'category', 'api_keywords', 'authentication', 'https', 'cors', 'type'])
     searchClient.wait_for_task(task.task_uid)
 
     return

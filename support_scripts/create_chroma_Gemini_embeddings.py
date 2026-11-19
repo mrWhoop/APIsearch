@@ -1,11 +1,28 @@
 import chromadb
 import os
+
 from app.extensions import mongo
-import google.generativeai as genai
+from google import genai
+from google.genai import types
+from google.genai.errors import APIError
+from tenacity import retry, stop_after_attempt, wait_exponential, retry_if_exception_type
+
 import time
 
-genai.configure(api_key=os.environ['GEMINI_API_KEY'])
+client = genai.Client(api_key=os.environ['GEMINI_API_KEY'])
 embedding_model_name='models/gemini-embedding-001'
+
+@retry(
+    stop=stop_after_attempt(5),
+    wait=wait_exponential(multiplier=1, min=2, max=10),
+    retry=retry_if_exception_type(APIError)
+)
+def embed_single_document(doc_text: str):
+    return client.models.embed_content(
+        model=embedding_model_name,
+        contents=doc_text,
+        config=types.EmbedContentConfig(task_type="RETRIEVAL_DOCUMENT")
+    )
 
 def createCollection():
 
@@ -19,26 +36,26 @@ def createCollection():
         chroma_id = str(api['_id'])
 
         metadata = {
-            'id': str(api['_id']),
-            'name': str(api['name']),
-            'description': str(api['description']),
-            'docs': str(api['docs']),
-            'category': str(api['category']),
-            'authentication': str(api['authentication']),
-            'https': str(api['https']),
-            'cors': str(api['cors']),
-            'type': str(api['type'])
+            key: value
+            for key, value in {
+                'id': str(api['_id']),
+                'name': api['name'],
+                'description': api['description'],
+                'docs': api['docs'],
+                'category': api['category'],
+                'authentication': api['authentication'],
+                'https': api['https'],
+                'cors': api['cors'],
+                'type': api['type']
+            }.items()
+            if value is not None
         }
 
         # here we get gemini embeddings
 
-        embedding = genai.embed_content(
-            model=embedding_model_name,
-            content=document)
+        response = embed_single_document(document)
 
-        embedding = embedding['embedding']
-
-        time.sleep(5)
+        embedding = response.embeddings[0].values
 
         chroma_collection.add(documents=[document], embeddings=[embedding], ids=[chroma_id], metadatas=[metadata])
 
@@ -79,26 +96,26 @@ def createCollectionMeta():
         chroma_id = str(api['_id'])
 
         metadata = {
-            'id': str(api['_id']),
-            'name': str(api['name']),
-            'description': str(api['description']),
-            'docs': str(api['docs']),
-            'category': str(api['category']),
-            'authentication': str(api['authentication']),
-            'https': str(api['https']),
-            'cors': str(api['cors']),
-            'type': str(api['type'])
+            key: value
+            for key, value in {
+                'id': str(api['_id']),
+                'name': api['name'],
+                'description': api['description'],
+                'docs': api['docs'],
+                'category': api['category'],
+                'authentication': api['authentication'],
+                'https': api['https'],
+                'cors': api['cors'],
+                'type': api['type']
+            }.items()
+            if value is not None
         }
 
         # here we get gemini embeddings
 
-        embedding = genai.embed_content(
-            model=embedding_model_name,
-            content=document)
+        response = embed_single_document(document)
 
-        embedding = embedding['embedding']
-
-        time.sleep(5)
+        embedding = response.embeddings[0].values
 
         chroma_collection.add(documents=[document], embeddings=[embedding], ids=[chroma_id], metadatas=[metadata])
 
@@ -195,26 +212,26 @@ def createCollectionDescriptive():
         chroma_id = str(api['_id'])
 
         metadata = {
-            'id': str(api['_id']),
-            'name': str(api['name']),
-            'description': str(api['description']),
-            'docs': str(api['docs']),
-            'category': str(api['category']),
-            'authentication': str(api['authentication']),
-            'https': str(api['https']),
-            'cors': str(api['cors']),
-            'type': str(api['type'])
+            key: value
+            for key, value in {
+                'id': str(api['_id']),
+                'name': api['name'],
+                'description': api['description'],
+                'docs': api['docs'],
+                'category': api['category'],
+                'authentication': api['authentication'],
+                'https': api['https'],
+                'cors': api['cors'],
+                'type': api['type']
+            }.items()
+            if value is not None
         }
 
         # here we get gemini embeddings
 
-        embedding = genai.embed_content(
-            model=embedding_model_name,
-            content=document)
+        response = embed_single_document(document)
 
-        embedding = embedding['embedding']
-
-        time.sleep(5)
+        embedding = response.embeddings[0].values
 
         chroma_collection.add(documents=[document], embeddings=[embedding], ids=[chroma_id], metadatas=[metadata])
 

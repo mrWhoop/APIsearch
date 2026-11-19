@@ -8,3 +8,4 @@ load_dotenv()
 
 # Initialize MongoDB connection
 mongo = PyMongo()
+mongo_readwrite_client = None

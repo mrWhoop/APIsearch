@@ -1,5 +1,4 @@
-from app.models.api import Api, EndPoint
-from random import randrange
+from app.models.api import Api
 
 def populate_database():
 
@@ -232,15 +231,15 @@ def populate_database():
 
     api = Api(
         name='AnimeNewsNetwork',
-        description="Anime News Network was created as a news source that focuses on the medium of Japanese Animation(anime) and Japanese Comics (manga). ANN was founded by Justin Sevakis in July of 1998, and has since lead the online anime news medium with a tradition of strong unbiased coverage of major breaking news. With in-depth coverage, analysis and commentary to provide insight into the world of anime and manga, ANN has been and continues to be the #1 English language source for anime and manga news on the Internet. ANN's goal is to make the latest, most comprehensive Anime news available to new fans and veteran Otaku alike.",
+        description="Anime News Network was created as a news source that focuses on the medium of Japanese Animation (anime) and Japanese Comics (manga). ANN was founded by Justin Sevakis in July of 1998, and has since lead the online anime news medium with a tradition of strong unbiased coverage of major breaking news. With in-depth coverage, analysis and commentary to provide insight into the world of anime and manga, ANN has been and continues to be the #1 English language source for anime and manga news on the Internet. ANN's goal is to make the latest, most comprehensive Anime news available to new fans and veteran Otaku alike.",
         base_url='https://cdn.animenewsnetwork.com/encyclopedia',
-        api_keywords=['Anime', 'News', 'anime news'],
+        api_keywords=['Anime', 'News', 'anime news', 'Anime News Network', 'ANN'],
         authentication=None,
         https=True,
         cors=True,
         docs='https://www.animenewsnetwork.com/encyclopedia/api.php',
         category='Anime',
-        type='XML'
+        type='SOAP'
     )
 
     api.save()
@@ -307,7 +306,7 @@ def populate_database():
         name='MangaDex',
         description='MangaDex is an ad-free manga reader offering high-quality images. Some of the API is open, while more advanced functionalities require authentication.',
         base_url='http://api.mangadex.org',
-        api_keywords=['MangaDex', 'manga reader', 'anime'],
+        api_keywords=['MangaDex', 'manga reader', 'anime', 'ad-free'],
         authentication=None,
         https=True,
         cors=None,
@@ -325,8 +324,7 @@ def populate_database():
         name='Nekosia',
         description='The Best Anime and Nekos API for Your Projects Infuse your projects with anime magic and a dash of feline charm! Explore a diverse range of endpoints designed to meet all your anime-related needs. Scroll down and discover the purr-fect solutions that will bring your projects to life! Meow~~ 🐾',
         base_url='http://api.nekosia.cat/api',
-        api_keywords=['Nekosia', 'anime'],
-
+        api_keywords=['Nekosia', 'anime', 'feline charm', 'furry'],
         authentication=None,
         https=True,
         cors=None,
@@ -346,7 +344,7 @@ def populate_database():
         name='AbuseIPDB',
         description='AbuseIPDB is a project dedicated to helping combat the spread of hackers, spammers, and abusive activity on the internet. Our mission is to help make Web safer by providing a central blacklist for webmasters, system administrators, and other interested parties to report and find IP addresses that have been associated with malicious activity online. The AbuseIPDB API allows you to utilize our database programmatically. This is most commonly done through Fail2Ban, which comes prepackaged with an AbuseIPDB configuration.',
         base_url='https://api.abuseipdb.com/api/',
-        api_keywords=['AbuseIPDB', 'Anti-Malware', 'Fail2Ban'],
+        api_keywords=['AbuseIPDB', 'Anti-Malware', 'Fail2Ban', 'central blacklist', 'malicious activity detection'],
         authentication='apiKey',
         https=True,
         cors=None,
@@ -364,7 +362,7 @@ def populate_database():
         name='FishFish',
         description="An anti-phishing service that focuses on quick, automated detection of threat resources before they're used for evil.",
         base_url='https://api.fishfish.gg',
-        api_keywords=['FishFish', 'anti-phishing service', 'Anti-Malware'],
+        api_keywords=['FishFish', 'anti-phishing', 'Anti-Malware', 'automated detection'],
         authentication=None,
         https=True,
         cors=None,
@@ -382,7 +380,7 @@ def populate_database():
         name='Google Safe Browsing',
         description='Enables client applications to check web resources (most commonly URLs) against Google-generated lists of unsafe web resources. The Safe Browsing APIs are for non-commercial use only. If you need to use APIs to detect malicious URLs for commercial purposes – meaning “for sale or revenue-generating purposes” – please refer to the Web Risk API.',
         base_url='https://safebrowsing.googleapis.com',
-        api_keywords=['Anti-Malware', 'Google Safe Browsing', 'detect malicious URL', 'Anti-Malware'],
+        api_keywords=['Anti-Malware', 'Google Safe Browsing', 'detect malicious URL', 'Anti-Malware', 'non-commercial use'],
         authentication='apiKey',
         https=True,
         cors=None,
@@ -548,7 +546,7 @@ def populate_database():
         name='Harry Potter API',
         description="Harry potter character, house and spell information. The Harry Potter API offers endpoints for retrieving lists of entities (books, characters, houses, spells), as well as endpoints for retrieving random items. It supports filtering and pagination through query parameters, and it's designed to be easily translated into multiple languages.",
         base_url='https://potterapi-fedeperin.vercel.app/en',
-        api_keywords=['Harry Potter API', 'Books'],
+        api_keywords=['Harry Potter API', 'Books', 'spells', 'Harry Potter'],
         authentication=None,
         https=True,
         cors=True,
@@ -564,7 +562,7 @@ def populate_database():
 
     api = Api(
         name='OPEN Library',
-        description="Open Library offers a suite of APIs to help developers get up and running with our data. This includes RESTful APIs, which make Open Library data availabile in JSON, YAML and RDF/XML formats. There's also an earlier, now deprecated JSON API which is preserved for backward compatibility.",
+        description="Open Library offers a suite of APIs to help developers get up and running with our data. This includes RESTful APIs, which make Open Library data available in JSON, YAML and RDF/XML formats. There's also an earlier, now deprecated JSON API which is preserved for backward compatibility.",
         base_url='https://openlibrary.org/',
         api_keywords=['OPEN Library', 'Books', 'Open Library data'],
         authentication=None,
@@ -622,7 +620,7 @@ def populate_database():
         name='Domains-Index API',
         description="Registered domains search checks the lists of registered domains for names containing particular words/phrases/numbers or symbols. Technically it's just a GUI interface for domains-index.com database containing more than 260M of registered domains and 1000+ TLDS including newGTLDs. It's free to use and could be helpful domains/marketing research tool.",
         base_url='https://api.domainsdb.info',
-        api_keywords=['Domains-Index API', 'Business', 'Registered domains search', 'domains/marketing research tool'],
+        api_keywords=['Domains-Index API', 'Business', 'Registered domains search', 'marketing research tool'],
         authentication=None,
         https=True,
         cors=None,
@@ -640,7 +638,7 @@ def populate_database():
         name='Favicon.im',
         description="Favicon.im is a simple and efficient service that allows you to fetch the favicon (website icon) of any website. Just provide a domain name, and we'll return the associated favicon. It's perfect for developers, designers, or anyone who needs quick access to website icons.",
         base_url='https://favicon.im',
-        api_keywords=['Favicon.im', 'favicon for any website', 'Business'],
+        api_keywords=['Favicon.im', 'favicon for any website', 'Business', 'website icons'],
         authentication=None,
         https=True,
         cors=False,
@@ -658,7 +656,7 @@ def populate_database():
         name='freelancer developers',
         description="Use the Freelancer API to access a cloud workforce of skilled freelancers from your website, app or software. Why hire people when you can just make an API call to the cloud?",
         base_url='https://developers.freelancer.com',
-        api_keywords=['freelancer developers', 'Business', 'workforce of skilled freelancers'],
+        api_keywords=['freelancer developers', 'Business', 'workforce of skilled freelancers', 'freelancer'],
         endpoints=endpoints,
         authentication='OAuth',
         https=True,
@@ -677,7 +675,7 @@ def populate_database():
         name='Gmail',
         description="The Gmail API is a RESTful API that can be used to access Gmail mailboxes and send mail. For most web applications the Gmail API is the best choice for authorized access to a user's Gmail data and is suitable for various applications, such as: Read-only mail extraction, indexing, and backup; Automated or programmatic message sending; Email account migration; Email organization including filtering and sorting of messages; Standardization of email signatures across an organization",
         base_url='https://www.googleapis.com/gmail',
-        api_keywords=['Gmail', 'Business', 'access Gmail mailbox', 'send mail'],
+        api_keywords=['Gmail', 'Business', 'access Gmail mailbox', 'mail', 'e-mail'],
         authentication='OAuth',
         https=True,
         cors=None,
@@ -735,7 +733,7 @@ def populate_database():
         authentication='apiKey',
         https=True,
         cors=None,
-        docs='https://documentation.mailgun.com/docs/mailgun/quickstart-guide/quickstart',
+        docs='https://documentation.mailgun.com/docs/mailgun',
         category='Business'
     )
 
@@ -783,9 +781,9 @@ def populate_database():
 
     api = Api(
         name='Trello',
-        description="The best way to build on top of Trello is to create a Power-Up! With Power-Ups you can add buttons to cards and boards, show previews of attachments on Trello cards, and much more - all inside of Trello! Power-Ups add extra functionality inside of Trello and let you and your team work with more perspective. Some Power-Ups help you automate your workflows, others give you a new view into the data you have stored in cards.",
+        description="Trello is the flexible work management tool where teams can ideate plans, collaborate on projects, organize workflows, and track progress in a visual, productive, and rewarding way. From brainstorm to planning to execution, Trello manages the big milestones and the day-to-day tasks of working together and getting things done.",
         base_url='https://api.trello.com',
-        api_keywords=['Trello', 'Business', 'bussiness cards'],
+        api_keywords=['Trello', 'Business', 'collaboration', 'workflow', 'management tool'],
         authentication='OAuth',
         https=True,
         cors=None,
@@ -821,7 +819,7 @@ def populate_database():
         name='Clientsbee',
         description="With Clientsbee Embark on a journey of technological discovery with our advanced technographics data, designed to unveil the intricate layers of digital ecosystems and empower businesses with actionable insights.",
         base_url=None,
-        api_keywords=['Clientsbee', 'Business', 'technographics data'],
+        api_keywords=['Clientsbee', 'Business', 'technographics data', 'business insights', 'digital ecosystems'],
         authentication='apiKey',
         https=True,
         cors=False,
@@ -929,7 +927,7 @@ def populate_database():
 
     api = Api(
         name='Google Calendar',
-        description="Enhance the Google Calendar experience. Insert interactive content, powered by your account data or an external service, with add-ons.",
+        description="The Google Calendar API is a RESTful API that can be accessed through explicit HTTP calls or using the Google Client Libraries. The API exposes most of the features available in the Google Calendar Web interface.",
         base_url='https://www.googleapis.com/calendar/v3/calendars',
         api_keywords=['Google Calendar', 'Calendar', 'Enhance google calendar'],
         authentication='OAuth',
@@ -1194,7 +1192,8 @@ def populate_database():
         https=True,
         cors=None,
         docs='https://bitquery.io/',
-        category='Cryptocurrency'
+        category='Cryptocurrency',
+        type='GraphQL'
     )
 
     api.save()
@@ -1230,7 +1229,8 @@ def populate_database():
         https=True,
         cors=None,
         docs='https://www.bitmex.com/app/apiOverview',
-        category='Cryptocurrency'
+        category='Cryptocurrency',
+        type='WebSocket'
     )
 
     api.save()
@@ -1499,7 +1499,7 @@ def populate_database():
         name='Trestle',
         description="Trestle provides identity data for businesses. This identity data is key for building and maintaining great customer relationships.",
         base_url='https://api.trestleiq.com',
-        api_keywords=['Trestle', 'identity data for businesses', 'Data Validation', 'customer relationships'],
+        api_keywords=['Trestle', 'identity data', 'Data Validation', 'data provider', 'customer relationships'],
         authentication='apiKey',
         https=True,
         cors=True,
@@ -1616,8 +1616,6 @@ def populate_database():
     )
 
     api.save()
-
-    # Development TODO
 
     # Dictionaries
 
@@ -1739,7 +1737,7 @@ def populate_database():
         name='ReliefWeb API',
         description="The ReliefWeb API was originally built to power a mobile/ low-bandwidth version of the ReliefWeb website. Enhancements and a public release provided access to ReliefWeb's curated and continuously updated data archive. It's now used to serve much of the main site, content on other OCHA sites, and third party apps. All the content of ReliefWeb is available through its API. The API aligns with current API best-practices, and is intended to be friendly to developers, as well as machines. It is publicly accessible using HTTP requests and returns JSON data.",
         base_url='https://api.reliefweb.int/v1/reports',
-        api_keywords=['ReliefWeb API', 'Disasters', 'continuously updated'],
+        api_keywords=['ReliefWeb API', 'Disasters', 'continuously updated', 'ReliefWeb'],
         authentication='apiKey',
         https=True,
         cors=None,
@@ -1849,7 +1847,7 @@ def populate_database():
         name='pdfEndpoint',
         description="Effortlessly Convert HTML and URLs to PDF. High-quality output, easy integration, and full control over formatting for all your HTML to PDF needs. All it takes is just a few lines of code and you can customize your output with a variety of options. Check our Documentation to learn how do that.",
         base_url='https://api.pdfendpoint.com',
-        api_keywords=['pdfEndpoint', 'Documents & Productivity', 'Convert HTML and URLs to PDF'],
+        api_keywords=['pdfEndpoint', 'Documents & Productivity', 'Convert HTML to PDF', 'Convert URLs to PDF'],
         authentication='apiKey',
         https=True,
         cors=None,
@@ -1939,7 +1937,7 @@ def populate_database():
         name='Todoist',
         description="Clarity, finally. Join 50+ million professionals who simplify work and life with the world’s #1 to-do list app. Capture tasks at the speed of thought. Achieve mental clarity by sorting tasks into Today, Upcoming, or using custom filters. See only what you need, when you need it. Make the most of your time. Schedule due dates, visualize your week in calendar view, and set recurring tasks with ease. Give your team a shared space to collaborate and stay on top of it all – alongside but separate from your personal tasks and projects.",
         base_url='https://api.todoist.com/api',
-        api_keywords=['Todoist', 'Documents & Productivity', 'task manager', 'time management'],
+        api_keywords=['Todoist', 'Documents & Productivity', 'task manager', 'time management', 'to-do list'],
         authentication='OAuth',
         https=True,
         cors=None,
@@ -2306,7 +2304,7 @@ def populate_database():
     api = Api(
         name='FINCEPT',
         description="Welcome! TLK Industries Insights. Explore Financial Economic Market Trends Worldwide. Unlock Global Financial Insights with TLK Industries. Insight delivers data-driven solutions, helping businesses and individuals make smarter decisions and achieve sustained growth globally.",
-        base_url='',
+        base_url=None,
         api_keywords=['FINCEPT', 'Finance', 'market trends', 'data-driven solutions', 'growth'],
         authentication='apiKey',
         https=True,
@@ -2433,9 +2431,9 @@ def populate_database():
 
     api = Api(
         name='Open Brewery DB',
-        description="Open Brewery DB is a free dataset and API with public information on breweries, cideries, brewpubs, and bottleshops. The goal of Open Brewery DB is to maintain an open-source, community-driven dataset and provide a public API for brewery-related data.",
+        description="Open Brewery DB is a free dataset and API with public information on breweries, cideries, brewpubs, and bottle shops. The goal of Open Brewery DB is to maintain an open-source, community-driven dataset and provide a public API for brewery-related data.",
         base_url='https://api.openbrewerydb.org',
-        api_keywords=['Open Brewery DB', 'Food & Drink', 'free', 'breweries', 'open-source', 'brewpubs', 'bottleshops'],
+        api_keywords=['Open Brewery DB', 'Food & Drink', 'free', 'breweries', 'open-source', 'brewpubs', 'bottle shops'],
         authentication=None,
         https=True,
         cors=True,
@@ -2644,12 +2642,6 @@ def populate_database():
     )
 
     api.save()
-
-    # Games & Comics TODO
-
-    # Geocoding TODO
-
-    # Government TODO
 
     # Health
 
@@ -2913,7 +2905,7 @@ def populate_database():
 
     api = Api(
         name='USAJOBS',
-        description="Find your federal government job.",
+        description="Find your federal government job. Bring your ambition and skills to find purpose with the federal government. You'll do meaningful work that impacts millions from day one.",
         base_url='https://data.usajobs.gov/api',
         api_keywords=['USAJOBS', 'Jobs', 'federal government', 'government job'],
         authentication=None,
@@ -3006,7 +2998,7 @@ def populate_database():
 
     api = Api(
         name='Unplugg API',
-        description="This API currently provides forecasting for timeseries data that you can test below. You can use it to forecast energy comsuption, temperature, or any other timeseries data which has some seasonality effect.",
+        description="This API currently provides forecasting for timeseries data that you can test below. You can use it to forecast energy consumption, temperature, or any other timeseries data which has some seasonality effect.",
         base_url='https://api.unplu.gg',
         api_keywords=['Unplugg API', 'Machine Learning', 'forecasting', 'timeseries data', 'energy', 'temperature'],
         authentication='apiKey',
@@ -3044,8 +3036,8 @@ def populate_database():
 
     api = Api(
         name='AI Mastering',
-        description="Automated Music Mastering",
-        base_url=None,
+        description="AI-powered online audio mastering service. AI Mastering is a tool that can easily improve your music. AI brings the sound quality of your music closer to that of commercial music. AI Mastering is a tool that can easily improve your music. You can focus on the music itself.",
+        base_url='api.bakuage.com:443/',
         api_keywords=['AI Mastering', 'Music', 'music mastering'],
         authentication='apiKey',
         https=True,
@@ -3261,8 +3253,8 @@ def populate_database():
 
     api = Api(
         name='musixmatch',
-        description="Lyrics API. The Musixmatch Lyrics API allows you to get access to Musixmatch metadata about song and lyrics.",
-        base_url=None,
+        description="Lyrics API. The Musixmatch Lyrics API allows you to get access to Musixmatch metadata about song and lyrics. The Musixmatch API is available to both selected partners and individual developers.",
+        base_url='https://api.musixmatch.com/',
         api_keywords=['musixmatch', 'Music', 'song lyrics', 'music metadata'],
         authentication='apiKey',
         https=True,
@@ -3479,9 +3471,9 @@ def populate_database():
 
     api = Api(
         name='New York Times',
-        description="Provides news from New York Times.",
-        base_url=None,
-        api_keywords=['New York Times', 'News'],
+        description="Provides news from New York Times. Our APIs (Application Programming Interfaces) allow you to programmatically access New York Times data for use in your own applications. Our goal is to facilitate a wide range of uses, from custom link lists to complex visualizations",
+        base_url='https://api.nytimes.com/svc',
+        api_keywords=['New York Times', 'News', 'news articles', 'news visualisation'],
         authentication='apiKey',
         https=True,
         cors=None,
@@ -3590,7 +3582,7 @@ def populate_database():
     api = Api(
         name='CARTO',
         description="CARTO is the only cloud-first spatial platform built for accelerated, modern GIS. It runs natively on top of your cloud data warehouse platform (e.g. Google BigQuery, Snowflake, AWS Redshift, etc.), providing easy access to highly scalable spatial analysis and visualization capabilities in the cloud — be it for analytics, app development, data engineering, and more.",
-        base_url=None,
+        base_url='https://gcp-us-east1.api.carto.com/v3/',
         api_keywords=['CARTO', 'Open Data', 'spatial analysis', 'cloud'],
         authentication='apiKey',
         https=True,
@@ -3679,9 +3671,9 @@ def populate_database():
 
     api = Api(
         name='The Recreation Information Database',
-        description="Recreation Information Database - RIDB. RIDB is a part of the Recreation One Stop (R1S) program, which oversees the operation of Recreation.gov -- a user-friendly, web-based resource to citizens, offering a single point of access to information about recreational opportunities nationwide. The website represents an authoritative source of information and services for millions of visitors to federal lands, historic sites, museums, waterways and other destinations and activities.",
+        description="The Recreation Information Database (RIDB) provides data resources to citizens, offering a single point of access to information about recreational opportunities nationwide. The RIDB represents an authoritative source of information and services for millions of visitors to federal lands, historic sites, museums, and other attractions/resources. This initiative integrates multiple Federal channels and sources about recreation opportunities into a one-stop, searchable database of recreational areas nationwide.",
         base_url=None,
-        api_keywords=['Recreation Information Database', 'Open Data', 'RIDB', 'recreation'],
+        api_keywords=['Recreation Information Database', 'Open Data', 'RIDB', 'recreation', 'recreational opportunities'],
         authentication='apiKey',
         https=True,
         cors=None,
@@ -3867,7 +3859,7 @@ def populate_database():
         name='Advice Slip',
         description="The Advice Slip JSON API is provided for free. It currently gives out over 10 million pieces of advice every year.",
         base_url='https://api.adviceslip.com',
-        api_keywords=['Advice Slip', 'Personality', 'piece of advice'],
+        api_keywords=['Advice Slip', 'Personality', 'piece of advice', 'free', 'advice generator'],
         authentication=None,
         https=True,
         cors=None,
@@ -4226,7 +4218,7 @@ def populate_database():
     # ---------------
 
     api = Api(
-        name='',
+        name='ObjectCut',
         description="This is the RESTful API for our AI Solution for Background or Foreground Removal. This solution allows clients to remove background or foreground from images without need to resize it, keeping or removing then just the main object visible.",
         base_url='https://background-removal.p.rapidapi.com',
         api_keywords=['ObjectCut', 'Photography', 'background removal', 'foreground removal', 'image editing'],
@@ -4688,7 +4680,8 @@ def populate_database():
         https=True,
         cors=None,
         docs='https://api.fishfish.gg/docs/',
-        category='Security'
+        category='Security',
+        type='WebSocket'
     )
 
     api.save()
@@ -4739,7 +4732,7 @@ def populate_database():
         base_url='https://secrets-api.appbrewery.com',
         api_keywords=['Secrets API', 'Security', 'manage secrets', 'retrieve secrets', 'education purposes'],
         authentication='Basic',
-        https='apiKey',
+        https=True,
         cors=None,
         docs='https://secrets-api.appbrewery.com/',
         category='Security'
@@ -4874,8 +4867,6 @@ def populate_database():
     )
 
     api.save()
-
-    # Social TODO
 
     # Sports & Fitness
 
@@ -5623,8 +5614,6 @@ def populate_database():
 
     api.save()
 
-    # Transportation TODO
-
     # URL Shorteners
 
     # ---------------
@@ -5826,8 +5815,6 @@ def populate_database():
     )
 
     api.save()
-
-    # Video TODO
 
     # Weather
 
@@ -6048,25 +6035,3 @@ def populate_database():
     api.save()
 
     return
-
-    #
-    #
-    # # ---------------
-    # # Cats
-    # # ---------------
-    #
-    # api = Api(
-    #     name='',
-    #     description="",
-    #     base_url='',
-    #     api_keywords=['Test', 'testAPI'],
-    #     popularity=randrange(0, 10),
-    #     service_level=randrange(0, 10),
-    #     latency=randrange(0, 1000),
-    #     reliability=randrange(0, 10),
-    #     authentication=,
-    #     https=,
-    #     cors=,
-    #     docs=,
-    #     category=
-    # )

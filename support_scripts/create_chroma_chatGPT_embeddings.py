@@ -9,15 +9,15 @@ OpenAI_client = OpenAI(api_key=OPENAI_API_KEY)
 def createCollection():
 
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
-    chroma_client.delete_collection("gptAPI")
-    chroma_collection = chroma_client.create_collection(name="gptAPI")
-    apis = mongo.db.apis.find()
+    #chroma_client.delete_collection("gptAPI")
+    chroma_collection = chroma_client.get_or_create_collection(name="gptAPI")
 
+    apis = mongo.db.apis.find()
     for api in apis:
         document = api['name'] + "\n" + api['description']
         chroma_id = str(api['_id'])
 
-        # here you call chatGPT for embedding
+        # here you call for embedding
 
         response = OpenAI_client.embeddings.create(
             model="text-embedding-3-large",
@@ -26,15 +26,19 @@ def createCollection():
         )
 
         metadata = {
-            'id': str(api['_id']),
-            'name': str(api['name']),
-            'description': str(api['description']),
-            'docs': str(api['docs']),
-            'category': str(api['category']),
-            'authentication': str(api['authentication']),
-            'https': str(api['https']),
-            'cors': str(api['cors']),
-            'type': str(api['type'])
+            key: value
+            for key, value in {
+                'id': str(api['_id']),
+                'name': api['name'],
+                'description': api['description'],
+                'docs': api['docs'],
+                'category': api['category'],
+                'authentication': api['authentication'],
+                'https': api['https'],
+                'cors': api['cors'],
+                'type': api['type']
+            }.items()
+            if value is not None
         }
 
         embedding = response.data[0].embedding
@@ -49,7 +53,6 @@ def createCollectionMeta():
     chroma_client.delete_collection("gptAPImeta")
     chroma_collection = chroma_client.get_or_create_collection(name="gptAPImeta")
     apis = mongo.db.apis.find()
-
     for api in apis:
         document = "Name: " + api['name'] + "\n" + "Type: " + api['type'] + "\n" + "Description: " + api['description'] + "\n" + "Category: " + api['category'] + "\n"
 
@@ -77,7 +80,7 @@ def createCollectionMeta():
 
         chroma_id = str(api['_id'])
 
-        # here you call chatGPT for embedding
+        # here you call for embedding
 
         response = OpenAI_client.embeddings.create(
             model="text-embedding-3-large",
@@ -86,15 +89,19 @@ def createCollectionMeta():
         )
 
         metadata = {
-            'id': str(api['_id']),
-            'name': str(api['name']),
-            'description': str(api['description']),
-            'docs': str(api['docs']),
-            'category': str(api['category']),
-            'authentication': str(api['authentication']),
-            'https': str(api['https']),
-            'cors': str(api['cors']),
-            'type': str(api['type'])
+            key: value
+            for key, value in {
+                'id': str(api['_id']),
+                'name': api['name'],
+                'description': api['description'],
+                'docs': api['docs'],
+                'category': api['category'],
+                'authentication': api['authentication'],
+                'https': api['https'],
+                'cors': api['cors'],
+                'type': api['type']
+            }.items()
+            if value is not None
         }
 
         embedding = response.data[0].embedding
@@ -107,7 +114,6 @@ def createCollectionDescriptive():
     chroma_client = chromadb.PersistentClient(path="dataRAG/chroma")
     chroma_client.delete_collection("gptAPIdescriptive")
     chroma_collection = chroma_client.get_or_create_collection(name="gptAPIdescriptive")
-
     apis = mongo.db.apis.find()
 
     for api in apis:
@@ -193,7 +199,7 @@ def createCollectionDescriptive():
 
         chroma_id = str(api['_id'])
 
-        # here you call chatGPT for embedding
+        # here you call for embedding
 
         response = OpenAI_client.embeddings.create(
             model="text-embedding-3-large",
@@ -202,15 +208,19 @@ def createCollectionDescriptive():
         )
 
         metadata = {
-            'id': str(api['_id']),
-            'name': str(api['name']),
-            'description': str(api['description']),
-            'docs': str(api['docs']),
-            'category': str(api['category']),
-            'authentication': str(api['authentication']),
-            'https': str(api['https']),
-            'cors': str(api['cors']),
-            'type': str(api['type'])
+            key: value
+            for key, value in {
+                'id': str(api['_id']),
+                'name': api['name'],
+                'description': api['description'],
+                'docs': api['docs'],
+                'category': api['category'],
+                'authentication': api['authentication'],
+                'https': api['https'],
+                'cors': api['cors'],
+                'type': api['type']
+            }.items()
+            if value is not None
         }
 
         embedding = response.data[0].embedding
