@@ -6,6 +6,10 @@ from pathlib import Path
 import json
 import chromadb
 from statistics import mean
+import numpy as np
+
+import pandas as pd
+from irrCAC.raw import CAC
 
 import os
 from dotenv import load_dotenv
@@ -80,6 +84,14 @@ print('-------------------- comparison component -------------------------')
 from statistics import mean
 from sklearn.metrics import cohen_kappa_score, confusion_matrix
 
+def gwet_irrcac(author_grades, evaluator_grades, weights="quadratic"):
+    ratings = pd.DataFrame({
+        "author": author_grades,
+        "evaluator": evaluator_grades,
+    })
+    cac = CAC(ratings, weights=weights, categories=[0, 1, 2, 3, 4])
+    return cac.gwet()["est"]
+
 authorComparison = db["comparisonEvaluation"]
 evaluatorComparison = db["simulatedComparisonEvaluation"]
 
@@ -146,6 +158,8 @@ for criterion in criteria:
         weights="quadratic"
     )
 
+    ac2 = gwet_irrcac(authorGrades, evaluatorGrades, weights="quadratic")
+
     meanDifference = mean(
         b - a
         for a, b in zip(authorGrades, evaluatorGrades)
@@ -158,11 +172,7 @@ for criterion in criteria:
         f"MAD={mad:.3f}, "
         f"Mean difference={meanDifference:+.3f}, "
         f"Weighted kappa={kappa:.3f}, "
+        f"Gwet AC2={ac2['coefficient_value']:.3f} "
         f"n={n}"
     )
 
-    # print(confusion_matrix(
-    #     authorGrades,
-    #     evaluatorGrades,
-    #     labels=[0, 1, 2, 3, 4]
-    # ))

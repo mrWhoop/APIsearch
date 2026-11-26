@@ -30,7 +30,7 @@ You are an expert MongoDB query generator. Your sole task is to generate a `quer
   "type": { "type": "string",
             "description": "Field indicating API style, possible options are SOAP, WebSocket, REST, GraphQL"},
   "category": { "type": "string",
-                "description": "Field indicating API category, possible options are: Text Analysis, Weather, Tracking, Business, Music, Books, Calendar, Personality, Machine Learning, Health, Sports & Fitness, Test Data, Animals, Patent, Currency Exchange, Fraud Prevention, Dictionaries, Photography, Continuous Integration, Shopping, Art and Design, Education, Disasters, Security, Documents & Productivity, Environment, URL Shorteners, Science & Math, Data Validation, Anti-Malware, Open Source Projects, Open Data, Cryptocurrency, Anime, Food & Drink, Events, Finance, Jobs, Vehicle, Cloud storage and File Sharing, News"},          
+                "description": "Field indicating API category, possible options are: Text Analysis, Weather, Tracking, Business, Music, Books, Calendar, Personality, Machine Learning, Health, Sports & Fitness, Test Data, Animals, Patent, Currency Exchange, Fraud Prevention, Dictionaries, Photography, Continuous Integration, Shopping, Art and Design, Education, Disasters, Security, Documents & Productivity, Environment, URL Shorteners, Science & Math, Data Validation, Anti-Malware, Open Source Projects, Open Data, Cryptocurrency, Anime, Food & Drink, Events, Finance, Jobs, Vehicle, Cloud storage and File Sharing, News"}          
 }
 ``` 
             """
@@ -88,7 +88,7 @@ def generateComparisonPrompt(docs, query):
         
                     ### INSTRUCTIONS:
                     1. **Analyze and Compare:** Review the text from all documents to identify the key **similarities, differences, and unique points** 
-                    2. **Strict Grounding:** Base your entire response *only* on the content provided in the [DOCUMENT] section. Do not use outside knowledge or make assumptions.
+                    2. **Strict Grounding:** Base your entire response *only* on the content provided in the [DOCUMENTS] section. Do not use outside knowledge or make assumptions.
                     3. **User query:** Based on provided user query recommend one of the documents.
                     4. **Output Format:** **Use semantic HTML (sections, headings, lists)** Provide 4 sections in HTML: 1) Recommendation, 2) Similarities, 3) differences, 4) Unique points per document. Keep each section concise. Return only HTML. Keep style minimal - no external CSS links.
                     """

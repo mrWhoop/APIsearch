@@ -3,7 +3,9 @@ from pymongo import MongoClient
 from pymongo.errors import OperationFailure
 from pathlib import Path
 import json
+
 from validationUtility import validateMongoQuery
+
 import numpy as np
 import os
 from dotenv import load_dotenv
@@ -52,8 +54,7 @@ for file in complex.iterdir():
                     complexWhiteListInvalid += 1
                     continue
                 try:
-                    apis = collection.find(mongoQuery)
-
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     complexTextError += 1
 
@@ -85,7 +86,7 @@ for file in named.iterdir():
                     continue
 
                 try:
-                    apis = collection.find(mongoQuery)
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     namedTextError += 1
                     continue
@@ -119,7 +120,7 @@ for file in simple.iterdir():
                     continue
 
                 try:
-                    apis = collection.find(mongoQuery)
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     simpleTextError += 1
 
@@ -153,7 +154,7 @@ for file in specific.iterdir():
                     continue
 
                 try:
-                    apis = collection.find(mongoQuery)
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     specificTextError += 1
 
@@ -173,6 +174,7 @@ allMalicious = 0
 maliciousInvalidJSON = 0
 maliciousWhiteListInvalid = 0
 maliciousPass = set()
+maliciousPassList = list()
 maliciousBreak = set()
 for file in malicious_cost.iterdir():
     if file.is_file():
@@ -182,6 +184,7 @@ for file in malicious_cost.iterdir():
             for query in queries:
                 allMalicious += 1
 
+                mongoQuery = None
                 try:
                     mongoQuery = json.loads(query)
                 except json.JSONDecodeError as e:
@@ -202,7 +205,7 @@ for file in malicious_cost.iterdir():
                     continue
 
                 try:
-                    apis = collection.find(mongoQuery)
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     maliciousTextError += 1
                     maliciousBreak.add(str(mongoQuery))
@@ -210,14 +213,15 @@ for file in malicious_cost.iterdir():
                     continue
 
                 maliciousPass.add(str(mongoQuery))
+                maliciousPassList.append(str(mongoQuery))
 
         except json.JSONDecodeError as e:
             print(f"Error decoding {file.name}: {e}")
             maliciousInvalidJSON += 1
 
-for mp in maliciousPass:print(mp)
+for mp in maliciousPass:print('|||', mp)
 print("----------------------- rejected -------------------------------")
-for mb in maliciousBreak:print(mb)
+for mb in maliciousBreak:print('|||', mb)
 
 print('******************************************************')
 print('MALICIOUS DESTRUCTIVE')
@@ -231,7 +235,7 @@ for file in malicious_destructive.iterdir():
             for query in queries:
                 allMalicious += 1
 
-
+                mongoQuery = None
                 try:
                     mongoQuery = json.loads(query)
                 except json.JSONDecodeError as e:
@@ -252,7 +256,7 @@ for file in malicious_destructive.iterdir():
                     continue
 
                 try:
-                    apis = collection.find(mongoQuery)
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     maliciousTextError += 1
                     malicious_breaks['destructive'] = malicious_breaks['destructive'] + 1.0
@@ -266,9 +270,9 @@ for file in malicious_destructive.iterdir():
             maliciousInvalidJSON += 1
             continue
 
-for mp in maliciousPass:print(mp)
+for mp in maliciousPass:print('|||', mp)
 print("----------------------- rejected -------------------------------")
-for mb in maliciousBreak:print(mb)
+for mb in maliciousBreak:print('|||', mb)
 
 print('******************************************************')
 print('MALICIOUS TASK CHANGE')
@@ -282,6 +286,7 @@ for file in malicious_taskChange.iterdir():
             for query in queries:
                 allMalicious += 1
 
+                mongoQuery = None
                 try:
                     mongoQuery = json.loads(query)
                 except json.JSONDecodeError as e:
@@ -302,7 +307,7 @@ for file in malicious_taskChange.iterdir():
                     continue
 
                 try:
-                    apis = collection.find(mongoQuery)
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     maliciousTextError += 1
                     malicious_breaks['task_change'] = malicious_breaks['task_change'] + 1
@@ -315,9 +320,9 @@ for file in malicious_taskChange.iterdir():
             print(f"Error decoding {file.name}: {e}")
             maliciousInvalidJSON += 1
 
-for mp in maliciousPass:print(mp)
+for mp in maliciousPass:print('|||', mp)
 print("----------------------- rejected -------------------------------")
-for mb in maliciousBreak:print(mb)
+for mb in maliciousBreak:print('|||', mb)
 
 print('******************************************************')
 print('MALICIOUS unauthorised reveal')
@@ -331,6 +336,7 @@ for file in malicious_unauthorisedReveal.iterdir():
             for query in queries:
                 allMalicious += 1
 
+                mongoQuery = None
                 try:
                     mongoQuery = json.loads(query)
                 except json.JSONDecodeError as e:
@@ -351,7 +357,7 @@ for file in malicious_unauthorisedReveal.iterdir():
                     continue
 
                 try:
-                    apis = collection.find(mongoQuery)
+                    apis = list(collection.find(mongoQuery))
                 except pymongo.errors.OperationFailure as e:
                     maliciousTextError += 1
                     malicious_breaks['unouthorised'] = malicious_breaks['unouthorised'] + 1
@@ -364,9 +370,9 @@ for file in malicious_unauthorisedReveal.iterdir():
             print(f"Error decoding {file.name}: {e}")
             maliciousInvalidJSON += 1
 
-for mp in maliciousPass:print(mp)
+for mp in maliciousPass:print('|||', mp)
 print("----------------------- rejected -------------------------------")
-for mb in maliciousBreak:print(mb)
+for mb in maliciousBreak:print('|||', mb)
 
 print('******************************************************')
 print('SIMPLE', allSimple, simpleTextError, simpleWhiteListInvalid, 1 - ((simpleTextError + simpleInvalidJSON + simpleWhiteListInvalid) / allSimple), 'Invalid JSON: ', simpleInvalidJSON + simpleWhiteListInvalid)
@@ -409,3 +415,8 @@ print(f"Number of measurements: {len(tokensUsed)}")
 print("-------------------------------------")
 
 print(malicious_breaks)
+
+for item in maliciousPassList:
+    print(len(item))
+
+print('list len:', len(maliciousPassList))

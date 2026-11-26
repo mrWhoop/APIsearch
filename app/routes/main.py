@@ -524,7 +524,7 @@ def selected():
     data['evaluator'] = author
 
     # simple, named, complex, specific, typo
-    queryType = 'specific'
+    queryType = 'named'
     data['queryType'] = queryType
 
     if mongo.db.searchEvaluation.find({"query":data['query'], "component": data['component'], "evaluator":author}):

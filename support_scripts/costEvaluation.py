@@ -22,10 +22,13 @@ tokens = [doc["totalTokens"] for doc in token if doc.get("totalTokens") is not N
 median = np.median(tokens)
 average = np.mean(tokens)
 p95 = np.percentile(tokens, 95)
-
+cost = (average * 0.02)/1000
+costTop = (p95 * 0.02)/1000
 print(f"Median: {median:.3f}")
 print(f"Average: {average:.3f}")
 print(f"P95: {p95:.3f}")
+print(f"cost: {cost:.6f}")
+print(f"costTop: {costTop:.6f}")
 print(f"Number of measurements: {len(tokens)}")
 print("-------------------------------------")
 
@@ -35,10 +38,13 @@ tokens = [doc["totalTokens"] for doc in token if doc.get("totalTokens") is not N
 median = np.median(tokens)
 average = np.mean(tokens)
 p95 = np.percentile(tokens, 95)
-
+cost = (average * 0.13)/1000
+costTop = (p95 * 0.13)/1000
 print(f"Median: {median:.3f}")
 print(f"Average: {average:.3f}")
 print(f"P95: {p95:.3f}")
+print(f"cost: {cost:.6f}")
+print(f"costTop: {costTop:.6f}")
 print(f"Number of measurements: {len(tokens)}")
 print("-------------------------------------")
 
@@ -48,10 +54,13 @@ tokens = [doc["totalTokens"] for doc in token if doc.get("totalTokens") is not N
 median = np.median(tokens)
 average = np.mean(tokens)
 p95 = np.percentile(tokens, 95)
-
+cost = (average * 0.15)/1000
+costTop = (p95 * 0.15)/1000
 print(f"Median: {median:.3f}")
 print(f"Average: {average:.3f}")
 print(f"P95: {p95:.3f}")
+print(f"cost: {cost:.6f}")
+print(f"costTop: {costTop:.6f}")
 print(f"Number of measurements: {len(tokens)}")
 print("-------------------------------------")
 
@@ -64,15 +73,23 @@ median = np.median(tokens)
 medianIn = np.median(inTokens)
 medianOut = np.median(outTokens)
 average = np.mean(tokens)
+averageIn = np.mean(inTokens)
+averageOut = np.mean(outTokens)
 p95 = np.percentile(tokens, 95)
-cost = (medianIn * 0.1)/1000 + (medianOut * 0.2)/1000
+p95In = np.percentile(inTokens, 95)
+p95Out = np.percentile(outTokens, 95)
+cost = (averageIn * 0.1)/1000 + (averageOut * 0.2)/1000
+costTop = (p95In * 0.1)/1000 + (p95Out * 0.2)/1000
 print(f"Median: {median:.3f}")
 print(f"MedianIn: {medianIn:.3f}")
 print(f"MedianOut: {medianOut:.3f}")
 print(f"Average: {average:.3f}")
+print(f"AverageIn: {averageIn:.3f}")
+print(f"AverageOut: {averageOut:.3f}")
 print(f"P95: {p95:.3f}")
 print(f"Number of measurements: {len(tokens)}")
-print(f"cost: {cost:.3f}")
+print(f"cost: {cost:.6f}")
+print(f"costTop: {costTop:.6f}")
 print("-------------------------------------")
 
 print("GeminiPrompt")
@@ -86,15 +103,23 @@ median = np.median(tokens)
 medianIn = np.median(inTokens)
 medianOut = np.median(combined)
 average = np.mean(tokens)
+averageIn = np.mean(inTokens)
+averageOut = np.mean(combined)
 p95 = np.percentile(tokens, 95)
-cost = (0.75 * medianIn)/1000 + (3.75 * medianOut)/1000
+p95In = np.percentile(inTokens, 95)
+p95Out = np.percentile(combined, 95)
+cost = (0.75 * averageIn)/1000 + (3.75 * averageOut)/1000
+costTop = (p95In * 0.75)/1000 + (p95Out * 3.75)/1000
 print(f"Median: {median:.3f}")
 print(f"MedianIn: {medianIn:.3f}")
 print(f"MedianOut: {medianOut:.3f}")
 print(f"Average: {average:.3f}")
+print(f"AverageIn: {averageIn:.3f}")
+print(f"AverageOut: {averageOut:.3f}")
 print(f"P95: {p95:.3f}")
 print(f"Number of measurements: {len(tokens)}")
-print(f"cost: {cost:.3f}")
+print(f"cost: {cost:6f}")
+print(f"costTop: {costTop:.6f}")
 print("-------------------------------------")
 print("-------------------------------------")
 
@@ -108,16 +133,24 @@ combined = [a + b for a, b in zip(outTokens, thinkTokens)]
 median = np.median(tokens)
 medianIn = np.median(inTokens)
 medianOut = np.median(combined)
+averageIn = np.mean(inTokens)
+averageOut = np.mean(combined)
 average = np.mean(tokens)
 p95 = np.percentile(tokens, 95)
-cost = (0.75 * medianIn)/1000 + (3.75 * medianOut)/1000
+p95In = np.percentile(inTokens, 95)
+p95Out = np.percentile(combined, 95)
+cost = (0.75 * averageIn)/1000 + (3.75 * averageOut)/1000
+costTop = (p95In * 0.75)/1000 + (p95Out * 3.75)/1000
 print(f"Median: {median:.3f}")
 print(f"MedianIn: {medianIn:.3f}")
 print(f"MedianOut: {medianOut:.3f}")
 print(f"Average: {average:.3f}")
+print(f"AverageIn: {averageIn:.3f}")
+print(f"AverageOut: {averageOut:.3f}")
 print(f"P95: {p95:.3f}")
 print(f"Number of measurements: {len(tokens)}")
-print(f"cost: {cost:.3f}")
+print(f"cost: {cost:.6f}")
+print(f"costTop: {costTop:.6f}")
 print("-------------------------------------")
 
 print("GPTComparePrompt")
@@ -128,16 +161,24 @@ outTokens = [doc["outputTokens"] for doc in token]
 median = np.median(tokens)
 medianIn = np.median(inTokens)
 medianOut = np.median(outTokens)
+averageIn = np.mean(inTokens)
+averageOut = np.mean(outTokens)
 average = np.mean(tokens)
 p95 = np.percentile(tokens, 95)
-cost = (medianIn * 0.1)/1000 + (medianOut * 0.2)/1000
+p95In = np.percentile(inTokens, 95)
+p95Out = np.percentile(outTokens, 95)
+cost = (averageIn * 0.1)/1000 + (averageOut * 0.2)/1000
+costTop = (p95In * 0.1)/1000 + (p95Out * 0.2)/1000
 print(f"Median: {median:.3f}")
 print(f"MedianIn: {medianIn:.3f}")
 print(f"MedianOut: {medianOut:.3f}")
 print(f"Average: {average:.3f}")
+print(f"AverageIn: {averageIn:.3f}")
+print(f"AverageOut: {averageOut:.3f}")
 print(f"P95: {p95:.3f}")
 print(f"Number of measurements: {len(tokens)}")
-print(f"cost: {cost:.3f}")
+print(f"cost: {cost:.6f}")
+print(f"costTop: {costTop:.6f}")
 models = set()
 implementation = set()
 time = collection.find({})

@@ -78,7 +78,7 @@ queries = [
 "ambee",
 "last.fm",
 "Spotify",
-"chucnorris.io",
+"chucknorris.io",
 "stock prices in real-time",
 "PDF generation from HTML",
 "convert text to speech",

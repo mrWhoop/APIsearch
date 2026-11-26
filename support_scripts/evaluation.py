@@ -64,46 +64,46 @@ simpleQuery = [
 ]
 
 namedQuery = [
-    "Dropbox",
-    "PASTEBIN",
-    "FINCEPT",
-    "kanye.rest",
-    "flickr",
-    "Imgur",
-    "THE WORLD BANK",
-    "eBay",
-    "National Weather Service API",
-    "MEGA",
-    "Google Books",
-    "CATAAS",
-    "FREEP!K",
-    "Lingua Robot",
-    "1Forge",
-    "Bitquery",
-    "Trestle",
-    "Oxford Dictionaries",
-    "Vector Express",
-    "Todoist",
-    "Advice Slip",
-    "Gmail",
-    "Mailgun",
-    "Tomba",
-    "languagelayer",
-    "veriphone",
-    "file.io",
-    "Ticketmaster",
-    "FMP",
-    "PunkAPI",
-    "TheCocktailDB",
-    "FraudLabs PRO",
-    "Lexigram",
-    "Nutritionix",
-    "JOBICY",
-    "Juju",
-    "ambee",
-    "last.fm",
-    "Spotify",
-    "chucnorris.io"
+    # "Dropbox",
+    # "PASTEBIN",
+    # "FINCEPT",
+    # "kanye.rest",
+    # "flickr",
+    # "Imgur",
+    # "THE WORLD BANK",
+    # "eBay",
+    # "National Weather Service API",
+    # "MEGA",
+    # "Google Books",
+    # "CATAAS",
+    # "FREEP!K",
+    # "Lingua Robot",
+    # "1Forge",
+    # "Bitquery",
+    # "Trestle",
+    # "Oxford Dictionaries",
+    # "Vector Express",
+    # "Todoist",
+    # "Advice Slip",
+    # "Gmail",
+    # "Mailgun",
+    # "Tomba",
+    # "languagelayer",
+    # "veriphone",
+    # "file.io",
+    # "Ticketmaster",
+    # "FMP",
+    # "PunkAPI",
+    # "TheCocktailDB",
+    # "FraudLabs PRO",
+    # "Lexigram",
+    # "Nutritionix",
+    # "JOBICY",
+    # "Juju",
+    # "ambee",
+    # "last.fm",
+    # "Spotify",
+    "chucknorris.io"   # ponovitev
 ]
 
 complexQuery = [
@@ -291,7 +291,7 @@ def geminiPrompt(user_query, mongo):
 
 def repeatabilityTestGemini(queries, folder, repetitions, mongo):
 
-    if len(queries) != 6:
+    if len(queries) != 1:
         print('QUERY LIST PROBLEM')
         return
 
@@ -357,7 +357,7 @@ def gptPrompt(user_query, mongo):
 
 def repeatabilityTestGPT(queries, folder, repetitions, mongo):
 
-    if len(queries) != 6:
+    if len(queries) != 1:
         print('QUERY LIST PROBLEM')
         return
 
@@ -380,7 +380,7 @@ def repeatabilityTestGPT(queries, folder, repetitions, mongo):
         results['distinctResponseCount'] = len(responsesSet)
         results['responses'] = responses
 
-        fileName = "evaluationRes/chatGPT/" + folder + "/" + query.replace(' ', '_').replace(':', '_').replace('"','').replace('*','').replace('$','').replace('?','') + "_" + str(len(responsesSet)) + ".json"
+        fileName = "evaluationRes/GPT/" + folder + "/" + query.replace(' ', '_').replace(':', '_').replace('"','').replace('*','').replace('$','').replace('?','') + "_" + str(len(responsesSet)) + ".json"
 
         with open(fileName, "w", encoding="utf-8") as f:
             json.dump(results, f, indent=4, ensure_ascii=False)

@@ -27,19 +27,6 @@ client = MongoClient(os.environ['MONGO_READWRITE_URI'])
 db = client["api"]
 collection = db["searchEvaluation"]
 
-components = [
-        "OpenAISimple",
-        "OpenAIStructured",
-        "OpenAIDescriptive",
-        "Meilisearch",
-        "MeilisearchEmbed",
-        "GeminiSimple",
-        "GeminiStructured",
-        "GeminiDescriptive",
-        "OpenAIPrompt",
-        "GeminiPrompt",
-    ]
-
 
 import itertools
 import numpy as np
@@ -49,81 +36,121 @@ from scipy.stats import wilcoxon, bootstrap
 from statsmodels.stats.multitest import multipletests
 
 
+component_a = [
+        "OpenAISimple",
+        "OpenAIStructured",
+        "OpenAIDescriptive",
+        # "GeminiSimple",
+        # "GeminiStructured",
+        # "GeminiDescriptive",
+        # "OpenAIPrompt",
+        # "GeminiPrompt",
+        # "Meilisearch",
+        # "MeilisearchEmbed",
+    ]
 
-def wilk(queryType, metric, components, file_name):
+component_b = [
+    "OpenAISimple",
+    "OpenAIStructured",
+    "OpenAIDescriptive",
+    # "GeminiSimple",
+    # "GeminiStructured",
+    # "GeminiDescriptive",
+    # "OpenAIPrompt",
+    # "GeminiPrompt",
+    # "Meilisearch",
+    # "MeilisearchEmbed",
+]
+
+def query_type_filter(queryType):
+    """Build the Mongo filter for queryType: None, a single value, or a list."""
+    if queryType is None:
+        return None
+    if isinstance(queryType, (list, tuple, set)):
+        values = list(queryType)
+        if not values:
+            raise ValueError("queryType list is empty")
+        return {"$in": values}
+    return queryType
+
+
+def fetch_scores(component, queryType, metric):
+    """Return {(queryType, query): score} for one component.
+
+    queryType may be None (all types), a single value, or a list of values.
+    """
+    match = {"component": component}
+    qt_filter = query_type_filter(queryType)
+    if qt_filter is not None:
+        match["queryType"] = qt_filter
+
+    if metric == "s5":
+        # "specific" queries use the corrected s5 value
+        value = {
+            "$cond": [
+                {"$eq": ["$queryType", "specific"]},
+                "$s5_replace",
+                "$s5",
+            ]
+        }
+    else:
+        value = f"${metric}"
+
+    documents = collection.aggregate([
+        {"$match": match},
+        {"$project": {"_id": 0, "query": 1, "queryType": 1, "score": value}},
+        {"$sort": {"query": 1}},
+    ])
 
     scores = {}
+    for doc in documents:
+        key = (doc.get("queryType"), doc["query"])
+        if key in scores:
+            raise ValueError(f"Duplicate entry for {component}: {key}")
+        scores[key] = doc.get("score")
+    return scores
 
-    for component in components:
-        if queryType is None:
-            documents = collection.aggregate([
-                {
-                    "$match": {
-                        "component": component
-                    }
-                },
-                {
-                    "$project": {
-                        "_id": 0,
-                        "query": 1,
-                        "s5": {
-                            "$cond": [
-                                {"$eq": ["$queryType", "specific"]},
-                                "$s5_replace",
-                                "$s5"
-                            ]
-                        }
-                    }
-                },
-                {
-                    "$sort": {"query": 1}
-                }
-            ])
-        else:
-            documents = collection.find(
-                {
-                    "queryType": queryType,
-                    "component": component
-                },
-                {
-                    "_id": 0,
-                    "query": 1,
-                    metric: 1
-                }
-            ).sort("query", 1)
 
-        scores[component] = {
-            doc["query"]: doc[metric]
-            for doc in documents
-        }
+def mean_difference(a, b, axis=-1):
+    return np.mean(a - b, axis=axis)
 
-    # bootstrap: difference between means A - B
-    def mean_difference(a, b, axis=-1):
-        return np.mean(a - b, axis=axis)
+# popravljeno in dopolnjeno z UI
+def wilk(queryType, metric, component_a, component_b, file_name):
+    # de-duplicate within each list, keeping order
+    component_a = list(dict.fromkeys(component_a))
+    component_b = list(dict.fromkeys(component_b))
+
+    # fetch each component once, even if it appears in both lists
+    all_components = list(dict.fromkeys(component_a + component_b))
+    scores = {c: fetch_scores(c, queryType, metric) for c in all_components}
 
     results = []
+    seen_pairs = set()
 
-    for system_a, system_b in itertools.combinations(scores, 2):
+    for system_a, system_b in itertools.product(component_a, component_b):
 
-        common_queries = sorted(
-            set(scores[system_a]) & set(scores[system_b])
-        )
-
-        a = np.asarray(
-            [scores[system_a][q] for q in common_queries],
-            dtype=float
-        )
-        b = np.asarray(
-            [scores[system_b][q] for q in common_queries],
-            dtype=float
-        )
-
-        if len(a) == 0:
+        # no self-comparison
+        if system_a == system_b:
             continue
+
+        # count (X, Y) and (Y, X) only once
+        pair = frozenset((system_a, system_b))
+        if pair in seen_pairs:
+            continue
+        seen_pairs.add(pair)
+
+        sa, sb = scores[system_a], scores[system_b]
+        common_queries = sorted(set(sa) & set(sb), key=str)
+
+        if not common_queries:
+            continue
+
+        a = np.asarray([sa[q] for q in common_queries], dtype=float)
+        b = np.asarray([sb[q] for q in common_queries], dtype=float)
 
         if not np.isfinite(a).all() or not np.isfinite(b).all():
             raise ValueError(
-                f"Non-finite scores for {system_a} and {system_b}"
+                f"Missing or non-finite scores for {system_a} vs {system_b}"
             )
 
         mean_a = np.mean(a)
@@ -133,12 +160,12 @@ def wilk(queryType, metric, components, file_name):
         # Wilcoxon signed-rank test
         if np.all(a == b):
             statistic, p_value = 0.0, 1.0
+            continue
         else:
             test = wilcoxon(a, b, alternative="two-sided")
-            statistic = test.statistic
-            p_value = test.pvalue
+            statistic, p_value = test.statistic, test.pvalue
 
-        # Paired bootstrap 95% confidence interval
+        # Paired bootstrap 95% CI of mean difference
         boot = bootstrap(
             (a, b),
             mean_difference,
@@ -147,46 +174,37 @@ def wilk(queryType, metric, components, file_name):
             n_resamples=50_000,
             confidence_level=0.95,
             method="percentile",
-            rng=np.random.default_rng(42)
+            rng=np.random.default_rng(42),
         )
-
         ci_lower = boot.confidence_interval.low
         ci_upper = boot.confidence_interval.high
 
         results.append({
             "component_a": system_a,
             "component_b": system_b,
-            "n_queries": len(common_queries),
-            "mean_a": mean_a,
-            "mean_b": mean_b,
+#            "n_queries": len(common_queries),
+#            "mean_a": mean_a,
+#            "mean_b": mean_b,
             "mean_difference": observed_difference,
             "ci_lower": ci_lower,
             "ci_upper": ci_upper,
-            "bootstrap_significant": ci_lower > 0 or ci_upper < 0,
-            "statistic": statistic,
+#            "bootstrap_significant": ci_lower > 0 or ci_upper < 0,
+#            "statistic": statistic,
             "p_value": p_value,
-            "p_significant": p_value < 0.05
+            "p_significant": p_value < 0.05,
         })
 
     df = pd.DataFrame(results)
 
     if not df.empty:
-
-        # Holm correction across all pairwise comparisons
-        df["p_adjusted"] = multipletests(
-            df["p_value"],
-            method="holm"
-        )[1]
-
-        # Use adjusted p-values for statistical significance
+        # Holm correction across all A-vs-B comparisons
+        df["p_adjusted"] = multipletests(df["p_value"], method="holm")[1]
         df["significant"] = df["p_adjusted"] <= 0.05
 
-        print(
-            df.sort_values("significant").to_string(index=False)
-        )
+        df = df.sort_values("p_adjusted")
+        print(df.to_string(index=False))
 
     df.to_csv(file_name, index=False)
-
     return df
 
 def precision_at_5(queryType, component):
@@ -205,8 +223,7 @@ def precision_at_5(queryType, component):
             {"$set": {"precision5": score}}
         )
 
-    # print(component, sum(scores) / len(scores) if scores else 0.0, len(scores))
-
+    print(component, sum(scores) / len(scores) if scores else 0.0, len(scores))
     return sum(scores) / len(scores) if scores else 0.0
 
 def ndcg_at_5(queryType, component):
@@ -232,15 +249,20 @@ def ndcg_at_5(queryType, component):
             for position in range(1, 6)
         )
 
-        # Ideal DCG@5: relevant results ranked first
-        relevant_count = min(
-            sum(relevance.values()),
-            5
-        )
+        # Ideal DCG@5 relevance needs to be based across all systems on the same query
+        resForQuery = evaluation.get("query")
+        allForQuery = collection.find({"query": resForQuery})
+        allRelevant = set()
+        for res in allForQuery:
+            acc = res.get("accepted")
+            for a in acc:
+                allRelevant.add(a["id"])
+
+        maxRelevant = min(len(allRelevant), 5)
 
         idcg = sum(
             1 / math.log2(position + 1)
-            for position in range(1, relevant_count + 1)
+            for position in range(1, maxRelevant + 1)
         )
 
         # nDCG@5
@@ -253,7 +275,7 @@ def ndcg_at_5(queryType, component):
             {"$set": {"ndcg5": score}}
         )
 
-    # print(component, sum(scores) / len(scores) if scores else 0.0)
+    print(component, sum(scores) / len(scores) if scores else 0.0, len(scores))
     return sum(scores) / len(scores) if scores else 0.0
 
 def score_at_5():
@@ -302,7 +324,7 @@ print("-------------- SIMPLE P5 --------------" )
 # precision_at_5("simple", "GeminiSimple")
 # precision_at_5("simple", "GeminiStructured")
 # precision_at_5("simple", "GeminiDescriptive")
-#
+
 # precision_at_5("simple", "OpenAIPrompt")
 # precision_at_5("simple", "GeminiPrompt")
 
@@ -318,7 +340,7 @@ print("-------------- NAMED P5 --------------" )
 # precision_at_5("named", "GeminiSimple")
 # precision_at_5("named", "GeminiStructured")
 # precision_at_5("named", "GeminiDescriptive")
-#
+
 # precision_at_5("named", "OpenAIPrompt")
 # precision_at_5("named", "GeminiPrompt")
 
@@ -334,7 +356,7 @@ print("-------------- COMPLEX P5 --------------" )
 # precision_at_5("complex", "GeminiSimple")
 # precision_at_5("complex", "GeminiStructured")
 # precision_at_5("complex", "GeminiDescriptive")
-#
+
 # precision_at_5("complex", "OpenAIPrompt")
 # precision_at_5("complex", "GeminiPrompt")
 
@@ -350,7 +372,7 @@ print("-------------- SIMPLE ndcg5 --------------" )
 # ndcg_at_5("simple", "GeminiSimple")
 # ndcg_at_5("simple", "GeminiStructured")
 # ndcg_at_5("simple", "GeminiDescriptive")
-#
+
 # ndcg_at_5("simple", "OpenAIPrompt")
 # ndcg_at_5("simple", "GeminiPrompt")
 
@@ -366,7 +388,7 @@ print("-------------- NAMED ndcg5 --------------" )
 # ndcg_at_5("named", "GeminiSimple")
 # ndcg_at_5("named", "GeminiStructured")
 # ndcg_at_5("named", "GeminiDescriptive")
-#
+
 # ndcg_at_5("named", "OpenAIPrompt")
 # ndcg_at_5("named", "GeminiPrompt")
 
@@ -382,26 +404,26 @@ print("-------------- COMPLEX ndcg5 --------------" )
 # ndcg_at_5("complex", "GeminiSimple")
 # ndcg_at_5("complex", "GeminiStructured")
 # ndcg_at_5("complex", "GeminiDescriptive")
-#
+
 # ndcg_at_5("complex", "OpenAIPrompt")
 # ndcg_at_5("complex", "GeminiPrompt")
 
-print("-------------- SIMPLE score --------------" )
+print("-------------- SIMPLE stat-test --------------" )
 # score_eval("simple")
-# wilk("simple", "precision5", components, "enostavne_poizvedbe_PrecisionRate5.csv")
-# wilk("simple", "ndcg5", components, "enostavne_poizvedbe_ndcgRate5.csv")
+# wilk("simple", "precision5", component_a, component_b, "enostavne_poizvedbe_PrecisionRate5.csv")
+# wilk("simple", "ndcg5", component_a, component_b,"enostavne_poizvedbe_ndcgRate5.csv")
 # wilk("simple", "s5", components, "enostavne_poizvedbe_S5.csv")
 
-print("-------------- NAMED score --------------" )
+print("-------------- NAMED stat-test --------------" )
 # score_eval("named")
 # wilk("named", "precision5", components, "poimenske_poizvedbe_PrecisionRate5.csv")
-# wilk("named", "ndcg5", components, "poimenske_poizvedbe_ndcgRate5.csv")
+# wilk("named", "ndcg5", component_a, component_b, "poimenske_poizvedbe_ndcgRate5.csv")
 # wilk("named", "s5", components, "poimenske_poizvedbe_s5.csv")
 
-print("-------------- COMPLEX score --------------" )
+print("-------------- COMPLEX stat-test --------------" )
 # score_eval("complex")
 # wilk("complex", "precision5", components, "sestavljene_poizvedbe_PrecisionRate5.csv")
-# wilk("complex", "ndcg5", components, "sestavljene_poizvedbe_ndcgRate5.csv")
+# wilk("complex", "ndcg5", component_a, component_b, "sestavljene_poizvedbe_ndcgRate5.csv")
 # wilk("complex", "s5", components, "sestavljene_poizvedbe_s5.csv")
 
 def mrr(queryType, component):
@@ -523,7 +545,7 @@ def mrr_replacement(queryType, component):
         )
 
 
-    # print(component, sum(reciprocal_ranks) / len(reciprocal_ranks) if reciprocal_ranks else 0.0)
+    print(component, sum(reciprocal_ranks) / len(reciprocal_ranks) if reciprocal_ranks else 0.0)
     return sum(reciprocal_ranks) / len(reciprocal_ranks) if reciprocal_ranks else 0.0
 
 print("-------------- SPECIFIC MMR --------------" )
@@ -538,7 +560,7 @@ print("-------------- SPECIFIC MMR --------------" )
 # mrr("specific", "GeminiSimple")
 # mrr("specific", "GeminiStructured")
 # mrr("specific", "GeminiDescriptive")
-#
+
 # mrr("specific", "OpenAIPrompt")
 # mrr("specific", "GeminiPrompt")
 
@@ -554,7 +576,7 @@ print("-------------- SPECIFIC MMR replacement --------------" )
 # mrr_replacement("specific", "GeminiSimple")
 # mrr_replacement("specific", "GeminiStructured")
 # mrr_replacement("specific", "GeminiDescriptive")
-#
+
 # mrr_replacement("specific", "OpenAIPrompt")
 # mrr_replacement("specific", "GeminiPrompt")
 
@@ -570,7 +592,7 @@ print("-------------- SPECIFIC Hit@1 --------------" )
 # hit_at_1("specific", "GeminiSimple")
 # hit_at_1("specific", "GeminiStructured")
 # hit_at_1("specific", "GeminiDescriptive")
-#
+
 # hit_at_1("specific", "OpenAIPrompt")
 # hit_at_1("specific", "GeminiPrompt")
 
@@ -612,7 +634,7 @@ def hit_at_1_replacement(queryType, component):
 
             total += 1
 
-    # print(component, hit / total if total else 0.0)
+    print(component, hit / total if total else 0.0)
     return hit / total if total else 0.0
 
 # hit_at_1_replacement("specific", "OpenAISimple")
@@ -625,7 +647,7 @@ def hit_at_1_replacement(queryType, component):
 # hit_at_1_replacement("specific", "GeminiSimple")
 # hit_at_1_replacement("specific", "GeminiStructured")
 # hit_at_1_replacement("specific", "GeminiDescriptive")
-#
+
 # hit_at_1_replacement("specific", "OpenAIPrompt")
 # hit_at_1_replacement("specific", "GeminiPrompt")
 
@@ -697,14 +719,14 @@ def score_eval_specific_replacement(queryType):
 print("-------------- SPECIFIC score --------------")
 # score_eval_specific("specific")
 
-print("-------------- SPECIFIC score replacement --------------")
+print("-------------- SPECIFIC score replacement stat-test --------------")
 # score_eval_specific_replacement("specific")
 
-#wilk("specific", "rr_replace", components, "specificne_poizvedbe_mrr.csv")
-#wilk("specific", "hit_replace", components, "specificne_poizvedbe_hit1.csv")
-#wilk("specific", "s5_replace", components, "specificne_poizvedbe_s5.csv")
+# wilk("specific", "rr_replace", component_a, component_b, "specificne_poizvedbe_mrr.csv")
+# wilk("specific", "hit_replace", components, "specificne_poizvedbe_hit1.csv")
+# wilk("specific", "s5_replace", components, "specificne_poizvedbe_s5.csv")
 
-print("-------------- Score@5 summary --------------")
+print("-------------- Metric summary --------------")
 
 def score_summary():
 
@@ -728,103 +750,133 @@ def score_summary():
 
         print('------------', queryType, '--------------')
 
-        OpenAISimple = (precision_at_5(queryType, "OpenAISimple") + ndcg_at_5(queryType, "OpenAISimple")) / 2
+        OpenAISimple = (ndcg_at_5(queryType, "OpenAISimple"))
         OpenAISimpleSum = OpenAISimpleSum + OpenAISimple
         print('OpenAISimple', OpenAISimple)
 
-        OpenAIStructured = (precision_at_5(queryType, "OpenAIStructured") + ndcg_at_5(queryType, "OpenAIStructured")) / 2
+        OpenAIStructured = (ndcg_at_5(queryType, "OpenAIStructured"))
         OpenAIStructuredSum = OpenAIStructuredSum + OpenAIStructured
         print('OpenAIStructured', OpenAIStructured)
 
-        OpenAIDescriptive = (precision_at_5(queryType, "OpenAIDescriptive") + ndcg_at_5(queryType, "OpenAIDescriptive")) / 2
+        OpenAIDescriptive = (ndcg_at_5(queryType, "OpenAIDescriptive"))
         OpenAIDescriptiveSum = OpenAIDescriptiveSum + OpenAIDescriptive
         print('OpenAIDescriptive', OpenAIDescriptive)
 
-        Meilisearch = (precision_at_5(queryType, "Meilisearch") + ndcg_at_5(queryType, "Meilisearch")) / 2
+        Meilisearch = (ndcg_at_5(queryType, "Meilisearch"))
         MeilisearchSum = MeilisearchSum + Meilisearch
         print('Meilisearch', Meilisearch)
 
-        MeilisearchEmbed = (precision_at_5(queryType, "MeilisearchEmbed") + ndcg_at_5(queryType, "MeilisearchEmbed")) / 2
+        MeilisearchEmbed = (ndcg_at_5(queryType, "MeilisearchEmbed"))
         MeilisearchEmbedSum = MeilisearchEmbedSum + MeilisearchEmbed
         print('MeilisearchEmbed', MeilisearchEmbed)
 
-        GeminiSimple = (precision_at_5(queryType, "GeminiSimple") + ndcg_at_5(queryType, "GeminiSimple")) / 2
+        GeminiSimple = (ndcg_at_5(queryType, "GeminiSimple"))
         GeminiSimpleSum = GeminiSimpleSum + GeminiSimple
         print('GeminiSimple', GeminiSimple)
 
-        GeminiStructured = (precision_at_5(queryType, "GeminiStructured") + ndcg_at_5(queryType, "GeminiStructured")) / 2
+        GeminiStructured = (ndcg_at_5(queryType, "GeminiStructured"))
         GeminiStructuredSum = GeminiStructuredSum + GeminiStructured
         print('GeminiStructured', GeminiStructured)
 
-        GeminiDescriptive = (precision_at_5(queryType, "GeminiDescriptive") + ndcg_at_5(queryType, "GeminiDescriptive")) / 2
+        GeminiDescriptive = (ndcg_at_5(queryType, "GeminiDescriptive"))
         GeminiDescriptiveSum = GeminiDescriptiveSum + GeminiDescriptive
         print('GeminiDescriptive', GeminiDescriptive)
 
-        OpenAIPrompt = (precision_at_5(queryType, "OpenAIPrompt") + ndcg_at_5(queryType, "OpenAIPrompt")) / 2
+        OpenAIPrompt = (ndcg_at_5(queryType, "OpenAIPrompt"))
         OpenAIPromptSum = OpenAIPromptSum + OpenAIPrompt
         print('OpenAIPrompt', OpenAIPrompt)
 
-        GeminiPrompt = (precision_at_5(queryType, "GeminiPrompt") + ndcg_at_5(queryType, "GeminiPrompt")) / 2
+        GeminiPrompt = (ndcg_at_5(queryType, "GeminiPrompt"))
         GeminiPromptSum = GeminiPromptSum + GeminiPrompt
         print('GeminiPrompt', GeminiPrompt)
 
     print('------------', 'specific', '--------------')
 
-    OpenAISimple = (hit_at_1_replacement("specific", "OpenAISimple") + mrr_replacement("specific", "OpenAISimple")) / 2
-    OpenAISimpleSum = OpenAISimpleSum + OpenAISimple
+    OpenAISimple = (mrr_replacement("specific", "OpenAISimple"))
     print('OpenAISimple', OpenAISimple)
 
-    OpenAIStructured = (hit_at_1_replacement("specific", "OpenAIStructured") + mrr_replacement("specific", "OpenAIStructured")) / 2
-    OpenAIStructuredSum = OpenAIStructuredSum + OpenAIStructured
+    OpenAIStructured = (mrr_replacement("specific", "OpenAIStructured"))
     print('OpenAIStructured', OpenAIStructured)
 
-    OpenAIDescriptive = (hit_at_1_replacement("specific", "OpenAIDescriptive") + mrr_replacement("specific", "OpenAIDescriptive")) / 2
-    OpenAIDescriptiveSum = OpenAIDescriptiveSum + OpenAIDescriptive
+    OpenAIDescriptive = (mrr_replacement("specific", "OpenAIDescriptive"))
     print('OpenAIDescriptive', OpenAIDescriptive)
 
-    Meilisearch = (hit_at_1_replacement("specific", "Meilisearch") + mrr_replacement("specific", "Meilisearch")) / 2
-    MeilisearchSum = MeilisearchSum + Meilisearch
+    Meilisearch = (mrr_replacement("specific", "Meilisearch"))
     print('Meilisearch', Meilisearch)
 
-    MeilisearchEmbed = (hit_at_1_replacement("specific", "MeilisearchEmbed") + mrr_replacement("specific", "MeilisearchEmbed")) / 2
-    MeilisearchEmbedSum = MeilisearchEmbedSum + MeilisearchEmbed
+    MeilisearchEmbed = (mrr_replacement("specific", "MeilisearchEmbed"))
     print('MeilisearchEmbed', MeilisearchEmbed)
 
-    GeminiSimple = (hit_at_1_replacement("specific", "GeminiSimple") + mrr_replacement("specific", "GeminiSimple")) / 2
-    GeminiSimpleSum = GeminiSimpleSum + GeminiSimple
+    GeminiSimple = (mrr_replacement("specific", "GeminiSimple"))
     print('GeminiSimple', GeminiSimple)
 
-    GeminiStructured = (hit_at_1_replacement("specific", "GeminiStructured") + mrr_replacement("specific", "GeminiStructured")) / 2
-    GeminiStructuredSum = GeminiStructuredSum + GeminiStructured
+    GeminiStructured = (mrr_replacement("specific", "GeminiStructured"))
     print('GeminiStructured', GeminiStructured)
 
-    GeminiDescriptive = (hit_at_1_replacement("specific", "GeminiDescriptive") + mrr_replacement("specific", "GeminiDescriptive")) / 2
-    GeminiDescriptiveSum = GeminiDescriptiveSum + GeminiDescriptive
+    GeminiDescriptive = (mrr_replacement("specific", "GeminiDescriptive"))
     print('GeminiDescriptive', GeminiDescriptive)
 
-    OpenAIPrompt = (hit_at_1_replacement("specific", "OpenAIPrompt") + mrr_replacement("specific", "OpenAIPrompt")) / 2
-    OpenAIPromptSum = OpenAIPromptSum + OpenAIPrompt
+    OpenAIPrompt = (mrr_replacement("specific", "OpenAIPrompt"))
     print('OpenAIPrompt', OpenAIPrompt)
 
-    GeminiPrompt = (hit_at_1_replacement("specific", "GeminiPrompt") + mrr_replacement("specific", "GeminiPrompt")) / 2
-    GeminiPromptSum = GeminiPromptSum + GeminiPrompt
+    GeminiPrompt = (mrr_replacement("specific", "GeminiPrompt"))
+    print('GeminiPrompt', GeminiPrompt)
+
+    print('------------', 'named', '--------------')
+
+    OpenAISimple = (mrr("named", "OpenAISimple"))
+    print('OpenAISimple', OpenAISimple)
+
+    OpenAIStructured = (mrr("named", "OpenAIStructured"))
+    print('OpenAIStructured', OpenAIStructured)
+
+    OpenAIDescriptive = (mrr("named", "OpenAIDescriptive"))
+    print('OpenAIDescriptive', OpenAIDescriptive)
+
+    Meilisearch = (mrr("named", "Meilisearch"))
+    print('Meilisearch', Meilisearch)
+
+    MeilisearchEmbed = (mrr("named", "MeilisearchEmbed"))
+    print('MeilisearchEmbed', MeilisearchEmbed)
+
+    GeminiSimple = (mrr("named", "GeminiSimple"))
+    print('GeminiSimple', GeminiSimple)
+
+    GeminiStructured = (mrr("named", "GeminiStructured"))
+    print('GeminiStructured', GeminiStructured)
+
+    GeminiDescriptive = (mrr("named", "GeminiDescriptive"))
+    print('GeminiDescriptive', GeminiDescriptive)
+
+    OpenAIPrompt = (mrr("named", "OpenAIPrompt"))
+    print('OpenAIPrompt', OpenAIPrompt)
+
+    GeminiPrompt = (mrr("named", "GeminiPrompt"))
     print('GeminiPrompt', GeminiPrompt)
 
     print('------------------------------------------')
 
-    print('OpenAISimpleSum', OpenAISimpleSum / 4)
-    print('OpenAIStructuredSum', OpenAIStructuredSum / 4)
-    print('OpenAIDescriptiveSum', OpenAIDescriptiveSum / 4)
+    # print('OpenAISimpleSum', OpenAISimpleSum / 4)
+    # print('OpenAIStructuredSum', OpenAIStructuredSum /4)
+    # print('OpenAIDescriptiveSum', OpenAIDescriptiveSum / 4)
+    #
+    # print('MeilisearchSum', MeilisearchSum / 4)
+    # print('MeilisearchEmbedSum', MeilisearchEmbedSum / 4)
+    #
+    # print('GeminiSimpleSum', GeminiSimpleSum / 4)
+    # print('GeminiStructuredSum', GeminiStructuredSum / 4)
+    # print('GeminiDescriptiveSum', GeminiDescriptiveSum / 4)
+    #
+    # print('OpenAIPromptSum', OpenAIPromptSum / 4)
+    # print('GeminiPromptSum', GeminiPromptSum / 4)
 
-    print('MeilisearchSum', MeilisearchSum / 4)
-    print('MeilisearchEmbedSum', MeilisearchEmbedSum / 4)
+# score_summary()
+# wilk(None, "s5", components, "score_summary.csv") # izjema pri secificnih s5_replace
 
-    print('GeminiSimpleSum', GeminiSimpleSum / 4)
-    print('GeminiStructuredSum', GeminiStructuredSum / 4)
-    print('GeminiDescriptiveSum', GeminiDescriptiveSum / 4)
+print("-------------- Summary significance ndcg5  --------------")
 
-    print('OpenAIPromptSum', OpenAIPromptSum / 4)
-    print('GeminiPromptSum', GeminiPromptSum / 4)
+wilk(["simple","named","complex"], "ndcg5", component_a , component_b, "score_summary.csv")
 
-score_summary()
-#wilk(None, "s5", components, "score_summary.csv") # izjema pri secificnih s5_replace
+print("-------------- Summary significance mrr  --------------")
+
+wilk("specific", "rr_replace", component_a , component_b, "score_summary.csv")
